@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.wikidata.org/"
+     xml:base="https://www.wikidata.org/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://www.wikidata.org/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.wikidata.org/prop/P1038 -->
+
+    <owl:ObjectProperty rdf:about="https://www.wikidata.org/prop/P1038">
+        <rdfs:domain rdf:resource="https://www.wikidata.org/wiki/Q5"/>
+        <rdfs:range rdf:resource="https://www.wikidata.org/wiki/Q5"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.wikidata.org/prop/P22 -->
+
+    <owl:ObjectProperty rdf:about="https://www.wikidata.org/prop/P22">
+        <rdfs:subPropertyOf rdf:resource="https://www.wikidata.org/prop/P8810"/>
+        <rdfs:range rdf:resource="https://www.wikidata.org/wiki/Q7565"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.wikidata.org/prop/P25 -->
+
+    <owl:ObjectProperty rdf:about="https://www.wikidata.org/prop/P25">
+        <rdfs:subPropertyOf rdf:resource="https://www.wikidata.org/prop/P8810"/>
+        <rdfs:range rdf:resource="https://www.wikidata.org/wiki/Q7560"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.wikidata.org/prop/P26 -->
+
+    <owl:ObjectProperty rdf:about="https://www.wikidata.org/prop/P26">
+        <rdfs:subPropertyOf rdf:resource="https://www.wikidata.org/prop/P1038"/>
+        <owl:inverseOf rdf:resource="https://www.wikidata.org/prop/P26"/>
+        <rdfs:domain rdf:resource="https://www.wikidata.org/wiki/Q1196129"/>
+        <rdfs:range rdf:resource="https://www.wikidata.org/wiki/Q1196129"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.wikidata.org/prop/P3373 -->
+
+    <owl:ObjectProperty rdf:about="https://www.wikidata.org/prop/P3373">
+        <rdfs:subPropertyOf rdf:resource="https://www.wikidata.org/prop/P1038"/>
+        <owl:inverseOf rdf:resource="https://www.wikidata.org/prop/P3373"/>
+        <rdfs:domain rdf:resource="https://www.wikidata.org/wiki/Q31184"/>
+        <rdfs:range rdf:resource="https://www.wikidata.org/wiki/Q31184"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.wikidata.org/prop/P40 -->
+
+    <owl:ObjectProperty rdf:about="https://www.wikidata.org/prop/P40">
+        <rdfs:subPropertyOf rdf:resource="https://www.wikidata.org/prop/P1038"/>
+        <rdfs:range rdf:resource="https://www.wikidata.org/wiki/Q7569"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.wikidata.org/prop/P8810 -->
+
+    <owl:ObjectProperty rdf:about="https://www.wikidata.org/prop/P8810">
+        <rdfs:subPropertyOf rdf:resource="https://www.wikidata.org/prop/P1038"/>
+        <rdfs:range rdf:resource="https://www.wikidata.org/wiki/Q7566"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q10861465 -->
+
+    <owl:Class rdf:about="https://www.wikidata.org/wiki/Q10861465">
+        <rdfs:subClassOf rdf:resource="https://www.wikidata.org/wiki/Q31184"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q1196129 -->
+
+    <owl:Class rdf:about="https://www.wikidata.org/wiki/Q1196129">
+        <rdfs:subClassOf rdf:resource="https://www.wikidata.org/wiki/Q5"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://www.wikidata.org/prop/P26"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q177232 -->
+
+    <owl:Class rdf:about="https://www.wikidata.org/wiki/Q177232">
+        <rdfs:subClassOf rdf:resource="https://www.wikidata.org/wiki/Q7569"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q308194 -->
+
+    <owl:Class rdf:about="https://www.wikidata.org/wiki/Q308194">
+        <rdfs:subClassOf rdf:resource="https://www.wikidata.org/wiki/Q7569"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q31184 -->
+
+    <owl:Class rdf:about="https://www.wikidata.org/wiki/Q31184">
+        <rdfs:subClassOf rdf:resource="https://www.wikidata.org/wiki/Q5"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://www.wikidata.org/prop/P3373"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q5 -->
+
+    <owl:Class rdf:about="https://www.wikidata.org/wiki/Q5"/>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q595094 -->
+
+    <owl:Class rdf:about="https://www.wikidata.org/wiki/Q595094">
+        <rdfs:subClassOf rdf:resource="https://www.wikidata.org/wiki/Q31184"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q7560 -->
+
+    <owl:Class rdf:about="https://www.wikidata.org/wiki/Q7560">
+        <rdfs:subClassOf rdf:resource="https://www.wikidata.org/wiki/Q7566"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://www.wikidata.org/prop/P25"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q7565 -->
+
+    <owl:Class rdf:about="https://www.wikidata.org/wiki/Q7565">
+        <rdfs:subClassOf rdf:resource="https://www.wikidata.org/wiki/Q7566"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://www.wikidata.org/prop/P22"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q7566 -->
+
+    <owl:Class rdf:about="https://www.wikidata.org/wiki/Q7566">
+        <rdfs:subClassOf rdf:resource="https://www.wikidata.org/wiki/Q5"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://www.wikidata.org/prop/P8810"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q7569 -->
+
+    <owl:Class rdf:about="https://www.wikidata.org/wiki/Q7569">
+        <rdfs:subClassOf rdf:resource="https://www.wikidata.org/wiki/Q5"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://www.wikidata.org/prop/P40"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

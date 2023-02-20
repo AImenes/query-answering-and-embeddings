@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/untitled-ontology-5#"
+     xml:base="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/untitled-ontology-5"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:family-ontology="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/FamilyOntology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.wikidata.org/prop/P1038 -->
+
+    <owl:ObjectProperty rdf:about="https://www.wikidata.org/prop/P1038"/>
+    
+
+
+    <!-- https://www.wikidata.org/prop/P22 -->
+
+    <owl:ObjectProperty rdf:about="https://www.wikidata.org/prop/P22">
+        <rdfs:subPropertyOf rdf:resource="https://www.wikidata.org/prop/P8810"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.wikidata.org/prop/P25 -->
+
+    <owl:ObjectProperty rdf:about="https://www.wikidata.org/prop/P25">
+        <rdfs:subPropertyOf rdf:resource="https://www.wikidata.org/prop/P8810"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.wikidata.org/prop/P26 -->
+
+    <owl:ObjectProperty rdf:about="https://www.wikidata.org/prop/P26">
+        <rdfs:subPropertyOf rdf:resource="https://www.wikidata.org/prop/P1038"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.wikidata.org/prop/P3373 -->
+
+    <owl:ObjectProperty rdf:about="https://www.wikidata.org/prop/P3373">
+        <rdfs:subPropertyOf rdf:resource="https://www.wikidata.org/prop/P1038"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.wikidata.org/prop/P40 -->
+
+    <owl:ObjectProperty rdf:about="https://www.wikidata.org/prop/P40">
+        <rdfs:subPropertyOf rdf:resource="https://www.wikidata.org/prop/P1038"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.wikidata.org/prop/P8810 -->
+
+    <owl:ObjectProperty rdf:about="https://www.wikidata.org/prop/P8810">
+        <rdfs:subPropertyOf rdf:resource="https://www.wikidata.org/prop/P1038"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/FamilyOntology#FatherInLaw -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/FamilyOntology#FatherInLaw"/>
+    
+
+
+    <!-- http://www.semanticweb.org/FamilyOntology#Female -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/FamilyOntology#Female"/>
+    
+
+
+    <!-- http://www.semanticweb.org/FamilyOntology#Male -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/FamilyOntology#Male"/>
+    
+
+
+    <!-- http://www.semanticweb.org/FamilyOntology#MotherInLaw -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/FamilyOntology#MotherInLaw"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/FamilyOntology#Aline_Archambault -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/FamilyOntology#Aline_Archambault"/>
+    
+
+
+    <!-- http://www.semanticweb.org/FamilyOntology#Amanda_Archambault -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/FamilyOntology#Amanda_Archambault"/>
+    
+
+
+    <!-- http://www.semanticweb.org/FamilyOntology#Dylan_Archambault -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/FamilyOntology#Dylan_Archambault"/>
+    
+
+
+    <!-- http://www.semanticweb.org/FamilyOntology#Elijah_Archambault -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/FamilyOntology#Elijah_Archambault"/>
+    
+
+
+    <!-- http://www.semanticweb.org/FamilyOntology#Estelle_Archambault -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/FamilyOntology#Estelle_Archambault"/>
+    
+
+
+    <!-- http://www.semanticweb.org/FamilyOntology#Gerald_Renaud -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/FamilyOntology#Gerald_Renaud"/>
+    
+
+
+    <!-- http://www.semanticweb.org/FamilyOntology#Irene_DeMarco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/FamilyOntology#Irene_DeMarco"/>
+    
+
+
+    <!-- http://www.semanticweb.org/FamilyOntology#Jacob_Archambault -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/FamilyOntology#Jacob_Archambault"/>
+    
+
+
+    <!-- http://www.semanticweb.org/FamilyOntology#John_DeMarco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/FamilyOntology#John_DeMarco"/>
+    
+
+
+    <!-- http://www.semanticweb.org/FamilyOntology#Matthew_DeMarco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/FamilyOntology#Matthew_DeMarco"/>
+    
+
+
+    <!-- http://www.semanticweb.org/FamilyOntology#Naomi_Archambault -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/FamilyOntology#Naomi_Archambault"/>
+    
+
+
+    <!-- http://www.semanticweb.org/FamilyOntology#Wendy_DeMarco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/FamilyOntology#Wendy_DeMarco"/>
+    
+
+
+    <!-- http://www.semanticweb.org/FamilyOntology#female -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/FamilyOntology#female">
+        <rdf:type>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#female"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/FamilyOntology#male -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/FamilyOntology#male"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Aline_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Amanda_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Dylan_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Elijah_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Estelle_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Gerald_Renaud"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Irene_DeMarco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Jacob_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#John_DeMarco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Matthew_DeMarco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Naomi_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Wendy_DeMarco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#female"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#male"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Aline_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Amanda_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Dylan_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Elijah_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Estelle_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Gerald_Renaud"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Jacob_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#John_DeMarco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Matthew_DeMarco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Naomi_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Wendy_DeMarco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#female"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#male"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Aline_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Amanda_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Dylan_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Gerald_Renaud"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Jacob_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#John_DeMarco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Matthew_DeMarco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#female"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#male"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Aline_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Amanda_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Dylan_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Gerald_Renaud"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Jacob_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Matthew_DeMarco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#female"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#male"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Aline_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Amanda_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Dylan_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Gerald_Renaud"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Jacob_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#female"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#male"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Aline_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Dylan_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Gerald_Renaud"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Jacob_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#female"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#male"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Aline_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Gerald_Renaud"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Jacob_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#female"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#male"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Aline_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#Jacob_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#female"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/FamilyOntology#male"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

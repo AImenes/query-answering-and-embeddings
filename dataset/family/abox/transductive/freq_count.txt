@@ -1,0 +1,7 @@
+,1
+<https://www.wikidata.org/prop/P3373>,75654
+<https://www.wikidata.org/prop/P40>,64983
+<https://www.wikidata.org/prop/P22>,49973
+<https://www.wikidata.org/prop/P26>,46561
+<https://www.wikidata.org/prop/P25>,16408
+<https://www.wikidata.org/prop/P1038>,4656

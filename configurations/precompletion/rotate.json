@@ -1,4 +1,0 @@
-{
-	"training_loop": sLCWA,
-	"training": transductive_train_set,
-}

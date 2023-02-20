@@ -1,0 +1,40 @@
+Properties
+
+1. playsFor (P54)
+2. isLocatedIn (P706)
+3. hasGender (P21)
+4. isConnectedTo ... (airports)
+5. isAffiliatedTo (superproperty of member of, super of PlaysFor) (P1416)
+6. actedIn (P161)
+7. wroteMusicFor (producer which writes for film)
+8. edited (when it comes to films)
+9. wasBornIn (cityofbirth, P19)
+10. graduatedFrom (person which graduated from uni)
+11. influcences (inverse P737, in terms of authors and pilosophy)
+12. hasWonPrize (P166)
+13. diedin (cityofdeath, P20)
+14. hasChild
+15. isMarriedTo
+16. dealsWith (å handle mellom to land)
+17. happenedIn (event in place, P276)
+18. livesIn
+19. isPoliticianOf (politiker fra et land)
+20. hasMusicalRole
+21. created (Movies, director)
+22. isLeaderOf (political party or state)
+23. participatedIn (Country participating in War/Historical event)
+24. isCitizenOf (of country)
+25. hasOfficialLanguage
+26. worksAt
+27. directed
+28. hasAcademicAdvisor
+29. imports
+30. isInterestedIn
+31. hasCapital
+32. hasNeighbor
+33. exports
+34. owns
+35. hasCurrency
+36. hasWebsite
+37. isKnownFor
+
