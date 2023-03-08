@@ -282,11 +282,6 @@ def training(transductive_models, project_name, dataset, train, valid, test):
     # step 1 - train
     epochs = [16,20,24]
     dims = [50,128,192]
-    print(TransE.loss_default)
-    print(DistMult.loss_default)
-    print(BoxE.loss_default)
-    print(RotatE.loss_default)
-    print(CompGCN.loss_default)
     press_any_key()
     for dim in dims:
         for epoch in epochs:
@@ -813,18 +808,19 @@ def main():
     menu['3'] = "Load TBox"
     menu['4'] = "Load ABox"
     menu['5'] = "Change query"
-    menu['6'] = "Show entities and properties in TBox"
-    menu['7'] = "Run PerfectRef (entail queries)"
-    menu['8'] = "Select queries to ask"
-    menu['9'] = "Train models"
-    menu['10'] = "Load model"
-    menu['11'] = "Query KG with original query"
-    menu['12'] = "Query KG with a subset of entailed queries"
-    menu['13'] = "Query KG with all entailed queries (expensive)"
-    menu['14'] = "Query KGE with original query"
-    menu['15'] = "Query KGE with a subset of entailed queries"
-    menu['16'] = "Query KGE with all entailed queries (expensive)"
-    menu['17'] = "Compare results"
+    menu['6'] = "Import set of queries (JSON)"
+    menu['7'] = "Show entities and properties in TBox"
+    menu['8'] = "Run PerfectRef (entail queries)"
+    menu['9'] = "Select queries to ask"
+    menu['10'] = "Train models"
+    menu['11'] = "Load model"
+    menu['12'] = "Query KG with original query"
+    menu['13'] = "Query KG with a subset of entailed queries"
+    menu['14'] = "Query KG with all entailed queries (expensive)"
+    menu['15'] = "Query KGE with original query"
+    menu['16'] = "Query KGE with a subset of entailed queries"
+    menu['17'] = "Query KGE with all entailed queries (expensive)"
+    menu['18'] = "Compare results"
     menu['0'] = "Exit"
 
     while True:
@@ -918,11 +914,11 @@ def main():
             press_any_key()
         elif selection == '4':
             print("To be implemented")
-        elif selection == '5':
+        elif selection == '6':
             query_object = enter_query(tbox_ontology)
             if query_object is not None:
                 query = query_object["str"]
-        elif selection == '6':
+        elif selection == '7':
             clear()
             if not tbox_ontology == None:
                 show_tbox(tbox_ontology)
@@ -935,10 +931,10 @@ def main():
             else:
                 print("Please import a tbox first.")
             press_any_key()
-        elif selection == '7':
+        elif selection == '8':
             entailed_queries = pr.get_entailed_queries(t_box_path, query)
             entailed_queries_str = pr.parse_output(query, entailed_queries)
-        elif selection == '8':
+        elif selection == '9':
             if entailed_queries == None:
                 print("Please run PerfectRef first.")
             else:
@@ -952,12 +948,12 @@ def main():
                     queries_to_be_parsed.append(entailed_queries[id])
             parsed_entailed_queries_subset = parse_entailed_queries(queries_to_be_parsed)
                 
-        elif selection == '9':
+        elif selection == '10':
             training(transductive_models, project_name,
                      dataset, train, valid, test)
-        elif selection == '10':
-            current_model = load_model(tf, train, valid, test, project_name, dataset)
         elif selection == '11':
+            current_model = load_model(tf, train, valid, test, project_name, dataset)
+        elif selection == '12':
             if query is None:
                 print("Please enter a query first.")
                 press_any_key()
@@ -978,7 +974,7 @@ def main():
                 write_results_to_file(received_entities_kg_queries, query, transductive_models, project_name, dataset)
                 press_any_key()
 
-        elif selection == '12':
+        elif selection == '13':
             if parsed_entailed_queries_subset is None:
                 print("Please run PerfectRef first (7), and select subset (8).")
                 press_any_key()
@@ -999,7 +995,7 @@ def main():
                 write_results_to_file(received_entities_kg_queries, query, transductive_models, project_name, dataset)
                 press_any_key()
 
-        elif selection == '13':
+        elif selection == '14':
             if entailed_queries is None:
                 print("Please run PerfectRef first (7).")
             else:
@@ -1019,7 +1015,7 @@ def main():
                 print_kg_results(received_entities_kg_queries)
                 write_results_to_file(received_entities_kg_queries, query, transductive_models, project_name, dataset)
                 press_any_key()
-        elif selection == '14':
+        elif selection == '15':
             if current_model is None:
                 print("Please load a model (10) you want to utilize for prediction.")
                 press_any_key()
@@ -1027,7 +1023,7 @@ def main():
                 received_entities_kge_queries = new_approach(current_model,100, tf, train, valid, test, [query_object], tbox_ontology, a_box_path)
                 entities_df = combine_scores(received_entities_kge_queries, query, transductive_models, project_name, dataset)      
                 write_results_to_file_kge(entities_df, query, project_name)
-        elif selection == '15':
+        elif selection == '16':
             if current_model is None:
                 print("Please load a model (10) you want to utilize for prediction.")
                 press_any_key()
@@ -1042,7 +1038,7 @@ def main():
                 entities_df = combine_scores(received_entities_kge_queries, query, transductive_models, project_name, dataset)      
                 write_results_to_file_kge(entities_df, query, project_name)
         
-        elif selection == '16':
+        elif selection == '17':
             if entailed_queries is None:
                 print("\nRun PerfectRef first.")
                 press_any_key()
@@ -1055,7 +1051,7 @@ def main():
                 entities_df = combine_scores(received_entities_kge_queries, query, transductive_models, project_name, dataset)      
                 write_results_to_file_kge(entities_df, query, project_name)
 
-        elif selection == '17':
+        elif selection == '18':
             print("To be implemented")
         else:
             print("Unknown Option Selected! Select a number [0-15].")
