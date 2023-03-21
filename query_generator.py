@@ -215,14 +215,14 @@ def get_configuration(dataset,query_structure, query_structure_length, weights, 
                 is_concept = bool(random.getrandbits(1))
                 if is_concept:
                     third_atom = random.choices(concepts, weights=w_c)[0]
-                    return "q(?w) :- " + first_atom + "(?w)^" + second_atom + "(?w)" + third_atom + "(?w)"
+                    return "q(?w) :- " + first_atom + "(?w)^" + second_atom + "(?w)^" + third_atom + "(?w)"
                 else:
                     third_atom = random.choices(roles, weights=w_r)[0]
                     is_domain = bool(random.getrandbits(1))
                     if is_domain:
-                        return "q(?w) :- " + first_atom + "(?w)^" + second_atom + "(?w)" + third_atom + "(?w,?x)"
+                        return "q(?w) :- " + first_atom + "(?w)^" + second_atom + "(?w)^" + third_atom + "(?w,?x)"
                     else:
-                        return "q(?w) :- " + first_atom + "(?w)^" + second_atom + "(?w)" + third_atom + "(?x,?w)"
+                        return "q(?w) :- " + first_atom + "(?w)^" + second_atom + "(?w)^" + third_atom + "(?x,?w)"
             
             # if second atom is a role
             else:
@@ -570,32 +570,27 @@ def get_weights():
                 {'concepts': family_classes, 'roles': family_roles}
             }
 
+def main(testcase, number_of_queries_per_structure):
+    #init
+    query_structure = {1: '1p', 2: '2p', 3: '3p', 4: '2i', 5: '3i', 6: 'pi', 7: 'ip', 8: 'up', 9: '2u'}
+    query_length = {1: [1], 2: [2, 4, 9], 3: [3,5,6,7,8]}
+    queries = dict()
+    weights = get_weights()
+    datasets = ['family', 'dbpedia15k']
 
-##params
-number_of_queries_per_structure = 5
-#must correlate with an existing testcase from the master.py.
-testcase = '001'
+    #generate queries
+    for ds in datasets:
+        for structure in query_structure.values():
+            i = 0
+            temp_list = list()
+            while (i < number_of_queries_per_structure):
+                temp_list.append(get_configuration(ds, query_structure, query_length, weights, structure))
+                i += 1
+            queries[structure] = temp_list
 
-#init
-query_structure = {1: '1p', 2: '2p', 3: '3p', 4: '2i', 5: '3i', 6: 'pi', 7: 'ip', 8: 'up', 9: '2u'}
-query_length = {1: [1], 2: [2, 4, 9], 3: [3,5,6,7,8]}
-queries = dict()
-weights = get_weights()
-datasets = ['family', 'dbpedia15k']
-
-#generate queries
-for ds in datasets:
-    for structure in query_structure.values():
-        i = 0
-        temp_list = list()
-        while (i < number_of_queries_per_structure):
-            temp_list.append(get_configuration(ds, query_structure, query_length, weights, structure))
-            i += 1
-        queries[structure] = temp_list
-
-    file_name = "testcases/" + testcase + "/queries/" 'queries_' + ds + ".txt"
-    with open(file_name, 'w') as convert_file:
-        convert_file.write(json.dumps(queries, indent=2))
+        file_name = "testcases/" + testcase + "/queries/" + ds + '/queries_' + "k-" + str(number_of_queries_per_structure) + '.txt'
+        with open(file_name, 'w') as convert_file:
+            convert_file.write(json.dumps(queries, indent=2))
 
 
 

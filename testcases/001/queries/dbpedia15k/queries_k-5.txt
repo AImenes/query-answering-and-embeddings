@@ -1,0 +1,65 @@
+{
+  "1p": [
+    "q(?w) :- <http://dbpedia.org/ontology/governmentType>(?x,?w)",
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?w)",
+    "q(?w) :- <http://www.wikidata.org/entity/Q5>(?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/country>(?x,?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/birthPlace>(?w,?x)"
+  ],
+  "2p": [
+    "q(?w) :- <http://dbpedia.org/ontology/starring>(?x,?y)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?y)",
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?y,?x)^<http://dbpedia.org/ontology/previousWork>(?w,?y)",
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?w)^<http://www.wikidata.org/entity/Q486972>(?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/countySeat>(?y,?x)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?y)",
+    "q(?w) :- <http://www.w3.org/2000/01/rdf-schema#seeAlso>(?x,?y)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?y)"
+  ],
+  "3p": [
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?y)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?y,?w)^<http://www.wikidata.org/entity/Q486972>(?w)",
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?y,?x)^<http://dbpedia.org/ontology/associatedMusicalArtist>(?z,?y)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?z)",
+    "q(?w) :- <http://dbpedia.org/ontology/isPartOf>(?y,?x)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?y,?z)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?z,?w)",
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?y,?x)^<http://dbpedia.org/ontology/starring>(?y,?z)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?z)",
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?y,?x)^<http://dbpedia.org/ontology/developer>(?y,?z)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?z,?w)"
+  ],
+  "2i": [
+    "q(?w) :- <http://dbpedia.org/ontology/timeZone>(?x,?w)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?y,?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/hometown>(?w,?x)^<http://dbpedia.org/ontology/stylisticOrigin>(?y,?w)",
+    "q(?w) :- <http://www.w3.org/2000/01/rdf-schema#seeAlso>(?x,?w)^<http://dbpedia.org/ontology/musicComposer>(?y,?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/Island>(?w)^<http://schema.org/Place>(?w)",
+    "q(?w) :- <http://schema.org/Place>(?w)^<http://dbpedia.org/ontology/Place>(?w)"
+  ],
+  "3i": [
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?w)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?w)^<http://dbpedia.org/ontology/genre>(?w,?x)",
+    "q(?w) :- <http://schema.org/Place>(?w)^<http://dbpedia.org/ontology/PopulatedPlace>(?w)^<http://dbpedia.org/ontology/birthPlace>(?w,?x)",
+    "q(?w) :- <http://www.wikidata.org/entity/Q486972>(?w)^<http://dbpedia.org/ontology/Island>(?w)^<http://schema.org/Place>(?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/PopulatedPlace>(?w)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?x)^<http://dbpedia.org/ontology/creator>(?w,?x)",
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?x)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?x)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?w)"
+  ],
+  "pi": [
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?y)^<http://dbpedia.org/ontology/occupation>(?w,?y)^<http://dbpedia.org/ontology/country>(?w,?z)",
+    "q(?w) :- <http://dbpedia.org/ontology/starring>(?x,?y)^<http://dbpedia.org/ontology/recordLabel>(?y,?w)^<http://www.w3.org/2000/01/rdf-schema#seeAlso>(?w,?z)",
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?y)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?y)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?z)",
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?y)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?y,?w)^<http://www.w3.org/2000/01/rdf-schema#seeAlso>(?z,?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/starring>(?x,?w)^<http://dbpedia.org/ontology/Settlement>(?w)^<http://schema.org/Place>(?w)"
+  ],
+  "ip": [
+    "q(?w) :- <http://dbpedia.org/ontology/Location>(?x)^<http://dbpedia.org/ontology/PopulatedPlace>(?x)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x, ?w)",
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?z,?x)^<http://dbpedia.org/ontology/company>(?z,?y)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?z, ?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/instrument>(?x,?z)^<http://dbpedia.org/ontology/associatedBand>(?z,?y)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?z, ?w)",
+    "q(?w) :- <http://www.wikidata.org/entity/Q215627>(?x)^<http://dbpedia.org/ontology/Species>(?x)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x, ?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/starring>(?x,?z)^<http://dbpedia.org/ontology/officialLanguage>(?y,?z)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?z, ?w)"
+  ],
+  "up": [
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?z,?x) | <http://dbpedia.org/ontology/populationPlace>(?y,?z)^<http://dbpedia.org/ontology/occupation>(?z, ?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/starring>(?x,?z) | <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?y,?z)^<http://dbpedia.org/ontology/genre>(?z, ?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/Settlement>(?z) | <http://dbpedia.org/ontology/locationCountry>(?y,?z)^<http://www.w3.org/2000/01/rdf-schema#seeAlso>(?w, ?z)",
+    "q(?w) :- <http://dbpedia.org/ontology/type>(?z,?x) | <http://dbpedia.org/ontology/composer>(?z,?y)^<http://dbpedia.org/ontology/recordLabel>(?w, ?z)",
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?z) | <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?z,?y)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w, ?z)"
+  ],
+  "2u": [
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?x) | <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w, ?y)",
+    "q(?w) :- <http://dbpedia.org/ontology/genre>(?w,?x) | <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?y, ?w)",
+    "q(?w) :- <http://schema.org/Place>(?w) | <http://dbpedia.org/ontology/Astronaut>(?w)",
+    "q(?w) :- <http://www.wikidata.org/entity/Q486972>(?w) | <http://dbpedia.org/ontology/Astronaut>(?w)",
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?w) | <http://dbpedia.org/ontology/birthPlace>(?y, ?w)"
+  ]
+}

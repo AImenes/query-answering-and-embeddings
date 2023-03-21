@@ -1,0 +1,56 @@
+{
+  "1p": [
+    "q(?w) :- <http://dbpedia.org/ontology/Settlement>(?w)",
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?x)",
+    "q(?w) :- <http://www.wikidata.org/entity/Q5>(?w)",
+    "q(?w) :- <http://www.wikidata.org/entity/Q486972>(?w)"
+  ],
+  "2p": [
+    "q(?w) :- <http://dbpedia.org/ontology/director>(?w,?x)^<http://dbpedia.org/ontology/Economist>(?w)",
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?y)^<http://dbpedia.org/ontology/recordLabel>(?y,?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/genre>(?w,?x)^<http://dbpedia.org/ontology/Drama>(?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/instrument>(?w,?x)^<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson>(?w)"
+  ],
+  "3p": [
+    "q(?w) :- <http://dbpedia.org/ontology/genre>(?y,?x)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?y)^<http://schema.org/Place>(?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/birthPlace>(?x,?y)^<http://dbpedia.org/ontology/instrument>(?y,?w)^<http://dbpedia.org/ontology/Agent>(?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/developer>(?x,?y)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?y)^<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson>(?w)",
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?y)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?y)^<http://schema.org/Place>(?w)"
+  ],
+  "2i": [
+    "q(?w) :- <http://www.wikidata.org/entity/Q486972>(?w)^<http://dbpedia.org/ontology/PopulatedPlace>(?w)",
+    "q(?w) :- <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent>(?w)^<http://dbpedia.org/ontology/Person>(?w)",
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?x)^<http://dbpedia.org/ontology/distributor>(?y,?w)",
+    "q(?w) :- <http://www.wikidata.org/entity/Q215627>(?w)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?w)"
+  ],
+  "3i": [
+    "q(?w) :- <http://www.wikidata.org/entity/Q486972>(?w)^<http://xmlns.com/foaf/0.1/Person>(?w)<http://dbpedia.org/ontology/Person>(?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/PopulatedPlace>(?w)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?w)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?x)",
+    "q(?w) :- <http://dbpedia.org/ontology/team>(?w,?x)^<http://dbpedia.org/ontology/starring>(?w,?x)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?_x",
+    "q(?w) :- <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent>(?w)^<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent>(?w)<http://dbpedia.org/ontology/Island>(?w)"
+  ],
+  "pi": [
+    "q(?w) :- <http://dbpedia.org/ontology/influencedBy>(?x,?w)^<http://schema.org/Place>(?w)^<http://dbpedia.org/ontology/PopulatedPlace>(?w)",
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?w)^<http://dbpedia.org/ontology/Settlement>(?w)^<http://www.wikidata.org/entity/Q215627>(?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/religion>(?x,?y)^<http://dbpedia.org/ontology/starring>(?w,?y)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?z,?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/type>(?x,?y)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?y,?w)^<http://dbpedia.org/ontology/nationality>(?z,?w)"
+  ],
+  "ip": [
+    "q(?w) :- <http://dbpedia.org/ontology/Island>(?x)^<http://www.wikidata.org/entity/Q486972>(?x)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w, ?x)",
+    "q(?w) :- <http://dbpedia.org/ontology/Island>(?z)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?z,?y)^<http://dbpedia.org/ontology/genre>(?z, ?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/Island>(?z)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?z,?y)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w, ?z)",
+    "q(?w) :- <http://schema.org/Place>(?x)^<http://dbpedia.org/ontology/Location>(?x)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x, ?w)"
+  ],
+  "up": [
+    "q(?w) :- <http://dbpedia.org/ontology/deathPlace>(?z,?x) | <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?y,?z)^<http://dbpedia.org/ontology/almaMater>(?w, ?z)",
+    "q(?w) :- <http://dbpedia.org/ontology/Politician>(?x) | <http://dbpedia.org/ontology/Settlement>(?x)^<http://dbpedia.org/ontology/starring>(?x, ?w)",
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?z) | <http://dbpedia.org/ontology/deathPlace>(?z,?y)^<http://dbpedia.org/ontology/country>(?z, ?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/Island>(?z) | <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?z,?y)^<http://dbpedia.org/ontology/stylisticOrigin>(?w, ?z)"
+  ],
+  "2u": [
+    "q(?w) :- <http://www.wikidata.org/entity/Q215627>(?w) | <http://dbpedia.org/ontology/parentCompany>(?w, ?x)",
+    "q(?w) :- <http://dbpedia.org/ontology/Settlement>(?w) | <http://dbpedia.org/ontology/recordLabel>(?x, ?w)",
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?x) | <http://dbpedia.org/ontology/musicComposer>(?w, ?y)",
+    "q(?w) :- <http://www.wikidata.org/entity/Q215627>(?w) | <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x, ?w)"
+  ]
+}

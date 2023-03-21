@@ -1,0 +1,29 @@
+{
+  "1p": [
+    "q(?w) :- <http://dbpedia.org/ontology/Location>(?w)"
+  ],
+  "2p": [
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?y,?x)^<http://dbpedia.org/ontology/leaderName>(?y,?w)"
+  ],
+  "3p": [
+    "q(?w) :- <http://dbpedia.org/ontology/distributor>(?y,?x)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?y,?z)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?z)"
+  ],
+  "2i": [
+    "q(?w) :- <http://dbpedia.org/ontology/Species>(?w)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?w)"
+  ],
+  "3i": [
+    "q(?w) :- <http://schema.org/Place>(?w)^<http://dbpedia.org/ontology/Settlement>(?w)<http://dbpedia.org/ontology/starring>(?w,?x)"
+  ],
+  "pi": [
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?w)^<http://dbpedia.org/ontology/Place>(?w)^<http://www.wikidata.org/entity/Q486972>(?w)"
+  ],
+  "ip": [
+    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?z)^<http://dbpedia.org/ontology/populationPlace>(?y,?z)^<http://www.w3.org/2000/01/rdf-schema#seeAlso>(?w, ?z)"
+  ],
+  "up": [
+    "q(?w) :- <http://www.wikidata.org/entity/Q215627>(?x) | <http://dbpedia.org/ontology/Artist>(?x)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w, ?x)"
+  ],
+  "2u": [
+    "q(?w) :- <http://dbpedia.org/ontology/PopulatedPlace>(?w) | <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w, ?x)"
+  ]
+}

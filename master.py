@@ -5,10 +5,17 @@ from time import sleep
 import numpy as np
 import pandas as pd
 import torch
+import json
+import pickle
 
 # Import PerfectRef and OwlReady2
 import perfectref_v1 as pr
+from perfectref_v1 import Query, QueryBody
+from perfectref_v1 import AtomParser, AtomConcept, AtomRole, AtomConstant
+from perfectref_v1 import Variable, Constant
 from owlready2 import get_ontology
+import query_generator
+import query_parser
 
 
 # Import embedding related
@@ -262,6 +269,16 @@ def parse_entailed_queries(entailed_queries):
         parsed_queries.append(new_query)
     return parsed_queries
 
+def parse_generated_queries(queries_from_gen):
+    
+    for query_structure in queries_from_gen.keys():
+        for query in queries_from_gen[query_structure]:
+            break
+
+
+
+    return None
+
 def ready_to_run(ontology):
     if ontology == None:
         return False
@@ -283,29 +300,30 @@ def training(transductive_models, project_name, dataset, train, valid, test):
     epochs = [16,20,24]
     dims = [50,128,192]
     press_any_key()
-    for dim in dims:
-        for epoch in epochs:
-            for current_model in transductive_models:
-                #dim = int(input("Enter dimension for model %s: " % (current_model)))
-                #epoch = int(input("Enter number of epochs for model %s: " % (current_model)))
-                current_config = "testcases/" + project_name + "/models/dataset:" + dataset + "_model:" + current_model + "_dim:" + str(dim) + "_epoch:" + str(epoch)
+    #for dim in dims:
+    #    for epoch in epochs:
+    for current_model in transductive_models:
+        dim = int(input("Enter dimension for model %s: " % (current_model)))
+        epoch = int(input("Enter number of epochs for model %s: " % (current_model)))
+        current_config = "testcases/" + project_name + "/models/dataset:" + dataset + "_model:" + current_model + "_dim:" + str(dim) + "_epoch:" + str(epoch)
 
-                if os.path.exists(current_config):
-                    print(
-                        "Configuration already trained. Edit configuration or delete model directory.")
-                else:
-                    results = pipeline(
-                        training_loop='sLCWA',
-                        training=train,
-                        testing=test,
-                        random_seed=RANDOM_SEED,
-                        model='DistMult',
-                        model_kwargs=dict(embedding_dim=dim),
-                        epochs=epoch,
-                        device=get_device(),
-                    )
+        if os.path.exists(current_config):
+            print(
+                "Configuration already trained. Edit configuration or delete model directory.")
+        else:
+            results = pipeline(
+                training_loop='sLCWA',
+                training=train,
+                testing=test,
+                random_seed=RANDOM_SEED,
+                model=current_model,
+                model_kwargs=dict(embedding_dim=dim),
+                epochs=epoch,
+                dimensions=dim,
+                device=get_device(),
+            )
 
-                    results.save_to_directory(current_config)
+            results.save_to_directory(current_config)
 
     return None
 
@@ -361,7 +379,7 @@ def query_graph_roles(query,tf):
 def load_model(tf, train, valid, test, project_name, dataset):
     # load trained model
     model_number = int(
-        input("Enter 1 for TransE\tEnter 2 for BoxE\tEnter 3 RotatE\t(1-3):"))
+        input("Enter 1 for TransE\tEnter 2 for BoxE\tEnter 3 RotatE\tEnter 4 DistMult\tEnter 5 CompGCN\t(1-5):"))
     if model_number == 1:
         current_model = "TransE"
     elif model_number == 2:
@@ -387,7 +405,7 @@ def load_model(tf, train, valid, test, project_name, dataset):
         trained_model = load(model_path)
         print("model loaded successfully")
 
-        return trained_model
+        return trained_model, {'selected_model_name': current_model, 'dim': dim, 'epoch': epochs}
 
     return None
 
@@ -416,16 +434,16 @@ def new_approach(model, k, tf, train, valid, test, queries, tbox, aboxpath):
 
 def concepts(model,k, tf, train, valid, test, query, tbox, aboxpath):
     entities = dict()
-    entities[query['var1']['name']] = None
+    entities[query.get_var1().get_org_name()] = None
     X = query_graph(query, tbox, aboxpath)
     X = pd.DataFrame(data=X)
     # the IDs of the entities
     if not X.empty:
         entityIDs_of_matches = X.iloc[:, 1].values.tolist()
     else:
-        print("\nThis Ontology doesnt have any entities defined as %s. However, with rewriting the TBox will handle entailments." % (query['name']))
+        print("\nThis Ontology doesnt have any instances of concept %s. However, with rewriting the TBox will handle entailments." % (query.name))
         #press_any_key()
-        return entities[query['var1']['name']]
+        return entities[query.get_var1().get_org_name()]
 
     rdf_type_id = tf.relations_to_ids(relations=["<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"])[0]
     atom_entity_id = tf.entities_to_ids(entities=["<"+str(query['iri'])+">"])[0]
@@ -500,7 +518,7 @@ def concepts(model,k, tf, train, valid, test, query, tbox, aboxpath):
     print("Filtering predictions for concept %s.\n" % (query['name']))
     filter_results = predict.predict_triples(model=model, triples=new_triples).process(factory=tf).add_membership_columns(
         training=train, validation=valid, testing=test).df.sort_values(by=['score'], ascending=False)
-    #print(filter_results)
+
     entities[query['var1']['name']] = filter_results
 
     # - Append new results and its score to X
@@ -511,54 +529,58 @@ def concepts(model,k, tf, train, valid, test, query, tbox, aboxpath):
 def roles(model, k, tf, train, valid, test, query, tbox, aboxpath):
     
     entities = dict()
-    entities[query['var1']['name']] = None
-    entities[query['var2']['name']] = None
+    entities[query.get_var1().get_org_name()] = None
+    entities[query.get_var2().get_org_name()] = None
     entities['queried_heads'] = False
     entities['queried_tails'] = False
-    entities['var_for_heads'] = query['var1']['name']
-    entities['var_for_tails'] = query['var2']['name']
+    entities['var_for_heads'] = query.get_var1().get_org_name()
+    entities['var_for_tails'] = query.get_var2().get_org_name()
+    
     try:
-        relation = tf.relations_to_ids(relations=["<"+query['iri']+">"])[0]
+        relation = tf.relations_to_ids(relations=["<"+query.iri+">"])[0]
         new_factory = tf.new_with_restriction(relations=[relation])
     except:
         return entities
 
     # Domain, like hasCousin(x, _)
-    if query['var1']['is_bound']:
+    if query.get_var1().get_bound():
         tails = np.unique(new_factory.mapped_triples[:, 2], return_index=False)
         dataset = predict.PartiallyRestrictedPredictionDataset(
             tails=tails, relations=relation, target="head")
         consumer = predict.TopKScoreConsumer(k=k)
-        print("\nCurrently predicting for role %s.\n" % (query['name']))
+        print("\nCurrently predicting for role %s.\n" % (query.name))
         predict.consume_scores(model, dataset, consumer)
         score_pack = consumer.finalize().process(tf).add_membership_columns(
             training=train, validation=valid, testing=test)
         #print(type(score_pack))
         Y = score_pack.df
         #print(Y)
-        entities[query['var1']['name']] = Y
+        # entities[query.get_var1().get_org_name()] = Y
+        entities['head'] = Y
         entities['queried_heads'] = True
 
 
     # Range, like hasCousin(_, x)
-    if query['var2']['is_bound']:
+    if query.get_var2().get_bound():
         heads = np.unique(new_factory.mapped_triples[:, 0], return_index=False)
         dataset = predict.PartiallyRestrictedPredictionDataset(
             heads=heads, relations=relation, target="tail")
         consumer = predict.TopKScoreConsumer(k=k)
-        print("\nCurrently predicting for role %s.\n" % (query['name']))
+        print("\nCurrently predicting for role %s.\n" % (query.name))
         predict.consume_scores(model, dataset, consumer)
         score_pack = consumer.finalize().process(tf).add_membership_columns(
             training=train, validation=valid, testing=test)
         print(type(score_pack))
         YY = score_pack.df
         print(YY)
-        entities[query['var2']['name']] = YY
+        #entities[query.get_var2().get_org_name()] = YY
+        entities['tail'] = YY
         entities['queried_tails'] = True
 
 
     # Role inclusion, like hasCousin(x, y)
-    if query['var1']['is_bound'] and query['var2']['is_bound']:
+    if query.get_var1().get_bound() and query.get_var2().get_bound():
+        #Already covered by the two latter.
         pass
 
     return entities
@@ -676,7 +698,7 @@ def write_results_to_file_kge(entity_df, original_query, project_name):
         file_name = path + original_query + "_kge_"+str(key)+".txt"
         entity_df[key].to_csv(path_or_buf=file_name)
 
-def combine_scores(queries, original_query, transductive_models, project_name, dataset):
+def combine_scores_old(queries, original_query, transductive_models, project_name, dataset):
     list_of_variables = list()
     merged_df = dict()
     for q in queries:
@@ -777,8 +799,121 @@ def combine_scores(queries, original_query, transductive_models, project_name, d
         print(entities_df[bound_variable])
     press_any_key()
 
-
     return entities_df
+
+def update_prediction_pickle(already_predicted_atoms, filepath):
+    with open(filepath, 'wb') as file:
+        pickle.dump(already_predicted_atoms, file, protocol=pickle.HIGHEST_PROTOCOL)
+
+def query_for_different_structures(queries, already_predicted_atoms, dataset, model,model_params, k, tf, train, valid, test, tbox, abox, partial_prediction_path):  
+    conjunction_types = ['1p', '2p', '3p', '2i', '3i', 'pi', 'ip']
+    disjunction_types = ['up','2u']
+
+    print("Current structure: %s\n" % (queries['query_structure']))
+
+    if queries['query_structure'] in conjunction_types:
+        for query in queries['rewritings']:
+            for atom in query.get_body():
+                current_config = {
+                    'iri': atom.iri,
+                    'type': 'undeclared',
+                    'dataset': dataset,
+                    'model_name': model_params['selected_model_name'],
+                    'model_dim': model_params['dim'],
+                    'model_epoch': model_params['epoch'],
+                    'prediction_cutoff': k,
+                    'domain': False,
+                    'range': False
+                    }    
+                
+                #If the atom is a concept
+                if isinstance(atom, AtomConcept):
+                    current_config['type'] = 'concept'
+                    not_predicted = True
+                    # Check if the Concept is already predicted
+                    i = 0
+                    while not_predicted and i < len(already_predicted_atoms):
+                        if current_config == already_predicted_atoms[i]['config']:
+                            #If so, return the df
+                            atom.set_answer(already_predicted_atoms[i]['result'])
+                            not_predicted = False
+                        i += 1
+                    
+                    if not_predicted:
+                        # If not, perform prediction on the Concept
+                        temp = concepts(model, k, tf, train, valid, test, atom, tbox, abox)
+                        atom.set_answer(temp)
+                        already_predicted_atoms.append({'config': current_config, 'result': temp})
+                        update_prediction_pickle(already_predicted_atoms, partial_prediction_path)
+
+                # If the atom is a a role
+                if isinstance(atom, AtomRole):
+                    #Current role config
+                    current_config['type'] = 'role'            
+                    if atom.get_var1().get_bound():
+                        current_config['domain'] = True
+                    if atom.get_var2().get_bound():
+                        current_config['range'] = True
+
+                    not_predicted = True
+                    # Check if the Role is already predicted
+                    i = 0
+                    while not_predicted and i < len(already_predicted_atoms):
+                        if current_config == already_predicted_atoms[i]['config']:
+                            #If so, return the df
+                            atom.set_answer(already_predicted_atoms[i]['result'])
+                            not_predicted = False
+                        i += 1
+
+                    if not_predicted:       
+                        # If not, perform prediction on Role
+                        temp = roles(model, k, tf, train, valid, test, atom, tbox, abox)
+                        atom.set_answer(temp)
+                        already_predicted_atoms.append({'config': current_config, 'result': temp})
+                        update_prediction_pickle(already_predicted_atoms, partial_prediction_path)
+    
+    if queries['query_structure'] in disjunction_types:
+        return queries
+    return queries
+
+
+def combine_scores(pred_query):
+    if pred_query['query_structure'] == '1p':
+        return pred_query
+    if pred_query['query_structure'] == '2p':
+        return pred_query
+    
+    if pred_query['query_structure'] == '3p':
+        print("Stop")
+        for q in pred_query['rewritings']:
+            body = q.get_body()
+            #Check if q is answerable
+            is_answerable = True
+            for g in body:
+                if g.get_answer() is None:
+                    is_answerable = False
+
+            if is_answerable:
+                i = len(body) - 1
+                while i >= 0:
+                    print(body[i].get_answer())
+                    i -= 1
+
+        return pred_query
+    
+    if pred_query['query_structure'] == '2i':
+        return pred_query
+    if pred_query['query_structure'] == '3i':
+        return pred_query
+    if pred_query['query_structure'] == 'pi':
+        return pred_query
+    if pred_query['query_structure'] == 'ip':
+        return pred_query
+    if pred_query['query_structure'] == 'up':
+        return pred_query
+    if pred_query['query_structure'] == '2u':
+        return pred_query
+
 
 def main():
     # SETTINGS
@@ -794,21 +929,33 @@ def main():
     tf = TriplesFactory.from_path(a_box_path + "all.txt")
     train, valid, test = tf.split([0.8, 0.1, 0.1], random_state=RANDOM_SEED, method="cleanup")
     current_model = None
+    current_model_params = {'selected_model_name': None, 'dim': None, 'epoch': None}
     entailed_queries = None
     parsed_entailed_queries = None
+    parsed_generated_queries = None
     parsed_entailed_queries_subset = None
     received_entities_kg_queries = None
     received_entities_kge_queries = None
     atom_mapping = [None]
+    number_of_queries_per_structure = None
+    queries_from_generation = None
+
+    partial_results_path  = "testcases/" + project_name + "/already_predicted_atoms.pickle"
+    
+    if os.path.exists(partial_results_path):
+        with open(partial_results_path, 'rb') as file:
+            already_predicted_atoms = pickle.load(file)
+    else:
+        already_predicted_atoms = list()
 
     # menu
     menu = {}
     menu['1'] = "Create new test case or extend to existing one"
     menu['2'] = "Change dataset"
     menu['3'] = "Load TBox"
-    menu['4'] = "Load ABox"
-    menu['5'] = "Change query"
-    menu['6'] = "Import set of queries (JSON)"
+    menu['4'] = "Generate queries"
+    menu['5'] = "Import set of queries (JSON)"
+    menu['6'] = "Change query"
     menu['7'] = "Show entities and properties in TBox"
     menu['8'] = "Run PerfectRef (entail queries)"
     menu['9'] = "Select queries to ask"
@@ -913,7 +1060,28 @@ def main():
             print("\n\nTBox loaded successfully.")
             press_any_key()
         elif selection == '4':
-            print("To be implemented")
+            pth = "testcases/" + project_name + "/queries/" + dataset + "/"
+            filename = "queries" + "_k-" + str(number_of_queries_per_structure) + ".txt"
+            full_pth = pth + filename
+            number_of_queries_per_structure = int(input("Please input the number of queries to generate per query type (1-100): "))
+            if not os.path.exists(full_pth):
+                query_generator.main(project_name, number_of_queries_per_structure)
+                print("Queries successfully created, and can be found in the testcases-folder.")
+            else:
+                print("A query configuration for k = " + str(number_of_queries_per_structure) + " already exists.")
+            press_any_key()
+        elif selection == '5':
+            number_of_queries_per_structure = int(input("Please input the number of queries to generate per query type (1-100): "))
+            query_path = "testcases/" + project_name + "/queries/" + dataset + "/queries_k-" + str(number_of_queries_per_structure) + ".txt"
+            parsed_generated_queries = dict()
+            with open(query_path) as json_file:
+                queries_from_generation = json.load(json_file)
+            for key in queries_from_generation.keys():
+                parsed_generated_queries[key] = list()
+                for q in queries_from_generation[key]:
+                    parsed_generated_queries[key].append(query_parser.query_structure_parsing(q, key, tbox_ontology))
+            press_any_key()
+
         elif selection == '6':
             query_object = enter_query(tbox_ontology)
             if query_object is not None:
@@ -952,7 +1120,7 @@ def main():
             training(transductive_models, project_name,
                      dataset, train, valid, test)
         elif selection == '11':
-            current_model = load_model(tf, train, valid, test, project_name, dataset)
+            current_model, current_model_params = load_model(tf, train, valid, test, project_name, dataset)
         elif selection == '12':
             if query is None:
                 print("Please enter a query first.")
@@ -1021,7 +1189,7 @@ def main():
                 press_any_key()
             else:
                 received_entities_kge_queries = new_approach(current_model,100, tf, train, valid, test, [query_object], tbox_ontology, a_box_path)
-                entities_df = combine_scores(received_entities_kge_queries, query, transductive_models, project_name, dataset)      
+                entities_df = combine_scores_old(received_entities_kge_queries, query, transductive_models, project_name, dataset)      
                 write_results_to_file_kge(entities_df, query, project_name)
         elif selection == '16':
             if current_model is None:
@@ -1035,7 +1203,7 @@ def main():
                 press_any_key()
             else:
                 received_entities_kge_queries = new_approach(current_model,100, tf, train, valid, test, parsed_entailed_queries_subset, tbox_ontology, a_box_path)
-                entities_df = combine_scores(received_entities_kge_queries, query, transductive_models, project_name, dataset)      
+                entities_df = combine_scores_old(received_entities_kge_queries, query, transductive_models, project_name, dataset)      
                 write_results_to_file_kge(entities_df, query, project_name)
         
         elif selection == '17':
@@ -1048,13 +1216,67 @@ def main():
             else:
                 parsed_entailed_queries = parse_entailed_queries(entailed_queries)
                 received_entities_kge_queries = new_approach(current_model,100, tf, train, valid, test, parsed_entailed_queries, tbox_ontology, a_box_path)
-                entities_df = combine_scores(received_entities_kge_queries, query, transductive_models, project_name, dataset)      
+                entities_df = combine_scores_old(received_entities_kge_queries, query, transductive_models, project_name, dataset)      
                 write_results_to_file_kge(entities_df, query, project_name)
 
         elif selection == '18':
-            print("To be implemented")
+            if parsed_generated_queries is None or current_model is None:
+                print("Import a set of queries first (option 5) and a model (option 11).")
+                press_any_key()
+            else:
+                #filename
+                pth = "testcases/" + project_name + "/queries/" + dataset + "/"
+                filename = "queries" + "_k-" + str(number_of_queries_per_structure) + "_parsed_and_rewritten.pickle"
+                full_pth = pth + filename
+                #Reformulate
+                # if exists
+                if not os.path.exists(full_pth):      
+                    #for each query structure
+                    for query_structure in parsed_generated_queries.keys():
+
+                        #for each query in that structure
+                        for query_dict in parsed_generated_queries[query_structure]:
+
+                            print("Performing PerfectRef rewriting for structure " + query_structure + "...")
+
+                            #if the query structure is not up or 2u
+                            if not (query_structure == 'up' or query_structure == '2u'):
+                            
+                                #perform PerfectRef
+                                query_dict['rewritings'] = pr.get_entailed_queries(t_box_path, query_dict['q1'], False)
+                            else:
+                                temp1 = pr.get_entailed_queries(t_box_path, query_dict['q1'], False)
+                                temp2 = pr.get_entailed_queries(t_box_path, query_dict['q2'], False)
+                                query_dict['rewritings'] = temp1 + temp2
+
+                    
+                    with open(full_pth, 'wb') as handle:
+                        pickle.dump(parsed_generated_queries, handle, protocol=pickle.HIGHEST_PROTOCOL)
+                else:
+                    print("\n Reformulation already exists. Loaded pickle for this configuration. Delete or rename the pickle file if you want to redo the reformulation. \n")
+                    with open(full_pth, 'rb') as handle:
+                        parsed_generated_queries = pickle.load(handle)
+
+                #Predict
+                #for each query structure
+                for query_structure in parsed_generated_queries.keys():
+
+                    #for each query in that structure
+                    for query_dict in parsed_generated_queries[query_structure]:
+                        query_dict = query_for_different_structures(query_dict,already_predicted_atoms,dataset,current_model, current_model_params, 100, tf, train, valid, test, tbox_ontology, a_box_path, partial_results_path)
+
+                print("debug_stop")
+                #Combine scores
+                for query_structure in parsed_generated_queries.keys():
+
+                    #for each query in that structure
+                    for query_dict in parsed_generated_queries[query_structure]:
+                        query_dict = combine_scores(query_dict)
+
+                print("ohboi")
+
         else:
-            print("Unknown Option Selected! Select a number [0-15].")
+            print("Unknown Option Selected! Select a number [0-18].")
             press_any_key()
 
 
