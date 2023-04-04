@@ -329,9 +329,9 @@ def write_results_to_file_kge(entity_df, original_query, project_name):
         file_name = path + original_query + "_kge_"+str(key)+".txt"
         entity_df[key].to_csv(path_or_buf=file_name)
 
-def update_prediction_pickle(already_predicted_atoms, filepath):
+def update_prediction_pickle(structure, filepath):
     with open(filepath, 'wb') as file:
-        pickle.dump(already_predicted_atoms, file, protocol=pickle.HIGHEST_PROTOCOL)
+        pickle.dump(structure, file, protocol=pickle.HIGHEST_PROTOCOL)
 
 def t_norm(a, b):
     return a*b

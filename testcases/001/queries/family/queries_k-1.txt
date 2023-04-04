@@ -1,5 +1,5 @@
 {
-"2i": [
-    "q(?w) :- <https://www.wikidata.org/prop/P3373>(?w,?x)^<https://www.wikidata.org/prop/P22>(?y,?w)"
+"3p": [
+    "q(?w) :- <https://www.wikidata.org/prop/P22>(?y,?x)^<https://www.wikidata.org/prop/P3373>(?y,?z)^<https://www.wikidata.org/prop/P40>(?z,?w)"
   ]
 }

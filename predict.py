@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import pickle
 import torch
 
 from pykeen import predict
@@ -10,24 +9,43 @@ from scipy.special import expit
 from kglookup import *
 from utilities import *
 
-def concepts(dataset, model,k, tf, train, valid, test, query, tbox, aboxpath, candidates = {'variable': None, 'target': None, 'entities': None}):
-    entities = dict()
-    entities[query.get_var1().get_org_name()] = None
-    entities['queried_heads'] = query.get_var1().get_bound()
-    entities['var_for_heads'] = query.get_var1().get_org_name()
-    X = query_graph_concepts(query, dataset, aboxpath)
+
+"""
+
+The prediction of queries
+
+In this file, we find the methods utilized for prediction.
+
+We define a term 'base case' as:
+ - For concepts:
+    - All concepts that have a bound variable (Which should be all concepts. Otherwise there is something wrong.)
+ - For roles:
+    - All roles where exactly one of the variables is unbound. This means that the atom is not used in a projection step.
+
+We start of by identifying all the base-cases used.
+
+
+"""
+
+#Predict base case for concepts
+def concepts(dataset, model,k, tf, train, valid, test, atom, aboxpath):
+    
+    # get candidates if rdf_type exists in the ABox, otherwise return None.
+    X = query_graph_concepts(atom, dataset, aboxpath)
     X = pd.DataFrame(data=X)
 
     # the IDs of the entities
     if not X.empty:
         entityIDs_of_matches = X.iloc[:, 1].values.tolist()
     else:
-        print("\nThis Ontology doesnt have any instances of concept %s. However, with rewriting the TBox will handle entailments." % (query.name))
-        #press_any_key()
-        return entities
+        print("\nThis Ontology doesnt have any instances of concept %s. However, with rewriting the TBox will handle entailments." % (atom.name))
+        
+        #Return empty Dataframe on same format as base-cases dataframes.
+        cols = ['head_id', 'head_label', 'relation_id', 'relation_label', 'tail_id', 'tail_label', 'score', 'in_training', 'in_validation', 'in_testing']
+        return pd.DataFrame(columns=cols)
 
     rdf_type_id = tf.relations_to_ids(relations=["<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"])[0]
-    atom_entity_id = tf.entities_to_ids(entities=["<"+str(query.iri)+">"])[0]
+    atom_entity_id = tf.entities_to_ids(entities=["<"+str(atom.iri)+">"])[0]
 
     head_triples = tf.mapped_triples[np.where(np.isin(tf.mapped_triples[:,0], entityIDs_of_matches))]
     head_relations = np.unique(head_triples[:,1], return_index=False)
@@ -42,7 +60,7 @@ def concepts(dataset, model,k, tf, train, valid, test, query, tbox, aboxpath, ca
     dataset = predict.PartiallyRestrictedPredictionDataset(
         heads=entityIDs_of_matches, relations=head_relations, target="tail")
     consumer = predict.TopKScoreConsumer(k=k)
-    print("\nStep 1/4:\tCurrently predicting for concept %s.\n" % (query.name))
+    print("\nPredicting for concept %s, where k = %i. Step 1/5\n" % (atom.name, k))
     predict.consume_scores(model, dataset, consumer)
     score_pack = consumer.finalize().process(tf).add_membership_columns(
         training=train, validation=valid, testing=test)
@@ -53,7 +71,7 @@ def concepts(dataset, model,k, tf, train, valid, test, query, tbox, aboxpath, ca
     dataset = predict.PartiallyRestrictedPredictionDataset(
         tails=predicted_tails, relations=head_relations, target="head")
     consumer = predict.TopKScoreConsumer(k=k)
-    print("\nStep 2/4:\tCurrently predicting for concept %s.\n" % (query.name))
+    print("\nPredicting for concept %s, where k = %i. Step 2/5\n" % (atom.name, k))
     predict.consume_scores(model, dataset, consumer)
     score_pack = consumer.finalize().process(tf).add_membership_columns(
         training=train, validation=valid, testing=test)
@@ -67,7 +85,7 @@ def concepts(dataset, model,k, tf, train, valid, test, query, tbox, aboxpath, ca
     dataset = predict.PartiallyRestrictedPredictionDataset(
         tails=entityIDs_of_matches, relations=tail_relations, target="head")
     consumer = predict.TopKScoreConsumer(k=k)
-    print("\nStep 3/4:\tCurrently predicting for concept %s.\n" % (query.name))
+    print("\nPredicting for concept %s, where k = %i. Step 3/5\n" % (atom.name, k))
     predict.consume_scores(model, dataset, consumer)
     score_pack = consumer.finalize().process(tf).add_membership_columns(
         training=train, validation=valid, testing=test)
@@ -76,7 +94,7 @@ def concepts(dataset, model,k, tf, train, valid, test, query, tbox, aboxpath, ca
 
     dataset = predict.PartiallyRestrictedPredictionDataset(heads=H, relations=tail_relations, target="tail")
     consumer = predict.TopKScoreConsumer(k=k)
-    print("\nStep 4/4:\tCurrently predicting for concept %s.\n" % (query.name))
+    print("\nPredicting for concept %s, where k = %i. Step 4/5\n" % (atom.name, k))
     predict.consume_scores(model, dataset, consumer)
     score_pack = consumer.finalize().process(tf).add_membership_columns(
         training=train, validation=valid, testing=test)
@@ -96,95 +114,52 @@ def concepts(dataset, model,k, tf, train, valid, test, query, tbox, aboxpath, ca
     new_triples = TriplesFactory(
         temp_tensor, entity_to_id=tf.entity_to_id, relation_to_id=tf.relation_to_id)
 
-    print("Filtering predictions for concept %s.\n" % (query.name))
+    print("\Filtering predictions for concept %s, where k = %i. Step 5/5\n" % (atom.name, k))
     filter_results = predict.predict_triples(model=model, triples=new_triples).process(factory=tf).add_membership_columns(
         training=train, validation=valid, testing=test).df.sort_values(by=['score'], ascending=False)
-    filter_results['still_valid'] = filter_results[["in_training", "in_validation", "in_testing"]].any(axis=1)
-    filter_results['score_calibrated'] = filter_results['score'].apply(expit)
-    filter_results['score_combined'] = filter_results['score_calibrated']
-    entities['head'] = filter_results
+    #filter_results['still_valid'] = filter_results[["in_training", "in_validation", "in_testing"]].any(axis=1)
+    #filter_results['score_calibrated'] = filter_results['score'].apply(expit)
+    #filter_results['score_combined'] = filter_results['score_calibrated']
+    #entities['head'] = filter_results
 
     # - Append new results and its score to X
 
     # return X
-    return entities
+    return filter_results
 
-def roles(model, k, tf, train, valid, test, query, tbox, aboxpath, candidates = {'variable': None, 'target': None, 'entities': None}):
-    
-    entities = dict()
-    entities[query.get_var1().get_org_name()] = None
-    entities[query.get_var2().get_org_name()] = None
-    entities['queried_heads'] = False
-    entities['queried_tails'] = False
-    entities['var_for_heads'] = query.get_var1().get_org_name()
-    entities['var_for_tails'] = query.get_var2().get_org_name()
-    
-    # TripleFactory creation for the relevant role.
-    try:
-        relation = tf.relations_to_ids(relations=["<"+query.iri+">"])[0]
-        new_factory = tf.new_with_restriction(relations=[relation])
-    except:
-        return entities
-    
-    #If this is a projection step, then we have input candidates for the next iteration
-    if not candidates['entities'] is None:
-        # if the variable from the previous atom is equal to the head variable in this atom, we predict tails
-        if candidates['variable'] == entities['var_for_heads']:
-            if candidates['target'] == 'head':
-                head_entities = candidates['entities']['head_id'].to_list()
-            if candidates['target'] == 'tail':
-                head_entities = candidates['entities']['tail_id'].to_list()
-            dataset = predict.PartiallyRestrictedPredictionDataset(heads=head_entities, relations=relation, target="tail")
+#Predict base case for roles
+def roles(model, k, tf, train, valid, test, atom, target):     
+    # TripleFactory creation for the relevant role. 
+    relation = tf.relations_to_ids(relations=["<"+atom.iri+">"])[0]
+    new_factory = tf.new_with_restriction(relations=[relation])
 
-        #We predict the heads with the tails
-        elif candidates['variable'] == entities['var_for_tails']:     
-            if candidates['target'] == 'head':
-                tail_entities = candidates['entities']['head_id'].to_list()
-            if candidates['target'] == 'tail':
-                tail_entities = candidates['entities']['tail_id'].to_list()
-            dataset = predict.PartiallyRestrictedPredictionDataset(tails=tail_entities, relations=relation, target="head")
+    #Creating the dataset with respect to the target
+    if target == 'head':
+        tail_entities = np.unique(new_factory.mapped_triples[:, 2], return_index=False)
+        dataset = predict.PartiallyRestrictedPredictionDataset(tails=tail_entities, relations=relation, target="head")
+    if target == 'tail':
+        head_entities = np.unique(new_factory.mapped_triples[:, 0], return_index=False)
+        dataset = predict.PartiallyRestrictedPredictionDataset(heads=head_entities, relations=relation, target="tail")
 
-    #If no candidates, we select them from the ABox. Nececssary for step 1.
-    else:
-        # Even if both cases can trigger in the code, its never the case that the first atom has two bound variables.
-        if query.get_var1().get_bound():
-            tail_entities = np.unique(new_factory.mapped_triples[:, 2], return_index=False)
-            dataset = predict.PartiallyRestrictedPredictionDataset(tails=tail_entities, relations=relation, target="head")
-        if query.get_var2().get_bound():
-            head_entities = np.unique(new_factory.mapped_triples[:, 0], return_index=False)
-            dataset = predict.PartiallyRestrictedPredictionDataset(heads=head_entities, relations=relation, target="tail")
-
+    # Perform prediction using PyKEEN Predict.
     consumer = predict.TopKScoreConsumer(k=k)
-    print("\nCurrently predicting for role %s.\n" % (query.name))
+    print("\nPrediction base case for role %s, where k = %i.\n" % (atom.name, k))
     predict.consume_scores(model, dataset, consumer)
     score_pack = consumer.finalize().process(tf).add_membership_columns(training=train, validation=valid, testing=test)
-    Y = score_pack.df.copy()
-    #calibrate with the logistic sigmoid function, expit.
-    print(Y)
-    Y['still_valid'] = Y[["in_training", "in_validation", "in_testing"]].any(axis=1)
-    print(Y)
-    Y['score_calibrated'] = Y['score'].apply(expit)
-    Y['score_combined'] = Y['score_calibrated']
-    
-    # Domain, like hasCousin(x, _)
-    if query.get_var1().get_bound() and (candidates['variable'] != entities['var_for_heads']):
-        
-        # Only store the distinct answer entities with the best score. 
-        Y_head = Y.drop_duplicates(subset=["head_id"],keep='first', ignore_index=True)
-        print(Y_head, Y_head.shape)
-        entities['head'] = Y_head
-        entities['queried_heads'] = True
+    role_df = score_pack.df
 
-    # Range, like hasCousin(_, x)
-    if query.get_var2().get_bound() and (candidates['variable'] != entities['var_for_tails']):
-        
-        # Only store the distinct answer entities with the best score. 
-        Y_tail = Y.drop_duplicates(subset=["tail_id"],keep='first', ignore_index=True)
-        print(Y_tail, Y_tail.shape)
-        entities['tail'] = Y_tail
-        entities['queried_tails'] = True
+    # We want the score between 0 and 1. We calibrate it using logistic sigmoid function, and add it as a column
+    role_df['score_calibrated'] = role_df['score'].apply(expit)
 
-    return entities
+    # We add a column to check if at least one of the three subsets are true. This will be used to verify in the end if each atom prediction in a query has returned a true prediction along the way.
+    role_df['still_valid'] = role_df[["in_training", "in_validation", "in_testing"]].any(axis=1)
+
+    # Return the dataframe role_df
+    return role_df
+
+# Project the previous
+def projection():
+    return None
 
 #Intersect dataframe df1 and df2 and return the final dataframe with the top scores
 def intersection(df1, df2):
@@ -208,9 +183,7 @@ def disjunction(df1, df2):
 
     return entities
 
-# Project the previous
-def projection():
-    return None
+
 
 #Perform prediction
 def prediction():
@@ -222,40 +195,66 @@ def prediction():
 
     return None
 
+def new_base_case(base_cases, config):
+    for b in base_cases:
+        if b['config'] == config:
+            return False
+    return True
+
 # Handle the base-prediction cases
-def base_predictions(query, bases, current_config):
+def base_predictions(query, base_cases, base_case_path, dataset, model, model_params, k, tf, train, valid, test, aboxpath):
     
     #for each atom in query
-    for g in query:
+    for g in query.body:
 
-        # for roles
+        #CONCEPTS
+        if isinstance(g, AtomConcept):
+
+            #if the concept is bound (which should always be the case)
+            if g.var1.bound:
+
+                current_config = {'dataset': dataset, 'model': model_params, 'k': k, 'iri': g.iri, 'target': 'head'}
+
+                if new_base_case(base_cases, current_config):
+                    predicted_entities_df = concepts(dataset, model, k, tf, train, valid, test, g, aboxpath)
+                
+
+        #ROLES
         if isinstance(g, AtomRole):
 
             # if it has an unbound, and target is tail
             if g.var1.unbound and g.var2.bound:
-
-                # predict
-                result = pd.Dataframe()
-
-                # store in bases
+                
+                current_config = {'dataset': dataset, 'model': model_params, 'k': k, 'iri': g.iri, 'target': 'tail'}
+                
+                if new_base_case(base_cases, current_config):
+                    predicted_entities_df = roles(model, k, tf, train, valid, test, g, current_config['target'])
+                
             
             # if it has an unbound, and target is head
             if g.var2.unbound and g.var1.bound:
 
-                # predict
-                break
-                # store in bases
+                current_config = {'dataset': dataset, 'model': model_params, 'k': k, 'iri': g.iri, 'target': 'head'}
 
-        elif isinstance(g, AtomConcept):
+                if new_base_case(base_cases, current_config):
+                    predicted_entities_df = roles(model, k, tf, train, valid, test, g, current_config['target'])
 
-            #if the concept is bound (which should always be the case)
-            if g.var1.bound:
-                break
+        
+        #add the prediction to the list of dictionaries, base_cases.
+        if new_base_case(base_cases, current_config):
+            base_cases.append({'config': current_config, 'entities_df': predicted_entities_df})
+            update_prediction_pickle(base_cases, base_case_path)
 
-    return bases
+    return base_cases
 
 # Remove head_id, tail_ids and subsitite with entity_id
 def standardize_dataframe():
+    #Add column of expit
+
+    #remove and rename columns
+
+    #return the dataframe
+    
     return None
 
 def combine_scores(previous_atom, current_atom):
@@ -358,7 +357,7 @@ def combine_scores(previous_atom, current_atom):
 def extract_boundness_of_query_variables(query):
     boundness = dict()
 
-    for atom in query:
+    for atom in query.body:
         if not atom.var1.original_entry_name in boundness:
             boundness[atom.var1.original_entry_name] = {
                 'unbound': atom.var1.unbound,
@@ -366,7 +365,7 @@ def extract_boundness_of_query_variables(query):
                 'distinguished': atom.var1.distinguished
             }
         
-        if isinstance(query, AtomRole):
+        if isinstance(atom, AtomRole):
             if not atom.var2.original_entry_name in boundness:
                 boundness[atom.var2.original_entry_name] = {
                     'unbound': atom.var2.unbound,
@@ -376,42 +375,40 @@ def extract_boundness_of_query_variables(query):
 
     return boundness
 
-    
-
-def query_pipeline(query):
+def query_pipeline(query, base_cases, base_cases_path, dataset, model, model_params, k, tf, train, valid, test, aboxpath):
 
     #identify the distinguished variable
-    distinguished = '?w'
+    distinguished_variable = query['q1'].head.var1.original_entry_name
     
     ## Performing base-case predictions ##
     #   if one of the variables is unbound, then we know its a 'root leaf', and can safely be predicted initially.
     #   We call these atoms base-predictions, and these can be stored for later lookups as long as we save the parameters used for the prediction.
     #   This we do with the current-config dictionary.
-  
-    someting = base_predictions
+    for querybody in query['rewritings']:
+            base_cases = base_predictions(querybody, base_cases, base_cases_path, dataset, model, model_params, k, tf, train, valid, test, aboxpath)
 
-    #   We write to file for a latter execution of this code.
-    # write_to_some_file(someting)
-    
-    # Identify the variables in the current query, and create a boundness-dictionary which keeps track of the 
+    # For each query formulation, identify the variables in the current query, and create a boundness-dictionary which keeps track of the 
     # entities bound to a variable
-    boundness = extract_boundness_of_query_variables
-
-    # Bind base-predictions to variables
+    for querybody in query['rewritings']:
+        entities = dict()
+        boundness = extract_boundness_of_query_variables(querybody)
+        
+        # Bind base-predictions to variables and standardize the dataframe
+        for atom in querybody.body:
+            atom.var 
 
     # If the variable already contains entries, perform intersection
 
+    return entities
 
-    return None
-
-def predict_parsed_queries(all_queries,base_cases,dataset,current_model, current_model_params, k, tf, train, valid, test, tbox_ontology, a_box_path, partial_results_path, use_storage_file):
+def predict_parsed_queries(all_queries,base_cases, base_cases_path, dataset,model, model_params, k, tf, train, valid, test, tbox_ontology, aboxpath, use_storage_file):
 
     # For each original structure type
     for query_structure in all_queries.keys():
 
                     #for each query in that structure
                     for query in all_queries[query_structure]:
-                        query['answer'] = 
+                        query['answer'] = query_pipeline(query, base_cases, base_cases_path, dataset, model, model_params, k, tf, train, valid, test, aboxpath)
 
     
     return all_queries

@@ -51,10 +51,10 @@ def main():
 
     use_storage_file = False
 
-    partial_results_path  = "testcases/" + project_name + "/already_predicted_atoms.pickle"
+    base_cases_path  = "testcases/" + project_name + "/base_cases.pickle"
     
-    if os.path.exists(partial_results_path):
-        with open(partial_results_path, 'rb') as file:
+    if os.path.exists(base_cases_path):
+        with open(base_cases_path, 'rb') as file:
             base_cases = pickle.load(file)
     else:
         base_cases = list()
@@ -350,7 +350,7 @@ def main():
                 parsed_generated_queries = query_reformulate(parsed_generated_queries, full_pth, t_box_path) 
 
                 #Predict
-                parsed_generated_queries = predict_parsed_queries(parsed_generated_queries,base_cases,dataset,current_model, current_model_params, 100, tf, train, valid, test, tbox_ontology, a_box_path, partial_results_path, use_storage_file)
+                parsed_generated_queries = predict_parsed_queries(parsed_generated_queries,base_cases, base_cases_path, dataset, current_model, current_model_params, 100, tf, train, valid, test, tbox_ontology, a_box_path, use_storage_file)
 
     
                 #Combine scores
