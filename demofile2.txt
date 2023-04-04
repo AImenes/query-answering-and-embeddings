@@ -1,6 +1,0 @@
-Original query: 
-q(?x) :- Father(?x) 
-
-Entailed query:
-q(?x) :- Father(?x)
-q(?x) :- P22(?_,?x)

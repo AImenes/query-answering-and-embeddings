@@ -1,4 +1,7 @@
-import owlready2 
+import os
+import pickle
+
+import perfectref_v1 as pr
 from perfectref_v1 import Query, QueryBody
 from perfectref_v1 import AtomParser, AtomConcept, AtomRole, AtomConstant
 from perfectref_v1 import Variable, Constant
@@ -185,7 +188,6 @@ def update_body(body):
 
 	return body
 
-
 def update_atom(atom, dictionary_of_variables):
 	if isinstance(atom, AtomConcept):
 		update_concept(atom.get_var1(), dictionary_of_variables)
@@ -196,13 +198,11 @@ def update_concept(var, dictionary_of_variables):
 	iri = var.get_org_name()
 	parse_dict_of_variables(iri, var.get_distinguished(), dictionary_of_variables)
 
-	
 def update_role(var1, var2, dictionary_of_variables):
 	iri1 = var1.get_org_name()
 	iri2 = var2.get_org_name()
 	parse_dict_of_variables(iri1, var1.get_distinguished(), dictionary_of_variables)
 	parse_dict_of_variables(iri2, var2.get_distinguished(), dictionary_of_variables)
-
 
 def get_name_and_namespace(q, tbox):
 	classes = list(tbox.classes())
@@ -258,7 +258,86 @@ def get_name_and_namespace(q, tbox):
 	return q
 	
 
+# OTHER UTILITY PARSER METHODS
+def parse_entailed_queries(entailed_queries):
+    parsed_queries = list()
+    for query in entailed_queries:
+        new_query = dict()
+        parsed_atoms = list()
+        for atom in query.get_body():
+            new_atom = dict()
+            new_atom['iri'] = atom.get_iri()
+            new_atom['name'] = atom.get_name()
+            if isinstance(atom, pr.AtomConcept):
+                new_atom['type'] = "concept"
+            if isinstance(atom, pr.AtomRole):
+                new_atom['type'] = "role"
 
+            if new_atom['type'] == "concept":
+                temp = dict()
+                temp_obj = dict()
+                temp['name'] = atom.get_var1().get_represented_name()
+                temp['is_bound'] = atom.get_var1().get_bound()
+                new_atom['var1'] = temp
+                temp_obj['obj'] = new_atom
+                temp_obj['str'] = ""
+            if new_atom['type'] == "role":
+                temp1 = dict()
+                temp2 = dict()
+                temp_obj = dict()
+                temp1['name'] = atom.get_var1().get_represented_name()
+                temp1['is_bound'] = atom.get_var1().get_bound()
+                new_atom['var1'] = temp1
+                temp2['name'] = atom.get_var2().get_represented_name()
+                temp2['is_bound'] = atom.get_var2().get_bound()
+                new_atom['var2'] = temp2
+                temp_obj['obj'] = new_atom
+                temp_obj['str'] = ""
+            parsed_atoms.append(temp_obj)
+        new_query['obj']=parsed_atoms
+        parsed_queries.append(new_query)
+    return parsed_queries
+
+def parse_generated_queries(queries_from_gen):
+    
+    for query_structure in queries_from_gen.keys():
+        for query in queries_from_gen[query_structure]:
+            break
+
+
+    return None
+
+def query_reformulate(parsed_generated_queries, full_pth, t_box_path):
+	#Reformulate
+	# if exists
+	if not os.path.exists(full_pth):      
+		#for each query structure
+		for query_structure in parsed_generated_queries.keys():
+
+			#for each query in that structure
+			for query_dict in parsed_generated_queries[query_structure]:
+
+				print("Performing PerfectRef rewriting for structure " + query_structure + "...")
+
+				#if the query structure is not up or 2u
+				if not (query_structure == 'up' or query_structure == '2u'):
+				
+					#perform PerfectRef
+					query_dict['rewritings'] = pr.get_entailed_queries(t_box_path, query_dict['q1'], False)
+				else:
+					temp1 = pr.get_entailed_queries(t_box_path, query_dict['q1'], False)
+					temp2 = pr.get_entailed_queries(t_box_path, query_dict['q2'], False)
+					query_dict['rewritings'] = temp1 + temp2
+
+		
+		with open(full_pth, 'wb') as handle:
+			pickle.dump(parsed_generated_queries, handle, protocol=pickle.HIGHEST_PROTOCOL)
+	else:
+		print("\n Reformulation already exists. Loaded pickle for this configuration. Delete or rename the pickle file if you want to redo the reformulation. \n")
+		with open(full_pth, 'rb') as handle:
+			parsed_generated_queries = pickle.load(handle)
+
+	return parsed_generated_queries
 
 # query_1p = "q(?w) :- <http://dbpedia.org/ontology/Location>(?w)"
 # query_2p = "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?y,?x)^<http://dbpedia.org/ontology/leaderName>(?y,?w)"

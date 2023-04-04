@@ -1,17 +1,11 @@
 {
   "1p": [
-    "q(?w) :- <https://www.wikidata.org/wiki/Q1196129>(?w)",
-    "q(?w) :- <https://www.wikidata.org/prop/P3373>(?w,?x)",
-    "q(?w) :- <https://www.wikidata.org/wiki/Q177232>(?w)"
+
   ],
   "2p": [
-    "q(?w) :- <https://www.wikidata.org/prop/P3373>(?x,?w)^<https://www.wikidata.org/wiki/Q7560>(?w)",
-    "q(?w) :- <https://www.wikidata.org/prop/P3373>(?x,?y)^<https://www.wikidata.org/prop/P40>(?w,?y)",
-    "q(?w) :- <https://www.wikidata.org/prop/P3373>(?w,?x)^<https://www.wikidata.org/wiki/Q595094>(?w)"
+
   ],
   "3p": [
-    "q(?w) :- <https://www.wikidata.org/prop/P3373>(?y,?x)^<https://www.wikidata.org/prop/P3373>(?w,?y)^<https://www.wikidata.org/wiki/Q31184>(?w)",
-    "q(?w) :- <https://www.wikidata.org/prop/P3373>(?x,?y)^<https://www.wikidata.org/prop/P3373>(?y,?z)^<https://www.wikidata.org/prop/P26>(?w,?z)",
     "q(?w) :- <https://www.wikidata.org/prop/P3373>(?x,?y)^<https://www.wikidata.org/prop/P40>(?z,?y)^<https://www.wikidata.org/prop/P40>(?w,?z)"
   ],
   "2i": [

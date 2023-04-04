@@ -1,29 +1,29 @@
 {
   "1p": [
-    "q(?w) :- <http://dbpedia.org/ontology/Location>(?w)"
+    "q(?w) :- <http://dbpedia.org/ontology/starring>(?x,?w)"
   ],
   "2p": [
-    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?y,?x)^<http://dbpedia.org/ontology/leaderName>(?y,?w)"
+    "q(?w) :- <http://dbpedia.org/ontology/language>(?x,?w)^<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent>(?w)"
   ],
   "3p": [
-    "q(?w) :- <http://dbpedia.org/ontology/distributor>(?y,?x)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?y,?z)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?z)"
+    "q(?w) :- <http://dbpedia.org/ontology/isPartOf>(?y,?x)^<http://dbpedia.org/ontology/affiliation>(?w,?y)^<http://dbpedia.org/ontology/Settlement>(?w)"
   ],
   "2i": [
-    "q(?w) :- <http://dbpedia.org/ontology/Species>(?w)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?w)"
+    "q(?w) :- <http://dbpedia.org/ontology/birthPlace>(?x,?w)^<http://dbpedia.org/ontology/influenced>(?y,?w)"
   ],
   "3i": [
-    "q(?w) :- <http://schema.org/Place>(?w)^<http://dbpedia.org/ontology/Settlement>(?w)<http://dbpedia.org/ontology/starring>(?w,?x)"
+    "q(?w) :- <http://dbpedia.org/ontology/child>(?x,?w)^<http://dbpedia.org/ontology/producer>(?x,?w)^<http://dbpedia.org/ontology/recordLabel>(?w,?x)"
   ],
   "pi": [
-    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?w)^<http://dbpedia.org/ontology/Place>(?w)^<http://www.wikidata.org/entity/Q486972>(?w)"
+    "q(?w) :- <http://dbpedia.org/ontology/affiliation>(?x,?w)^<http://dbpedia.org/ontology/Athlete>(?w)^<http://dbpedia.org/ontology/Person>(?w)"
   ],
   "ip": [
-    "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?z)^<http://dbpedia.org/ontology/populationPlace>(?y,?z)^<http://www.w3.org/2000/01/rdf-schema#seeAlso>(?w, ?z)"
+    "q(?w) :- <http://dbpedia.org/ontology/PopulatedPlace>(?x)^<http://www.wikidata.org/entity/Q82955>(?x)^<http://dbpedia.org/ontology/capital>(?w, ?x)"
   ],
   "up": [
-    "q(?w) :- <http://www.wikidata.org/entity/Q215627>(?x) | <http://dbpedia.org/ontology/Artist>(?x)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w, ?x)"
+    "q(?w) :- <http://www.wikidata.org/entity/Q486972>(?z) | <http://dbpedia.org/ontology/currency>(?y,?z)^<http://dbpedia.org/ontology/director>(?w, ?z)"
   ],
   "2u": [
-    "q(?w) :- <http://dbpedia.org/ontology/PopulatedPlace>(?w) | <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w, ?x)"
+    "q(?w) :- <http://dbpedia.org/ontology/ground>(?x,?w) | <http://dbpedia.org/ontology/affiliation>(?w, ?y)"
   ]
 }

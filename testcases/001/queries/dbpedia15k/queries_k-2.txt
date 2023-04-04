@@ -1,0 +1,38 @@
+{
+  "1p": [
+    "q(?w) :- <http://www.wikidata.org/entity/Q5>(?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/occupation>(?w,?x)"
+  ],
+  "2p": [
+    "q(?w) :- <http://dbpedia.org/ontology/award>(?w,?x)^<http://dbpedia.org/ontology/Economist>(?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/associatedBand>(?y,?x)^<http://dbpedia.org/ontology/influenced>(?w,?y)"
+  ],
+  "3p": [
+    "q(?w) :- <http://dbpedia.org/ontology/location>(?y,?x)^<http://dbpedia.org/ontology/athletics>(?y,?z)^<http://dbpedia.org/ontology/birthPlace>(?z,?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/region>(?x,?y)^<http://dbpedia.org/ontology/recordLabel>(?y,?z)^<http://dbpedia.org/ontology/birthPlace>(?z,?w)"
+  ],
+  "2i": [
+    "q(?w) :- <http://dbpedia.org/ontology/PopulatedPlace>(?w)^<http://dbpedia.org/ontology/president>(?w,?x)",
+    "q(?w) :- <http://xmlns.com/foaf/0.1/Person>(?w)^<http://dbpedia.org/ontology/owner>(?w,?x)"
+  ],
+  "3i": [
+    "q(?w) :- <http://dbpedia.org/ontology/location>(?w,?x)^<http://dbpedia.org/ontology/musicComposer>(?w,?x)^<http://dbpedia.org/ontology/birthPlace>(?w,?_x",
+    "q(?w) :- <http://dbpedia.org/ontology/associatedBand>(?x,?w)^<http://dbpedia.org/ontology/distributor>(?w,?x)^<http://dbpedia.org/ontology/occupation>(?x,?w)"
+  ],
+  "pi": [
+    "q(?w) :- <http://dbpedia.org/ontology/almaMater>(?x,?y)^<http://dbpedia.org/ontology/genre>(?y,?w)^<http://dbpedia.org/ontology/field>(?w,?z)",
+    "q(?w) :- <http://dbpedia.org/ontology/associatedMusicalArtist>(?x,?w)^<http://dbpedia.org/ontology/Settlement>(?w)^<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson>(?w)"
+  ],
+  "ip": [
+    "q(?w) :- <http://dbpedia.org/ontology/Island>(?x)^<http://dbpedia.org/ontology/Member_of_Congress>(?x)^<http://dbpedia.org/ontology/foundedBy>(?x, ?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/starring>(?x,?z)^<http://dbpedia.org/ontology/affiliation>(?y,?z)^<http://dbpedia.org/ontology/type>(?w, ?z)"
+  ],
+  "up": [
+    "q(?w) :- <http://dbpedia.org/ontology/instrument>(?x,?z) | <http://dbpedia.org/ontology/recordLabel>(?y,?z)^<http://dbpedia.org/ontology/musicFusionGenre>(?w, ?z)",
+    "q(?w) :- <http://xmlns.com/foaf/0.1/Person>(?z) | <http://dbpedia.org/ontology/distributor>(?z,?y)^<http://dbpedia.org/ontology/creator>(?z, ?w)"
+  ],
+  "2u": [
+    "q(?w) :- <http://dbpedia.org/ontology/Island>(?w) | <http://dbpedia.org/ontology/PopulatedPlace>(?w)",
+    "q(?w) :- <http://dbpedia.org/ontology/Agent>(?w) | <http://dbpedia.org/ontology/ethnicGroup>(?x, ?w)"
+  ]
+}

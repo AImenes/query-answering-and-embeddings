@@ -1,11 +1,13 @@
 import owlready2
 import pandas as pd
 import random
-import os
 import json
 
 
-def get_configuration(dataset,query_structure, query_structure_length, weights, wanted_structure = None):
+def get_configuration(dataset, query_structure, query_structure_length, weights, wanted_structure = None):
+    df_family = pd.read_csv("dataset/family/abox/transductive/all.txt", delimiter='\t', header=None)
+    df_dbpedia15k = pd.read_csv("dataset/dbpedia15k/abox/transductive/all.txt", delimiter='\t', header=None)
+    
     query_length = random.randint(1,3)
 
     #1p
@@ -40,17 +42,16 @@ def get_configuration(dataset,query_structure, query_structure_length, weights, 
 
         if is_concept:
             random_concept = random.choices(concepts, weights=w_c)[0]
+
+            #get answer
+
             return "q(?w) :- " + random_concept + "(?w)"
-            #return {'type': 'c', 'iri': random_concept, 'var': 'x'}
         else:
             random_role = random.choices(roles, weights=w_r)[0]
             is_domain = bool(random.getrandbits(1))
             if is_domain:
-                #return {'type': 'r', 'iri': random_role, 'var': ['x', None]}
                 return "q(?w) :- " + random_role + "(?w,?x)"
-
             else:
-                #return {'type': 'r', 'iri': random_role, 'var': [None, 'x']}
                 return "q(?w) :- " + random_role + "(?x,?w)"
             
     #2p - 6 subversions
@@ -64,6 +65,8 @@ def get_configuration(dataset,query_structure, query_structure_length, weights, 
             is_concept = bool(random.getrandbits(1))
             if is_concept:
                 second_atom = random.choices(concepts, weights=w_c)[0]
+
+
                 return "q(?w) :- " + first_atom + "(?x,?w)^" + second_atom + "(?w)"
 
             else:
@@ -524,12 +527,10 @@ def get_weights():
     #Using pandas way, Series.value_counts()
     df_family_roles = df_family.iloc[:,1].value_counts()
     df_dbpedia15k_roles = df_dbpedia15k.iloc[:,1].value_counts()
-    #print(df_dbpedia15k_roles)
 
     #Count concepts in dbpedia15k. That is, do a value count on the objects in the triples where rdf:type is the property.
     df_dbpedia15k_rdftype = df_dbpedia15k.loc[df_dbpedia15k[1] == df_dbpedia15k_roles.index.tolist()[0]]
     df_dbpedia15k_concepts = df_dbpedia15k_rdftype.iloc[:,2].value_counts()
-    #print(df_dbpedia15k_concepts, len(df_dbpedia15k_concepts), len(df_dbpedia15k_rdftype))
 
     tbox_family     = owlready2.get_ontology("dataset/family/tbox/family_wikidata.owl").load()    
     tbox_dbpedia15k = owlready2.get_ontology("dataset/dbpedia15k/tbox/dbpedia15k.owl").load()
@@ -562,7 +563,10 @@ def get_weights():
         iri = "<" + pr.iri + ">"
         if not iri in family_roles:
             family_roles[iri] = 1
-
+        
+    #Removing RDF-type from query-structures
+    del dbpedia15k_roles['<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>']
+    del dbpedia15k_roles['<http://www.w3.org/2000/01/rdf-schema#seeAlso>']
 
     return {'dbpedia15k': 
                 {'concepts': dbpedia15k_concepts, 'roles': dbpedia15k_roles},
@@ -570,7 +574,7 @@ def get_weights():
                 {'concepts': family_classes, 'roles': family_roles}
             }
 
-def main(testcase, number_of_queries_per_structure):
+def query_gen(testcase, number_of_queries_per_structure):
     #init
     query_structure = {1: '1p', 2: '2p', 3: '3p', 4: '2i', 5: '3i', 6: 'pi', 7: 'ip', 8: 'up', 9: '2u'}
     query_length = {1: [1], 2: [2, 4, 9], 3: [3,5,6,7,8]}
@@ -591,8 +595,6 @@ def main(testcase, number_of_queries_per_structure):
         file_name = "testcases/" + testcase + "/queries/" + ds + '/queries_' + "k-" + str(number_of_queries_per_structure) + '.txt'
         with open(file_name, 'w') as convert_file:
             convert_file.write(json.dumps(queries, indent=2))
-
-
 
 
 
