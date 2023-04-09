@@ -1,5 +1,29 @@
 {
-"3p": [
-    "q(?w) :- <https://www.wikidata.org/prop/P22>(?y,?x)^<https://www.wikidata.org/prop/P3373>(?y,?z)^<https://www.wikidata.org/prop/P40>(?z,?w)"
+  "1p": [
+    "q(?w) :- <https://www.wikidata.org/prop/P25>(?x,?w)"
+  ],
+  "2p": [
+    "q(?w) :- <https://www.wikidata.org/prop/P22>(?x,?y)^<https://www.wikidata.org/prop/P40>(?y,?w)"
+  ],
+  "3p": [
+    "q(?w) :- <https://www.wikidata.org/prop/P40>(?y,?x)^<https://www.wikidata.org/prop/P3373>(?z,?y)^<https://www.wikidata.org/prop/P3373>(?w,?z)"
+  ],
+  "2i": [
+    "q(?w) :- <https://www.wikidata.org/prop/P3373>(?x,?w)^<https://www.wikidata.org/prop/P22>(?y,?w)"
+  ],
+  "3i": [
+    "q(?w) :- <https://www.wikidata.org/prop/P22>(?w,?x)^<https://www.wikidata.org/prop/P25>(?w,?x)^<https://www.wikidata.org/prop/P22>(?x,?w)"
+  ],
+  "pi": [
+    "q(?w) :- <https://www.wikidata.org/prop/P26>(?x,?y)^<https://www.wikidata.org/prop/P3373>(?y,?w)^<https://www.wikidata.org/prop/P26>(?z,?w)"
+  ],
+  "ip": [
+    "q(?w) :- <https://www.wikidata.org/wiki/Q595094>(?z)^<https://www.wikidata.org/prop/P40>(?z,?y)^<https://www.wikidata.org/prop/P3373>(?z, ?w)"
+  ],
+  "up": [
+    "q(?w) :- <https://www.wikidata.org/wiki/Q10861465>(?z) | <https://www.wikidata.org/prop/P40>(?z,?y)^<https://www.wikidata.org/prop/P40>(?z, ?w)"
+  ],
+  "2u": [
+    "q(?w) :- <https://www.wikidata.org/prop/P3373>(?x,?w) | <https://www.wikidata.org/prop/P3373>(?y, ?w)"
   ]
 }

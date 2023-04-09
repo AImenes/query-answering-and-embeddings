@@ -1,12 +1,11 @@
 import numpy as np
 import pandas as pd
+import requests
+import time
 
 # Import PerfectRef and OwlReady2
-import perfectref_v1 as pr
-from perfectref_v1 import Query, QueryBody
-from perfectref_v1 import AtomParser, AtomConcept, AtomRole, AtomConstant
-from perfectref_v1 import Variable, Constant
-from owlready2 import get_ontology
+from perfectref_v1 import AtomParser, AtomConcept, AtomRole, AtomConstant, QueryBody
+
 
 def kg_lookup(queries, ds, abox_path, tf):
     abox = abox_path + "all.txt"
@@ -421,9 +420,174 @@ def kg_lookup(queries, ds, abox_path, tf):
 
     return queries
 
+def is_prediction_kg_hit(final_df, kglookup):
+    return final_df['entity_label'].isin(kglookup)
+
+def online_kg_lookup(final_df, query, dataset):
+    entities = final_df['entity_label'].to_list()
+
+    def divide_chunks(l, n): 
+        # looping till length l
+        for i in range(0, len(l), n):
+            yield l[i:i + n]
+    chunks = 100
+    entities = list(divide_chunks(entities, chunks))
+
+
+    # Construct the SELECT clause with the distinguished variable
+    distinguished_variable = query['q1'].head.var1.original_entry_name if isinstance(query, dict) else next(iter(query.variable_hierarchy))
+    select_clause = f"SELECT {distinguished_variable} WHERE {{ "
+
+    if dataset == 'family':
+        for entity_chunk in entities:
+
+            # Construct the VALUES clause with entities
+            values_clause = "VALUES ?w { "
+            for entity in entity_chunk:
+                entity = entity.replace("https", "http").replace("/wiki/", "/entity/").replace("<http://www.wikidata.org/entity/", "wd:").replace(">", "")
+                values_clause += f"{entity} "
+            values_clause += "} "
+
+            # Construct the body of the query for q1
+            if isinstance(query, QueryBody):
+                query_body_q1 = ""
+                for atom in query.body:
+                    if isinstance(atom, AtomRole):
+                        query_body_q1 += f"{atom.var1.original_entry_name} wdt:{atom.name} {atom.var2.original_entry_name} . "
+                    elif isinstance(atom, AtomConcept):
+                        query_body_q1 += f"{atom.var1.original_entry_name} wdt:P31 wd:{atom.name} . "
+
+                query_body = query_body_q1
+            
+            if isinstance(query, dict):
+                query_body_q1 = ""
+                for atom in query['q1'].body.body:
+                    if isinstance(atom, AtomRole):
+                        query_body_q1 += f"{atom.var1.original_entry_name} wdt:{atom.name} {atom.var2.original_entry_name} . "
+                    elif isinstance(atom, AtomConcept):
+                        query_body_q1 += f"{atom.var1.original_entry_name} wdt:P31 wd:{atom.name} . "
+
+                # If there is a second query q2, construct its body
+                if query['q2'] is not None:
+                    query_body_q2 = ""
+                    for atom in query['q2'].body.body:
+                        if isinstance(atom, AtomRole):
+                            query_body_q2 += f"{atom.var1.original_entry_name} wdt:{atom.name} {atom.var2.original_entry_name} . "
+                        elif isinstance(atom, AtomConcept):
+                            query_body_q2 += f"{atom.var1.original_entry_name} wdt:P31 wd:{atom.name} . "
+                    # Merge q1 and q2 with UNION
+                    query_body = f"{{ {query_body_q1} }} UNION {{ {query_body_q2} }}"
+                else:
+                    query_body = query_body_q1
+            
+            # Close the query
+            query_body += "} "
+
+            # Construct the complete SPARQL query
+            sparql_query = f"{select_clause} {values_clause} {query_body}"
+            print(sparql_query)
+            # Send the SPARQL query and get the response
+            url = 'https://query.wikidata.org/sparql'
+            r = requests.get(url, params={'format': 'json', 'query': sparql_query})
+
+            while not r.status_code == 200:
+                print("Sleep 1 minute for Online lookup restoring.")
+                time.sleep(60)
+                r = requests.get(url, params={'format': 'json', 'query': sparql_query})
+            
+            data = r.json()
+
+            #Construct 
+            true_entities = list()
+            for binding in data['results']['bindings']:
+                entity = "<" + binding[distinguished_variable[1:]]['value'] + ">"
+                entity = entity.replace("http:", "https:").replace("/entity/", "/wiki/")
+                if not entity in true_entities:
+                    true_entities.append(entity)
+            
+            if len(entities)>1:
+                time.sleep(2)
+    
+    #DBPEDIA  
+    else:
+        for entity_chunk in entities:
+
+            # Construct the VALUES clause with entities
+            values_clause = "VALUES ?w { "
+            banned_chars = '\"'
+            for entity in entity_chunk:
+                if not banned_chars in entity:
+                #entity = entity.replace("<http://dbpedia.org/resource/", "dbr:").replace(">", "")
+                    values_clause += f"{entity} "
+            values_clause += "} "
+
+            # Construct the body of the query for q1
+            if isinstance(query, QueryBody):
+                query_body_q1 = ""
+                for atom in query.body:
+                    if isinstance(atom, AtomRole):
+                        query_body_q1 += f"{atom.var1.original_entry_name} <{atom.iri}> {atom.var2.original_entry_name} . "
+                    elif isinstance(atom, AtomConcept):
+                        query_body_q1 += f"{atom.var1.original_entry_name} rdf:type <{atom.iri}> . "
+
+                query_body = query_body_q1
+            
+            if isinstance(query, dict):
+                query_body_q1 = ""
+                for atom in query['q1'].body.body:
+                    if isinstance(atom, AtomRole):
+                        query_body_q1 += f"{atom.var1.original_entry_name} <{atom.iri}> {atom.var2.original_entry_name} . "
+                    elif isinstance(atom, AtomConcept):
+                        query_body_q1 += f"{atom.var1.original_entry_name} rdf:type <{atom.iri}> . "
+
+                # If there is a second query q2, construct its body
+                if query['q2'] is not None:
+                    query_body_q2 = ""
+                    for atom in query['q2'].body.body:
+                        if isinstance(atom, AtomRole):
+                            query_body_q2 += f"{atom.var1.original_entry_name} <{atom.iri}> {atom.var2.original_entry_name} . "
+                        elif isinstance(atom, AtomConcept):
+                            query_body_q2 += f"{atom.var1.original_entry_name} rdf:type <{atom.iri}> . "
+                    # Merge q1 and q2 with UNION
+                    query_body = f"{{ {query_body_q1} }} UNION {{ {query_body_q2} }}"
+                else:
+                    query_body = query_body_q1
+            
+            # Close the query
+            query_body += "} "
+
+            # Construct the complete SPARQL query
+            sparql_query = f"{select_clause} {values_clause} {query_body}"
+            print(sparql_query)
+            # Send the SPARQL query and get the response
+            url = 'https://dbpedia.org/sparql'
+            r = requests.get(url, params={'format': 'json', 'query': sparql_query})
+            while r.status_code == 429:
+                print("Sleeping 1 minute for deload API.")
+                time.sleep(60)
+            
+            if r.status_code == 200:
+                data = r.json()
+            else:
+                raise ImportError("Error code %i from HTML response" % (r.status_code))
+
+            #Construct 
+            true_entities = list()
+            for binding in data['results']['bindings']:
+                entity = "<" + binding[distinguished_variable[1:]]['value'] + ">"
+                if not entity in true_entities:
+                    true_entities.append(entity)
+            
+            if len(entities)>1:
+                time.sleep(0.5)
+
+
+    # Return the results
+    return final_df['entity_label'].isin(true_entities)
+    
+
 def query_graph_concepts(query, dataset, a_box_path):
     entities_to_return = list()
-    #test = pr.parse_query(query["str"]).get_body().get_body()
 
     #if dataset has classes in separate files
     if dataset == "dbpedia15k":

@@ -1,0 +1,74 @@
+{
+    "0":{
+        "entity_id":62326,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q448342>",
+        "still_valid":true,
+        "origin":"q(?w) :- P22(?w,?x)^P3373(?y,?w)",
+        "score_calibrated":0.7835456133,
+        "score_combined":0.7835456133,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    },
+    "1":{
+        "entity_id":82536,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q571756>",
+        "still_valid":true,
+        "origin":"q(?w) :- P22(?w,?x)^P3373(?y,?w)",
+        "score_calibrated":0.7815281153,
+        "score_combined":0.7815281153,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    },
+    "2":{
+        "entity_id":76532,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q5353322>",
+        "still_valid":true,
+        "origin":"q(?w) :- P22(?w,?x)^P3373(?y,?w)",
+        "score_calibrated":0.7807072997,
+        "score_combined":0.7807072997,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    },
+    "3":{
+        "entity_id":59835,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q428820>",
+        "still_valid":true,
+        "origin":"q(?w) :- P22(?w,?x)^P3373(?y,?w)",
+        "score_calibrated":0.7805602551,
+        "score_combined":0.7805602551,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    },
+    "4":{
+        "entity_id":96408,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q699893>",
+        "still_valid":true,
+        "origin":"q(?w) :- P22(?w,?x)^P3373(?y,?w)",
+        "score_calibrated":0.7800941467,
+        "score_combined":0.7800941467,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    },
+    "5":{
+        "entity_id":5912,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q12507600>",
+        "still_valid":true,
+        "origin":"q(?w) :- P22(?w,?x)^P3373(?y,?w)",
+        "score_calibrated":0.7792543769,
+        "score_combined":0.7792543769,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    }
+}

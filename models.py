@@ -54,7 +54,6 @@ def load_model(tf, train, valid, test, project_name, dataset):
         current_model = "CompGCN"
     else:
         current_model = None
-
     dim = int(input("Enter dimension for model %s: " % (current_model)))
     epochs = int(input("Enter number of epochs for model %s: " %
                  (current_model)))

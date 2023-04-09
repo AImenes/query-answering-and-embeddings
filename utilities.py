@@ -3,338 +3,247 @@ import pickle
 from torch.cuda import is_available
 from owlready2 import get_ontology
 
+#custom modules
+from kglookup import *
+
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def press_any_key():
-    holder = input("\n\nPress any key to continue ...")
+    input("\n\nPress any key to continue ...")
 
 def get_device():
-    if is_available():
-        device = 'gpu'
-    else:
-        device = 'cpu'
-    return device
+    """
+    This method checks whether a GPU is available, and returns the
+    appropriate device string to use in the rest of the program.
+
+    Returns:
+        str: The device string, either 'gpu' or 'cpu', based on availability.
+    """
+    # Check if GPU is available for computation, if not return CPU
+    return 'gpu' if is_available() else 'cpu'
 
 def load_ontology(path):
-    ontology = get_ontology(path).load()
-    return ontology
+    return get_ontology(path).load()
 
-def show_tbox(tbox):
-    print("CLASSES:\n", list(tbox.classes()))
-    print("\n\nPROPERTIES:\n1", list(tbox.properties()))
+def create_test_environment(project_name: str) -> None:
+    """
+    Create a test environment for a given project.
 
-def enter_query(ontology):
+    This function creates a new directory for the test environment if it doesn't already exist. If the directory
+    already exists, the user is informed and no action is taken.
 
-    distinguished = list()
-    keep_adding_distinguished = True
-    if ontology == None:
-        print("Please import a tbox before using the query wizard.\n")
-        press_any_key()
-        return None
-    while keep_adding_distinguished:
-        temp = input("Enter distinguished variable name(default = x): ")
-        if temp == "":
-            temp = "x"
-            if temp not in distinguished:
-                distinguished.append(temp)
-        else:
-            if temp not in distinguished:
-                distinguished.append(temp)
-        cont = input(
-            "\nIf you would like another distinguished variable, enter 1. Leave empty to finish [empty]: ")
-        if cont == "":
-            keep_adding_distinguished = False
+    Args:
+        project_name (str): Name of the project for which the test environment is to be created.
 
-    classes = list(ontology.classes())
-    properties = list(ontology.properties())
-    atoms = list()
-    running = True
+    Returns:
+        None
+    """
 
-    while running:
-        atom = dict()
-        atom["iri"] = None
-        atom['type'] = None
-        counter = 0
-        matches = list()
-
-        while atom["iri"] == None:
-            atom['name'] = input("\nEnter atom name:")
-            # Classes
-            for cl in classes:
-                if atom['name'] == cl.name:
-                    counter += 1
-                    matches.append(cl)
-
-            if counter == 1:
-                atom['iri'] = matches[0].iri
-                atom['type'] = "concept"
-
-            elif counter > 1:
-                for i in range(len(matches)):
-                    print(str(i) + ":\t" + matches[i].iri)
-
-                option = None
-                while not (isinstance(option, int) and option < len(matches)):
-                    option = int(
-                        input("\nSelect the ID of the wanted IRI (0-" + str(len(matches)-1) + "): "))
-
-                atom['iri'] = matches[option].iri
-                atom['type'] = "concept"
-
-            else:
-                pass
-
-            if atom['type'] == "concept":
-                if len(distinguished) > 0:
-                    for j in range(len(distinguished)):
-                        print("[%i]:\t%s" % (j, distinguished[j]))
-                    print("[%i]:\t%s" % (len(
-                        distinguished), "Enter other variable, which will occur more than once in the body."))
-                    print("[%i]:\t%s" % (len(distinguished)+1, "_ (Unbound)"))
-                    option = int(
-                        input("\nSelect the corresponding variable number: "))
-                    idx = "var1"
-                    temp = dict()
-                    if option > len(distinguished):
-                        temp['name'] = "_"
-                        temp['is_bound'] = False
-                    elif option == len(distinguished):
-                        temp['name'] = input("\nEnter variable name: ")
-                        if temp['name'] in distinguished:
-                            temp['is_bound'] = True
-                        else:
-                            temp['is_bound'] = False
-                    else:
-                        temp['name'] = distinguished[option]
-                        temp['is_bound'] = True
-                    atom[idx] = temp
-                else:
-                    atom['var1'] = None
-
-                completed_atom = dict()
-                completed_atom["str"] = atom["name"] + \
-                    "(?" + atom['var1']['name'] + ")"
-                completed_atom["obj"] = atom
-                atoms.append(completed_atom)
-
-            if counter == 0:
-                # Properties
-                for pp in properties:
-                    if atom['name'] == pp.name:
-                        counter += 1
-                        matches.append(pp)
-
-                if counter == 1:
-                    atom['iri'] = matches[0].iri
-                    atom['type'] = "role"
-
-                elif counter > 1:
-                    for i in range(len(matches)):
-                        print(str(i) + ":\t" + matches[i].iri)
-
-                    option = None
-                    while not (isinstance(option, int) and option < len(matches)):
-                        option = int(
-                            input("\nSelect the ID of the wanted IRI (0-" + str(len(matches)-1) + "): "))
-
-                    atom['iri'] = matches[option].iri
-                    atom['type'] = "role"
-                else:
-                    print(
-                        "\nYou have entered a non existent class or property in the current TBox. Remember to be case sensitive.")
-                if atom['type'] == "role":
-                    for i in range(2):
-                        print("What should be in the %i. variable spot?" % (i+1))
-
-                        for j in range(len(distinguished)):
-                            print("[%i]:\t%s" % (j, distinguished[j]))
-                        print("[%i]:\t%s" % (len(
-                            distinguished), "Enter other variable, which will occur more than once in the body."))
-                        print("[%i]:\t%s" %
-                              (len(distinguished)+1, "_ (Unbound)"))
-                        option = int(
-                            input("\nSelect the corresponding variable number: "))
-                        idx = "var" + str(i+1)
-                        temp = dict()
-                        if option > len(distinguished):
-                            temp['name'] = "_"
-                            temp['is_bound'] = False
-                        elif option == len(distinguished):
-                            temp['name'] = input("\nEnter variable name: ")
-                            if temp['name'] in distinguished:
-                                temp['is_bound'] = True
-                            else:
-                                temp['is_bound'] = False
-                        else:
-                            temp['name'] = distinguished[option]
-                            temp['is_bound'] = True
-                        atom[idx] = temp
-                else:
-                    return None
-                    
-
-                final_prop = dict()
-                final_prop["str"] = atom["name"] + \
-                    "(?" + atom['var1']['name'] + ",?" + atom['var2']['name'] + ")"
-                final_prop["obj"] = atom
-                atoms.append(final_prop)
-
-        print("\nDo you want to add another atom?")
-        option = input("y/[n]: ")
-        if not (option == "y" or option == "Y"):
-            running = False
-
-    final_query = dict()
-    final_query["obj"] = atoms
-    dist_str = ""
-    for var in distinguished:
-        dist_str += var
-        dist_str += ",?"
-    dist_str = dist_str[:-2]
-    final_query["str"] = "q(?" + dist_str + ") :- "
-    for i in range(len(atoms)):
-        final_query["str"] += atoms[i]["str"]
-        if i < ((len(atoms)) - 1):
-            final_query["str"] += "^"
-
-    return final_query
-
-def ready_to_run(ontology):
-    if ontology == None:
-        return False
-    return True
-
-def create_test_environment(project_name):
+    # Clear the console
     clear()
-    env_path = "testcases/" + project_name
+
+    # Construct the test environment directory path
+    env_path = f"testcases/{project_name}"
+
+    # Check if the directory already exists
     if os.path.isdir(env_path):
-        print("This test case already exists. You will not overwrite a model configuration, i.e, if the same model, dimension and epoch number.\n If you want a new test environment, please change the identifier.")
+        # If it exists, inform the user and avoid overwriting the existing test environment
+        print("This test case already exists. You will not overwrite a model configuration, i.e, if the same model, "
+              "dimension and epoch number.\n If you want a new test environment, please change the identifier.")
         press_any_key()
     else:
+        # If it doesn't exist, create the directory and inform the user
         os.makedirs(env_path)
         print("Test environment successfully created.")
         press_any_key()
-
-def print_kg_results(queries):
-    for q in queries:
-        for atom in q:
-            if atom['atom']['type'] == "concept":
-                print(atom['atom']['name']+"(%s):" % (atom['atom']['var1']['name']))
-                if not atom['returned_entities']:
-                    print("Empty lookup.\n")
-                else:
-
-                    for i in range(len(atom['returned_entities'])):
-                        if i < 20:
-                            print(atom['returned_entities'][i][0])
-                        if i == 20:
-                            print("[...]")
-                        if i == len(atom['returned_entities']) - 1:
-                            print("Total number of entities: %i\n" % (len(atom['returned_entities'])))
-
-                   
-            if atom['atom']['type'] == "role":
-                print(atom['atom']['name']+"(%s,%s):" % (atom['atom']['var1']['name'],atom['atom']['var2']['name']))
-                if not atom['returned_entities']:
-                    print("Empty lookup.\n")
-                else:
-                    if atom['atom']['var1']['is_bound']:
-                        for i in range(len(atom['returned_entities'][0])):
-                            if i < 20:
-                                print(atom['returned_entities'][0][i])
-                            if i == 20:
-                                print("[...]")
-                            if i == len(atom['returned_entities'][0]) - 1:
-                                print("Total number of entities: %i\n" % (len(atom['returned_entities'][0])))
-
-                    if atom['atom']['var2']['is_bound']:
-                        for i in range(len(atom['returned_entities'][1])):
-                            if i < 20:
-                                print(atom['returned_entities'][1][i])
-                            if i == 20:
-                                print("[...]")
-                            if i == len(atom['returned_entities'][1]) - 1:
-                                print("Total number of entities: %i\n" % (len(atom['returned_entities'][1])))
-
-def print_kge_results(queries):
-    return None
-
-def write_results_to_file(queries, original_query, transductive_models, project_name, dataset):
-    path = "testcases/"+project_name+"/"
-    file_name = path + original_query + ".txt"
-    # File separation
-    f = open(file_name, "w")
-    for q in queries:
-        for atom in q:
-            if atom['atom']['type'] == "concept":
-                f.write(atom['atom']['name']+"(%s):\n" % (atom['atom']['var1']['name']))
-                if not atom['returned_entities']:
-                    f.write("Empty lookup.\n")
-                else:
-                    for i in range(len(atom['returned_entities'])): 
-                        f.write(atom['returned_entities'][i][0]+"\n")                          
-                        if i == len(atom['returned_entities']) - 1:
-                            f.write("Total number of entities: %i\n" % (len(atom['returned_entities'])))
-                
-            if atom['atom']['type'] == "role":
-                f.write(atom['atom']['name']+"(%s,%s):\n" % (atom['atom']['var1']['name'],atom['atom']['var2']['name']))
-                if not atom['returned_entities']:
-                    f.write("Empty lookup.\n")
-                else:
-                    if atom['atom']['var1']['is_bound']:
-                        for i in range(len(atom['returned_entities'][0])): 
-                            f.write(atom['returned_entities'][0][i]+"\n")  
-                            if i == len(atom['returned_entities'][0]) - 1:
-                                f.write("Total number of entities: %i\n" % (len(atom['returned_entities'][0])))
-                    if atom['atom']['var2']['is_bound']:
-                        for i in range(len(atom['returned_entities'][1])):  
-                            f.write(atom['returned_entities'][1][i]+"\n")           
-                            if i == len(atom['returned_entities'][1]) - 1:
-                                f.write("Total number of entities: %i\n" % (len(atom['returned_entities'][1])))
-        f.write("\n")
-    f.close()   
-
-    #File merged
-    uniques = list()
-    file_name = path + original_query + "_entailed.txt"
-    for q in queries:
-        for atom in q:
-            if atom['atom']['type'] == "concept":
-                if atom['returned_entities']:
-                    for i in range(len(atom['returned_entities'])): 
-                        if atom['returned_entities'][i][0] not in uniques:
-                            uniques.append(atom['returned_entities'][i][0])                          
-            if atom['atom']['type'] == "role":
-                if atom['returned_entities']:
-                    if atom['atom']['var1']['is_bound']:
-                        for i in range(len(atom['returned_entities'][0])): 
-                            if atom['returned_entities'][0][i] not in uniques:
-                                uniques.append(atom['returned_entities'][0][i])                             
-                    if atom['atom']['var2']['is_bound']:
-                        for i in range(len(atom['returned_entities'][1])):  
-                            if atom['returned_entities'][1][i] not in uniques:
-                                uniques.append(atom['returned_entities'][1][i])     
-    f = open(file_name, "w")
-    f.write("Total number of entities: %i\n" % (len(uniques)))
-    f.write("Original_query: %s\n" % (original_query))
-    for entity in uniques:
-        f.write(entity+"\n")
-    f.close()
-
-def write_results_to_file_kge(entity_df, original_query, project_name):
-    path = "testcases/"+project_name+"/"
-    keys = entity_df.keys()
-    for key in keys:
-        file_name = path + original_query + "_kge_"+str(key)+".txt"
-        entity_df[key].to_csv(path_or_buf=file_name)
 
 def update_prediction_pickle(structure, filepath):
     with open(filepath, 'wb') as file:
         pickle.dump(structure, file, protocol=pickle.HIGHEST_PROTOCOL)
 
-def t_norm(a, b):
-    return a*b
+def build_variable_hierarchy(query, distinguished_variable, processed_vars=None, depth=0):
+    """
+    Create a variable hierarchy in a query based on the distinguished variable.
 
-def tco_norm(a, b):
-    return max(a, b)
+    Args:
+        query (QueryBody):              The input query with a body containing atoms. 
+        distinguished_variable (str):   The distinguished variable used as the starting point for building the hierarchy.
+        processed_vars (set, optional): A set of variables that have been processed. Defaults to None.
+        depth (int, optional):          The depth in the hierarchy for the current distinguished variable. Defaults to 0.
+
+    Returns:
+        dict: A dictionary representing the variable hierarchy, with variables as keys and their depth in the hierarchy as values.
+    """
+
+    # Initialize the processed_vars set if not provided
+    if processed_vars is None:
+        processed_vars = set()
+
+    # Create the initial hierarchy with the distinguished_variable at the given depth
+    hierarchy = {distinguished_variable: depth}
+
+    # Add the distinguished_variable to the set of processed variables
+    processed_vars.add(distinguished_variable)
+
+    # Iterate through the atoms in the query body
+    for atom in query.body:
+
+        # If the atom is an AtomRole
+        if isinstance(atom, AtomRole):
+
+            # Extract the variable names from the atom
+            var1, var2 = atom.var1.original_entry_name, atom.var2.original_entry_name
+
+            # Check if either of the variables matches the distinguished_variable
+            if distinguished_variable == var1 or distinguished_variable == var2:
+
+                # Identify the child variable in the atom
+                child = var1 if var2 == distinguished_variable else var2
+
+                # If the child variable has not been processed yet
+                if child not in processed_vars:
+
+                    # Recursively build the hierarchy for the child variable and update the current hierarchy
+                    hierarchy.update(build_variable_hierarchy(query, child, processed_vars, depth + 1))
+
+        # If the atom is an AtomConcept
+        elif isinstance(atom, AtomConcept):
+
+            # Extract the variable name from the atom
+            var1 = atom.var1.original_entry_name
+
+            # If the variable has not been processed yet
+            if var1 not in processed_vars:
+
+                # Update the hierarchy with the new variable
+                hierarchy.update(hierarchy)
+
+    # Return the constructed variable hierarchy
+    return hierarchy
+
+def inverse_hierarchy(hierarchy):
+    """
+    Takes a hierarchy dictionary as input and returns the inverse of the dictionary
+    where the depths are the keys.
+
+    Args:
+        hierarchy (dict): A dictionary representing the variable hierarchy, where
+                         keys are variable names and values are the depths.
+
+    Returns:
+        dict: The inverse of the hierarchy dictionary, where keys are depths and
+              values are lists of variable names.
+    """
+    inverse = {}
+    for variable, depth in hierarchy.items():
+        if depth not in inverse:
+            inverse[depth] = []
+        inverse[depth].append(variable)
+    return inverse
+
+def get_target_variable(hierarchy: dict, var1: str, var2: str) -> tuple:
+    """
+    Determine the target variable based on the hierarchy and the depths of the given variables.
+
+    This function compares the depths of two variables in a given hierarchy. It returns the target variable
+    along with the corresponding 'head' or 'tail' designation. If both variables have the same depth, it returns
+    a tuple of None values.
+
+    Args:
+        hierarchy (dict): A dictionary representing the hierarchy, where keys are variable names and values are their depths.
+        var1 (str): The first variable to compare.
+        var2 (str): The second variable to compare.
+
+    Returns:
+        tuple: A tuple containing the designation ('head' or 'tail'), the target variable, and the other variable.
+               If both variables have the same depth, a tuple of None values is returned.
+    """
+
+    # Check if both variables are present in the hierarchy
+    if var1 not in hierarchy or var2 not in hierarchy:
+        return None, None, None
+
+    # Get the depths of both variables from the hierarchy
+    depth1 = hierarchy[var1]
+    depth2 = hierarchy[var2]
+
+    # Compare the depths to determine the target variable
+    if depth1 < depth2:
+        return 'head', var1, var2
+    elif depth1 > depth2:
+        return 'tail', var2, var1
+    else:
+        # If both variables have the same depth, return a tuple of None values
+        return None, None, None
+    
+def sort_atoms_by_depth(hierarchy: dict, query: QueryBody):
+    """
+    Sort atoms in the query body based on their variable depths in the given hierarchy.
+
+    This function sorts atoms in the query body based on the depths of their variables within a given hierarchy.
+    Atoms with higher variable depths are placed earlier in the sorted list.
+
+    Args:
+        hierarchy (dict): A dictionary representing the hierarchy, where keys are variable names and values are their depths.
+        query (QueryBody): An object containing the query body, which is a list of atoms (AtomRole and AtomConcept).
+
+    Returns:
+        List[Union[AtomRole, AtomConcept]]: A sorted list of atoms in the query body.
+    """
+    
+    # Create a dictionary to store the depth of each variable
+    variable_depths = hierarchy
+
+    # Define a custom sorting key function for sorting the atoms based on variable depth
+    def atom_depth_key(atom):
+        if isinstance(atom, AtomRole):
+            # Get the depth of both variables in the atom
+            var1, var2 = atom.var1.original_entry_name, atom.var2.original_entry_name
+            depth1 = variable_depths[var1]
+            depth2 = variable_depths[var2]
+            # Return the maximum depth, which represents the higher variable in the hierarchy
+            return max(depth1, depth2)
+        if isinstance(atom, AtomConcept):
+            return variable_depths[atom.var1.original_entry_name]
+        
+        return None
+
+    # Sort the atoms based on the variable depth using the custom sorting key
+    sorted_atoms = sorted(query.body, key=atom_depth_key, reverse=True)
+
+    return sorted_atoms
+
+def get_query_string(querybody: QueryBody, distinguished_variable: str) -> str:
+    """
+    Generate a query string based on a query body and a distinguished variable.
+
+    This function generates a query string from a given query body and a distinguished variable. The query
+    string can be used to query a knowledge base.
+
+    Args:
+        querybody (QueryBody): An object containing the query body, which is a list of atoms (AtomRole and AtomConcept).
+        distinguished_variable (str): The distinguished variable in the query.
+
+    Returns:
+        str: A query string based on the query body and distinguished variable.
+    """
+
+    # Create the initial part of the query string with the distinguished variable
+    temp = "q(" + distinguished_variable + ") :- "
+
+    # Iterate over the atoms in the query body and add them to the query string
+    for atom in querybody.body:
+        if isinstance(atom, AtomConcept):
+            # Add a concept atom to the query string
+            temp += atom.name + "(" + atom.var1.original_entry_name + ")"
+        if isinstance(atom, AtomRole):
+            # Add a role atom to the query string
+            temp += atom.name + "(" + atom.var1.original_entry_name + "," + atom.var2.original_entry_name + ")"
+        
+        # Add a separator between atoms
+        temp += "^"
+
+    # Remove the final separator and return the query string
+    return temp[:-1]
+

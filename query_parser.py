@@ -1,215 +1,355 @@
 import os
 import pickle
 
+# Custom modules
 import perfectref_v1 as pr
 from perfectref_v1 import Query, QueryBody
 from perfectref_v1 import AtomParser, AtomConcept, AtomRole, AtomConstant
 from perfectref_v1 import Variable, Constant
 
-
-"""
-	METHODS FOR PARSING
-
-		parse_query					Splits head and body, creates a dictionary for variables (which is within the object). Return type Class:Query
-
-		parse_head					Since the head per definition contains distinguished variables, the boolean variable is_distinguised is set to True. 
- 									This is passed to Atom-parser. It returns a Class:Atom, 
-
-		parse_body					Since the head per definition contains distinguished variables, the boolean variable in the body is_distinguised is set to False. 
-									This is passed to Atom-parser. It returns a list of Class:Atom.
-
-		parse_atom					Extracts entry tokens from a Atom, and returns an Atom with a list of entries. Returns either 
-
-		parse_entry					Parses each entry as either a Variable or Constant. Returns a Class:Variable or Class:Constant
-
-
-	METHODS FOR UTILITIES
-
-		extract_entry_tokens		Parses the entire atom, and extracts the variables or constants
-	
-		parse_dict_of_variables		Checks if variable already exists. That is, a shared (bound) variable. Returns Boolean value.
-
-		update_entries				After the recursion is complete, all the entries are detected and decided whether its bound, shared or unbound. This updates those objects.
-
-"""
-## Query Structures
 def query_structure_parsing(query_string, query_structure, tbox):
-	char_remove = ['<', '>']
-	for char in char_remove:
-		query_string = query_string.replace(char,'')
-	if query_structure == 'up' or query_structure == '2u':
-		head, body = query_string.split(":-")
-		if "^" in body:
-			the_or_atoms, last_atom = body.split("^")
-			first_atom, second_atom = the_or_atoms.split(" | ")
-			q1 = head + ":-" + first_atom + "^" + last_atom
-			q2 = head + ":-" + second_atom + "^" + last_atom
-		else:
-			first_atom, second_atom = body.split(" | ")
-			q1 = head + ":-" + first_atom
-			q2 = head + ":-" + second_atom
-        
-		return {'query_structure': query_structure, 'q1': get_name_and_namespace(parse_query(q1, query_structure), tbox), 'q2': get_name_and_namespace(parse_query(q2, query_structure), tbox)}
-	else:
-		return {'query_structure': query_structure, 'q1': get_name_and_namespace(parse_query(query_string, query_structure), tbox), 'q2': None}
+    """
+    Parse a given query string based on its structure and the TBox ontology provided.
+    
+	Example: If we have a up query (with a disjunction) it will be restructured:
+    q(w): P22(x,y) | P25(x,y) ^ P40(y, w) 
+	->
+	q1: P22(x,y) ^ P40(y, w) 
+	q2: P25(x,y) ^ P40(y, w) 
+	q = q1 union q2
 
+    Args:
+        query_string (str): The query string to be parsed.
+        query_structure (str): The structure of the query ('up', '2u', or other).
+        tbox (Ontology): The TBox ontology for the knowledge graph.
 
-## PARSING
-def parse_query(query_string, query_structure = None):    
+    Returns:
+        dict: A dictionary containing the parsed query information, including the query structure and parsed query
+              expressions.
+    """
+    # Remove angle brackets from the query string
+    char_remove = ['<', '>']
+    for char in char_remove:
+        query_string = query_string.replace(char, '')
 
-    # Split head and body
-	head_string, body_string = query_string.split(":-")
-	dictionary_of_variables = {}
+    # Handle up and 2u queries. That is, queries that contains disjunction.
+    if query_structure == 'up' or query_structure == '2u':
+        head, body = query_string.split(":-")
 
-	# Remove trailing spaces
-	head_string = head_string.strip()
-	body_string = body_string.strip()
+        # Check if the query contains a conjunction (^)
+        if "^" in body:
+            the_or_atoms, last_atom = body.split("^")
+            first_atom, second_atom = the_or_atoms.split(" | ")
+            q1 = head + ":-" + first_atom + "^" + last_atom
+            q2 = head + ":-" + second_atom + "^" + last_atom
+        else:
+            first_atom, second_atom = body.split(" | ")
+            q1 = head + ":-" + first_atom
+            q2 = head + ":-" + second_atom
 
-	# Initial recursion for atom detection and variable detection
-	head = parse_head(head_string, dictionary_of_variables)
-	body = parse_body(body_string, dictionary_of_variables)
+        return {
+            'query_structure': query_structure,
+            'q1': get_name_and_namespace(parse_query(q1, query_structure), tbox),
+            'q2': get_name_and_namespace(parse_query(q2, query_structure), tbox)
+        }
+    # Handle other query structures. That is projection and intersection queries.
+    else:
+        return {
+            'query_structure': query_structure,
+            'q1': get_name_and_namespace(parse_query(query_string, query_structure), tbox),
+            'q2': None
+        }
 
-	#Update the boundness Boolean variables after the recursion
-	initial_update_entries(head, dictionary_of_variables)
-	[initial_update_entries(b, dictionary_of_variables) for b in body]
+def parse_query(query_string: str, query_structure: str = None) -> Query:
+    """
+    Parse a query string into a Query object.
 
-	#Update classtypes
-	new_body = list()
-	for atom in body:
-		if atom.get_type() == "CONSTANT":
-			new_body.append(AtomConstant(None,atom.get_value(),atom.get_name()))
-			
-		elif atom.get_type() == "CONCEPT":
-			new_body.append(AtomConcept(None,atom.get_var1(),atom.get_name()))
-			
-		elif atom.get_type() == "ROLE":
-			new_body.append(AtomRole(None,atom.get_var1(), atom.get_var2(),False,atom.get_name()))
-			
-		else:
-			print("SYNTHAX ERROR")
+    This function takes a query string and a query structure (optional) and parses it into a Query object.
 
-	#Return a Query-object
-	return Query(head, QueryBody(new_body), dictionary_of_variables, query_structure)
+    Args:
+        query_string (str): The query string to parse.
+        query_structure (str, optional): The structure of the query. Defaults to None.
 
-def parse_head(head_string,dictionary_of_variables):
-	is_distinguished = True 
-	return parse_atom(head_string,is_distinguished, dictionary_of_variables) 
+    Returns:
+        Query: A Query object representing the parsed query string.
+    """
 
-def parse_body(body_string, dictionary_of_variables):
-	is_distinguished = False
-	atom_str_list = body_string.split("^")
-	return [parse_atom(atom_str,is_distinguished, dictionary_of_variables) for atom_str in atom_str_list] 
+    # Split the query string into head and body
+    head_string, body_string = query_string.split(":-")
+    dictionary_of_variables = {}
 
-def parse_atom(atom_string, is_distinguished, dictionary_of_variables):
-	iri, arity, entry_str_list = extract_entry_tokens(atom_string)
-	return AtomParser(iri, [parse_entry(token, is_distinguished, dictionary_of_variables) for token in entry_str_list])
+    # Remove trailing spaces
+    head_string = head_string.strip()
+    body_string = body_string.strip()
 
-def parse_entry(entry_string, is_distinguished, dictionary_of_variables):
-	if entry_string.startswith("?"):
-		return Variable(entry_string, parse_dict_of_variables(entry_string, is_distinguished, dictionary_of_variables))
-	return Constant(entry_string)
+    # Parse the head and body of the query string
+    head = parse_head(head_string, dictionary_of_variables)
+    body = parse_body(body_string, dictionary_of_variables)
 
+    # Update the boundness Boolean variables after the recursion
+    initial_update_entries(head, dictionary_of_variables)
+    [initial_update_entries(b, dictionary_of_variables) for b in body]
 
-#UTILITIES
-def extract_entry_tokens(atom_string):
-	entries_list = list()
-	arity = 0
-	iri = ""
+    # Update classtypes
+    new_body = list()
+    for atom in body:
+        if atom.get_type() == "CONSTANT":
+            # Create a new AtomConstant object
+            new_body.append(AtomConstant(None, atom.get_value(), atom.name))
+            
+        elif atom.get_type() == "CONCEPT":
+            # Create a new AtomConcept object
+            new_body.append(AtomConcept(None, atom.var1, atom.name))
+            
+        elif atom.get_type() == "ROLE":
+            # Create a new AtomRole object
+            new_body.append(AtomRole(None, atom.var1, atom.var2, False, atom.name))
+            
+        else:
+            # Print an error message for syntax errors
+            raise SyntaxError("SYNTAX ERROR")
 
-	#if a atom with arity = 0 (a constant)
-	if (not ("(") in atom_string):
-		arity = 0
-		iri = atom_string
+    # Return a Query object with the parsed query string and query structure
+    return Query(head, QueryBody(new_body), dictionary_of_variables, query_structure)
 
-	#if a atom with arity = 0, but with empty parantheses
-	elif (("()") in atom_string):
-		arity = 0
-		iri = atom_string.split(("("))[0]
+def parse_head(head_string: str, dictionary_of_variables: dict) -> AtomParser:
+    """
+    Parse a head string into an Atom object.
 
-	else:
-	#if the atom contains entries
-	#else if ((("(") in atom_string) and (("?" in atom_string) or ("_" in atom_string))):
-		iri, entries = atom_string.split("(", 1)
-		entries = entries.replace(" ", "")
-		entries = entries.rstrip(")")
+    This function takes a head string and a dictionary of variables and parses it into an Atom object.
 
-		if not ((",") in entries):
-			arity = 1
-			entries_list.append(entries)
-		else:
-			entries = entries.split(",")
-			for e in entries:
-				entries_list.append(e)
-			arity = len(entries)
+    Args:
+        head_string (str): The head string to parse.
+        dictionary_of_variables (DictOfVariables): A dictionary containing information about the variables in the query.
 
-	return iri,arity,entries_list
+    Returns:
+        AtomParser: An Atom object representing the parsed head string.
+    """
+
+    # Set the distinguished flag to True
+    is_distinguished = True 
+
+    # Parse the head string into an Atom object
+    return parse_atom(head_string, is_distinguished, dictionary_of_variables)
+ 
+def parse_body(body_string: str, dictionary_of_variables: dict) -> list:
+    """
+    Parse a body string into a list of Atom objects.
+
+    This function takes a body string and a dictionary of variables and parses it into a list of Atom objects.
+
+    Args:
+        body_string (str): The body string to parse.
+        dictionary_of_variables (dict): A dictionary containing information about the variables in the query.
+
+    Returns:
+        list: A list of Atom objects representing the parsed body string.
+    """
+
+    # Set the distinguished flag to False
+    is_distinguished = False
+
+    # Split the body string into atom strings
+    atom_str_list = body_string.split("^")
+
+    # Parse each atom in the atom string list
+    return [parse_atom(atom_str, is_distinguished, dictionary_of_variables) for atom_str in atom_str_list]
+
+def parse_atom(atom_string: str, is_distinguished: bool, dictionary_of_variables: dict) -> AtomParser:
+    """
+    Parse an atom string into an Atom object.
+
+    This function takes an atom string, a flag indicating whether the variable is distinguished, and a dictionary of
+    variables, and parses it into an Atom object.
+
+    Args:
+        atom_string (str): The atom string to parse.
+        is_distinguished (bool): A flag indicating whether the variable is distinguished.
+        dictionary_of_variables (DictOfVariables): A dictionary containing information about the variables in the query.
+
+    Returns:
+        Atom: An Atom object representing the parsed atom string.
+    """
+
+    # Extract tokens from the atom string
+    iri, entry_str_list = extract_entry_tokens(atom_string)
+
+    # Parse each entry in the entry string list
+    entry_list = [parse_entry(token, is_distinguished, dictionary_of_variables) for token in entry_str_list]
+
+    # Create a new AtomParser object with the IRI and entry list
+    return AtomParser(iri, entry_list)
+
+def parse_entry(entry_string: str, is_distinguished: bool, dictionary_of_variables: dict) -> Variable or Constant:
+    """
+    Parse an entry string into a Variable or Constant object based on its prefix.
+
+    This function takes an entry string and parses it into a Variable or Constant object based on whether the string
+    starts with "?". If it is a variable, it also updates the dictionary of variables with the new variable.
+
+    Args:
+        entry_string (str): The string to be parsed.
+        is_distinguished (bool): A flag indicating whether the variable is the distinguished variable in the query.
+        dictionary_of_variables (dict): A dictionary containing the variables in the query and their indices.
+
+    Returns:
+        Variable or Constant: A Variable or Constant object based on the prefix of the entry string.
+    """
+
+    # Check if the entry string is a variable
+    if entry_string.startswith("?"):
+        # If it is, create a new Variable object and update the dictionary of variables
+        variable = Variable(entry_string, parse_dict_of_variables(entry_string, is_distinguished, dictionary_of_variables))
+        return variable
+    
+    # If it's not a variable, create a new Constant object
+    return Constant(entry_string)
+
+def extract_entry_tokens(atom_string: str) -> tuple:
+    """
+    Extract tokens from an atom string and return them as a tuple.
+
+    This function takes an atom string and extracts the entries and IRI from it. It returns them as a tuple.
+
+    Args:
+        atom_string (str): The atom string to extract tokens from.
+
+    Returns:
+        tuple: A tuple containing the IRI and a list of entries extracted from the atom string.
+    """
+
+    entries_list = list()
+    iri = ""
+
+    # Check if the atom string is a constant
+    if (not ("(") in atom_string):
+        iri = atom_string
+
+    # Check if the atom string is a constant with empty parentheses
+    elif (("()") in atom_string):
+        iri = atom_string.split(("("))[0]
+
+    else:
+        # If the atom string contains entries
+        iri, entries = atom_string.split("(", 1)
+        entries = entries.replace(" ", "")
+        entries = entries.rstrip(")")
+
+        if not ((",") in entries):
+	    
+            # If there is only one entry, add it to the list
+            entries_list.append(entries)
+        else:
+            # If there are multiple entries, split them and add them to the list
+            entries = entries.split(",")
+            for e in entries:
+                entries_list.append(e)
+
+    return iri, entries_list
 
 def parse_dict_of_variables(entry_string, is_distinguished, dictionary_of_variables):
-	
-	# If the variable is known
-	if entry_string in dictionary_of_variables:
-		if dictionary_of_variables[entry_string]['in_body']:
-			dictionary_of_variables[entry_string]['is_shared'] = True
-		else:
-			dictionary_of_variables[entry_string]['in_body'] = True
+    """
+    Update the dictionary_of_variables for a given entry_string based on whether it is distinguished or not.
+    
+    Args:
+        entry_string (str): The variable entry string to be processed
+        is_distinguished (bool): A flag indicating whether the entry_string is a distinguished variable
+        dictionary_of_variables (dict): A dictionary containing information about variables
 
-	#If the variable is new
-	else:
-		if is_distinguished:
-			dictionary_of_variables[entry_string] = {'is_bound':False, 'is_distinguished':True, 'in_body': True, 'is_shared':False }
-		else:
-			dictionary_of_variables[entry_string] = {'is_bound':False, 'is_distinguished':False, 'in_body': True, 'is_shared':False }
-		
-	if dictionary_of_variables[entry_string]['is_shared'] or dictionary_of_variables[entry_string]['is_distinguished']:
-		dictionary_of_variables[entry_string]['is_bound'] = True
+    Returns:
+        dict: An updated variable entry from the dictionary_of_variables
+    """
+    
+    # Check if the variable is already in the dictionary_of_variables
+    if entry_string in dictionary_of_variables:
+        # If the variable is in the body, mark it as shared
+        if dictionary_of_variables[entry_string]['in_body']:
+            dictionary_of_variables[entry_string]['is_shared'] = True
+        else:
+            dictionary_of_variables[entry_string]['in_body'] = True
+    else:
+        # Create a new variable entry based on the is_distinguished flag
+        new_entry = {'is_bound': False, 'is_distinguished': is_distinguished, 'in_body': True, 'is_shared': False}
+        dictionary_of_variables[entry_string] = new_entry
 
-	return dictionary_of_variables[entry_string]
+    # Update the 'is_bound' attribute if the variable is shared or distinguished
+    if dictionary_of_variables[entry_string]['is_shared'] or dictionary_of_variables[entry_string]['is_distinguished']:
+        dictionary_of_variables[entry_string]['is_bound'] = True
+
+    return dictionary_of_variables[entry_string]
 
 def initial_update_entries(atom, dict_of_variables):
 	
+	"""
+    Update entries in an atom with values from the dictionary of variables.
+
+    This function takes an atom and a dictionary of variables and updates each entry in the atom with its corresponding
+    values from the dictionary.
+
+    Args:
+        atom (Atom): The atom to update.
+        dict_of_variables (DictOfVariables): A dictionary containing information about the variables in the query.
+    """
+
 	for entry in atom.get_entries():
-		e = dict_of_variables[entry.get_org_name()]
+		e = dict_of_variables[entry.original_entry_name]
 		entry.update_values(e['is_distinguished'], e['in_body'], e['is_shared'])
 
-def update_processed_status(current_q, PR, stat):
-	for qu in PR:
-		if current_q == qu:
-			qu.set_process_status(stat)
+def update_processed_status(current_query, PR, status):
+	for query in PR:
+		if current_query == query:
+			query.set_process_status(status)
 
+def update_body(body: QueryBody) -> QueryBody:
+    """
+    Update the variables in a QueryBody object.
 
-##UPDATE
-def update_body(body):
-	dictionary_of_variables = {}
-	for g in body.get_body():
-		update_atom(g, dictionary_of_variables)
+    This function takes a QueryBody object, updates the variables in each Atom object in the QueryBody object, and returns
+    the updated QueryBody object.
 
-	[initial_update_entries(b, dictionary_of_variables) for b in body.get_body()]
+    Args:
+        body (QueryBody): The QueryBody object to update.
 
+    Returns:
+        QueryBody: The updated QueryBody object.
+    """
 
-	return body
+    # Create a dictionary of variables
+    dictionary_of_variables = {}
+
+    # Update each Atom object in the QueryBody object
+    for atom in body.body:
+        update_atom(atom, dictionary_of_variables)
+
+    # Update the boundness Boolean variables after the recursion
+    [initial_update_entries(b, dictionary_of_variables) for b in body.body]
+
+    # Return the updated QueryBody object
+    return body
 
 def update_atom(atom, dictionary_of_variables):
 	if isinstance(atom, AtomConcept):
-		update_concept(atom.get_var1(), dictionary_of_variables)
+		update_concept(atom.var1, dictionary_of_variables)
 	else:
-		update_role(atom.get_var1(), atom.get_var2(), dictionary_of_variables)
+		update_role(atom.var1, atom.var2, dictionary_of_variables)
 	
 def update_concept(var, dictionary_of_variables):
-	iri = var.get_org_name()
-	parse_dict_of_variables(iri, var.get_distinguished(), dictionary_of_variables)
+	iri = var.original_entry_name
+	parse_dict_of_variables(iri, var.distinguished, dictionary_of_variables)
 
 def update_role(var1, var2, dictionary_of_variables):
-	iri1 = var1.get_org_name()
-	iri2 = var2.get_org_name()
-	parse_dict_of_variables(iri1, var1.get_distinguished(), dictionary_of_variables)
-	parse_dict_of_variables(iri2, var2.get_distinguished(), dictionary_of_variables)
+	iri1 = var1.original_entry_name
+	iri2 = var2.original_entry_name
+	parse_dict_of_variables(iri1, var1.distinguished, dictionary_of_variables)
+	parse_dict_of_variables(iri2, var2.distinguished, dictionary_of_variables)
 
 def get_name_and_namespace(q, tbox):
+        
 	classes = list(tbox.classes())
 	properties = list(tbox.properties())
 
 	#for every atom in q
-	for g in q.get_body().get_body():
+	for g in q.body.body:
             
 		#Classes
 		matches = list()
@@ -219,7 +359,7 @@ def get_name_and_namespace(q, tbox):
 		for cl in classes:
 
             #if atom name equals class name
-			if g.get_iri() == cl.iri:
+			if g.iri == cl.iri:
 
                 #save class
 				matches.append(cl)
@@ -242,7 +382,7 @@ def get_name_and_namespace(q, tbox):
 		for pp in properties:
 
             #if atom name equals class name
-			if g.get_iri() == pp.iri:
+			if g.iri == pp.iri:
 
                 #save class
 				matches.append(pp)
@@ -256,97 +396,50 @@ def get_name_and_namespace(q, tbox):
             #g.set_namespace(matches[0].namespace.ontology)
 			g.set_name(matches[0].name)
 	return q
-	
 
-# OTHER UTILITY PARSER METHODS
-def parse_entailed_queries(entailed_queries):
-    parsed_queries = list()
-    for query in entailed_queries:
-        new_query = dict()
-        parsed_atoms = list()
-        for atom in query.get_body():
-            new_atom = dict()
-            new_atom['iri'] = atom.get_iri()
-            new_atom['name'] = atom.get_name()
-            if isinstance(atom, pr.AtomConcept):
-                new_atom['type'] = "concept"
-            if isinstance(atom, pr.AtomRole):
-                new_atom['type'] = "role"
+def query_reformulate(parsed_generated_queries: dict, rewriting_upper_limit: int, full_pth: str, t_box_path: str) -> dict:
+    """
+    Perform query reformulation using PerfectRef and return the reformulated queries.
 
-            if new_atom['type'] == "concept":
-                temp = dict()
-                temp_obj = dict()
-                temp['name'] = atom.get_var1().get_represented_name()
-                temp['is_bound'] = atom.get_var1().get_bound()
-                new_atom['var1'] = temp
-                temp_obj['obj'] = new_atom
-                temp_obj['str'] = ""
-            if new_atom['type'] == "role":
-                temp1 = dict()
-                temp2 = dict()
-                temp_obj = dict()
-                temp1['name'] = atom.get_var1().get_represented_name()
-                temp1['is_bound'] = atom.get_var1().get_bound()
-                new_atom['var1'] = temp1
-                temp2['name'] = atom.get_var2().get_represented_name()
-                temp2['is_bound'] = atom.get_var2().get_bound()
-                new_atom['var2'] = temp2
-                temp_obj['obj'] = new_atom
-                temp_obj['str'] = ""
-            parsed_atoms.append(temp_obj)
-        new_query['obj']=parsed_atoms
-        parsed_queries.append(new_query)
-    return parsed_queries
+    This function takes a dictionary of parsed queries, an upper limit for rewriting, a path to a file to save the reformulated queries,
+    and a path to a T-Box file, and performs query reformulation using PerfectRef on each query in the parsed query dictionary. If the
+    reformulated queries have not been saved to the file specified by full_pth, the function performs the reformulation and saves the
+    result to the file. If the file already exists, the function loads the reformulated queries from the file.
 
-def parse_generated_queries(queries_from_gen):
-    
-    for query_structure in queries_from_gen.keys():
-        for query in queries_from_gen[query_structure]:
-            break
+    Args:
+        parsed_generated_queries (Dict[str, Any]): A dictionary of parsed queries to reformulate.
+        rewriting_upper_limit (int): An upper limit for query rewriting.
+        full_pth (str): The path to the file to save the reformulated queries.
+        t_box_path (str): The path to the T-Box file.
 
+    Returns:
+        dict: A dictionary of the reformulated queries.
+    """
 
-    return None
+    # If the reformulated queries have not been saved to the file specified by full_pth
+    if not os.path.exists(full_pth):
+        # For each query structure
+        for query_structure in parsed_generated_queries.keys():
+            print("Performing PerfectRef rewriting for structure " + query_structure + "...")
+            # For each query in that structure
+            for query_dict in parsed_generated_queries[query_structure]:
+                # If the query structure is not up or 2u
+                if not (query_structure == 'up' or query_structure == '2u'):
+                    # Perform PerfectRef
+                    query_dict['rewritings'] = pr.get_entailed_queries(t_box_path, query_dict['q1'], upperlimit=rewriting_upper_limit, parse=False)
+                else:
+                    temp1 = pr.get_entailed_queries(t_box_path, query_dict['q1'], upperlimit=rewriting_upper_limit, parse=False)
+                    temp2 = pr.get_entailed_queries(t_box_path, query_dict['q2'], upperlimit=rewriting_upper_limit, parse=False)
+                    query_dict['rewritings'] = temp1 + temp2
 
-def query_reformulate(parsed_generated_queries, full_pth, t_box_path):
-	#Reformulate
-	# if exists
-	if not os.path.exists(full_pth):      
-		#for each query structure
-		for query_structure in parsed_generated_queries.keys():
+        # Save the reformulated queries to the file specified by full_pth
+        with open(full_pth, 'wb') as handle:
+            pickle.dump(parsed_generated_queries, handle, protocol=pickle.HIGHEST_PROTOCOL)
+    else:
+        # If the reformulated queries have already been saved to the file specified by full_pth, load them from the file
+        print("\n Reformulation already exists. Loaded pickle for this configuration. Delete or rename the pickle file if you want to redo the reformulation. \n")
+        with open(full_pth, 'rb') as handle:
+            parsed_generated_queries = pickle.load(handle)
 
-			#for each query in that structure
-			for query_dict in parsed_generated_queries[query_structure]:
-
-				print("Performing PerfectRef rewriting for structure " + query_structure + "...")
-
-				#if the query structure is not up or 2u
-				if not (query_structure == 'up' or query_structure == '2u'):
-				
-					#perform PerfectRef
-					query_dict['rewritings'] = pr.get_entailed_queries(t_box_path, query_dict['q1'], False)
-				else:
-					temp1 = pr.get_entailed_queries(t_box_path, query_dict['q1'], False)
-					temp2 = pr.get_entailed_queries(t_box_path, query_dict['q2'], False)
-					query_dict['rewritings'] = temp1 + temp2
-
-		
-		with open(full_pth, 'wb') as handle:
-			pickle.dump(parsed_generated_queries, handle, protocol=pickle.HIGHEST_PROTOCOL)
-	else:
-		print("\n Reformulation already exists. Loaded pickle for this configuration. Delete or rename the pickle file if you want to redo the reformulation. \n")
-		with open(full_pth, 'rb') as handle:
-			parsed_generated_queries = pickle.load(handle)
-
-	return parsed_generated_queries
-
-# query_1p = "q(?w) :- <http://dbpedia.org/ontology/Location>(?w)"
-# query_2p = "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?y,?x)^<http://dbpedia.org/ontology/leaderName>(?y,?w)"
-# query_3p = "q(?w) :- <http://dbpedia.org/ontology/distributor>(?y,?x)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?y,?z)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?w,?z)"
-# query_2i = "q(?w) :- <http://dbpedia.org/ontology/Species>(?w)^<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?w)"
-# query_3i = "q(?w) :- <http://schema.org/Place>(?w)^<http://dbpedia.org/ontology/Settlement>(?w)^<http://dbpedia.org/ontology/starring>(?w,?x)"
-# query_ip = "q(?w) :- <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>(?x,?z)^<http://dbpedia.org/ontology/populationPlace>(?y,?z)^<http://www.w3.org/2000/01/rdf-schema#seeAlso>(?w, ?z)"
-# query_up = "q(?z):- <https://www.wikidata.org/wiki/Q7565>(?z) | <https://www.wikidata.org/prop/P22>(?z,?y)^<https://www.wikidata.org/prop/P40>(?w, ?z)"
-
-#tbox = owlready2.get_ontology("dataset/dbpedia15k/tbox/dbpedia15k.owl").load()
-#up = query_structure_parsing(query_2p, '2p', tbox)
-#print("stop")
+    # Return the reformulated queries
+    return parsed_generated_queries

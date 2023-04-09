@@ -1,8 +1,0 @@
-academicAdvisor(x,y):
-<http://dbpedia.org/resource/Linus_Pauling>
-<http://dbpedia.org/resource/Niels_Bohr>
-Total number of entities: 2
-<http://dbpedia.org/resource/Ernest_Rutherford>
-<http://dbpedia.org/resource/Niels_Bohr>
-Total number of entities: 2
-

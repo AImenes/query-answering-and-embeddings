@@ -1,0 +1,26 @@
+{
+    "0":{
+        "entity_id":77480,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q539026>",
+        "still_valid":false,
+        "origin":"q(?w) :- P22(?z,?w)^P25(?y,?w)^P40(?x,?w)",
+        "score_calibrated":0.781935811,
+        "score_combined":0.781935811,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":89431,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q632254>",
+        "still_valid":false,
+        "origin":"q(?w) :- P22(?z,?w)^P25(?y,?w)^P40(?x,?w)",
+        "score_calibrated":0.7817510962,
+        "score_combined":0.7817510962,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":62326,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q448342>",
+        "still_valid":false,
+        "origin":"q(?w) :- P3373(?w,?z)^P22(?w,?y)^P40(?w,?x)",
+        "score_calibrated":0.7930977941,
+        "score_combined":0.7930977941,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

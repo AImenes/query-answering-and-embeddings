@@ -1,0 +1,22 @@
+{
+    "hits@25": {
+        "local_kg_hit_rewriting": 0.472,
+        "online_kg_hit_rewriting": 0.6639999999999999,
+        "local_kg_hit_original": 0.472,
+        "online_kg_hit_original": 0.472
+    },
+    "mrr": {
+        "local_kg_hit_rewriting": 0.5,
+        "online_kg_hit_rewriting": 0.7,
+        "local_kg_hit_original": 0.5,
+        "online_kg_hit_original": 0.5001996007984032
+    },
+    "query_structure": "1p",
+    "number_of_queries": 10,
+    "model": {
+        "selected_model_name": "DistMult",
+        "dim": 128,
+        "epoch": 20
+    },
+    "dataset": "family"
+}

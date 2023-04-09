@@ -44,7 +44,6 @@ def get_configuration(dataset, query_structure, query_structure_length, weights,
             random_concept = random.choices(concepts, weights=w_c)[0]
 
             #get answer
-
             return "q(?w) :- " + random_concept + "(?w)"
         else:
             random_role = random.choices(roles, weights=w_r)[0]
@@ -54,7 +53,7 @@ def get_configuration(dataset, query_structure, query_structure_length, weights,
             else:
                 return "q(?w) :- " + random_role + "(?x,?w)"
             
-    #2p - 6 subversions
+    #2p - 4 subversions
     if currenct_structure == '2p':
 
         #first atom has to be a role
@@ -62,36 +61,22 @@ def get_configuration(dataset, query_structure, query_structure_length, weights,
         is_domain = bool(random.getrandbits(1))
         if is_domain:
             #second atom
-            is_concept = bool(random.getrandbits(1))
-            if is_concept:
-                second_atom = random.choices(concepts, weights=w_c)[0]
-
-
-                return "q(?w) :- " + first_atom + "(?x,?w)^" + second_atom + "(?w)"
-
+            second_atom = random.choices(roles, weights=w_r)[0]
+            is_domain = bool(random.getrandbits(1))
+            if is_domain:
+                return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?y,?w)"
             else:
-                second_atom = random.choices(roles, weights=w_r)[0]
-                is_domain = bool(random.getrandbits(1))
-                if is_domain:
-                    return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?y,?w)"
-                else:
-                    return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?w,?y)"
+                return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?w,?y)"
         else:
             #second atom
-            is_concept = bool(random.getrandbits(1))
-            if is_concept:
-                second_atom = random.choices(concepts, weights=w_c)[0]
-                return "q(?w) :- " + first_atom + "(?w,?x)^" + second_atom + "(?w)"
-
+            second_atom = random.choices(roles, weights=w_r)[0]
+            is_domain = bool(random.getrandbits(1))
+            if is_domain:
+                return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?y,?w)"
             else:
-                second_atom = random.choices(roles, weights=w_r)[0]
-                is_domain = bool(random.getrandbits(1))
-                if is_domain:
-                    return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?y,?w)"
-                else:
-                    return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?w,?y)"
+                return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?w,?y)"
           
-    #3p - 12 subversions
+    #3p - 8 subversions
     if currenct_structure == '3p':
 
         #first atom has to be a role
@@ -102,63 +87,40 @@ def get_configuration(dataset, query_structure, query_structure_length, weights,
             is_domain = bool(random.getrandbits(1))
             if is_domain:
                 #third atom
-                is_concept = bool(random.getrandbits(1))
-                if is_concept:
-                    third_atom = random.choices(concepts, weights=w_c)[0]
-                    return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?y,?w)^" + third_atom + "(?w)"
-
+                third_atom = random.choices(roles, weights=w_r)[0]
+                is_domain = bool(random.getrandbits(1))
+                if is_domain:
+                    return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?y,?z)^" + third_atom + "(?z,?w)"
                 else:
-                    third_atom = random.choices(roles, weights=w_r)[0]
-                    is_domain = bool(random.getrandbits(1))
-                    if is_domain:
-                        return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?y,?z)^" + third_atom + "(?z,?w)"
-                    else:
-                        return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?y,?z)^" + third_atom + "(?w,?z)"
+                    return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?y,?z)^" + third_atom + "(?w,?z)"
             else:
-                #third atom
-                is_concept = bool(random.getrandbits(1))
-                if is_concept:
-                    third_atom = random.choices(concepts, weights=w_c)[0]
-                    return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?w,?y)^" + third_atom + "(?w)"
-
+            #third atom
+                third_atom = random.choices(roles, weights=w_r)[0]
+                is_domain = bool(random.getrandbits(1))
+                if is_domain:
+                    return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?z,?y)^" + third_atom + "(?z,?w)"
                 else:
-                    third_atom = random.choices(roles, weights=w_r)[0]
-                    is_domain = bool(random.getrandbits(1))
-                    if is_domain:
-                        return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?z,?y)^" + third_atom + "(?z,?w)"
-                    else:
-                        return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?z,?y)^" + third_atom + "(?w,?z)"
+                    return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?z,?y)^" + third_atom + "(?w,?z)"
         else:
             second_atom = random.choices(roles, weights=w_r)[0]
             is_domain = bool(random.getrandbits(1))
             if is_domain:
                 #third atom
-                is_concept = bool(random.getrandbits(1))
-                if is_concept:
-                    third_atom = random.choices(concepts, weights=w_c)[0]
-                    return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?y,?w)^" + third_atom + "(?w)"
-
+                third_atom = random.choices(roles, weights=w_r)[0]
+                is_domain = bool(random.getrandbits(1))
+                if is_domain:
+                    return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?y,?z)^" + third_atom + "(?z,?w)"
                 else:
-                    third_atom = random.choices(roles, weights=w_r)[0]
-                    is_domain = bool(random.getrandbits(1))
-                    if is_domain:
-                        return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?y,?z)^" + third_atom + "(?z,?w)"
-                    else:
-                        return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?y,?z)^" + third_atom + "(?w,?z)"
+                    return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?y,?z)^" + third_atom + "(?w,?z)"
+                
             else:
                 #third atom
-                is_concept = bool(random.getrandbits(1))
-                if is_concept:
-                    third_atom = random.choices(concepts, weights=w_c)[0]
-                    return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?w,?y)^" + third_atom + "(?w)"
-
+                third_atom = random.choices(roles, weights=w_r)[0]
+                is_domain = bool(random.getrandbits(1))
+                if is_domain:
+                    return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?z,?y)^" + third_atom + "(?z,?w)"
                 else:
-                    third_atom = random.choices(roles, weights=w_r)[0]
-                    is_domain = bool(random.getrandbits(1))
-                    if is_domain:
-                        return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?z,?y)^" + third_atom + "(?z,?w)"
-                    else:
-                        return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?z,?y)^" + third_atom + "(?w,?z)"
+                    return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?z,?y)^" + third_atom + "(?w,?z)"
                 
     #2i - 7 subversions
     if currenct_structure == '2i':
@@ -235,15 +197,15 @@ def get_configuration(dataset, query_structure, query_structure_length, weights,
                 if is_domain:
                     is_domain = bool(random.getrandbits(1))
                     if is_domain:
-                        return "q(?w) :- " + first_atom + "(?w)^" + second_atom + "(?w,?x)^" + third_atom + "(?w,?x)"
+                        return "q(?w) :- " + first_atom + "(?w)^" + second_atom + "(?w,?y)^" + third_atom + "(?w,?x)"
                     else:
-                        return "q(?w) :- " + first_atom + "(?w)^" + second_atom + "(?w,?x)^" + third_atom + "(?x,?w)"
+                        return "q(?w) :- " + first_atom + "(?w)^" + second_atom + "(?w,?y)^" + third_atom + "(?x,?w)"
                 else:
                     is_domain = bool(random.getrandbits(1))
                     if is_domain:
-                        return "q(?w) :- " + first_atom + "(?w)^" + second_atom + "(?x,?w)^" + third_atom + "(?w,?x)"
+                        return "q(?w) :- " + first_atom + "(?w)^" + second_atom + "(?y,?w)^" + third_atom + "(?w,?x)"
                     else:
-                        return "q(?w) :- " + first_atom + "(?w)^" + second_atom + "(?x,?w)^" + third_atom + "(?x,?w)"
+                        return "q(?w) :- " + first_atom + "(?w)^" + second_atom + "(?y,?w)^" + third_atom + "(?x,?w)"
         else:
             first_atom = random.choices(roles, weights=w_r)[0]
             second_atom = random.choices(roles, weights=w_r)[0]
@@ -254,30 +216,30 @@ def get_configuration(dataset, query_structure, query_structure_length, weights,
                 if is_domain:
                     is_domain = bool(random.getrandbits(1))
                     if is_domain:
-                        return "q(?w) :- " + first_atom + "(?w,?x)^" + second_atom + "(?w,?x)^" + third_atom + "(?w,?_x"
+                        return "q(?w) :- " + first_atom + "(?w,?z)^" + second_atom + "(?w,?y)^" + third_atom + "(?w,?x)"
                     else:
-                        return "q(?w) :- " + first_atom + "(?w,?x)^" + second_atom + "(?w,?x)^" + third_atom + "(?x,?w)"
+                        return "q(?w) :- " + first_atom + "(?w,?z)^" + second_atom + "(?w,?y)^" + third_atom + "(?x,?w)"
                 else:
                     if is_domain:
-                        return "q(?w) :- " + first_atom + "(?w,?x)^" + second_atom + "(?x,?w)^" + third_atom + "(?w,?x)"
+                        return "q(?w) :- " + first_atom + "(?w,?z)^" + second_atom + "(?y,?w)^" + third_atom + "(?w,?x)"
                     else:
-                        return "q(?w) :- " + first_atom + "(?w,?x)^" + second_atom + "(?x,?w)^" + third_atom + "(?x,?w)"
+                        return "q(?w) :- " + first_atom + "(?w,?z)^" + second_atom + "(?y,?w)^" + third_atom + "(?x,?w)"
             else:
                 is_domain = bool(random.getrandbits(1))
                 if is_domain:
                     is_domain = bool(random.getrandbits(1))
                     if is_domain:
-                        return "q(?x) :- " + first_atom + "(?x,?x)^" + second_atom + "(?w,?x)^"  + third_atom + "(?w,?x)"
+                        return "q(?x) :- " + first_atom + "(?z,?w)^" + second_atom + "(?w,?y)^"  + third_atom + "(?w,?x)"
                     else:
-                        return "q(?w) :- " + first_atom + "(?x,?w)^" + second_atom + "(?w,?x)^"  + third_atom + "(?x,?w)"
+                        return "q(?w) :- " + first_atom + "(?z,?w)^" + second_atom + "(?w,?y)^"  + third_atom + "(?x,?w)"
                 else:
                     is_domain = bool(random.getrandbits(1))
                     if is_domain:
-                        return "q(?w) :- " + first_atom + "(?x,?w)^" + second_atom + "(?x,?w)^" + third_atom + "(?w,?x)"
+                        return "q(?w) :- " + first_atom + "(?z,?w)^" + second_atom + "(?y,?w)^" + third_atom + "(?w,?x)"
                     else:
-                        return "q(?w) :- " + first_atom + "(?x,?w)^" + second_atom + "(?x,?w)^" + third_atom + "(?x,?w)"
+                        return "q(?w) :- " + first_atom + "(?z,?w)^" + second_atom + "(?y,?w)^" + third_atom + "(?x,?w)"
 
-    #pi - 14 subversions
+    #pi - 6 subversions
     if currenct_structure == 'pi':
 
         #has to be a role
@@ -285,69 +247,37 @@ def get_configuration(dataset, query_structure, query_structure_length, weights,
 
         is_domain = random.choices(roles, weights=w_r)[0]
         if is_domain:
-            is_concept = bool(random.getrandbits(1))
-            if is_concept:
-                second_atom = random.choices(concepts, weights=w_c)[0]
-
-                if is_concept:
-                    third_atom = random.choices(concepts, weights=w_c)[0]
-                    return "q(?w) :- " + first_atom + "(?x,?w)^" + second_atom + "(?w)^" + third_atom + "(?w)"
-                else:
-                    third_atom = random.choices(roles, weights=w_r)[0]
-                    is_domain = bool(random.getrandbits(1))
-                    if is_domain:
-                        return "q(?w) :- " + first_atom + "(?x,?w)^" + second_atom + "(?w)^" + third_atom + "(?z,?w)"
-                    else:
-                        return "q(?w) :- " + first_atom + "(?x,?w)^" + second_atom + "(?w)^" + third_atom + "(?w,?z)"
-
-            else:
-                second_atom = random.choices(roles, weights=w_r)[0]
-                third_atom = random.choices(roles, weights=w_r)[0]
+            second_atom = random.choices(roles, weights=w_r)[0]
+            third_atom = random.choices(roles, weights=w_r)[0]
+            is_domain = bool(random.getrandbits(1))
+            if is_domain:
                 is_domain = bool(random.getrandbits(1))
                 if is_domain:
-                    is_domain = bool(random.getrandbits(1))
-                    if is_domain:
-                        return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?y,?w)^" + third_atom + "(?z,?w)"
-                    else:
-                        return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?y,?w)^" + third_atom + "(?w,?z)"
+                    return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?y,?w)^" + third_atom + "(?z,?w)"
                 else:
-                    is_domain = bool(random.getrandbits(1))
-                    if is_domain:
-                        return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?w,?y)^" + third_atom + "(?z,?w)"
-                    else:
-                        return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?w,?y)^" + third_atom + "(?w,?z)"
+                    return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?y,?w)^" + third_atom + "(?w,?z)"
+            else:
+                is_domain = bool(random.getrandbits(1))
+                if is_domain:
+                    return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?w,?y)^" + third_atom + "(?z,?w)"
+                else:
+                    return "q(?w) :- " + first_atom + "(?x,?y)^" + second_atom + "(?w,?y)^" + third_atom + "(?w,?z)"
         else:
-            is_concept = bool(random.getrandbits(1))
-            if is_concept:
-                second_atom = random.choices(concepts, weights=w_c)[0]
-
-                if is_concept:
-                    third_atom = random.choices(concepts, weights=w_c)[0]
-                    return "q(?w) :- " + first_atom + "(?w,?x)^" + second_atom + "(?w)^" + third_atom + "(?w)"
-                else:
-                    third_atom = random.choices(roles, weights=w_r)[0]
-                    is_domain = bool(random.getrandbits(1))
-                    if is_domain:
-                        return "q(?w) :- " + first_atom + "(?w,?x)^" + second_atom + "(?w)^" + third_atom + "(?z,?w)"
-                    else:
-                        return "q(?w) :- " + first_atom + "(?w,?x)^" + second_atom + "(?w)^" + third_atom + "(?w,?z)"
-
-            else:
-                second_atom = random.choices(roles, weights=w_r)[0]
-                third_atom = random.choices(roles, weights=w_r)[0]
+            second_atom = random.choices(roles, weights=w_r)[0]
+            third_atom = random.choices(roles, weights=w_r)[0]
+            is_domain = bool(random.getrandbits(1))
+            if is_domain:
                 is_domain = bool(random.getrandbits(1))
                 if is_domain:
-                    is_domain = bool(random.getrandbits(1))
-                    if is_domain:
-                        return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?y,?w)^" + third_atom + "(?z,?w)"
-                    else:
-                        return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?y,?w)^" + third_atom + "(?w,?z)"
+                    return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?y,?w)^" + third_atom + "(?z,?w)"
                 else:
-                    is_domain = bool(random.getrandbits(1))
-                    if is_domain:
-                        return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?w,?y)^" + third_atom + "(?z,?w)"
-                    else:
-                        return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?w,?y)^" + third_atom + "(?w,?z)"
+                    return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?y,?w)^" + third_atom + "(?w,?z)"
+            else:
+                is_domain = bool(random.getrandbits(1))
+                if is_domain:
+                    return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?w,?y)^" + third_atom + "(?z,?w)"
+                else:
+                    return "q(?w) :- " + first_atom + "(?y,?x)^" + second_atom + "(?w,?y)^" + third_atom + "(?w,?z)"
 
     #ip - 14 subversions
     if currenct_structure == 'ip':

@@ -1,5 +1,0 @@
-Total number of entities: 3
-Original_query: q(?x,?y) :- academicAdvisor(?x,?y)
-<http://dbpedia.org/resource/Linus_Pauling>
-<http://dbpedia.org/resource/Niels_Bohr>
-<http://dbpedia.org/resource/Ernest_Rutherford>

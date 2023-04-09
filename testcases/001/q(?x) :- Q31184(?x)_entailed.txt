@@ -1,2 +1,0 @@
-Total number of entities: 0
-Original_query: q(?x) :- Q31184(?x)
