@@ -93,7 +93,7 @@ def main():
         print(" | EMBEDDINGS")
         print(" | Current dataset:\t\t%s" % (dataset))
         print(" | Is GPU available (Cuda):\t%s\n |" % (is_available()))
-        print(" | Ready to run? \t\t%s" % (parsed_generated_queries != None and is_available() and tbox_ontology != None))
+        print(" | Ready to run? \t\t%s" % (parsed_generated_queries != None and bool(parsed_generated_queries) and is_available() and tbox_ontology != None))
         print(" --------------------- MENU -------------------------")
 
         for entry in options:
@@ -153,37 +153,48 @@ def main():
                 print("A query configuration for k = " + str(number_of_queries_per_structure) + " already exists.")
             press_any_key()
         elif selection == '4':
-            number_of_queries_per_structure = int(input("Please input the number of queries to generate per query type (1-100): "))
-            query_path = "testcases/" + project_name + "/queries/" + dataset + "/queries_k-" + str(number_of_queries_per_structure) + ".txt"
             parsed_generated_queries = dict()
-            with open(query_path) as json_file:
-                queries_from_generation = json.load(json_file)
-            for key in queries_from_generation.keys():
-                parsed_generated_queries[key] = list()
-                for q in queries_from_generation[key]:
-                    parsed_generated_queries[key].append(query_structure_parsing(q, key, tbox_ontology))
-            
-            #do local KG-lookup
-            pth = "testcases/" + project_name + "/queries/" + dataset + "/"
-            filename = "queries" + "_k-" + str(number_of_queries_per_structure) + "_parsed_and_rewritten.pickle"
-            full_pth = pth + filename
-            print("Successfully imported! \n\nPerforming KG-lookup on imported queries ...")
-            if not os.path.exists(full_pth):
-                parsed_generated_queries = kg_lookup(parsed_generated_queries, dataset, a_box_path, tf)
-            else:
-                print("\n Reformulation already exists. Loaded pickle for this configuration. Delete or rename the pickle file if you want to redo the reformulation. \n")
-                with open(full_pth, 'rb') as handle:
-                    parsed_generated_queries = pickle.load(handle)
-            print("\nLocal KG-lookup finished, and answers stored with query variable.\n")
-            
-            result_path = Path(f"testcases/{project_name}/queries/{dataset}/k-{number_of_queries_per_structure}/")
-            result_path.mkdir(parents=True, exist_ok=True)
-            press_any_key()
+            unloaded = True
+
+            while unloaded:
+                number_of_queries_per_structure = int(input("Please input the number of queries to generate per query type (1-100), or press 0 to cancel: "))
+                query_path = "testcases/" + project_name + "/queries/" + dataset + "/queries_k-" + str(number_of_queries_per_structure) + ".txt"
+                if number_of_queries_per_structure == 0:
+                    unloaded = False
+                else:
+                    try:
+                        with open(query_path) as json_file:
+                            queries_from_generation = json.load(json_file)
+                        unloaded = False
+                    except:
+                        print("Doesnt exist. Try again.")
+            if number_of_queries_per_structure != 0:
+                for key in queries_from_generation.keys():
+                    parsed_generated_queries[key] = list()
+                    for q in queries_from_generation[key]:
+                        parsed_generated_queries[key].append(query_structure_parsing(q, key, tbox_ontology))
+                
+                #do local KG-lookup
+                pth = "testcases/" + project_name + "/queries/" + dataset + "/"
+                filename = "queries" + "_k-" + str(number_of_queries_per_structure) + "_parsed_and_rewritten.pickle"
+                full_pth = pth + filename
+                print("Successfully imported! \n\nPerforming KG-lookup on imported queries ...")
+                if not os.path.exists(full_pth):
+                    parsed_generated_queries = kg_lookup(parsed_generated_queries, dataset, a_box_path, tf)
+                else:
+                    print("\n Reformulation already exists. Loaded pickle for this configuration. Delete or rename the pickle file if you want to redo the reformulation. \n")
+                    with open(full_pth, 'rb') as handle:
+                        parsed_generated_queries = pickle.load(handle)
+                print("\nLocal KG-lookup finished, and answers stored with query variable.\n")
+                
+                result_path = Path(f"testcases/{project_name}/queries/{dataset}/k-{number_of_queries_per_structure}/")
+                result_path.mkdir(parents=True, exist_ok=True)
+                press_any_key()
                 
         elif selection == '5':
             training(transductive_models, project_name, dataset, train, valid, test)
         elif selection == '6':
-            current_model, current_model_params = load_model(tf, train, valid, test, project_name, dataset)
+            current_model, current_model_params = load_model(project_name, dataset)
 
         elif selection == '7':
             if parsed_generated_queries is None or current_model is None:

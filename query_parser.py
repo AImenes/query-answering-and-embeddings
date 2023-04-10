@@ -93,15 +93,15 @@ def parse_query(query_string: str, query_structure: str = None) -> Query:
     # Update classtypes
     new_body = list()
     for atom in body:
-        if atom.get_type() == "CONSTANT":
+        if atom.type == "CONSTANT":
             # Create a new AtomConstant object
             new_body.append(AtomConstant(None, atom.get_value(), atom.name))
             
-        elif atom.get_type() == "CONCEPT":
+        elif atom.type == "CONCEPT":
             # Create a new AtomConcept object
             new_body.append(AtomConcept(None, atom.var1, atom.name))
             
-        elif atom.get_type() == "ROLE":
+        elif atom.type == "ROLE":
             # Create a new AtomRole object
             new_body.append(AtomRole(None, atom.var1, atom.var2, False, atom.name))
             
@@ -143,7 +143,7 @@ def parse_body(body_string: str, dictionary_of_variables: dict) -> list:
         dictionary_of_variables (dict): A dictionary containing information about the variables in the query.
 
     Returns:
-        list: A list of Atom objects representing the parsed body string.
+        list: A list of AtomParser objects representing the parsed body string.
     """
 
     # Set the distinguished flag to False
@@ -168,7 +168,7 @@ def parse_atom(atom_string: str, is_distinguished: bool, dictionary_of_variables
         dictionary_of_variables (DictOfVariables): A dictionary containing information about the variables in the query.
 
     Returns:
-        Atom: An Atom object representing the parsed atom string.
+        AtomParser: An AtomParser object representing the parsed atom string. Will later we used to split to ROLES and CONCEPTS.
     """
 
     # Extract tokens from the atom string
@@ -288,7 +288,7 @@ def initial_update_entries(atom, dict_of_variables):
 
     Args:
         atom (Atom): The atom to update.
-        dict_of_variables (DictOfVariables): A dictionary containing information about the variables in the query.
+        dict_of_variables (dict): A dictionary containing information about the variables in the query.
     """
 
 	for entry in atom.get_entries():
@@ -296,9 +296,22 @@ def initial_update_entries(atom, dict_of_variables):
 		entry.update_values(e['is_distinguished'], e['in_body'], e['is_shared'])
 
 def update_processed_status(current_query, PR, status):
-	for query in PR:
-		if current_query == query:
-			query.set_process_status(status)
+    """
+    
+    This method updates the status on a query if it has been used for rewriting, to avoid a never ending rewriting loop.
+
+    Args:
+        current_query (QueryBody): The QueryBody object to update.
+        PR (dict): PerfectRef results dict
+        status (bool): Flag for whether atom is processed
+
+    Returns:
+        Nothing. Changes objects.
+
+    """
+    for query in PR:
+        if current_query == query:
+            query.set_process_status(status)
 
 def update_body(body: QueryBody) -> QueryBody:
     """
@@ -328,74 +341,112 @@ def update_body(body: QueryBody) -> QueryBody:
     return body
 
 def update_atom(atom, dictionary_of_variables):
-	if isinstance(atom, AtomConcept):
-		update_concept(atom.var1, dictionary_of_variables)
-	else:
-		update_role(atom.var1, atom.var2, dictionary_of_variables)
-	
+    """
+    Update an AtomConcept or AtomRole with the given dictionary of variables.
+
+    Args:
+        atom (AtomConcept or AtomRole): The AtomConcept or AtomRole to be updated.
+        dictionary_of_variables (dict): A dictionary mapping variable names to their values.
+
+    Returns:
+        None
+    """
+    if isinstance(atom, AtomConcept):
+        # If the atom is an AtomConcept, update its first variable.
+        update_concept(atom.var1, dictionary_of_variables)
+    else:
+        # If the atom is an AtomRole, update its first and second variables.
+        update_role(atom.var1, atom.var2, dictionary_of_variables)
+
 def update_concept(var, dictionary_of_variables):
-	iri = var.original_entry_name
-	parse_dict_of_variables(iri, var.distinguished, dictionary_of_variables)
+    """
+    Update a concept with the given dictionary of variables.
+
+    Args:
+        var (AtomConcept): The consept variable to be updated.
+        dictionary_of_variables (dict): A dictionary mapping variable names to their values.
+
+    Returns:
+        None
+    """
+    iri = var.original_entry_name
+    # Parse the IRI of the variable and update its distinguished attribute.
+    parse_dict_of_variables(iri, var.distinguished, dictionary_of_variables)
 
 def update_role(var1, var2, dictionary_of_variables):
-	iri1 = var1.original_entry_name
-	iri2 = var2.original_entry_name
-	parse_dict_of_variables(iri1, var1.distinguished, dictionary_of_variables)
-	parse_dict_of_variables(iri2, var2.distinguished, dictionary_of_variables)
+    """
+    Update a role with the given dictionary of variables.
+
+    Args:
+        var1 (AtomRole): The first role variable to be updated.
+        var2 (AtomRole): The second role variable to be updated.
+        dictionary_of_variables (dict): A dictionary mapping variable names to their values.
+
+    Returns:
+        None
+    """
+    iri1, iri2 = var1.original_entry_name, var2.original_entry_name
+    
+    # Parse the IRIs of the variables and update their distinguished attributes.
+    parse_dict_of_variables(iri1, var1.distinguished, dictionary_of_variables)
+    parse_dict_of_variables(iri2, var2.distinguished, dictionary_of_variables)
 
 def get_name_and_namespace(q, tbox):
-        
-	classes = list(tbox.classes())
-	properties = list(tbox.properties())
+    """
+    Based on a QueryBody and a TBox, add the atom names to the object.
 
-	#for every atom in q
-	for g in q.body.body:
+    """
+    classes = list(tbox.classes())
+    properties = list(tbox.properties())
+
+    #for every atom in q
+    for g in q.body.body:
             
-		#Classes
-		matches = list()
-		counter = 0
+        #Classes
+        matches = list()
+        counter = 0
 
         #for every class
-		for cl in classes:
+        for cl in classes:
 
             #if atom name equals class name
-			if g.iri == cl.iri:
+            if g.iri == cl.iri:
 
                 #save class
-				matches.append(cl)
+                matches.append(cl)
 
                 #add to counter
-				counter += 1
+                counter += 1
 
         #if counter is 1
-		if counter == 1:
+        if counter == 1:
 
             #set namespace and iri
             #g.set_namespace(matches[0].namespace.ontology)
-			g.set_name(matches[0].name)
+            g.set_name(matches[0].name)
 
 
         #Properties
-		matches = list()
-		counter = 0
+        matches = list()
+        counter = 0
         #for every property
-		for pp in properties:
+        for pp in properties:
 
             #if atom name equals class name
-			if g.iri == pp.iri:
+            if g.iri == pp.iri:
 
                 #save class
-				matches.append(pp)
+                matches.append(pp)
 
                 #add to counter
-				counter += 1
+                counter += 1
 
         #if counter is 1
-		if counter == 1:
+        if counter == 1:
             #set namespace and iri
             #g.set_namespace(matches[0].namespace.ontology)
-			g.set_name(matches[0].name)
-	return q
+            g.set_name(matches[0].name)
+    return q
 
 def query_reformulate(parsed_generated_queries: dict, rewriting_upper_limit: int, full_pth: str, t_box_path: str) -> dict:
     """

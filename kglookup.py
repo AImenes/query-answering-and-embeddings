@@ -8,28 +8,46 @@ from perfectref_v1 import AtomParser, AtomConcept, AtomRole, AtomConstant, Query
 
 
 def kg_lookup(queries, ds, abox_path, tf):
+    """
+    This method extracts the entities from the local KG which the KGEs models are trained upon. They are a little outdated from
+    the online versions.
+
+    Args:
+        queries (dict):         The dictionary containing all queries for all structures.
+        ds (str):               The dataset name
+        abox_path (str):        The relative path to the entire abox of the dataset, which we will to KG-lookup.
+        tf (TriplesFactory):    The TriplesFactory used together with it.
+
+    Returns:
+        queries (dict):         Returns an updated queries dictionary also containing the kglookup results.
+    """
+    
+    # Load ABox
     abox = abox_path + "all.txt"
     columns = ['head', 'relation', 'tail']
     abox = pd.read_csv(abox, sep='\t', names=columns, header=None)
     
+    # Iterate through the structure types and the queries inside them.
     for structure, query_list in queries.items():
         print("Looking up answers for %s-queries." % ((structure)))
+        
+        # If the structure is a projection
         if structure == '1p' or structure == '2p' or structure == '3p' or structure == 'pi':
-
+            
+            # Iterate through every query in a structure
             for query in query_list:
                 distinguished_var = query['q1'].head.entries[0].original_entry_name
-                query_length = len(query['q1'].get_body().get_body())
                 i = 0
                 projection = {'type': None, 'variable': None, 'target': None, 'entities': None}
+                
+                # The list we will merge in the end of the method
                 entities_to_merge = list()
-                for g in query['q1'].get_body().get_body():
+                
+                # Iterate through every atom in a query
+                for g in query['q1'].body.body:
                     atom = {'type': None, 'variable': None, 'target': None, 'entities': None}
-                    #Last atom
-                    if i == query_length - 1:
-                        last_atom = True
-                    else:
-                        last_atom = False
 
+                    # Query using the concept method if the atom is a Concept.
                     if isinstance(g, AtomConcept):
                         atom['type'] = 'concept'
                         try:
@@ -37,21 +55,21 @@ def kg_lookup(queries, ds, abox_path, tf):
                         except:
                             atom['entities'] = []
 
-                        if g.var1.get_org_name() == distinguished_var:
-                            atom['variable'] = g.var1.get_org_name()
+                        if g.var1.original_entry_name == distinguished_var:
+                            atom['variable'] = g.var1.original_entry_name
                             atom['target'] = 'head'
                             
-
                             entities_to_merge.append(atom['entities'])
+                    
                     if isinstance(g, AtomRole):
                         atom['type'] = 'role'
                         atom['entities'] = query_graph_roles(g, tf, abox, True, projection)
                         
-                        if g.var1.get_org_name() == distinguished_var:
+                        if g.var1.original_entry_name == distinguished_var:
                             atom['target'] = 'head'
                             entities_to_merge.append(atom['entities'][distinguished_var])
                             projection = {'type': None, 'variable': None, 'target': None, 'entities': None}
-                        elif g.var2.get_org_name() == distinguished_var:
+                        elif g.var2.original_entry_name == distinguished_var:
                             atom['target'] = 'tail'
                             entities_to_merge.append(atom['entities'][distinguished_var])
                             projection = {'type': None, 'variable': None, 'target': None, 'entities': None}
@@ -83,6 +101,7 @@ def kg_lookup(queries, ds, abox_path, tf):
                 else:
                     print("An error has occured")
 
+        # For structures that are intersective
         if structure == '2i' or structure == '3i':
             for query in query_list:
                 distinguished_var = query['q1'].head.entries[0].original_entry_name
@@ -126,10 +145,10 @@ def kg_lookup(queries, ds, abox_path, tf):
                 else:
                     print("An error has occured")
 
+        # If the structure is both intersective and projective
         if structure == 'ip':
              for query in query_list:
                 distinguished_var = query['q1'].head.entries[0].original_entry_name
-                query_length = len(query['q1'].get_body().get_body())
                 i = 0
                 intersection = {'type': None, 'variable': None, 'target': None, 'entities': None}
                 entities_to_merge = list()
@@ -170,11 +189,9 @@ def kg_lookup(queries, ds, abox_path, tf):
                         if g.var1.get_org_name() == distinguished_var:
                             atom['target'] = 'head'
                             entities_to_merge.append(atom['entities'][distinguished_var])
-                            #intersection = {'type': None, 'variable': None, 'target': None, 'entities': None}
                         elif g.var2.get_org_name() == distinguished_var:
                             atom['target'] = 'tail'
                             entities_to_merge.append(atom['entities'][distinguished_var])
-                            #intersection = {'type': None, 'variable': None, 'target': None, 'entities': None}
                         
                         #Intersection
                         else:
@@ -216,6 +233,7 @@ def kg_lookup(queries, ds, abox_path, tf):
                 else:
                     print("An error has occured")
 
+        # Disjunction 2u
         if structure == '2u':
             for query in query_list:
                 distinguished_var = query['q1'].head.entries[0].original_entry_name
@@ -283,20 +301,16 @@ def kg_lookup(queries, ds, abox_path, tf):
                 else:
                     print("An error has occured")
 
+        
+        # Disjunction up
         if structure == 'up':
             for query in query_list:
                 distinguished_var = query['q1'].head.entries[0].original_entry_name
-                query_length = len(query['q1'].get_body().get_body())
                 i = 0
                 projection = {'type': None, 'variable': None, 'target': None, 'entities': None}
                 entities_to_merge = list()
                 for g in query['q1'].get_body().get_body():
                     atom = {'type': None, 'variable': None, 'target': None, 'entities': None}
-                    #Last atom
-                    if i == query_length - 1:
-                        last_atom = True
-                    else:
-                        last_atom = False
 
                     if isinstance(g, AtomConcept):
                         atom['type'] = 'concept'
@@ -356,11 +370,6 @@ def kg_lookup(queries, ds, abox_path, tf):
                 entities_to_merge = list()
                 for g in query['q2'].get_body().get_body():
                     atom = {'type': None, 'variable': None, 'target': None, 'entities': None}
-                    #Last atom
-                    if i == query_length - 1:
-                        last_atom = True
-                    else:
-                        last_atom = False
 
                     if isinstance(g, AtomConcept):
                         atom['type'] = 'concept'
@@ -421,11 +430,38 @@ def kg_lookup(queries, ds, abox_path, tf):
     return queries
 
 def is_prediction_kg_hit(final_df, kglookup):
+    """
+    Args:
+        final_df (pd.DataFrame): The final results dataframe
+        kglookup (list): a list of all the local KG hits
+
+    Returns:
+        pd.DataFrame: a boolean column if entity is in kglookup.
+    """
     return final_df['entity_label'].isin(kglookup)
 
 def online_kg_lookup(final_df, query, dataset):
+    """
+    
+    Given the query and the dataset, query the respective online
+    KG for entity answers. Due to HTML and API limitations, some
+    sleep parameters and entity splits are created to do make sure
+    we don't get stuck with error responses.
+
+    Args:
+        final_df (pd.DataFrame):    The final results dataframe
+        query (QueryBody or dict):  The query body of the current query. 
+                                    It is a QueryBody for each rewriting, but a dict
+                                    for the original query.
+        dataset (str):              The name of the dataset
+
+    Returns: 
+        pd.DataFrame: a boolean column if entity is in kglookup.
+
+    """
     entities = final_df['entity_label'].to_list()
 
+    # Divide entities into chunks, so we dont get too long queries.
     def divide_chunks(l, n): 
         # looping till length l
         for i in range(0, len(l), n):
@@ -438,6 +474,7 @@ def online_kg_lookup(final_df, query, dataset):
     distinguished_variable = query['q1'].head.var1.original_entry_name if isinstance(query, dict) else next(iter(query.variable_hierarchy))
     select_clause = f"SELECT {distinguished_variable} WHERE {{ "
 
+    # For the Family dataset (WikiData)
     if dataset == 'family':
         for entity_chunk in entities:
 
@@ -448,7 +485,7 @@ def online_kg_lookup(final_df, query, dataset):
                 values_clause += f"{entity} "
             values_clause += "} "
 
-            # Construct the body of the query for q1
+            # If a rewritten query, construct the body of the query for q1
             if isinstance(query, QueryBody):
                 query_body_q1 = ""
                 for atom in query.body:
@@ -459,6 +496,7 @@ def online_kg_lookup(final_df, query, dataset):
 
                 query_body = query_body_q1
             
+            # If the original query, construct the body of the query for q1
             if isinstance(query, dict):
                 query_body_q1 = ""
                 for atom in query['q1'].body.body:
@@ -517,11 +555,10 @@ def online_kg_lookup(final_df, query, dataset):
             banned_chars = '\"'
             for entity in entity_chunk:
                 if not banned_chars in entity:
-                #entity = entity.replace("<http://dbpedia.org/resource/", "dbr:").replace(">", "")
                     values_clause += f"{entity} "
             values_clause += "} "
 
-            # Construct the body of the query for q1
+            # If a rewritten query, construct the body of the query for q1
             if isinstance(query, QueryBody):
                 query_body_q1 = ""
                 for atom in query.body:
@@ -532,6 +569,7 @@ def online_kg_lookup(final_df, query, dataset):
 
                 query_body = query_body_q1
             
+            # If the original query, construct the body of the query for q1
             if isinstance(query, dict):
                 query_body_q1 = ""
                 for atom in query['q1'].body.body:
@@ -548,6 +586,7 @@ def online_kg_lookup(final_df, query, dataset):
                             query_body_q2 += f"{atom.var1.original_entry_name} <{atom.iri}> {atom.var2.original_entry_name} . "
                         elif isinstance(atom, AtomConcept):
                             query_body_q2 += f"{atom.var1.original_entry_name} rdf:type <{atom.iri}> . "
+                    
                     # Merge q1 and q2 with UNION
                     query_body = f"{{ {query_body_q1} }} UNION {{ {query_body_q2} }}"
                 else:
@@ -562,6 +601,7 @@ def online_kg_lookup(final_df, query, dataset):
             # Send the SPARQL query and get the response
             url = 'https://dbpedia.org/sparql'
             r = requests.get(url, params={'format': 'json', 'query': sparql_query})
+            
             while r.status_code == 429:
                 print("Sleeping 1 minute for deload API.")
                 time.sleep(60)

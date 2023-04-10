@@ -505,23 +505,35 @@ def get_weights():
             }
 
 def query_gen(testcase, number_of_queries_per_structure):
-    #init
+    """
+    Generate queries for the given testcase and number of queries per structure.
+
+    Args:
+        testcase (str): The name of the testcase.
+        number_of_queries_per_structure (int): The number of queries to generate for each query structure.
+
+    Returns:
+        None. Writes to file.
+    """
+    # Initialize variables
     query_structure = {1: '1p', 2: '2p', 3: '3p', 4: '2i', 5: '3i', 6: 'pi', 7: 'ip', 8: 'up', 9: '2u'}
-    query_length = {1: [1], 2: [2, 4, 9], 3: [3,5,6,7,8]}
+    query_length = {1: [1], 2: [2, 4, 9], 3: [3, 5, 6, 7, 8]}
     queries = dict()
     weights = get_weights()
     datasets = ['family', 'dbpedia15k']
 
-    #generate queries
+    # Generate queries for each dataset and structure
     for ds in datasets:
         for structure in query_structure.values():
             i = 0
             temp_list = list()
             while (i < number_of_queries_per_structure):
+                # Get a query configuration and append it to the temporary list
                 temp_list.append(get_configuration(ds, query_structure, query_length, weights, structure))
                 i += 1
             queries[structure] = temp_list
 
+        # Write the queries to a file
         file_name = "testcases/" + testcase + "/queries/" + ds + '/queries_' + "k-" + str(number_of_queries_per_structure) + '.txt'
         with open(file_name, 'w') as convert_file:
             convert_file.write(json.dumps(queries, indent=2))
