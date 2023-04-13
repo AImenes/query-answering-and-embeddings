@@ -344,11 +344,11 @@ def intersection(df1, df2):
     """
     
     # Create a new DataFrame containing common 'entity_id' values from both input DataFrames.
-    entities = df1[df1['entity_id'].isin(df2['entity_id'])]
+    entities = df1[df1['entity_id'].isin(df2['entity_id'])]    
 
     # Sort the new DataFrame by 'score_combined' in descending order and remove duplicates based
-    # on 'entity_id', keeping the first occurrence (highest score) in the sorted DataFrame.
-    entities = entities.sort_values(['score_combined'], ignore_index=True, ascending=False).drop_duplicates(subset=['entity_id'], ignore_index=True, keep='first')
+    # on 'entity_id', keeping the last occurrence (lowest score) in the sorted DataFrame.
+    entities = entities.sort_values(['score_combined'], ignore_index=True, ascending=False).drop_duplicates(subset=['entity_id'], ignore_index=True, keep='last')
 
     return entities
 
@@ -836,10 +836,10 @@ def predict_parsed_queries(all_queries, base_cases, base_cases_path, enable_onli
             query['answer'], results_metrics = query_pipeline(query, base_cases, base_cases_path, enable_online_lookup, dataset, model, model_params, k, tf, train, valid, test, aboxpath, n)
 
             # Save the answer to a JSON file
-            query['answer'].to_json(f"{result_path}/{query_structure}-{idx+1}.json", indent=4, orient = 'index')
+            query['answer'].to_json(f"{result_path}/every_structure/{query_structure}-{idx+1}.json", indent=4, orient = 'index')
 
             # Save metrics to a JSON file
-            with open(f'{result_path}/{query_structure}-{idx+1}-results.json', 'w') as fp:
+            with open(f'{result_path}/every_structure/{query_structure}-{idx+1}-results.json', 'w') as fp:
                 json.dump(results_metrics, fp, indent=4)
 
             structure_metrices.append(results_metrics)
@@ -850,9 +850,10 @@ def predict_parsed_queries(all_queries, base_cases, base_cases_path, enable_onli
         final_results['number_of_queries'] = len(all_queries[query_structure])
         final_results['model'] = model_params
         final_results['dataset'] = dataset
+        final_results['cutoff_value'] = k
 
         # Save the final results to a JSON file
-        with open(f'{result_path}/{query_structure}-final_results.json', 'w') as fp:
+        with open(f'{result_path}/{dataset}-{ model_params["selected_model_name"]}-dim{model_params["dim"]}-epoch{model_params["epoch"]}-k{k}-numbofqueries:{final_results["number_of_queries"]}-{query_structure}-final_results.json', 'w') as fp:
                 json.dump(final_results, fp, indent=4)
 
     return None

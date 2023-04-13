@@ -189,6 +189,8 @@ def main():
                 
                 result_path = Path(f"testcases/{project_name}/queries/{dataset}/k-{number_of_queries_per_structure}/")
                 result_path.mkdir(parents=True, exist_ok=True)
+                result_every_structure = Path(f"testcases/{project_name}/queries/{dataset}/k-{number_of_queries_per_structure}/every_structure/")
+                result_every_structure.mkdir(parents=True, exist_ok=True)
                 press_any_key()
                 
         elif selection == '5':

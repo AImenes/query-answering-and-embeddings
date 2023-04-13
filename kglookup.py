@@ -543,8 +543,7 @@ def online_kg_lookup(final_df, query, dataset):
                 if not entity in true_entities:
                     true_entities.append(entity)
             
-            if len(entities)>1:
-                time.sleep(2)
+            time.sleep(1)
     
     #DBPEDIA  
     else:
