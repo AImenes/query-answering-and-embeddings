@@ -551,9 +551,9 @@ def online_kg_lookup(final_df, query, dataset):
 
             # Construct the VALUES clause with entities
             values_clause = "VALUES ?w { "
-            banned_chars = '\"Ä'
+            forbidden_characters = {'\"', 'Ä'}
             for entity in entity_chunk:
-                if not banned_chars in entity:
+                if all(char not in forbidden_characters for char in entity):
                     values_clause += f"{entity} "
             values_clause += "} "
 
