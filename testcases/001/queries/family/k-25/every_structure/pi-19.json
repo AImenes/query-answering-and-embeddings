@@ -1,0 +1,62 @@
+{
+    "0":{
+        "entity_id":56985,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q38163>",
+        "still_valid":false,
+        "origin":"q(?w) :- P3373(?x,?y)^P40(?w,?y)^P40(?z,?w)",
+        "score_calibrated":1.0,
+        "score_combined":1.0,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":true
+    },
+    "1":{
+        "entity_id":105048,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q7586388>",
+        "still_valid":true,
+        "origin":"q(?w) :- P3373(?x,?y)^P40(?w,?y)^P40(?z,?w)",
+        "score_calibrated":1.0,
+        "score_combined":1.0,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":111056,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q84084>",
+        "still_valid":true,
+        "origin":"q(?w) :- P3373(?x,?y)^P40(?w,?y)^P40(?z,?w)",
+        "score_calibrated":1.0,
+        "score_combined":1.0,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":8267,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q1348217>",
+        "still_valid":true,
+        "origin":"q(?w) :- P3373(?x,?y)^P40(?w,?y)^P40(?z,?w)",
+        "score_calibrated":1.0,
+        "score_combined":1.0,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":101729,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q7341739>",
+        "still_valid":true,
+        "origin":"q(?w) :- P3373(?y,?_)^P40(?w,?y)^P40(?z,?w)",
+        "score_calibrated":1.0,
+        "score_combined":1.0,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

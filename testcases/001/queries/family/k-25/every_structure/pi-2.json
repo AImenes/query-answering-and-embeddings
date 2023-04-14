@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":111536,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q861324>",
+        "still_valid":false,
+        "origin":"q(?w) :- P3373(?x,?y)^P40(?w,?y)^P26(?z,?w)",
+        "score_calibrated":1.0,
+        "score_combined":1.0,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

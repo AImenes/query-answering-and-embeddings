@@ -1,0 +1,23 @@
+{
+    "hits@3": {
+        "local_kg_hit_rewriting": 0.24,
+        "online_kg_hit_rewriting": 0.2666666666666666,
+        "local_kg_hit_original": 0.24,
+        "online_kg_hit_original": 0.05333333333333333
+    },
+    "mrr": {
+        "local_kg_hit_rewriting": 0.3287873869231117,
+        "online_kg_hit_rewriting": 0.39185046011277547,
+        "local_kg_hit_original": 0.3287873869231117,
+        "online_kg_hit_original": 0.1646624841723242
+    },
+    "query_structure": "2p",
+    "number_of_queries": 25,
+    "model": {
+        "selected_model_name": "CompGCN",
+        "dim": 192,
+        "epoch": 24
+    },
+    "dataset": "family",
+    "cutoff_value": 100
+}

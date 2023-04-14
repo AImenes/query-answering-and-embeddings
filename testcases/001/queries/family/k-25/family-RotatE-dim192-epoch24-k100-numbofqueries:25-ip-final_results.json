@@ -1,0 +1,23 @@
+{
+    "hits@3": {
+        "local_kg_hit_rewriting": 0.2,
+        "online_kg_hit_rewriting": 0.26666666666666666,
+        "local_kg_hit_original": 0.2,
+        "online_kg_hit_original": 0.18666666666666665
+    },
+    "mrr": {
+        "local_kg_hit_rewriting": 0.22,
+        "online_kg_hit_rewriting": 0.3,
+        "local_kg_hit_original": 0.22,
+        "online_kg_hit_original": 0.2203960396039604
+    },
+    "query_structure": "ip",
+    "number_of_queries": 25,
+    "model": {
+        "selected_model_name": "RotatE",
+        "dim": 192,
+        "epoch": 24
+    },
+    "dataset": "family",
+    "cutoff_value": 100
+}

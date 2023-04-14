@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":40300,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q28132009>",
+        "still_valid":false,
+        "origin":"q(?w) :- P3373(?x,?w)^P26(?y,?w)",
+        "score_calibrated":1.0,
+        "score_combined":1.0,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    }
+}

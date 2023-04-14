@@ -1,0 +1,23 @@
+{
+    "hits@3": {
+        "local_kg_hit_rewriting": 0.22666666666666668,
+        "online_kg_hit_rewriting": 0.3466666666666666,
+        "local_kg_hit_original": 0.22666666666666668,
+        "online_kg_hit_original": 0.13333333333333333
+    },
+    "mrr": {
+        "local_kg_hit_rewriting": 0.3792395654659806,
+        "online_kg_hit_rewriting": 0.48525146198830404,
+        "local_kg_hit_original": 0.3792395654659806,
+        "online_kg_hit_original": 0.20288216017299363
+    },
+    "query_structure": "ip",
+    "number_of_queries": 25,
+    "model": {
+        "selected_model_name": "TransE",
+        "dim": 192,
+        "epoch": 24
+    },
+    "dataset": "family",
+    "cutoff_value": 100
+}

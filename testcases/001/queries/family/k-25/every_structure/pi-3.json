@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":56985,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q38163>",
+        "still_valid":true,
+        "origin":"q(?w) :- P40(?x,?y)^P3373(?y,?w)^P22(?z,?w)",
+        "score_calibrated":1.0,
+        "score_combined":1.0,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

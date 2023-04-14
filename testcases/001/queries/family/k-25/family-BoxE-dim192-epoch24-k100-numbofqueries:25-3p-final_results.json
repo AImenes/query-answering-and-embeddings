@@ -1,0 +1,23 @@
+{
+    "hits@3": {
+        "local_kg_hit_rewriting": 0.6533333333333333,
+        "online_kg_hit_rewriting": 0.7866666666666667,
+        "local_kg_hit_original": 0.6533333333333333,
+        "online_kg_hit_original": 0.4666666666666666
+    },
+    "mrr": {
+        "local_kg_hit_rewriting": 0.7785499438832773,
+        "online_kg_hit_rewriting": 0.8657777777777779,
+        "local_kg_hit_original": 0.7785499438832773,
+        "online_kg_hit_original": 0.46399912278036015
+    },
+    "query_structure": "3p",
+    "number_of_queries": 25,
+    "model": {
+        "selected_model_name": "BoxE",
+        "dim": 192,
+        "epoch": 24
+    },
+    "dataset": "family",
+    "cutoff_value": 100
+}
