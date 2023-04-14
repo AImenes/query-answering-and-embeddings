@@ -466,7 +466,7 @@ def online_kg_lookup(final_df, query, dataset):
         # looping till length l
         for i in range(0, len(l), n):
             yield l[i:i + n]
-    chunks = 100
+    chunks = 75
     entities = list(divide_chunks(entities, chunks))
 
 
