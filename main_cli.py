@@ -105,22 +105,22 @@ for i in range(1,6):
     dim = 192
     epochs = 24
 
-# Set up the configuration file path for the current model
-current_config = "testcases/" + project_name + "/models/dataset:" + dataset + "_model:" + current_model + "_dim:" + str(dim) + "_epoch:" + str(epochs)
+    # Set up the configuration file path for the current model
+    current_config = "testcases/" + project_name + "/models/dataset:" + dataset + "_model:" + current_model + "_dim:" + str(dim) + "_epoch:" + str(epochs)
 
-if os.path.exists(current_config):
-    # If the configuration file exists, load the trained model and return it along with the selected model name, dimension, and number of epochs
-    model_path = current_config + "/trained_model.pkl"
-    current_model = load(model_path)
-    current_model_params = {'selected_model_name': current_model, 'dim': dim, 'epoch': epochs}
+    if os.path.exists(current_config):
+        # If the configuration file exists, load the trained model and return it along with the selected model name, dimension, and number of epochs
+        model_path = current_config + "/trained_model.pkl"
+        current_model = load(model_path)
+        current_model_params = {'selected_model_name': current_model, 'dim': dim, 'epoch': epochs}
 
-pth = "testcases/" + project_name + "/queries/" + dataset + "/"
-filename = "queries" + "_k-" + str(number_of_queries_per_structure) + "_parsed_and_rewritten.pickle"
-full_pth = pth + filename
+    pth = "testcases/" + project_name + "/queries/" + dataset + "/"
+    filename = "queries" + "_k-" + str(number_of_queries_per_structure) + "_parsed_and_rewritten.pickle"
+    full_pth = pth + filename
 
-#Reformulate
-parsed_generated_queries = query_reformulate(parsed_generated_queries, rewriting_upper_limit, full_pth, t_box_path) 
+    #Reformulate
+    parsed_generated_queries = query_reformulate(parsed_generated_queries, rewriting_upper_limit, full_pth, t_box_path) 
 
-#Predict
-predict_parsed_queries(parsed_generated_queries,base_cases, base_cases_path, enable_online_lookup, dataset, current_model, current_model_params, k, tf, train, valid, test, tbox_ontology, a_box_path, result_path, n)
+    #Predict
+    predict_parsed_queries(parsed_generated_queries,base_cases, base_cases_path, enable_online_lookup, dataset, current_model, current_model_params, k, tf, train, valid, test, tbox_ontology, a_box_path, result_path, n)
 
