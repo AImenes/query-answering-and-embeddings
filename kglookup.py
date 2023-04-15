@@ -551,7 +551,7 @@ def online_kg_lookup(final_df, query, dataset):
 
             # Construct the VALUES clause with entities
             values_clause = "VALUES ?w { "
-            forbidden_characters = {'\"', 'Ä'}
+            forbidden_characters = {'\"', 'Ä', 'ā', 'ī'}
             for entity in entity_chunk:
                 if all(char not in forbidden_characters for char in entity):
                     values_clause += f"{entity} "
@@ -575,7 +575,7 @@ def online_kg_lookup(final_df, query, dataset):
                     if isinstance(atom, AtomRole):
                         query_body_q1 += f"{atom.var1.original_entry_name} <{atom.iri}> {atom.var2.original_entry_name} . "
                     elif isinstance(atom, AtomConcept):
-                        query_body_q1 += f"{atom.var1.original_entry_name} rdf:type <{atom.iri}> . "
+                        query_body_q1 += f"{atom.var1.oiginal_entry_name} rdf:type <{atom.iri}> . "
 
                 # If there is a second query q2, construct its body
                 if query['q2'] is not None:
