@@ -606,13 +606,7 @@ def online_kg_lookup(final_df, query, dataset):
                 print("Sleeping 1 minute for deload API.")
                 time.sleep(60)
             
-            empty_dict = {}
-            data = json.dumps(empty_dict)
-            while r.status_code == 206:
-                temp = r.json()
-                data = data.update(temp)
-            
-            if r.status_code == 200:
+            if r.status_code == 200 or r.status_code == 206:
                 data = r.json()
             else:
                 raise ImportError("Error code %i from HTML response" % (r.status_code))
