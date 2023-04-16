@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import requests
 import time
+import json
 
 # Import PerfectRef and OwlReady2
 from perfectref_v1 import AtomParser, AtomConcept, AtomRole, AtomConstant, QueryBody
@@ -604,6 +605,12 @@ def online_kg_lookup(final_df, query, dataset):
             while r.status_code == 429:
                 print("Sleeping 1 minute for deload API.")
                 time.sleep(60)
+            
+            empty_dict = {}
+            data = json.dumps(empty_dict)
+            while r.status_code == 206:
+                temp = r.json()
+                data = data.update(temp)
             
             if r.status_code == 200:
                 data = r.json()
