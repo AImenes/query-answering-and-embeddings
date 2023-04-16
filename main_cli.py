@@ -112,7 +112,7 @@ for i in range(1,6):
         # If the configuration file exists, load the trained model and return it along with the selected model name, dimension, and number of epochs
         model_path = current_config + "/trained_model.pkl"
         current_model_params = {'selected_model_name': current_model, 'dim': dim, 'epoch': epochs}
-        gcurrent_model = load(model_path)
+        current_model = load(model_path)
 
 
     pth = "testcases/" + project_name + "/queries/" + dataset + "/"
