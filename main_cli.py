@@ -111,8 +111,9 @@ for i in range(1,6):
     if os.path.exists(current_config):
         # If the configuration file exists, load the trained model and return it along with the selected model name, dimension, and number of epochs
         model_path = current_config + "/trained_model.pkl"
-        current_model = load(model_path)
         current_model_params = {'selected_model_name': current_model, 'dim': dim, 'epoch': epochs}
+        gcurrent_model = load(model_path)
+
 
     pth = "testcases/" + project_name + "/queries/" + dataset + "/"
     filename = "queries" + "_k-" + str(number_of_queries_per_structure) + "_parsed_and_rewritten.pickle"
