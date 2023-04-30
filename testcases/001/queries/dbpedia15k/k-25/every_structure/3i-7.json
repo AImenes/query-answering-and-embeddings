@@ -1,0 +1,74 @@
+{
+    "0":{
+        "entity_id":69,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/21_Jump_Street_(film)>",
+        "still_valid":false,
+        "origin":"q(?w) :- birthPlace(?_,?w)^Island(?w)^Person(?w)",
+        "score_calibrated":1.0,
+        "score_combined":1.0,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":9969,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Selena_Gomez>",
+        "still_valid":false,
+        "origin":"q(?w) :- restingPlace(?w,?_)^Island(?w)^Place(?w)",
+        "score_calibrated":1.0,
+        "score_combined":1.0,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":11790,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Tsui_Hark>",
+        "still_valid":false,
+        "origin":"q(?w) :- influencedBy(?_,?w)^Island(?w)^Place(?w)",
+        "score_calibrated":1.0,
+        "score_combined":1.0,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":2644,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Cremona>",
+        "still_valid":false,
+        "origin":"q(?w) :- producer(?_,?w)^Island(?w)^Place(?w)",
+        "score_calibrated":1.0,
+        "score_combined":1.0,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":4805,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Henan>",
+        "still_valid":false,
+        "origin":"q(?w) :- spouse(?w,?_)^Island(?w)^Place(?w)",
+        "score_calibrated":0.9999991655,
+        "score_combined":0.9999991655,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":3674,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Eugene,_Oregon>",
+        "still_valid":false,
+        "origin":"q(?w) :- deathPlace(?w,?_)^Island(?w)^Place(?w)",
+        "score_calibrated":0.9999976158,
+        "score_combined":0.9999976158,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

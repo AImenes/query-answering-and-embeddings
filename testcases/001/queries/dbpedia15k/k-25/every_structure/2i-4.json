@@ -1,0 +1,98 @@
+{
+    "0":{
+        "entity_id":12182,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Van_Heflin>",
+        "still_valid":false,
+        "origin":"q(?w) :- ethnicGroup(?w,?x)^differentFrom(?w,?y)",
+        "score_calibrated":0.9971365929,
+        "score_combined":0.9971365929,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":4805,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Henan>",
+        "still_valid":false,
+        "origin":"q(?w) :- ethnicGroup(?w,?x)^differentFrom(?w,?y)",
+        "score_calibrated":0.993010819,
+        "score_combined":0.993010819,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":8389,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Palm_Beach_County,_Florida>",
+        "still_valid":false,
+        "origin":"q(?w) :- ethnicGroup(?w,?x)^differentFrom(?w,?y)",
+        "score_calibrated":0.9898564816,
+        "score_combined":0.9898564816,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":3179,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Dogville>",
+        "still_valid":false,
+        "origin":"q(?w) :- ethnicGroup(?w,?x)^differentFrom(?w,?y)",
+        "score_calibrated":0.9841028452,
+        "score_combined":0.9841028452,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":1683,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Bruce_Dern>",
+        "still_valid":false,
+        "origin":"q(?w) :- ethnicGroup(?w,?x)^differentFrom(?w,?y)",
+        "score_calibrated":0.9813685417,
+        "score_combined":0.9813685417,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":10019,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Sexy_Beast>",
+        "still_valid":false,
+        "origin":"q(?w) :- ethnicGroup(?w,?x)^differentFrom(?w,?y)",
+        "score_calibrated":0.9718477726,
+        "score_combined":0.9718477726,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "6":{
+        "entity_id":822,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Arminia_Bielefeld>",
+        "still_valid":false,
+        "origin":"q(?w) :- ethnicGroup(?w,?x)^differentFrom(?w,?y)",
+        "score_calibrated":0.9627210498,
+        "score_combined":0.9627210498,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "7":{
+        "entity_id":10732,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Swarthmore_College>",
+        "still_valid":false,
+        "origin":"q(?w) :- ethnicGroup(?w,?x)^differentFrom(?w,?y)",
+        "score_calibrated":0.9612138867,
+        "score_combined":0.9612138867,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

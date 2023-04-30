@@ -1,0 +1,122 @@
+{
+    "0":{
+        "entity_id":1887,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Cantonese>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?w,?x)^governmentType(?w,?y)",
+        "score_calibrated":0.9999445677,
+        "score_combined":0.9999445677,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":4665,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Happy-Go-Lucky>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?w,?x)^governmentType(?w,?y)",
+        "score_calibrated":0.9998500347,
+        "score_combined":0.9998500347,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":11292,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/The_Phantom_of_the_Opera_(2004_film)>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?w,?x)^governmentType(?w,?y)",
+        "score_calibrated":0.9996786118,
+        "score_combined":0.9996786118,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":7788,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/NYPD_Blue>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?w,?x)^governmentType(?w,?y)",
+        "score_calibrated":0.999599278,
+        "score_combined":0.999599278,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":139,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/AC\/DC>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?w,?x)^governmentType(?w,?y)",
+        "score_calibrated":0.9993802309,
+        "score_combined":0.9993802309,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":6742,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Lorraine_Bracco>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?w,?x)^governmentType(?w,?y)",
+        "score_calibrated":0.9993643165,
+        "score_combined":0.9993643165,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "6":{
+        "entity_id":1684,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Bruce_Greenwood>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?w,?x)^governmentType(?w,?y)",
+        "score_calibrated":0.9987020493,
+        "score_combined":0.9987020493,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "7":{
+        "entity_id":978,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Autoharp>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?w,?x)^governmentType(?w,?y)",
+        "score_calibrated":0.9986953139,
+        "score_combined":0.9986953139,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "8":{
+        "entity_id":10322,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/South_Carolina_State_University>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?w,?x)^governmentType(?w,?y)",
+        "score_calibrated":0.998611331,
+        "score_combined":0.998611331,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "9":{
+        "entity_id":11790,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Tsui_Hark>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?w,?x)^governmentType(?w,?y)",
+        "score_calibrated":0.9985665679,
+        "score_combined":0.9985665679,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

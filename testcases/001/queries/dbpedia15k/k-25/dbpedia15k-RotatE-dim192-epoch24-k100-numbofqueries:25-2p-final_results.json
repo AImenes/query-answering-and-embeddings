@@ -1,0 +1,23 @@
+{
+    "hits@3": {
+        "local_kg_hit_rewriting": 0.0,
+        "online_kg_hit_rewriting": 0.0,
+        "local_kg_hit_original": 0.0,
+        "online_kg_hit_original": 0.0
+    },
+    "mrr": {
+        "local_kg_hit_rewriting": 0.006615673981191224,
+        "online_kg_hit_rewriting": 0.011606060606060606,
+        "local_kg_hit_original": 0.006615673981191224,
+        "online_kg_hit_original": 0.011606060606060606
+    },
+    "query_structure": "2p",
+    "number_of_queries": 25,
+    "model": {
+        "selected_model_name": "RotatE",
+        "dim": 192,
+        "epoch": 24
+    },
+    "dataset": "dbpedia15k",
+    "cutoff_value": 100
+}
