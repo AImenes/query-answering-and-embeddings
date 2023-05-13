@@ -1,0 +1,5 @@
+{
+  "2i": [
+    "q(?w) :- <https://www.wikidata.org/wiki/Q7565>(?w)^<https://www.wikidata.org/prop/P26>(?w,?x)"
+  ]
+}
