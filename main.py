@@ -174,7 +174,7 @@ def main():
                     for q in queries_from_generation[key]:
                         parsed_generated_queries[key].append(query_structure_parsing(q, key, tbox_ontology))
                 
-                #do local KG-lookup
+                #do local original KG-lookup
                 pth = "testcases/" + project_name + "/queries/" + dataset + "/"
                 filename = "queries" + "_k-" + str(number_of_queries_per_structure) + "_parsed_and_rewritten.pickle"
                 full_pth = pth + filename
@@ -210,6 +210,9 @@ def main():
                 
                 #Reformulate
                 parsed_generated_queries = query_reformulate(parsed_generated_queries, rewriting_upper_limit, full_pth, t_box_path) 
+
+                #Reformulation KG Lookup
+                parsed_generated_queries = kg_lookup_rewriting(parsed_generated_queries, dataset, a_box_path, tf)
 
                 #Predict
                 predict_parsed_queries(parsed_generated_queries,base_cases, base_cases_path, enable_online_lookup, dataset, current_model, current_model_params, k, tf, train, valid, test, tbox_ontology, a_box_path, result_path, n)

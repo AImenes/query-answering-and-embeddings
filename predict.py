@@ -767,7 +767,7 @@ def query_pipeline(query, base_cases, base_cases_path, enable_online_lookup, dat
         # Save the answer DF
         # Check whether the predictions are in the KG
         if not entities[distinguished_variable].empty:
-            entities[distinguished_variable]['local_kg_hit_rewriting'] = is_prediction_kg_hit(entities[distinguished_variable], query['kglookup']) if query['kglookup'] else False
+            entities[distinguished_variable]['local_kg_hit_rewriting'] = is_prediction_kg_hit(entities[distinguished_variable], query['kglookup_rewriting']) if query['kglookup_rewriting'] else False
             entities[distinguished_variable]['online_kg_hit_rewriting'] = online_kg_lookup(entities[distinguished_variable], querybody, dataset) if enable_online_lookup else False
         else:
             entities[distinguished_variable]['local_kg_hit_rewriting'] = None

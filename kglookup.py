@@ -430,6 +430,380 @@ def kg_lookup(queries, ds, abox_path, tf):
 
     return queries
 
+def kg_lookup_rewriting(queries, ds, abox_path, tf):
+    """
+    This method extracts the entities from the local KG which the KGEs models are trained upon. They are a little outdated from
+    the online versions.
+
+    Args:
+        queries (dict):         The dictionary containing all queries for all structures.
+        ds (str):               The dataset name
+        abox_path (str):        The relative path to the entire abox of the dataset, which we will to KG-lookup.
+        tf (TriplesFactory):    The TriplesFactory used together with it.
+
+    Returns:
+        queries (dict):         Returns an updated queries dictionary also containing the kglookup results.
+    """
+    
+    # Load ABox
+    abox = abox_path + "all.txt"
+    columns = ['head', 'relation', 'tail']
+    abox = pd.read_csv(abox, sep='\t', names=columns, header=None)
+    
+    # Iterate through the structure types and the queries inside them.
+    for structure, query_list in queries.items():
+        print("Looking up answers for %s-queries." % ((structure)))
+        
+        # If the structure is a projection
+        if structure == '1p' or structure == '2p' or structure == '3p' or structure == 'pi':
+            
+            # Iterate through every query in a structure
+            for query in query_list:
+                distinguished_var = query['q1'].head.entries[0].original_entry_name
+                i = 0
+                projection = {'type': None, 'variable': None, 'target': None, 'entities': None}
+                query['kglookup_rewriting'] = list()
+                
+                
+                
+                for rewritten in query['rewritings']:
+                    # The list we will merge in the end of the method
+                    entities_to_merge = list()
+
+                    # Iterate through every atom in a query
+                    for g in rewritten.body:
+                        atom = {'type': None, 'variable': None, 'target': None, 'entities': None}
+
+                        # Query using the concept method if the atom is a Concept.
+                        if isinstance(g, AtomConcept):
+                            atom['type'] = 'concept'
+                            try:
+                                atom['entities'] = [t[0] for t in query_graph_concepts(g, ds, abox_path)]
+                            except:
+                                atom['entities'] = []
+
+                            if g.var1.original_entry_name == distinguished_var:
+                                atom['variable'] = g.var1.original_entry_name
+                                atom['target'] = 'head'
+                                
+                                entities_to_merge.append(atom['entities'])
+                        
+                        if isinstance(g, AtomRole):
+                            atom['type'] = 'role'
+                            atom['entities'] = query_graph_roles(g, tf, abox, True, projection)
+                            
+                            if g.var1.original_entry_name == distinguished_var:
+                                atom['target'] = 'head'
+                                entities_to_merge.append(atom['entities'][distinguished_var])
+                                projection = {'type': None, 'variable': None, 'target': None, 'entities': None}
+                            elif g.var2.original_entry_name == distinguished_var:
+                                atom['target'] = 'tail'
+                                entities_to_merge.append(atom['entities'][distinguished_var])
+                                projection = {'type': None, 'variable': None, 'target': None, 'entities': None}
+                            
+                            #Projection
+                            else:
+                                #if the variable is shared but not the previous shared
+                                if g.var1.shared and g.var1.original_entry_name != projection['variable']:
+                                    projection['type'] = 'role'
+                                    projection['variable'] = g.var1.original_entry_name
+                                    projection['target'] = 'head'
+                                    projection['entities'] = atom['entities'][g.var1.original_entry_name]
+                                elif g.var2.shared and g.var2.original_entry_name != projection['variable']:
+                                    projection['type'] = 'role'
+                                    projection['variable'] = g.var2.original_entry_name
+                                    projection['target'] = 'tail'
+                                    projection['entities'] = atom['entities'][g.var2.original_entry_name]
+                                    
+                                
+                        i += 1
+
+                    # Merge the sets
+                    if entities_to_merge:
+                        candidates = set.intersection(*map(set, entities_to_merge))
+                        for candidate in candidates:
+                            if candidate not in query['kglookup_rewriting']:
+                                query['kglookup_rewriting'].append(candidate)
+                    else:
+                        print("An error has occurred")
+
+        # For structures that are intersective
+        if structure == '2i' or structure == '3i':
+            for query in query_list:
+                distinguished_var = query['q1'].head.entries[0].original_entry_name
+                i = 0
+                query['kglookup_rewriting'] = list()
+
+
+                for rewritten in query['rewritings']:
+                    
+                    entities_to_merge = list()
+
+                    for g in rewritten.body:
+                        atom = {'type': None, 'variable': None, 'target': None, 'entities': None}
+
+                        if isinstance(g, AtomConcept):
+                            atom['type'] = 'concept'
+                            try:
+                                atom['entities'] = [t[0] for t in query_graph_concepts(g, ds, abox_path)]
+                            except:
+                                atom['entities'] = [] 
+                            if g.var1.get_org_name() == distinguished_var:
+                                atom['variable'] = g.var1.get_org_name()
+                                atom['target'] = 'head'
+                                                                
+                                entities_to_merge.append(atom['entities'])
+
+                        if isinstance(g, AtomRole):
+                            atom['type'] = 'role'
+                            atom['entities'] = query_graph_roles(g, tf, abox, False)
+                            
+                            if g.var1.get_org_name() == distinguished_var:
+                                atom['target'] = 'head'
+                                entities_to_merge.append(atom['entities'][distinguished_var])
+                            elif g.var2.get_org_name() == distinguished_var:
+                                atom['target'] = 'tail'
+                                entities_to_merge.append(atom['entities'][distinguished_var])
+                                
+                        i += 1
+
+                    # Merge the sets
+                    if entities_to_merge:
+                        candidates = set.intersection(*map(set, entities_to_merge))
+                        for candidate in candidates:
+                            if candidate not in query['kglookup_rewriting']:
+                                query['kglookup_rewriting'].append(candidate)
+                    else:
+                        print("An error has occurred")
+
+        # If the structure is both intersective and projective
+        if structure == 'ip':
+             for query in query_list:
+                distinguished_var = query['q1'].head.entries[0].original_entry_name
+                i = 0
+                intersection = {'type': None, 'variable': None, 'target': None, 'entities': None}
+                query['kglookup_rewriting'] = list()
+
+                for rewritten in query['rewritings']:
+                    entities_to_merge = list()
+                    for g in rewritten.body:
+                        atom = {'type': None, 'variable': None, 'target': None, 'entities': None}
+
+                        if isinstance(g, AtomConcept):
+                            atom['type'] = 'concept'
+                            try:
+                                atom['entities'] = [t[0] for t in query_graph_concepts(g, ds, abox_path)]
+                            except:
+                                atom['entities'] = []
+
+                            if g.var1.get_org_name() == distinguished_var:
+                                atom['variable'] = g.var1.get_org_name()
+                                atom['target'] = 'head'
+                                entities_to_merge.append(atom['entities'])
+
+                            else:
+                                if g.var1.shared and g.var1.original_entry_name == intersection['variable']:
+                                    intersection['type'] = 'concept'
+                                    intersection['variable'] = g.var1.original_entry_name
+                                    intersection['target'] = 'head'
+                                    intersection['entities'] = list(set(intersection['entities']) & set(atom['entities']))
+
+                                #First atom
+                                else:
+                                    if g.var1.shared and intersection['variable'] is None:
+                                        intersection['type'] = 'concept'
+                                        intersection['variable'] = g.var1.original_entry_name
+                                        intersection['target'] = 'head'
+                                        intersection['entities'] = atom['entities']
+                        
+                        if isinstance(g, AtomRole):
+                            atom['type'] = 'role'
+                            atom['entities'] = query_graph_roles(g, tf, abox, True, intersection)
+                            
+                            if g.var1.get_org_name() == distinguished_var:
+                                atom['target'] = 'head'
+                                entities_to_merge.append(atom['entities'][distinguished_var])
+                            elif g.var2.get_org_name() == distinguished_var:
+                                atom['target'] = 'tail'
+                                entities_to_merge.append(atom['entities'][distinguished_var])
+                            
+                            #Intersection
+                            else:
+                                #if the variable is shared and the previous shared
+                                if g.var1.shared and g.var1.original_entry_name == intersection['variable']:
+                                    intersection['type'] = 'role'
+                                    intersection['variable'] = g.var1.original_entry_name
+                                    intersection['target'] = 'head'
+                                    intersection['entities'] = list(set(intersection['entities']) & set(atom['entities'][g.var1.original_entry_name]))
+                                elif g.var2.shared and g.var2.original_entry_name == intersection['variable']:
+                                    intersection['type'] = 'role'
+                                    intersection['variable'] = g.var2.original_entry_name
+                                    intersection['target'] = 'tail'
+                                    intersection['entities'] = list(set(intersection['entities']) & set(atom['entities'][g.var2.original_entry_name]))
+                                
+                                #First atom
+                                else:
+                                    if g.var1.shared and intersection['variable'] is None:
+                                        intersection['type'] = 'role'
+                                        intersection['variable'] = g.var1.original_entry_name
+                                        intersection['target'] = 'head'
+                                        intersection['entities'] = atom['entities'][g.var1.original_entry_name]
+                                    elif g.var2.shared and intersection['variable'] is None:
+                                        intersection['type'] = 'role'
+                                        intersection['variable'] = g.var2.original_entry_name
+                                        intersection['target'] = 'tail'
+                                        intersection['entities'] = atom['entities'][g.var2.original_entry_name]
+                                    
+                                
+                        i += 1
+
+                    # Merge the sets
+                    if entities_to_merge:
+                        candidates = set.intersection(*map(set, entities_to_merge))
+                        for candidate in candidates:
+                            if candidate not in query['kglookup_rewriting']:
+                                query['kglookup_rewriting'].append(candidate)
+                    else:
+                        print("An error has occurred")
+
+        # Disjunction 2u
+        if structure == '2u':
+            for query in query_list:
+                distinguished_var = query['q1'].head.entries[0].original_entry_name
+                i = 0
+                query['kglookup_rewriting'] = list()
+                
+                for rewritten in query['rewritings']:
+                    for g in query['q1'].get_body().get_body():
+                        entities_to_merge = list()
+                        atom = {'type': None, 'variable': None, 'target': None, 'entities': None}
+
+                        if isinstance(g, AtomConcept):
+                            atom['type'] = 'concept'
+                            try:
+                                atom['entities'] = [t[0] for t in query_graph_concepts(g, ds, abox_path)]
+                            except:
+                                atom['entities'] = [] 
+                            if g.var1.get_org_name() == distinguished_var:
+                                atom['variable'] = g.var1.get_org_name()
+                                atom['target'] = 'head'
+                                                                
+                                entities_to_merge.append(atom['entities'])
+                        if isinstance(g, AtomRole):
+                            atom['type'] = 'role'
+                            atom['entities'] = query_graph_roles(g, tf, abox, False)
+                            
+                            if g.var1.get_org_name() == distinguished_var:
+                                atom['target'] = 'head'
+                                entities_to_merge.append(atom['entities'][distinguished_var])
+                            elif g.var2.get_org_name() == distinguished_var:
+                                atom['target'] = 'tail'
+                                entities_to_merge.append(atom['entities'][distinguished_var])
+                                
+                        i += 1
+                    i = 0
+                    for g in query['q2'].get_body().get_body():
+                        atom = {'type': None, 'variable': None, 'target': None, 'entities': None}
+
+                        if isinstance(g, AtomConcept):
+                            atom['type'] = 'concept'
+                            try:
+                                atom['entities'] = [t[0] for t in query_graph_concepts(g, ds, abox_path)]
+                            except:
+                                atom['entities'] = []
+                            if g.var1.get_org_name() == distinguished_var:
+                                atom['variable'] = g.var1.get_org_name()
+                                atom['target'] = 'head'
+                                                                
+                                entities_to_merge.append(atom['entities'])
+                        if isinstance(g, AtomRole):
+                            atom['type'] = 'role'
+                            atom['entities'] = query_graph_roles(g, tf, abox, False)
+                            
+                            if g.var1.get_org_name() == distinguished_var:
+                                atom['target'] = 'head'
+                                entities_to_merge.append(atom['entities'][distinguished_var])
+                            elif g.var2.get_org_name() == distinguished_var:
+                                atom['target'] = 'tail'
+                                entities_to_merge.append(atom['entities'][distinguished_var])
+
+                    # Merge the sets
+                    if entities_to_merge:
+                        candidates = set.intersection(*map(set, entities_to_merge))
+                        for candidate in candidates:
+                            if candidate not in query['kglookup_rewriting']:
+                                query['kglookup_rewriting'].append(candidate)
+                    else:
+                        print("An error has occurred")
+
+        
+        # Disjunction up
+        if structure == 'up':
+            for query in query_list:
+                distinguished_var = query['q1'].head.entries[0].original_entry_name
+                i = 0
+                query['kglookup_rewriting'] = list()
+                projection = {'type': None, 'variable': None, 'target': None, 'entities': None}
+                
+                for rewritten in query['rewritings']:
+                    entities_to_merge = list()
+                    for g in rewritten.body:
+                        atom = {'type': None, 'variable': None, 'target': None, 'entities': None}
+
+                        if isinstance(g, AtomConcept):
+                            atom['type'] = 'concept'
+                            try:
+                                atom['entities'] = [t[0] for t in query_graph_concepts(g, ds, abox_path)]
+                            except:
+                                atom['entities'] = []
+
+                            if g.var1.get_org_name() == distinguished_var:
+                                atom['variable'] = g.var1.get_org_name()
+                                atom['target'] = 'head'
+                                
+
+                                entities_to_merge.append(atom['entities'])
+                        if isinstance(g, AtomRole):
+                            atom['type'] = 'role'
+                            atom['entities'] = query_graph_roles(g, tf, abox, True, projection)
+                            
+                            if g.var1.get_org_name() == distinguished_var:
+                                atom['target'] = 'head'
+                                entities_to_merge.append(atom['entities'][distinguished_var])
+                                projection = {'type': None, 'variable': None, 'target': None, 'entities': None}
+                            elif g.var2.get_org_name() == distinguished_var:
+                                atom['target'] = 'tail'
+                                entities_to_merge.append(atom['entities'][distinguished_var])
+                                projection = {'type': None, 'variable': None, 'target': None, 'entities': None}
+                            
+                            #Projection
+                            else:
+                                #if the variable is shared but not the previous shared
+                                if g.var1.shared and g.var1.original_entry_name != projection['variable']:
+                                    projection['type'] = 'role'
+                                    projection['variable'] = g.var1.original_entry_name
+                                    projection['target'] = 'head'
+                                    projection['entities'] = atom['entities'][g.var1.original_entry_name]
+                                elif g.var2.shared and g.var2.original_entry_name != projection['variable']:
+                                    projection['type'] = 'role'
+                                    projection['variable'] = g.var2.original_entry_name
+                                    projection['target'] = 'tail'
+                                    projection['entities'] = atom['entities'][g.var2.original_entry_name]
+                                    
+                                
+                        i += 1
+
+                    #Merge the sets
+                    if entities_to_merge:
+                        candidates = set.intersection(*map(set, entities_to_merge))
+                        for candidate in candidates:
+                            if candidate not in query['kglookup_rewriting']:
+                                query['kglookup_rewriting'].append(candidate)
+                    else:
+                        print("An error has occurred")
+                    
+    return queries
+
 def is_prediction_kg_hit(final_df, kglookup):
     """
     Args:
@@ -658,8 +1032,11 @@ def query_graph_concepts(query, dataset, a_box_path):
         return None
 
 def query_graph_roles(g, tf, abox, is_projection, candidates = {'type': None}):
-    relation = tf.relations_to_ids(relations=["<"+g.iri+">"])
-    triples = tf.new_with_restriction(relations=relation)
+    try:
+        relation = tf.relations_to_ids(relations=["<"+g.iri+">"])
+        triples = tf.new_with_restriction(relations=relation)
+    except:
+        return {g.var1.get_org_name(): [], g.var2.get_org_name(): []}
     
     if is_projection and candidates['type'] is not None:
         temp = abox.loc[abox['relation'] == "<"+g.iri+">"]
