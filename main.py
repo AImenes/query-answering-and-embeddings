@@ -212,7 +212,7 @@ def main():
                 parsed_generated_queries = query_reformulate(parsed_generated_queries, rewriting_upper_limit, full_pth, t_box_path) 
 
                 #Reformulation KG Lookup
-                parsed_generated_queries = kg_lookup_rewriting(parsed_generated_queries, dataset, a_box_path, tf)
+                parsed_generated_queries = kg_lookup_rewriting(parsed_generated_queries, dataset, a_box_path, tf, full_pth)
 
                 #Predict
                 predict_parsed_queries(parsed_generated_queries,base_cases, base_cases_path, enable_online_lookup, dataset, current_model, current_model_params, k, tf, train, valid, test, tbox_ontology, a_box_path, result_path, n)

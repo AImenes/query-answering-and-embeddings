@@ -2,7 +2,8 @@ import numpy as np
 import pandas as pd
 import requests
 import time
-import json
+import os
+import pickle
 
 # Import PerfectRef and OwlReady2
 from perfectref_v1 import AtomParser, AtomConcept, AtomRole, AtomConstant, QueryBody
@@ -430,7 +431,7 @@ def kg_lookup(queries, ds, abox_path, tf):
 
     return queries
 
-def kg_lookup_rewriting(queries, ds, abox_path, tf):
+def kg_lookup_rewriting(queries, ds, abox_path, tf, full_path):
     """
     This method extracts the entities from the local KG which the KGEs models are trained upon. They are a little outdated from
     the online versions.
@@ -450,6 +451,11 @@ def kg_lookup_rewriting(queries, ds, abox_path, tf):
     columns = ['head', 'relation', 'tail']
     abox = pd.read_csv(abox, sep='\t', names=columns, header=None)
     
+    if os.path.exists(full_path):
+        with open(full_path, 'rb') as handle:
+            queries = pickle.load(handle)
+            return queries
+        
     # Iterate through the structure types and the queries inside them.
     for structure, query_list in queries.items():
         print("Looking up answers for %s-queries." % ((structure)))
@@ -802,6 +808,10 @@ def kg_lookup_rewriting(queries, ds, abox_path, tf):
                     else:
                         print("An error has occurred")
                     
+
+    with open(full_path, 'wb') as handle:
+        pickle.dump(queries, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
     return queries
 
 def is_prediction_kg_hit(final_df, kglookup):
@@ -844,6 +854,8 @@ def online_kg_lookup(final_df, query, dataset):
     chunks = 75
     entities = list(divide_chunks(entities, chunks))
 
+    #Define final list
+    true_entities = list()
 
     # Construct the SELECT clause with the distinguished variable
     distinguished_variable = query['q1'].head.var1.original_entry_name if isinstance(query, dict) else next(iter(query.variable_hierarchy))
@@ -910,8 +922,7 @@ def online_kg_lookup(final_df, query, dataset):
             
             data = r.json()
 
-            #Construct 
-            true_entities = list()
+            #Construct
             for binding in data['results']['bindings']:
                 entity = "<" + binding[distinguished_variable[1:]]['value'] + ">"
                 entity = entity.replace("http:", "https:").replace("/entity/", "/wiki/")
@@ -986,7 +997,6 @@ def online_kg_lookup(final_df, query, dataset):
                 raise ImportError("Error code %i from HTML response" % (r.status_code))
 
             #Construct 
-            true_entities = list()
             for binding in data['results']['bindings']:
                 entity = "<" + binding[distinguished_variable[1:]]['value'] + ">"
                 if not entity in true_entities:

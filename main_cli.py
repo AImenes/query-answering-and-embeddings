@@ -29,8 +29,8 @@ n = 3
 k = 100 
 #########################################################################
 ################          DEFAULT LOADING VALUES       ##################
-tbox_import_file = "dbpedia15k.owl"
-dataset = "dbpedia15k"
+tbox_import_file = "family_wikidata.owl"
+dataset = "family"
 project_name = "001"
 transductive_models = ["TransE", "BoxE", "RotatE", "DistMult", "CompGCN"]
 current_model = None
@@ -92,26 +92,34 @@ result_every_structure.mkdir(parents=True, exist_ok=True)
 for i in range(1,6):
     if i == 1:
         current_model = "TransE"
+        dim = 192
+        epoch = 24
     elif i == 2:
         current_model = "BoxE"
+        dim = 192
+        epoch = 24
     elif i == 3:
         current_model = "RotatE"
+        dim = 192
+        epoch = 24
     elif i == 4:
         current_model = "DistMult"
+        dim = 192
+        epoch = 16
     elif i == 5:
         current_model = "CompGCN"
+        dim = 192
+        epoch = 24
     else:
         current_model = None
-    dim = 192
-    epochs = 24
-
+    
     # Set up the configuration file path for the current model
-    current_config = "testcases/" + project_name + "/models/dataset:" + dataset + "_model:" + current_model + "_dim:" + str(dim) + "_epoch:" + str(epochs)
+    current_config = "testcases/" + project_name + "/models/dataset:" + dataset + "_model:" + current_model + "_dim:" + str(dim) + "_epoch:" + str(epoch)
 
     if os.path.exists(current_config):
         # If the configuration file exists, load the trained model and return it along with the selected model name, dimension, and number of epochs
         model_path = current_config + "/trained_model.pkl"
-        current_model_params = {'selected_model_name': current_model, 'dim': dim, 'epoch': epochs}
+        current_model_params = {'selected_model_name': current_model, 'dim': dim, 'epoch': epoch}
         current_model = load(model_path)
 
 
@@ -120,7 +128,10 @@ for i in range(1,6):
     full_pth = pth + filename
 
     #Reformulate
-    parsed_generated_queries = query_reformulate(parsed_generated_queries, rewriting_upper_limit, full_pth, t_box_path) 
+    parsed_generated_queries = query_reformulate(parsed_generated_queries, rewriting_upper_limit, full_pth, t_box_path)
+
+    #Reformulation KG Lookup
+    parsed_generated_queries = kg_lookup_rewriting(parsed_generated_queries, dataset, a_box_path, tf, full_pth) 
 
     #Predict
     predict_parsed_queries(parsed_generated_queries,base_cases, base_cases_path, enable_online_lookup, dataset, current_model, current_model_params, k, tf, train, valid, test, tbox_ontology, a_box_path, result_path, n)
