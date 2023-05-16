@@ -465,6 +465,7 @@ def new_base_case(base_cases, config):
     
     # Iterate through each base case in the base_cases list.
     for b in base_cases:
+        
         # If the configuration matches an existing base case configuration, return False.
         if b['config'] == config:
             return False
@@ -836,10 +837,10 @@ def predict_parsed_queries(all_queries, base_cases, base_cases_path, enable_onli
             query['answer'], results_metrics = query_pipeline(query, base_cases, base_cases_path, enable_online_lookup, dataset, model, model_params, k, tf, train, valid, test, aboxpath, n)
 
             # Save the answer to a JSON file
-            query['answer'].to_json(f"{result_path}/every_structure/{query_structure}-{idx+1}.json", indent=4, orient = 'index')
+            query['answer'].to_json(f'{result_path}/every_structure/{dataset}-{model_params["selected_model_name"]}-dim{model_params["dim"]}-epoch{model_params["epoch"]}-k{k}-{query_structure}-{idx+1}.json', indent=4, orient = 'index')
 
             # Save metrics to a JSON file
-            with open(f'{result_path}/every_structure/{query_structure}-{idx+1}-results.json', 'w') as fp:
+            with open(f'{result_path}/every_structure/{dataset}-{model_params["selected_model_name"]}-dim{model_params["dim"]}-epoch{model_params["epoch"]}-k{k}-{query_structure}-{idx+1}-results.json', 'w') as fp:
                 json.dump(results_metrics, fp, indent=4)
 
             structure_metrices.append(results_metrics)
@@ -853,7 +854,7 @@ def predict_parsed_queries(all_queries, base_cases, base_cases_path, enable_onli
         final_results['cutoff_value'] = k
 
         # Save the final results to a JSON file
-        with open(f'{result_path}/{dataset}-{ model_params["selected_model_name"]}-dim{model_params["dim"]}-epoch{model_params["epoch"]}-k{k}-numbofqueries:{final_results["number_of_queries"]}-{query_structure}-final_results.json', 'w') as fp:
+        with open(f'{result_path}/{dataset}-{model_params["selected_model_name"]}-dim{model_params["dim"]}-epoch{model_params["epoch"]}-k{k}-numbofqueries:{final_results["number_of_queries"]}-{query_structure}-final_results.json', 'w') as fp:
                 json.dump(final_results, fp, indent=4)
 
     return None

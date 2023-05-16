@@ -29,8 +29,8 @@ n = 3
 k = 100 
 #########################################################################
 ################          DEFAULT LOADING VALUES       ##################
-tbox_import_file = "family_wikidata.owl"
-dataset = "family"
+tbox_import_file = "dbpedia15k.owl"
+dataset = "dbpedia15k"
 project_name = "001"
 transductive_models = ["TransE", "BoxE", "RotatE", "DistMult", "CompGCN"]
 current_model = None
@@ -89,7 +89,7 @@ result_path.mkdir(parents=True, exist_ok=True)
 result_every_structure = Path(f"testcases/{project_name}/queries/{dataset}/k-{number_of_queries_per_structure}/every_structure/")
 result_every_structure.mkdir(parents=True, exist_ok=True)
 
-for i in range(1,6):
+for i in range(3,5):
     if i == 1:
         current_model = "TransE"
         dim = 192
@@ -105,7 +105,7 @@ for i in range(1,6):
     elif i == 4:
         current_model = "DistMult"
         dim = 192
-        epoch = 16
+        epoch = 24
     elif i == 5:
         current_model = "CompGCN"
         dim = 192
