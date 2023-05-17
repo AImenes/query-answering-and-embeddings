@@ -995,12 +995,13 @@ def online_kg_lookup(final_df, query, dataset):
                 data = r.json()
             else:
                 raise ImportError("Error code %i from HTML response" % (r.status_code))
-
-            #Construct 
-            for binding in data['results']['bindings']:
-                entity = "<" + binding[distinguished_variable[1:]]['value'] + ">"
-                if not entity in true_entities:
-                    true_entities.append(entity)
+            
+            if (r.status_code == 200 or r.status_code == 206):
+                #Construct 
+                for binding in data['results']['bindings']:
+                    entity = "<" + binding[distinguished_variable[1:]]['value'] + ">"
+                    if not entity in true_entities:
+                        true_entities.append(entity)
             
             time.sleep(0.5)
 
