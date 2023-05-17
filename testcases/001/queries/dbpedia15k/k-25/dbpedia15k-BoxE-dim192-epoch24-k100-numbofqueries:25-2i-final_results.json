@@ -6,10 +6,10 @@
         "online_kg_hit_original": 0.0
     },
     "mrr": {
-        "local_kg_hit_rewriting": 0.10239298245614036,
-        "online_kg_hit_rewriting": 0.0013008989952406136,
+        "local_kg_hit_rewriting": 0.11204761904761906,
+        "online_kg_hit_rewriting": 0.002384291725105189,
         "local_kg_hit_original": 0.10239298245614036,
-        "online_kg_hit_original": 0.0004878048780487805
+        "online_kg_hit_original": 0.01
     },
     "query_structure": "2i",
     "number_of_queries": 25,

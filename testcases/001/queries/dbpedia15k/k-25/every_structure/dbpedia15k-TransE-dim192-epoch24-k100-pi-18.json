@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":2104,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Charlie_Parker>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^ground(?y,?w)^influencedBy(?w,?z)",
+        "score_calibrated":0.0000039561,
+        "score_combined":0.0000039561,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

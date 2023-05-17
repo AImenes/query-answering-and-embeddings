@@ -2,9 +2,12 @@ import pandas as pd
 import os
 
 df = pd.read_csv("all.txt", delimiter='\t', header=None)
-print("stop")
 
-#Using pandas way, Series.value_counts()
-df1 = df.iloc[:,1].value_counts()
-df1.to_csv("freq_count.txt")
+# Concatenate the 0th and 2nd columns of the dataframe
+df_concatenated = pd.concat([df.iloc[:,0], df.iloc[:,2]])
 
+# Count the frequency of the entities
+entity_frequencies = df_concatenated.value_counts()
+
+# Write the results to a file
+entity_frequencies.to_csv("freq_count_entities.txt")

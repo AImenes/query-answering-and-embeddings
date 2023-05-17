@@ -1,0 +1,26 @@
+{
+    "0":{
+        "entity_id":10209,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Ski_jumping>",
+        "still_valid":false,
+        "origin":"q(?w) :- director(?x,?y)^instrument(?w,?y)^stylisticOrigin(?z,?w)",
+        "score_calibrated":0.03573066,
+        "score_combined":0.03573066,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":3314,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Duluth,_Minnesota>",
+        "still_valid":false,
+        "origin":"q(?w) :- director(?x,?y)^instrument(?w,?y)^stylisticOrigin(?z,?w)",
+        "score_calibrated":0.0329034626,
+        "score_combined":0.0329034626,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

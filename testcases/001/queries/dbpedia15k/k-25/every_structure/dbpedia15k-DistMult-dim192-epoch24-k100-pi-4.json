@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":6138,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Ken_Loach>",
+        "still_valid":false,
+        "origin":"q(?w) :- location(?x,?y)^writer(?w,?y)^associatedMusicalArtist(?w,?z)",
+        "score_calibrated":0.7799047828,
+        "score_combined":0.7799047828,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

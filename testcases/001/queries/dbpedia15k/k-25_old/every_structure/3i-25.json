@@ -1,0 +1,38 @@
+{
+    "0":{
+        "entity_id":11790,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Tsui_Hark>",
+        "still_valid":false,
+        "origin":"q(?w) :- position(?z,?w)^associatedBand(?y,?w)^instrument(?w,?x)",
+        "score_calibrated":0.9999136925,
+        "score_combined":0.9999136925,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":3685,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/European_Americans>",
+        "still_valid":false,
+        "origin":"q(?w) :- position(?z,?w)^associatedBand(?y,?w)^instrument(?w,?x)",
+        "score_calibrated":0.9991636276,
+        "score_combined":0.9991636276,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":12182,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Van_Heflin>",
+        "still_valid":false,
+        "origin":"q(?w) :- position(?z,?w)^associatedBand(?y,?w)^instrument(?w,?x)",
+        "score_calibrated":0.9976527095,
+        "score_combined":0.9976527095,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

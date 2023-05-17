@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":66,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/20th_Century_Fox_Television>",
+        "still_valid":false,
+        "origin":"q(?w) :- starring(?w,?x)^PopulatedPlace(?w)^Place(?w)",
+        "score_calibrated":0.0000011371,
+        "score_combined":0.0000011371,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

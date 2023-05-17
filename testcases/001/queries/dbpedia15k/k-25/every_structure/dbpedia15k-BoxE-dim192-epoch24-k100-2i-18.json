@@ -1,0 +1,122 @@
+{
+    "0":{
+        "entity_id":420,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Albert_S._D'Agostino>",
+        "still_valid":false,
+        "origin":"q(?w) :- metropolitanBorough(?_,?w)^musicComposer(?x,?w)",
+        "score_calibrated":0.0678851828,
+        "score_combined":0.0678851828,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":4250,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/George_R._R._Martin>",
+        "still_valid":false,
+        "origin":"q(?w) :- municipality(?_,?w)^musicComposer(?x,?w)",
+        "score_calibrated":0.0670358241,
+        "score_combined":0.0670358241,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":5744,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/John_Coltrane>",
+        "still_valid":false,
+        "origin":"q(?w) :- metropolitanBorough(?w,?_)^musicComposer(?x,?w)",
+        "score_calibrated":0.0451399609,
+        "score_combined":0.0451399609,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":9651,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/S.L._Benfica>",
+        "still_valid":false,
+        "origin":"q(?w) :- metropolitanBorough(?w,?_)^musicComposer(?x,?w)",
+        "score_calibrated":0.0416123383,
+        "score_combined":0.0416123383,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":7162,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Mary_Lynn_Rajskub>",
+        "still_valid":false,
+        "origin":"q(?w) :- metropolitanBorough(?w,?_)^musicComposer(?x,?w)",
+        "score_calibrated":0.0412544049,
+        "score_combined":0.0412544049,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":2314,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Cinematographer>",
+        "still_valid":false,
+        "origin":"q(?w) :- sourcePlace(?_,?w)^musicComposer(?x,?w)",
+        "score_calibrated":0.0399181582,
+        "score_combined":0.0399181582,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "6":{
+        "entity_id":7106,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Marlene_Dietrich>",
+        "still_valid":false,
+        "origin":"q(?w) :- lowestPlace(?_,?w)^musicComposer(?x,?w)",
+        "score_calibrated":0.0398263,
+        "score_combined":0.0398263,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "7":{
+        "entity_id":4724,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Hartlepool_United_F.C.>",
+        "still_valid":false,
+        "origin":"q(?w) :- lowestPlace(?_,?w)^musicComposer(?x,?w)",
+        "score_calibrated":0.0391101763,
+        "score_combined":0.0391101763,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "8":{
+        "entity_id":9115,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Raoul_Walsh>",
+        "still_valid":false,
+        "origin":"q(?w) :- lowestPlace(?_,?w)^musicComposer(?x,?w)",
+        "score_calibrated":0.0388243943,
+        "score_combined":0.0388243943,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "9":{
+        "entity_id":4270,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Georgia_Institute_of_Technology>",
+        "still_valid":false,
+        "origin":"q(?w) :- sourcePlace(?_,?w)^musicComposer(?x,?w)",
+        "score_calibrated":0.0358792841,
+        "score_combined":0.0358792841,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

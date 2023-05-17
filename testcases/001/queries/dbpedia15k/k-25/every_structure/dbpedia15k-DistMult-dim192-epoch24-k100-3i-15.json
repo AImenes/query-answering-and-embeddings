@@ -1,0 +1,38 @@
+{
+    "0":{
+        "entity_id":6632,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Lincoln,_England>",
+        "still_valid":false,
+        "origin":"q(?w) :- birthPlace(?w,?z)^hometown(?w,?y)^birthPlace(?x,?w)",
+        "score_calibrated":0.5001907945,
+        "score_combined":0.5001907945,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":12633,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/William_Petersen>",
+        "still_valid":false,
+        "origin":"q(?w) :- birthPlace(?w,?z)^hometown(?w,?y)^birthPlace(?x,?w)",
+        "score_calibrated":0.5001869202,
+        "score_combined":0.5001869202,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":8639,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Philanthropy>",
+        "still_valid":false,
+        "origin":"q(?w) :- birthPlace(?w,?z)^hometown(?w,?y)^birthPlace(?x,?w)",
+        "score_calibrated":0.5001804233,
+        "score_combined":0.5001804233,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

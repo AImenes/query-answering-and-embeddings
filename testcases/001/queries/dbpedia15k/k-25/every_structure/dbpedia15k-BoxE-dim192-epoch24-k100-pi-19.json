@@ -1,0 +1,122 @@
+{
+    "0":{
+        "entity_id":8059,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Ninth_grade>",
+        "still_valid":false,
+        "origin":"q(?w) :- sisterCollege(?x,?y)^formerBandMember(?w,?y)^associatedBand(?z,?w)",
+        "score_calibrated":0.0640832186,
+        "score_combined":0.0640832186,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":11013,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/The_Caine_Mutiny_(film)>",
+        "still_valid":false,
+        "origin":"q(?w) :- sisterCollege(?x,?y)^formerBandMember(?w,?y)^associatedBand(?z,?w)",
+        "score_calibrated":0.0574712902,
+        "score_combined":0.0574712902,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":1201,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Beginners>",
+        "still_valid":false,
+        "origin":"q(?w) :- sisterCollege(?x,?y)^formerBandMember(?w,?y)^associatedBand(?z,?w)",
+        "score_calibrated":0.0574124865,
+        "score_combined":0.0574124865,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":2105,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Charlie_Sheen>",
+        "still_valid":false,
+        "origin":"q(?w) :- sisterCollege(?x,?y)^formerBandMember(?w,?y)^associatedBand(?z,?w)",
+        "score_calibrated":0.0572393052,
+        "score_combined":0.0572393052,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":335,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Aimee_Mann>",
+        "still_valid":false,
+        "origin":"q(?w) :- sisterCollege(?x,?y)^formerBandMember(?w,?y)^associatedBand(?z,?w)",
+        "score_calibrated":0.0569977202,
+        "score_combined":0.0569977202,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":10963,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/The_Animatrix>",
+        "still_valid":false,
+        "origin":"q(?w) :- sisterCollege(?x,?y)^formerBandMember(?w,?y)^associatedBand(?z,?w)",
+        "score_calibrated":0.0477416776,
+        "score_combined":0.0477416776,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "6":{
+        "entity_id":8793,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Portage_County,_Ohio>",
+        "still_valid":false,
+        "origin":"q(?w) :- sisterCollege(?x,?y)^formerBandMember(?w,?y)^associatedBand(?z,?w)",
+        "score_calibrated":0.0464105457,
+        "score_combined":0.0464105457,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "7":{
+        "entity_id":8481,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Paul_Dano>",
+        "still_valid":false,
+        "origin":"q(?w) :- sisterCollege(?x,?y)^formerBandMember(?w,?y)^associatedBand(?z,?w)",
+        "score_calibrated":0.0442273617,
+        "score_combined":0.0442273617,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "8":{
+        "entity_id":9075,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Rainer_Werner_Fassbinder>",
+        "still_valid":false,
+        "origin":"q(?w) :- sisterCollege(?x,?y)^formerBandMember(?w,?y)^associatedBand(?z,?w)",
+        "score_calibrated":0.0403644592,
+        "score_combined":0.0403644592,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "9":{
+        "entity_id":8575,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Peter_Boyle>",
+        "still_valid":false,
+        "origin":"q(?w) :- sisterCollege(?x,?y)^formerBandMember(?w,?y)^associatedBand(?z,?w)",
+        "score_calibrated":0.0397172123,
+        "score_combined":0.0397172123,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

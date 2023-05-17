@@ -1,0 +1,86 @@
+{
+    "0":{
+        "entity_id":12425,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Warner_Music_Group>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?w,?x)^Person(?w)^Q486972(?w)",
+        "score_calibrated":0.0336200967,
+        "score_combined":0.0336200967,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":1917,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Carl_Sagan>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?w,?x)^Person(?w)^Q486972(?w)",
+        "score_calibrated":0.0257613007,
+        "score_combined":0.0257613007,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":948,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Augustus>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?w,?x)^Person(?w)^Island(?w)",
+        "score_calibrated":0.0252483152,
+        "score_combined":0.0252483152,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":12308,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Virginia_Beach,_Virginia>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?w,?x)^Economist(?w)^Q486972(?w)",
+        "score_calibrated":0.0239594467,
+        "score_combined":0.0239594467,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":3630,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Eric_Roth>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?w,?x)^Astronaut(?w)^Q486972(?w)",
+        "score_calibrated":0.0238502994,
+        "score_combined":0.0238502994,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":11921,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Universal_Pictures_Home_Entertainment>",
+        "still_valid":false,
+        "origin":"q(?w) :- owner(?_,?w)^associatedBand(?w,?x)^Q486972(?w)",
+        "score_calibrated":0.0211368594,
+        "score_combined":0.0211368594,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "6":{
+        "entity_id":12183,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Van_Helsing_(film)>",
+        "still_valid":false,
+        "origin":"q(?w) :- capital(?w,?_)^associatedBand(?w,?x)^Person(?w)",
+        "score_calibrated":0.0180369653,
+        "score_combined":0.0180369653,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

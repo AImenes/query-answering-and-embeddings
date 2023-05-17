@@ -1,0 +1,14 @@
+{
+    "hits@3": {
+        "local_kg_hit_rewriting": 0.0,
+        "online_kg_hit_rewriting": 0.0,
+        "local_kg_hit_original": 0.0,
+        "online_kg_hit_original": 0.0
+    },
+    "mrr": {
+        "local_kg_hit_rewriting": 0.009900990099009901,
+        "online_kg_hit_rewriting": 0.011494252873563218,
+        "local_kg_hit_original": 0.09090909090909091,
+        "online_kg_hit_original": 0.09090909090909091
+    }
+}

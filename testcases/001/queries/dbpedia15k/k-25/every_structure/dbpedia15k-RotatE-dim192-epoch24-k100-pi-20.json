@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":11894,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/United_States_Army>",
+        "still_valid":false,
+        "origin":"q(?w) :- occupation(?x,?y)^birthPlace(?w,?y)^birthPlace(?z,?w)",
+        "score_calibrated":0.033506915,
+        "score_combined":0.033506915,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":193,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/A_View_to_a_Kill>",
+        "still_valid":false,
+        "origin":"q(?w) :- cinematography(?x,?y)^company(?w,?y)^knownFor(?w,?z)",
+        "score_calibrated":0.0000002576,
+        "score_combined":0.0000002576,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

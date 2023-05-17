@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":4425,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Gothenburg>",
+        "still_valid":false,
+        "origin":"q(?w) :- countySeat(?w,?_)^genre(?w,?y)^restingPlace(?w,?x)",
+        "score_calibrated":0.0164135136,
+        "score_combined":0.0164135136,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

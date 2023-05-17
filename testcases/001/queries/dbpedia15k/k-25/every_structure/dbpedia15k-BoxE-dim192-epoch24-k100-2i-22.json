@@ -1,0 +1,50 @@
+{
+    "0":{
+        "entity_id":2105,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Charlie_Sheen>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?w,?x)^genre(?w,?y)",
+        "score_calibrated":0.0472349152,
+        "score_combined":0.0472349152,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":10963,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/The_Animatrix>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?w,?x)^genre(?w,?y)",
+        "score_calibrated":0.0457186215,
+        "score_combined":0.0457186215,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":9343,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Rita_Hayworth>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?w,?x)^genre(?w,?y)",
+        "score_calibrated":0.0451372229,
+        "score_combined":0.0451372229,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":8633,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Philadelphia>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?w,?x)^genre(?w,?y)",
+        "score_calibrated":0.0450160243,
+        "score_combined":0.0450160243,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

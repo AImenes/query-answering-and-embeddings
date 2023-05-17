@@ -1,0 +1,50 @@
+{
+    "0":{
+        "entity_id":4285,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Germany>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?w,?x)^governmentType(?w,?y)",
+        "score_calibrated":0.0000000539,
+        "score_combined":0.0000000539,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    },
+    "1":{
+        "entity_id":4876,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Hindi>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?w,?x)^governmentType(?w,?y)",
+        "score_calibrated":0.0000000539,
+        "score_combined":0.0000000539,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":3582,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/England>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?w,?x)^governmentType(?w,?y)",
+        "score_calibrated":0.0000000539,
+        "score_combined":0.0000000539,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":3966,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Franciaorsz\u00e1g>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?w,?x)^governmentType(?w,?y)",
+        "score_calibrated":0.0000000539,
+        "score_combined":0.0000000539,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":false
+    }
+}

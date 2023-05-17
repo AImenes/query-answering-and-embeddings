@@ -1,0 +1,86 @@
+{
+    "0":{
+        "entity_id":10,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Location>",
+        "still_valid":false,
+        "origin":"q(?w) :- locationCity(?w,?z)^almaMater(?w,?y)^populationPlace(?x,?w)",
+        "score_calibrated":0.0193902906,
+        "score_combined":0.0193902906,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":12853,
+        "entity_label":"<http:\/\/schema.org\/Place>",
+        "still_valid":false,
+        "origin":"q(?w) :- locationCity(?w,?z)^almaMater(?w,?y)^populationPlace(?x,?w)",
+        "score_calibrated":0.0185776465,
+        "score_combined":0.0185776465,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":13,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Place>",
+        "still_valid":false,
+        "origin":"q(?w) :- locationCity(?w,?z)^almaMater(?w,?y)^populationPlace(?x,?w)",
+        "score_calibrated":0.0181495082,
+        "score_combined":0.0181495082,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":12858,
+        "entity_label":"<http:\/\/www.wikidata.org\/entity\/Q486972>",
+        "still_valid":false,
+        "origin":"q(?w) :- locationCity(?w,?z)^almaMater(?w,?y)^populationPlace(?x,?w)",
+        "score_calibrated":0.0180349629,
+        "score_combined":0.0180349629,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":17,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Settlement>",
+        "still_valid":false,
+        "origin":"q(?w) :- locationCity(?w,?z)^almaMater(?w,?y)^populationPlace(?x,?w)",
+        "score_calibrated":0.01770024,
+        "score_combined":0.01770024,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":9,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Island>",
+        "still_valid":false,
+        "origin":"q(?w) :- locationCity(?w,?z)^almaMater(?w,?y)^populationPlace(?x,?w)",
+        "score_calibrated":0.0175393838,
+        "score_combined":0.0175393838,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "6":{
+        "entity_id":16,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/PopulatedPlace>",
+        "still_valid":false,
+        "origin":"q(?w) :- locationCity(?w,?z)^almaMater(?w,?y)^populationPlace(?x,?w)",
+        "score_calibrated":0.0172303375,
+        "score_combined":0.0172303375,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

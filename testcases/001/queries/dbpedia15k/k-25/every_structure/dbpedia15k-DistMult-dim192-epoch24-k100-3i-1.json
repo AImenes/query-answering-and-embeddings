@@ -1,0 +1,26 @@
+{
+    "0":{
+        "entity_id":12633,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/William_Petersen>",
+        "still_valid":false,
+        "origin":"q(?w) :- birthPlace(?_,?w)^birthPlace(?y,?w)^starring(?x,?w)",
+        "score_calibrated":0.500194788,
+        "score_combined":0.500194788,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":6271,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Knox_College_(Illinois)>",
+        "still_valid":false,
+        "origin":"q(?w) :- birthPlace(?_,?w)^birthPlace(?y,?w)^starring(?x,?w)",
+        "score_calibrated":0.5001925826,
+        "score_combined":0.5001925826,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

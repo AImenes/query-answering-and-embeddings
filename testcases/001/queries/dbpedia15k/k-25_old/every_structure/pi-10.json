@@ -1,0 +1,62 @@
+{
+    "0":{
+        "entity_id":11790,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Tsui_Hark>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?x,?y)^sisterStation(?y,?w)^recordLabel(?z,?w)",
+        "score_calibrated":0.9999982119,
+        "score_combined":0.9999982119,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":69,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/21_Jump_Street_(film)>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?x,?y)^sisterStation(?y,?w)^recordLabel(?z,?w)",
+        "score_calibrated":0.9999965429,
+        "score_combined":0.9999965429,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":2644,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Cremona>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?x,?y)^sisterStation(?y,?w)^recordLabel(?z,?w)",
+        "score_calibrated":0.9999959469,
+        "score_combined":0.9999959469,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":8389,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Palm_Beach_County,_Florida>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?x,?y)^sisterStation(?y,?w)^recordLabel(?z,?w)",
+        "score_calibrated":0.9999928474,
+        "score_combined":0.9999928474,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":7788,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/NYPD_Blue>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?x,?y)^sisterStation(?y,?w)^recordLabel(?z,?w)",
+        "score_calibrated":0.9999835491,
+        "score_combined":0.9999835491,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "0":{
+        "entity_id":292,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Adolph_Deutsch>",
+        "still_valid":false,
+        "origin":"q(?w) :- occupation(?x,?y)^birthPlace(?w,?y)^birthPlace(?z,?w)",
+        "score_calibrated":0.0000031669,
+        "score_combined":0.0000031669,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":379,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Alan_Bates>",
+        "still_valid":false,
+        "origin":"q(?w) :- occupation(?x,?y)^birthPlace(?w,?y)^birthPlace(?z,?w)",
+        "score_calibrated":0.0000031669,
+        "score_combined":0.0000031669,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":378,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Alan_Ball_(screenwriter)>",
+        "still_valid":false,
+        "origin":"q(?w) :- occupation(?x,?y)^birthPlace(?w,?y)^birthPlace(?z,?w)",
+        "score_calibrated":0.0000031669,
+        "score_combined":0.0000031669,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":297,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Adrian_Belew>",
+        "still_valid":false,
+        "origin":"q(?w) :- occupation(?x,?y)^birthPlace(?w,?y)^birthPlace(?z,?w)",
+        "score_calibrated":0.0000031669,
+        "score_combined":0.0000031669,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

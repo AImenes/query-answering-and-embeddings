@@ -1,0 +1,38 @@
+{
+    "0":{
+        "entity_id":3162,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Dixieland>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^recordLabel(?w,?y)^starring(?w,?z)",
+        "score_calibrated":0.5001064539,
+        "score_combined":0.5001064539,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":9364,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Rob_Schneider>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^recordLabel(?w,?y)^starring(?w,?z)",
+        "score_calibrated":0.5000992417,
+        "score_combined":0.5000992417,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":6732,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Lords_of_Dogtown>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^recordLabel(?w,?y)^starring(?w,?z)",
+        "score_calibrated":0.5000954866,
+        "score_combined":0.5000954866,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

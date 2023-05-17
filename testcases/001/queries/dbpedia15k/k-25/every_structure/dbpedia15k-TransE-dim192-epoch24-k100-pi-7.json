@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":246,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Academy_of_Motion_Picture_Arts_and_Sciences>",
+        "still_valid":false,
+        "origin":"q(?w) :- headquarter(?x,?y)^sourceConfluencePlace(?w,?y)^director(?w,?z)",
+        "score_calibrated":0.0000010237,
+        "score_combined":0.0000010237,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

@@ -3,13 +3,13 @@
         "local_kg_hit_rewriting": 0.22666666666666668,
         "online_kg_hit_rewriting": 0.29333333333333333,
         "local_kg_hit_original": 0.22666666666666668,
-        "online_kg_hit_original": 0.0
+        "online_kg_hit_original": 0.26666666666666666
     },
     "mrr": {
         "local_kg_hit_rewriting": 0.28,
         "online_kg_hit_rewriting": 0.36,
         "local_kg_hit_original": 0.28,
-        "online_kg_hit_original": 0.0029035197497770796
+        "online_kg_hit_original": 0.32
     },
     "query_structure": "ip",
     "number_of_queries": 25,

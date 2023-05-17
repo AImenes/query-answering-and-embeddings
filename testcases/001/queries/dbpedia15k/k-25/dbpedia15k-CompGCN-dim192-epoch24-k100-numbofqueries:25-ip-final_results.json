@@ -9,7 +9,7 @@
         "local_kg_hit_rewriting": 0.0032000741698343365,
         "online_kg_hit_rewriting": 0.0012760966455547735,
         "local_kg_hit_original": 0.0032000741698343365,
-        "online_kg_hit_original": 0.0009535972754363558
+        "online_kg_hit_original": 0.0012760966455547735
     },
     "query_structure": "ip",
     "number_of_queries": 25,

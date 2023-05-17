@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":8723,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Playback_singer>",
+        "still_valid":false,
+        "origin":"q(?w) :- leaderName(?_,?w)^twinCountry(?y,?w)^hometown(?x,?w)",
+        "score_calibrated":0.7052868009,
+        "score_combined":0.7052868009,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

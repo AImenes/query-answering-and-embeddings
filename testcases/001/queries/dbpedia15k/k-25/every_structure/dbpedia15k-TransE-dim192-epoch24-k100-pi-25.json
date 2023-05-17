@@ -1,0 +1,26 @@
+{
+    "0":{
+        "entity_id":4561,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Gujarat>",
+        "still_valid":false,
+        "origin":"q(?w) :- populationPlace(?x,?y)^subsequentWork(?w,?y)^leaderName(?z,?w)",
+        "score_calibrated":0.0000001891,
+        "score_combined":0.0000001891,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":6725,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Longview,_Texas>",
+        "still_valid":false,
+        "origin":"q(?w) :- populationPlace(?x,?y)^subsequentWork(?w,?y)^leaderName(?z,?w)",
+        "score_calibrated":0.0000001891,
+        "score_combined":0.0000001891,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

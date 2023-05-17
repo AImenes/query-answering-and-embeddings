@@ -1,0 +1,26 @@
+{
+    "0":{
+        "entity_id":13,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Place>",
+        "still_valid":false,
+        "origin":"q(?w) :- distributingLabel(?z,?w)^parentCompany(?y,?w)^distributor(?x,?w)",
+        "score_calibrated":0.0182820074,
+        "score_combined":0.0182820074,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":10,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Location>",
+        "still_valid":false,
+        "origin":"q(?w) :- distributingLabel(?z,?w)^parentCompany(?y,?w)^distributor(?x,?w)",
+        "score_calibrated":0.01777591,
+        "score_combined":0.01777591,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

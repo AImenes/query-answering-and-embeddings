@@ -89,7 +89,7 @@ result_path.mkdir(parents=True, exist_ok=True)
 result_every_structure = Path(f"testcases/{project_name}/queries/{dataset}/k-{number_of_queries_per_structure}/every_structure/")
 result_every_structure.mkdir(parents=True, exist_ok=True)
 
-for i in range(3,5):
+for i in range(1,6):
     if i == 1:
         current_model = "TransE"
         dim = 192

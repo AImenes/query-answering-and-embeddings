@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":94579,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q680131>",
+        "still_valid":false,
+        "origin":"q(?w) :- P22(?x,?y)^P26(?w,?y)^P22(?z,?w)",
+        "score_calibrated":0.2853936553,
+        "score_combined":0.2853936553,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

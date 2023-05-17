@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":2128,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Cheech_Marin>",
+        "still_valid":false,
+        "origin":"q(?w) :- nationality(?x,?w)^starring(?w,?y)",
+        "score_calibrated":0.000001214,
+        "score_combined":0.000001214,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

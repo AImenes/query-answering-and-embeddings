@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":60,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q10065>",
+        "still_valid":false,
+        "origin":"q(?w) :- P3373(?z,?w)^P40(?y,?w)^P40(?x,?w)",
+        "score_calibrated":0.0643199533,
+        "score_combined":0.0643199533,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    }
+}

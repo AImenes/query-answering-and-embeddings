@@ -1,0 +1,26 @@
+{
+    "0":{
+        "entity_id":161,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/A_Beautiful_Mind_(film)>",
+        "still_valid":false,
+        "origin":"q(?w) :- cinematography(?x,?y)^occupation(?w,?y)^battle(?z,?w)",
+        "score_calibrated":0.0000000075,
+        "score_combined":0.0000000075,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":339,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Airplane!>",
+        "still_valid":false,
+        "origin":"q(?w) :- cinematography(?x,?y)^occupation(?w,?y)^battle(?z,?w)",
+        "score_calibrated":0.0000000049,
+        "score_combined":0.0000000049,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

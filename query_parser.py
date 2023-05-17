@@ -483,14 +483,11 @@ def query_reformulate(parsed_generated_queries: dict, rewriting_upper_limit: int
                     temp2 = pr.get_entailed_queries(t_box_path, query_dict['q2'], upperlimit=rewriting_upper_limit, parse=False)
                     query_dict['rewritings'] = temp1 + temp2
 
-        # Save the reformulated queries to the file specified by full_pth
-        with open(full_pth, 'wb') as handle:
-            pickle.dump(parsed_generated_queries, handle, protocol=pickle.HIGHEST_PROTOCOL)
-    else:
-        # If the reformulated queries have already been saved to the file specified by full_pth, load them from the file
-        print("\n Reformulation already exists. Loaded pickle for this configuration. Delete or rename the pickle file if you want to redo the reformulation. \n")
-        with open(full_pth, 'rb') as handle:
-            parsed_generated_queries = pickle.load(handle)
+    # else:
+    #     # If the reformulated queries have already been saved to the file specified by full_pth, load them from the file
+    #     print("\n Reformulation already exists. Loaded pickle for this configuration. Delete or rename the pickle file if you want to redo the reformulation. \n")
+    #     with open(full_pth, 'rb') as handle:
+    #         parsed_generated_queries = pickle.load(handle)
 
     # Return the reformulated queries
     return parsed_generated_queries

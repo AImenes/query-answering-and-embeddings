@@ -6,7 +6,7 @@
         "online_kg_hit_original": 0.0
     },
     "mrr": {
-        "local_kg_hit_rewriting": 0.04,
+        "local_kg_hit_rewriting": 0.08,
         "online_kg_hit_rewriting": 0.0,
         "local_kg_hit_original": 0.04,
         "online_kg_hit_original": 0.0

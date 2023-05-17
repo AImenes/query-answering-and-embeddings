@@ -1,0 +1,74 @@
+{
+    "0":{
+        "entity_id":9969,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Selena_Gomez>",
+        "still_valid":false,
+        "origin":"q(?w) :- populationPlace(?x,?y)^subsequentWork(?w,?y)^leaderName(?z,?w)",
+        "score_calibrated":0.9943032265,
+        "score_combined":0.9943032265,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":822,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Arminia_Bielefeld>",
+        "still_valid":false,
+        "origin":"q(?w) :- populationPlace(?x,?y)^subsequentWork(?w,?y)^leaderName(?z,?w)",
+        "score_calibrated":0.9939046502,
+        "score_combined":0.9939046502,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":8795,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Portal:Nautical\/January\/12\/Selected_article>",
+        "still_valid":false,
+        "origin":"q(?w) :- populationPlace(?x,?y)^subsequentWork(?w,?y)^leaderName(?z,?w)",
+        "score_calibrated":0.9916766882,
+        "score_combined":0.9916766882,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":1684,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Bruce_Greenwood>",
+        "still_valid":false,
+        "origin":"q(?w) :- populationPlace(?x,?y)^subsequentWork(?w,?y)^leaderName(?z,?w)",
+        "score_calibrated":0.9864307642,
+        "score_combined":0.9864307642,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":11504,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Thomas_Edison>",
+        "still_valid":false,
+        "origin":"q(?w) :- populationPlace(?x,?y)^subsequentWork(?w,?y)^leaderName(?z,?w)",
+        "score_calibrated":0.9856479168,
+        "score_combined":0.9856479168,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":11506,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Thomas_Hardy>",
+        "still_valid":false,
+        "origin":"q(?w) :- populationPlace(?x,?y)^subsequentWork(?w,?y)^leaderName(?z,?w)",
+        "score_calibrated":0.9853186607,
+        "score_combined":0.9853186607,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

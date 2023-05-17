@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":61175,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q44011>",
+        "still_valid":true,
+        "origin":"q(?w) :- P25(?w,?_)^P22(?w,?y)^P25(?w,?x)",
+        "score_calibrated":0.7962393761,
+        "score_combined":0.7962393761,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":true
+    }
+}

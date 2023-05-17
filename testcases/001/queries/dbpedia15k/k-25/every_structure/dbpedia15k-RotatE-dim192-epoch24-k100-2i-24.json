@@ -1,0 +1,86 @@
+{
+    "0":{
+        "entity_id":12858,
+        "entity_label":"<http:\/\/www.wikidata.org\/entity\/Q486972>",
+        "still_valid":false,
+        "origin":"q(?w) :- cinematography(?x,?w)^musicFusionGenre(?w,?y)",
+        "score_calibrated":0.0237972531,
+        "score_combined":0.0237972531,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":12853,
+        "entity_label":"<http:\/\/schema.org\/Place>",
+        "still_valid":false,
+        "origin":"q(?w) :- cinematography(?x,?w)^musicFusionGenre(?w,?y)",
+        "score_calibrated":0.0227788575,
+        "score_combined":0.0227788575,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":10,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Location>",
+        "still_valid":false,
+        "origin":"q(?w) :- cinematography(?x,?w)^musicFusionGenre(?w,?y)",
+        "score_calibrated":0.0226049721,
+        "score_combined":0.0226049721,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":9,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Island>",
+        "still_valid":false,
+        "origin":"q(?w) :- cinematography(?x,?w)^musicFusionGenre(?w,?y)",
+        "score_calibrated":0.0223269761,
+        "score_combined":0.0223269761,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":13,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Place>",
+        "still_valid":false,
+        "origin":"q(?w) :- cinematography(?x,?w)^musicFusionGenre(?w,?y)",
+        "score_calibrated":0.022166308,
+        "score_combined":0.022166308,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":17,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Settlement>",
+        "still_valid":false,
+        "origin":"q(?w) :- cinematography(?x,?w)^musicFusionGenre(?w,?y)",
+        "score_calibrated":0.0215348266,
+        "score_combined":0.0215348266,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "6":{
+        "entity_id":16,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/PopulatedPlace>",
+        "still_valid":false,
+        "origin":"q(?w) :- cinematography(?x,?w)^musicFusionGenre(?w,?y)",
+        "score_calibrated":0.021200791,
+        "score_combined":0.021200791,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

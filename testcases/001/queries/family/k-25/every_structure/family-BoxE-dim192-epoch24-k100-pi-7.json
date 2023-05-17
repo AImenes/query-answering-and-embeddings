@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":57302,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q3847122>",
+        "still_valid":true,
+        "origin":"q(?w) :- P25(?x,?y)^P3373(?w,?y)^P40(?w,?z)",
+        "score_calibrated":0.2974024117,
+        "score_combined":0.2974024117,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    }
+}

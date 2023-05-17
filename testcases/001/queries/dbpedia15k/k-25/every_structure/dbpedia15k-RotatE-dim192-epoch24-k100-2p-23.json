@@ -1,0 +1,98 @@
+{
+    "0":{
+        "entity_id":10,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Location>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^starring(?w,?y)",
+        "score_calibrated":0.0184756238,
+        "score_combined":0.0007610863,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":13,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Place>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^starring(?w,?y)",
+        "score_calibrated":0.0173790511,
+        "score_combined":0.000715914,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":16,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/PopulatedPlace>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^starring(?w,?y)",
+        "score_calibrated":0.017191695,
+        "score_combined":0.000708196,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":12858,
+        "entity_label":"<http:\/\/www.wikidata.org\/entity\/Q486972>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^starring(?w,?y)",
+        "score_calibrated":0.0171236135,
+        "score_combined":0.0007053915,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":17,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Settlement>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^starring(?w,?y)",
+        "score_calibrated":0.0170460604,
+        "score_combined":0.0007021967,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":9,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Island>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^starring(?w,?y)",
+        "score_calibrated":0.0168545358,
+        "score_combined":0.0006943071,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "6":{
+        "entity_id":12853,
+        "entity_label":"<http:\/\/schema.org\/Place>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^starring(?w,?y)",
+        "score_calibrated":0.0168134812,
+        "score_combined":0.0006926159,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "7":{
+        "entity_id":5206,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Into_the_Wild_(film)>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^starring(?w,?y)",
+        "score_calibrated":0.0175643135,
+        "score_combined":0.0005445643,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

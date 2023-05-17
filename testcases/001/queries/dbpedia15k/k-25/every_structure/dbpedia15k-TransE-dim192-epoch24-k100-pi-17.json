@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":955,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Australia>",
+        "still_valid":false,
+        "origin":"q(?w) :- capital(?x,?y)^cinematography(?w,?y)^producer(?w,?z)",
+        "score_calibrated":0.0000002484,
+        "score_combined":0.0000002484,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

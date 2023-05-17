@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":6509,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Left_fielder>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?w,?x)^governmentType(?w,?y)",
+        "score_calibrated":0.0083252052,
+        "score_combined":0.0083252052,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

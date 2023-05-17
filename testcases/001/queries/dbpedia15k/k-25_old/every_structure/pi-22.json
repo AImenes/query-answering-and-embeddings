@@ -1,0 +1,86 @@
+{
+    "0":{
+        "entity_id":822,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Arminia_Bielefeld>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^associatedMusicalArtist(?y,?w)^deathPlace(?w,?z)",
+        "score_calibrated":0.9999976158,
+        "score_combined":0.9999976158,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":3674,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Eugene,_Oregon>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^associatedMusicalArtist(?y,?w)^deathPlace(?w,?z)",
+        "score_calibrated":0.9999976158,
+        "score_combined":0.9999976158,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":8389,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Palm_Beach_County,_Florida>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^associatedMusicalArtist(?y,?w)^deathPlace(?w,?z)",
+        "score_calibrated":0.9999973774,
+        "score_combined":0.9999973774,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":9969,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Selena_Gomez>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^associatedMusicalArtist(?y,?w)^deathPlace(?w,?z)",
+        "score_calibrated":0.9999952316,
+        "score_combined":0.9999952316,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":69,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/21_Jump_Street_(film)>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^associatedMusicalArtist(?y,?w)^deathPlace(?w,?z)",
+        "score_calibrated":0.9999923706,
+        "score_combined":0.9999923706,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":10297,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Sony>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^associatedMusicalArtist(?y,?w)^deathPlace(?w,?z)",
+        "score_calibrated":0.9999898672,
+        "score_combined":0.9999898672,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "6":{
+        "entity_id":12127,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Unstoppable_(2010_film)>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^associatedMusicalArtist(?y,?w)^deathPlace(?w,?z)",
+        "score_calibrated":0.9999520779,
+        "score_combined":0.9999520779,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

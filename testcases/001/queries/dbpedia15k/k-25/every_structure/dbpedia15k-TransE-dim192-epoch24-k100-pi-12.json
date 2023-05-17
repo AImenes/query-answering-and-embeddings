@@ -1,0 +1,98 @@
+{
+    "0":{
+        "entity_id":599,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Amsterdam>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?x,?y)^hometown(?y,?w)^locationCity(?w,?z)",
+        "score_calibrated":0.0000000329,
+        "score_combined":0.0000000329,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":6999,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Manhattan>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?x,?y)^hometown(?y,?w)^locationCity(?w,?z)",
+        "score_calibrated":0.0000000329,
+        "score_combined":0.0000000329,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":1218,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Bellevue,_Washington>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?x,?y)^hometown(?y,?w)^locationCity(?w,?z)",
+        "score_calibrated":0.0000000329,
+        "score_combined":0.0000000329,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":914,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Atlanta>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?x,?y)^hometown(?y,?w)^locationCity(?w,?z)",
+        "score_calibrated":0.0000000329,
+        "score_combined":0.0000000329,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":619,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Anaheim,_California>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?x,?y)^hometown(?y,?w)^locationCity(?w,?z)",
+        "score_calibrated":0.0000000329,
+        "score_combined":0.0000000329,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":374,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Alameda,_California>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?x,?y)^hometown(?y,?w)^locationCity(?w,?z)",
+        "score_calibrated":0.0000000329,
+        "score_combined":0.0000000329,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "6":{
+        "entity_id":1062,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Baltimore>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?x,?y)^hometown(?y,?w)^locationCity(?w,?z)",
+        "score_calibrated":0.0000000329,
+        "score_combined":0.0000000329,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "7":{
+        "entity_id":811,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Arlington,_Texas>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?x,?y)^hometown(?y,?w)^locationCity(?w,?z)",
+        "score_calibrated":0.0000000329,
+        "score_combined":0.0000000329,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

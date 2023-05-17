@@ -1,0 +1,86 @@
+{
+    "0":{
+        "entity_id":1684,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Bruce_Greenwood>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?x,?y)^hometown(?y,?w)^locationCity(?w,?z)",
+        "score_calibrated":0.999392271,
+        "score_combined":0.999392271,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":1901,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Cardiac_arrest>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?x,?y)^hometown(?y,?w)^locationCity(?w,?z)",
+        "score_calibrated":0.9993793964,
+        "score_combined":0.9993793964,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":11790,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Tsui_Hark>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?x,?y)^hometown(?y,?w)^locationCity(?w,?z)",
+        "score_calibrated":0.9988203645,
+        "score_combined":0.9988203645,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":69,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/21_Jump_Street_(film)>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?x,?y)^hometown(?y,?w)^locationCity(?w,?z)",
+        "score_calibrated":0.9973455071,
+        "score_combined":0.9973455071,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":6757,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Lost_in_Translation_(film)>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?x,?y)^hometown(?y,?w)^locationCity(?w,?z)",
+        "score_calibrated":0.9959388971,
+        "score_combined":0.9959388971,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":822,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Arminia_Bielefeld>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?x,?y)^hometown(?y,?w)^locationCity(?w,?z)",
+        "score_calibrated":0.9957914352,
+        "score_combined":0.9957914352,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "6":{
+        "entity_id":2830,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Dashiell_Hammett>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?x,?y)^hometown(?y,?w)^locationCity(?w,?z)",
+        "score_calibrated":0.9941212535,
+        "score_combined":0.9941212535,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

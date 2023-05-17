@@ -1,10 +1,12 @@
 import pandas as pd
-import os
 
 df = pd.read_csv("all.txt", delimiter='\t', header=None)
-print("stop")
 
-#Using pandas way, Series.value_counts()
-df1 = df.iloc[:,1].value_counts()
-df1.to_csv("freq_count.txt")
+# Filter the dataframe where the predicate (column 1) is equal to the rdf:type property
+df_filtered = df[df.iloc[:,1] == "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"]
 
+# Count the frequency of the entities in the 3rd column (column 2) of the filtered dataframe
+entity_frequencies = df_filtered.iloc[:,2].value_counts()
+
+# Write the results to a file
+entity_frequencies.to_csv("freq_count_concepts.txt", header=False)

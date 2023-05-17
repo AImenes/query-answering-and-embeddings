@@ -1,0 +1,98 @@
+{
+    "0":{
+        "entity_id":12858,
+        "entity_label":"<http:\/\/www.wikidata.org\/entity\/Q486972>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^ground(?y,?w)^influencedBy(?_,?w)",
+        "score_calibrated":0.018477397,
+        "score_combined":0.018477397,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":10,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Location>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^ground(?y,?w)^influencedBy(?w,?z)",
+        "score_calibrated":0.0183308441,
+        "score_combined":0.0183308441,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":9,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Island>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^ground(?y,?w)^influencedBy(?_,?w)",
+        "score_calibrated":0.0177703332,
+        "score_combined":0.0177703332,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":12853,
+        "entity_label":"<http:\/\/schema.org\/Place>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^ground(?y,?w)^influencedBy(?_,?w)",
+        "score_calibrated":0.0177375041,
+        "score_combined":0.0177375041,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":17,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Settlement>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^ground(?y,?w)^influencedBy(?w,?z)",
+        "score_calibrated":0.0177206881,
+        "score_combined":0.0177206881,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":13,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Place>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^ground(?y,?w)^influencedBy(?_,?w)",
+        "score_calibrated":0.0175672937,
+        "score_combined":0.0175672937,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "6":{
+        "entity_id":11894,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/United_States_Army>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^ground(?y,?w)^influencedBy(?w,?z)",
+        "score_calibrated":0.0174468905,
+        "score_combined":0.0174468905,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "7":{
+        "entity_id":16,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/PopulatedPlace>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^ground(?y,?w)^influencedBy(?_,?w)",
+        "score_calibrated":0.0174219683,
+        "score_combined":0.0174219683,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

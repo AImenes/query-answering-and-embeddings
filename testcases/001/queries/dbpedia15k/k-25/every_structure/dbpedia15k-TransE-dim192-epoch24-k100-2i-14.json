@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":411,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Albert_Arnold_\"Al\"_Gore,_Jr.>",
+        "still_valid":false,
+        "origin":"q(?w) :- stylisticOrigin(?w,?x)^country(?y,?w)",
+        "score_calibrated":0.0004020967,
+        "score_combined":0.0004020967,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

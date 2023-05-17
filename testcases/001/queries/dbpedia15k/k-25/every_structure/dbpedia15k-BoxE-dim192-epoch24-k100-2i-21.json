@@ -1,0 +1,62 @@
+{
+    "0":{
+        "entity_id":11191,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/The_Last_King_of_Scotland_(film)>",
+        "still_valid":false,
+        "origin":"q(?w) :- frazioni(?_,?w)^distributor(?w,?x)",
+        "score_calibrated":0.077865079,
+        "score_combined":0.077865079,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":10233,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Slovenia>",
+        "still_valid":false,
+        "origin":"q(?w) :- canonizedPlace(?_,?w)^distributor(?w,?x)",
+        "score_calibrated":0.0709395185,
+        "score_combined":0.0709395185,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":5063,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Iain_Banks>",
+        "still_valid":false,
+        "origin":"q(?w) :- canonizedPlace(?_,?w)^distributor(?w,?x)",
+        "score_calibrated":0.0708996952,
+        "score_combined":0.0708996952,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":11262,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/The_New_School>",
+        "still_valid":false,
+        "origin":"q(?w) :- canonizedPlace(?_,?w)^distributor(?w,?x)",
+        "score_calibrated":0.0693320706,
+        "score_combined":0.0693320706,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":11096,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/The_French_Connection_(film)>",
+        "still_valid":false,
+        "origin":"q(?w) :- sourceConfluenceRegion(?_,?w)^distributor(?w,?x)",
+        "score_calibrated":0.0418595634,
+        "score_combined":0.0418595634,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":false
+    }
+}

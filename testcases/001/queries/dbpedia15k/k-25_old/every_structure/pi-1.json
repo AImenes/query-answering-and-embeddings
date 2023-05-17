@@ -1,0 +1,86 @@
+{
+    "0":{
+        "entity_id":7788,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/NYPD_Blue>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^state(?w,?y)^instrument(?z,?w)",
+        "score_calibrated":0.9999765158,
+        "score_combined":0.9999765158,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":12182,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Van_Heflin>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^state(?w,?y)^instrument(?z,?w)",
+        "score_calibrated":0.9999696016,
+        "score_combined":0.9999696016,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":4573,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Gustavo_Santaolalla>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^state(?w,?y)^instrument(?z,?w)",
+        "score_calibrated":0.9999624491,
+        "score_combined":0.9999624491,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":7719,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Mukri>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^state(?w,?y)^instrument(?z,?w)",
+        "score_calibrated":0.9999610186,
+        "score_combined":0.9999610186,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":11790,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Tsui_Hark>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^state(?w,?y)^instrument(?z,?w)",
+        "score_calibrated":0.9999575615,
+        "score_combined":0.9999575615,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":3674,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Eugene,_Oregon>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^state(?w,?y)^instrument(?z,?w)",
+        "score_calibrated":0.9999039173,
+        "score_combined":0.9999039173,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "6":{
+        "entity_id":2198,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Chipping_Barnet>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^state(?w,?y)^instrument(?z,?w)",
+        "score_calibrated":0.99990201,
+        "score_combined":0.99990201,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

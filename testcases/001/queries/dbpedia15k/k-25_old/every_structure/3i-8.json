@@ -1,0 +1,62 @@
+{
+    "0":{
+        "entity_id":69,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/21_Jump_Street_(film)>",
+        "still_valid":false,
+        "origin":"q(?w) :- director(?_,?w)^associatedBand(?w,?x)^Q486972(?w)",
+        "score_calibrated":1.0,
+        "score_combined":1.0,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":11790,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Tsui_Hark>",
+        "still_valid":false,
+        "origin":"q(?w) :- influencedBy(?_,?w)^associatedBand(?w,?x)^Q486972(?w)",
+        "score_calibrated":1.0,
+        "score_combined":1.0,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":2644,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Cremona>",
+        "still_valid":false,
+        "origin":"q(?w) :- producer(?_,?w)^associatedBand(?w,?x)^Q486972(?w)",
+        "score_calibrated":1.0,
+        "score_combined":1.0,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":3674,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Eugene,_Oregon>",
+        "still_valid":false,
+        "origin":"q(?w) :- deathPlace(?w,?_)^associatedBand(?w,?x)^Q486972(?w)",
+        "score_calibrated":0.9999976158,
+        "score_combined":0.9999976158,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":2198,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Chipping_Barnet>",
+        "still_valid":false,
+        "origin":"q(?w) :- councilArea(?_,?w)^associatedBand(?w,?x)^Person(?w)",
+        "score_calibrated":0.9994120598,
+        "score_combined":0.9994120598,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

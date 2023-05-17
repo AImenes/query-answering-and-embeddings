@@ -1,0 +1,98 @@
+{
+    "0":{
+        "entity_id":10,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Location>",
+        "still_valid":false,
+        "origin":"q(?w) :- director(?w,?x)^isPartOf(?y,?w)",
+        "score_calibrated":0.0211722273,
+        "score_combined":0.0211722273,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":9,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Island>",
+        "still_valid":false,
+        "origin":"q(?w) :- director(?w,?x)^isPartOf(?y,?w)",
+        "score_calibrated":0.0209045559,
+        "score_combined":0.0209045559,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":12853,
+        "entity_label":"<http:\/\/schema.org\/Place>",
+        "still_valid":false,
+        "origin":"q(?w) :- director(?w,?x)^isPartOf(?y,?w)",
+        "score_calibrated":0.0203167293,
+        "score_combined":0.0203167293,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":12858,
+        "entity_label":"<http:\/\/www.wikidata.org\/entity\/Q486972>",
+        "still_valid":false,
+        "origin":"q(?w) :- director(?w,?x)^isPartOf(?y,?w)",
+        "score_calibrated":0.0200752504,
+        "score_combined":0.0200752504,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":17,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Settlement>",
+        "still_valid":false,
+        "origin":"q(?w) :- director(?w,?x)^isPartOf(?y,?w)",
+        "score_calibrated":0.0192605779,
+        "score_combined":0.0192605779,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":13,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Place>",
+        "still_valid":false,
+        "origin":"q(?w) :- director(?w,?x)^isPartOf(?y,?w)",
+        "score_calibrated":0.01925187,
+        "score_combined":0.01925187,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "6":{
+        "entity_id":16,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/PopulatedPlace>",
+        "still_valid":false,
+        "origin":"q(?w) :- director(?w,?x)^isPartOf(?y,?w)",
+        "score_calibrated":0.0188169815,
+        "score_combined":0.0188169815,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "7":{
+        "entity_id":7972,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/New_York_Stories>",
+        "still_valid":false,
+        "origin":"q(?w) :- director(?w,?x)^isPartOf(?y,?w)",
+        "score_calibrated":0.0174301416,
+        "score_combined":0.0174301416,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

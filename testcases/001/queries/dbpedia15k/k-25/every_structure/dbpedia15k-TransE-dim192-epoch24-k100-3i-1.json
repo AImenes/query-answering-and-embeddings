@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":326,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Agnes_Nixon>",
+        "still_valid":false,
+        "origin":"q(?w) :- birthPlace(?_,?w)^birthPlace(?y,?w)^starring(?x,?w)",
+        "score_calibrated":0.0000031669,
+        "score_combined":0.0000031669,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":111691,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q86832>",
+        "still_valid":false,
+        "origin":"q(?w) :- P3373(?w,?y)^P40(?_,?w)",
+        "score_calibrated":0.7910588384,
+        "score_combined":0.7910588384,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    }
+}

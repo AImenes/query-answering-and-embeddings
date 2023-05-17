@@ -1,0 +1,86 @@
+{
+    "0":{
+        "entity_id":10,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Location>",
+        "still_valid":false,
+        "origin":"q(?w) :- district(?w,?_)^executiveProducer(?w,?y)^musicComposer(?x,?w)",
+        "score_calibrated":0.0239060763,
+        "score_combined":0.0239060763,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":12858,
+        "entity_label":"<http:\/\/www.wikidata.org\/entity\/Q486972>",
+        "still_valid":false,
+        "origin":"q(?w) :- district(?w,?_)^executiveProducer(?w,?y)^musicComposer(?x,?w)",
+        "score_calibrated":0.0237447526,
+        "score_combined":0.0237447526,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":9,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Island>",
+        "still_valid":false,
+        "origin":"q(?w) :- restingPlace(?_,?w)^executiveProducer(?w,?y)^musicComposer(?x,?w)",
+        "score_calibrated":0.022609951,
+        "score_combined":0.022609951,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":12853,
+        "entity_label":"<http:\/\/schema.org\/Place>",
+        "still_valid":false,
+        "origin":"q(?w) :- district(?w,?_)^executiveProducer(?w,?y)^musicComposer(?x,?w)",
+        "score_calibrated":0.0225250274,
+        "score_combined":0.0225250274,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":16,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/PopulatedPlace>",
+        "still_valid":false,
+        "origin":"q(?w) :- district(?w,?_)^executiveProducer(?w,?y)^musicComposer(?x,?w)",
+        "score_calibrated":0.022464959,
+        "score_combined":0.022464959,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":13,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Place>",
+        "still_valid":false,
+        "origin":"q(?w) :- district(?w,?_)^executiveProducer(?w,?y)^musicComposer(?x,?w)",
+        "score_calibrated":0.0222596955,
+        "score_combined":0.0222596955,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "6":{
+        "entity_id":17,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Settlement>",
+        "still_valid":false,
+        "origin":"q(?w) :- district(?w,?_)^executiveProducer(?w,?y)^musicComposer(?x,?w)",
+        "score_calibrated":0.0221518446,
+        "score_combined":0.0221518446,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

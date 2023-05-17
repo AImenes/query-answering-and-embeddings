@@ -1,0 +1,122 @@
+{
+    "0":{
+        "entity_id":8795,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Portal:Nautical\/January\/12\/Selected_article>",
+        "still_valid":false,
+        "origin":"q(?w) :- writer(?x,?w)^leaderName(?y,?w)",
+        "score_calibrated":0.9999983311,
+        "score_combined":0.9999983311,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":11790,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Tsui_Hark>",
+        "still_valid":false,
+        "origin":"q(?w) :- writer(?x,?w)^leaderName(?y,?w)",
+        "score_calibrated":0.9999982119,
+        "score_combined":0.9999982119,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":1683,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Bruce_Dern>",
+        "still_valid":false,
+        "origin":"q(?w) :- writer(?x,?w)^leaderName(?y,?w)",
+        "score_calibrated":0.9999972582,
+        "score_combined":0.9999972582,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":2518,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Conrad_Buff_IV>",
+        "still_valid":false,
+        "origin":"q(?w) :- writer(?x,?w)^leaderName(?y,?w)",
+        "score_calibrated":0.9999916553,
+        "score_combined":0.9999916553,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":4777,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Heaven_Can_Wait_(1978_film)>",
+        "still_valid":false,
+        "origin":"q(?w) :- writer(?x,?w)^leaderName(?y,?w)",
+        "score_calibrated":0.999989748,
+        "score_combined":0.999989748,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":10322,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/South_Carolina_State_University>",
+        "still_valid":false,
+        "origin":"q(?w) :- writer(?x,?w)^leaderName(?y,?w)",
+        "score_calibrated":0.9999873638,
+        "score_combined":0.9999873638,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "6":{
+        "entity_id":3985,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Frank_Spotnitz>",
+        "still_valid":false,
+        "origin":"q(?w) :- writer(?x,?w)^leaderName(?y,?w)",
+        "score_calibrated":0.9999722242,
+        "score_combined":0.9999722242,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "7":{
+        "entity_id":8180,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Oahu>",
+        "still_valid":false,
+        "origin":"q(?w) :- writer(?x,?w)^leaderName(?y,?w)",
+        "score_calibrated":0.9999524355,
+        "score_combined":0.9999524355,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "8":{
+        "entity_id":12736,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/X-Men:_First_Class>",
+        "still_valid":false,
+        "origin":"q(?w) :- writer(?x,?w)^leaderName(?y,?w)",
+        "score_calibrated":0.9999492168,
+        "score_combined":0.9999492168,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "9":{
+        "entity_id":3062,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Denver>",
+        "still_valid":false,
+        "origin":"q(?w) :- writer(?x,?w)^leaderName(?y,?w)",
+        "score_calibrated":0.9999456406,
+        "score_combined":0.9999456406,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

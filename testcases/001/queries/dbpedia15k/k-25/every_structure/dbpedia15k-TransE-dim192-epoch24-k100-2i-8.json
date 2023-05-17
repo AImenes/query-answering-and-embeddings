@@ -1,0 +1,26 @@
+{
+    "0":{
+        "entity_id":375,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Alameda_County,_California>",
+        "still_valid":false,
+        "origin":"q(?w) :- director(?w,?x)^isPartOf(?y,?w)",
+        "score_calibrated":0.0000010237,
+        "score_combined":0.0000010237,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":205,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Aberdeen>",
+        "still_valid":false,
+        "origin":"q(?w) :- director(?w,?x)^isPartOf(?y,?w)",
+        "score_calibrated":0.0000010237,
+        "score_combined":0.0000010237,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

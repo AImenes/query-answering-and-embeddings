@@ -1,0 +1,74 @@
+{
+    "0":{
+        "entity_id":3555,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Emily_Osment>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^state(?w,?y)^instrument(?z,?w)",
+        "score_calibrated":0.8073291183,
+        "score_combined":0.8073291183,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":4440,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Graham_Greene_(actor)>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^state(?w,?y)^instrument(?z,?w)",
+        "score_calibrated":0.8057712913,
+        "score_combined":0.8057712913,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":10272,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Soldier>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^state(?w,?y)^instrument(?z,?w)",
+        "score_calibrated":0.804744184,
+        "score_combined":0.804744184,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":3936,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Foreigner_(band)>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^state(?w,?y)^instrument(?z,?w)",
+        "score_calibrated":0.8022776842,
+        "score_combined":0.8022776842,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":7994,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Newfoundland_Time_Zone>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^state(?w,?y)^instrument(?z,?w)",
+        "score_calibrated":0.796507597,
+        "score_combined":0.796507597,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":549,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Amblin_Entertainment>",
+        "still_valid":false,
+        "origin":"q(?w) :- genre(?x,?y)^state(?w,?y)^instrument(?z,?w)",
+        "score_calibrated":0.7945603728,
+        "score_combined":0.7945603728,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

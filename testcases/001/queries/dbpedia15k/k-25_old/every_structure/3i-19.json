@@ -1,0 +1,62 @@
+{
+    "0":{
+        "entity_id":7788,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/NYPD_Blue>",
+        "still_valid":false,
+        "origin":"q(?w) :- state(?_,?w)^genre(?w,?y)^restingPlace(?w,?x)",
+        "score_calibrated":1.0,
+        "score_combined":1.0,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":2644,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Cremona>",
+        "still_valid":false,
+        "origin":"q(?w) :- birthPlace(?_,?w)^genre(?w,?y)^restingPlace(?w,?x)",
+        "score_calibrated":1.0,
+        "score_combined":1.0,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":4665,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Happy-Go-Lucky>",
+        "still_valid":false,
+        "origin":"q(?w) :- countySeat(?w,?_)^genre(?w,?y)^restingPlace(?w,?x)",
+        "score_calibrated":1.0,
+        "score_combined":1.0,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":9969,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Selena_Gomez>",
+        "still_valid":false,
+        "origin":"q(?w) :- location(?_,?w)^genre(?w,?y)^restingPlace(?w,?x)",
+        "score_calibrated":0.9999995232,
+        "score_combined":0.9999995232,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":3938,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Forest_Lawn_Memorial_Park,_Hollywood_Hills>",
+        "still_valid":false,
+        "origin":"q(?w) :- largestCity(?_,?w)^genre(?w,?y)^restingPlace(?w,?x)",
+        "score_calibrated":0.999999404,
+        "score_combined":0.999999404,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

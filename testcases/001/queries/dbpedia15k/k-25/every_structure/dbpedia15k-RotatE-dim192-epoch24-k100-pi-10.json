@@ -1,0 +1,26 @@
+{
+    "0":{
+        "entity_id":1917,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Carl_Sagan>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?x,?y)^sisterStation(?y,?w)^recordLabel(?z,?w)",
+        "score_calibrated":0.0445786566,
+        "score_combined":0.0445786566,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":12308,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Virginia_Beach,_Virginia>",
+        "still_valid":false,
+        "origin":"q(?w) :- language(?x,?y)^sisterStation(?y,?w)^recordLabel(?z,?w)",
+        "score_calibrated":0.0353897512,
+        "score_combined":0.0353897512,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

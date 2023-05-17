@@ -1,0 +1,62 @@
+{
+    "0":{
+        "entity_id":11790,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Tsui_Hark>",
+        "still_valid":false,
+        "origin":"q(?w) :- occupation(?w,?z)^largestCity(?w,?y)^occupation(?x,?w)",
+        "score_calibrated":0.9999995232,
+        "score_combined":0.9999995232,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":4665,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Happy-Go-Lucky>",
+        "still_valid":false,
+        "origin":"q(?w) :- occupation(?w,?z)^largestCity(?w,?y)^occupation(?x,?w)",
+        "score_calibrated":0.999999404,
+        "score_combined":0.999999404,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":6894,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Machete_(film)>",
+        "still_valid":false,
+        "origin":"q(?w) :- occupation(?w,?z)^largestCity(?w,?y)^occupation(?x,?w)",
+        "score_calibrated":0.9999134541,
+        "score_combined":0.9999134541,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":6742,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Lorraine_Bracco>",
+        "still_valid":false,
+        "origin":"q(?w) :- occupation(?w,?z)^largestCity(?w,?y)^occupation(?x,?w)",
+        "score_calibrated":0.9998334646,
+        "score_combined":0.9998334646,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":69,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/21_Jump_Street_(film)>",
+        "still_valid":false,
+        "origin":"q(?w) :- occupation(?w,?z)^largestCity(?w,?y)^occupation(?x,?w)",
+        "score_calibrated":0.9996036887,
+        "score_combined":0.9996036887,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

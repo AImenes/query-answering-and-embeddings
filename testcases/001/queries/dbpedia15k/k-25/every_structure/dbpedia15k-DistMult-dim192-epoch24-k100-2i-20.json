@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":5027,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Hunan>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?w,?x)^almaMater(?w,?y)",
+        "score_calibrated":0.75978297,
+        "score_combined":0.75978297,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

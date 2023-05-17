@@ -1,0 +1,86 @@
+{
+    "0":{
+        "entity_id":60,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q10065>",
+        "still_valid":false,
+        "origin":"q(?w) :- P22(?x,?y)^P26(?w,?y)^P3373(?w,?z)",
+        "score_calibrated":0.0643199533,
+        "score_combined":0.0643199533,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":48,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q1004751>",
+        "still_valid":false,
+        "origin":"q(?w) :- P22(?x,?y)^P26(?w,?y)^P3373(?w,?z)",
+        "score_calibrated":0.0643199533,
+        "score_combined":0.0643199533,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":138,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q101397>",
+        "still_valid":false,
+        "origin":"q(?w) :- P22(?x,?y)^P26(?y,?w)^P3373(?_,?w)",
+        "score_calibrated":0.0643199533,
+        "score_combined":0.0643199533,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":141,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q1014687>",
+        "still_valid":false,
+        "origin":"q(?w) :- P22(?x,?y)^P26(?y,?w)^P3373(?_,?w)",
+        "score_calibrated":0.0643199533,
+        "score_combined":0.0643199533,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":44,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q100421>",
+        "still_valid":false,
+        "origin":"q(?w) :- P22(?x,?y)^P26(?y,?w)^P3373(?_,?w)",
+        "score_calibrated":0.0643199533,
+        "score_combined":0.0643199533,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":17,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q100175>",
+        "still_valid":false,
+        "origin":"q(?w) :- P22(?x,?y)^P26(?y,?w)^P3373(?_,?w)",
+        "score_calibrated":0.0643199533,
+        "score_combined":0.0643199533,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "6":{
+        "entity_id":182,
+        "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q101877>",
+        "still_valid":false,
+        "origin":"q(?w) :- P22(?x,?y)^P26(?w,?y)^P3373(?_,?w)",
+        "score_calibrated":0.0643199533,
+        "score_combined":0.0643199533,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

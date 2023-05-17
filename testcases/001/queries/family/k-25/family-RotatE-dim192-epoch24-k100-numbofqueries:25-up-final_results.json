@@ -1,15 +1,15 @@
 {
     "hits@3": {
-        "local_kg_hit_rewriting": 0.7866666666666667,
+        "local_kg_hit_rewriting": 0.8266666666666667,
         "online_kg_hit_rewriting": 0.8,
         "local_kg_hit_original": 0.7866666666666667,
-        "online_kg_hit_original": 0.33333333333333337
+        "online_kg_hit_original": 0.5466666666666665
     },
     "mrr": {
-        "local_kg_hit_rewriting": 0.8530769230769231,
+        "local_kg_hit_rewriting": 0.89,
         "online_kg_hit_rewriting": 0.85,
         "local_kg_hit_original": 0.8530769230769231,
-        "online_kg_hit_original": 0.3724029593201905
+        "online_kg_hit_original": 0.618
     },
     "query_structure": "up",
     "number_of_queries": 25,

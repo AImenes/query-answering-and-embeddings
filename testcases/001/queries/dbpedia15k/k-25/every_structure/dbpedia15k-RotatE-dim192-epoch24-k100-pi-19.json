@@ -1,0 +1,110 @@
+{
+    "0":{
+        "entity_id":10,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Location>",
+        "still_valid":false,
+        "origin":"q(?w) :- sisterCollege(?x,?y)^formerBandMember(?w,?y)^associatedBand(?z,?w)",
+        "score_calibrated":0.0248349831,
+        "score_combined":0.0248349831,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":16,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/PopulatedPlace>",
+        "still_valid":false,
+        "origin":"q(?w) :- sisterCollege(?x,?y)^formerBandMember(?w,?y)^associatedBand(?z,?w)",
+        "score_calibrated":0.0240554176,
+        "score_combined":0.0240554176,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":12858,
+        "entity_label":"<http:\/\/www.wikidata.org\/entity\/Q486972>",
+        "still_valid":false,
+        "origin":"q(?w) :- sisterCollege(?x,?y)^formerBandMember(?w,?y)^associatedBand(?z,?w)",
+        "score_calibrated":0.0237865932,
+        "score_combined":0.0237865932,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":12853,
+        "entity_label":"<http:\/\/schema.org\/Place>",
+        "still_valid":false,
+        "origin":"q(?w) :- sisterCollege(?x,?y)^formerBandMember(?w,?y)^associatedBand(?z,?w)",
+        "score_calibrated":0.0237157773,
+        "score_combined":0.0237157773,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":17,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Settlement>",
+        "still_valid":false,
+        "origin":"q(?w) :- sisterCollege(?x,?y)^formerBandMember(?w,?y)^associatedBand(?z,?w)",
+        "score_calibrated":0.0236744378,
+        "score_combined":0.0236744378,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":12425,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Warner_Music_Group>",
+        "still_valid":false,
+        "origin":"q(?w) :- sisterCollege(?x,?y)^formerBandMember(?w,?y)^associatedBand(?z,?w)",
+        "score_calibrated":0.0231647529,
+        "score_combined":0.0231647529,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "6":{
+        "entity_id":9,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Island>",
+        "still_valid":false,
+        "origin":"q(?w) :- sisterCollege(?x,?y)^formerBandMember(?w,?y)^associatedBand(?z,?w)",
+        "score_calibrated":0.0228288788,
+        "score_combined":0.0228288788,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "7":{
+        "entity_id":12308,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Virginia_Beach,_Virginia>",
+        "still_valid":false,
+        "origin":"q(?w) :- sisterCollege(?x,?y)^formerBandMember(?w,?y)^associatedBand(?z,?w)",
+        "score_calibrated":0.0228026249,
+        "score_combined":0.0228026249,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "8":{
+        "entity_id":13,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Place>",
+        "still_valid":false,
+        "origin":"q(?w) :- sisterCollege(?x,?y)^formerBandMember(?w,?y)^associatedBand(?z,?w)",
+        "score_calibrated":0.0225359965,
+        "score_combined":0.0225359965,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

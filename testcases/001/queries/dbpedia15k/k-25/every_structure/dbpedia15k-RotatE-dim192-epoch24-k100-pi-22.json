@@ -1,0 +1,98 @@
+{
+    "0":{
+        "entity_id":12858,
+        "entity_label":"<http:\/\/www.wikidata.org\/entity\/Q486972>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^associatedMusicalArtist(?y,?w)^deathPlace(?w,?z)",
+        "score_calibrated":0.0238150712,
+        "score_combined":0.0238150712,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":10,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Location>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^associatedMusicalArtist(?y,?w)^deathPlace(?w,?z)",
+        "score_calibrated":0.0228814371,
+        "score_combined":0.0228814371,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":17,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Settlement>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^associatedMusicalArtist(?y,?w)^deathPlace(?w,?z)",
+        "score_calibrated":0.0221646465,
+        "score_combined":0.0221646465,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "3":{
+        "entity_id":12853,
+        "entity_label":"<http:\/\/schema.org\/Place>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^associatedMusicalArtist(?y,?w)^deathPlace(?w,?z)",
+        "score_calibrated":0.0219539609,
+        "score_combined":0.0219539609,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":9,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Island>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^associatedMusicalArtist(?y,?w)^deathPlace(?w,?z)",
+        "score_calibrated":0.0215209797,
+        "score_combined":0.0215209797,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":16,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/PopulatedPlace>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^associatedMusicalArtist(?y,?w)^deathPlace(?w,?z)",
+        "score_calibrated":0.0213291924,
+        "score_combined":0.0213291924,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "6":{
+        "entity_id":13,
+        "entity_label":"<http:\/\/dbpedia.org\/ontology\/Place>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^associatedMusicalArtist(?y,?w)^deathPlace(?w,?z)",
+        "score_calibrated":0.0213097408,
+        "score_combined":0.0213097408,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "7":{
+        "entity_id":12308,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Virginia_Beach,_Virginia>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^associatedMusicalArtist(?y,?w)^deathPlace(?w,?z)",
+        "score_calibrated":0.0175398197,
+        "score_combined":0.0175398197,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

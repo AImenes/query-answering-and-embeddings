@@ -1,0 +1,110 @@
+{
+    "0":{
+        "entity_id":323,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Afropop>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?w,?x)^genre(?w,?y)",
+        "score_calibrated":0.0270312075,
+        "score_combined":0.0270312075,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":1708,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Bryn_Mawr_College>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?w,?x)^genre(?w,?y)",
+        "score_calibrated":0.0251196232,
+        "score_combined":0.0251196232,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":2901,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/David_Lindley_(musician)>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?w,?x)^genre(?w,?y)",
+        "score_calibrated":0.0250701066,
+        "score_combined":0.0250701066,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    },
+    "3":{
+        "entity_id":11273,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/The_O.C.>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?w,?x)^genre(?w,?y)",
+        "score_calibrated":0.02480869,
+        "score_combined":0.02480869,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "4":{
+        "entity_id":5606,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Jerry_Siegel>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?w,?x)^genre(?w,?y)",
+        "score_calibrated":0.0247057248,
+        "score_combined":0.0247057248,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "5":{
+        "entity_id":9404,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Robert_McKimson>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?w,?x)^genre(?w,?y)",
+        "score_calibrated":0.0242036395,
+        "score_combined":0.0242036395,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "6":{
+        "entity_id":4425,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Gothenburg>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?w,?x)^genre(?w,?y)",
+        "score_calibrated":0.0232708026,
+        "score_combined":0.0232708026,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "7":{
+        "entity_id":4438,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Graham_Gouldman>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?w,?x)^genre(?w,?y)",
+        "score_calibrated":0.0231647529,
+        "score_combined":0.0231647529,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    },
+    "8":{
+        "entity_id":5457,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Jangle_pop>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?w,?x)^genre(?w,?y)",
+        "score_calibrated":0.023121411,
+        "score_combined":0.023121411,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

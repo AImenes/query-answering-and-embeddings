@@ -1,0 +1,14 @@
+{
+    "0":{
+        "entity_id":6506,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Leeds>",
+        "still_valid":false,
+        "origin":"q(?w) :- leaderName(?x,?y)^writer(?y,?w)^starring(?w,?z)",
+        "score_calibrated":0.0000006529,
+        "score_combined":0.0000006529,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}

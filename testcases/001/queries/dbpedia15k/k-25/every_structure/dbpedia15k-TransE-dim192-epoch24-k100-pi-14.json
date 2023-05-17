@@ -1,0 +1,38 @@
+{
+    "0":{
+        "entity_id":919,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Atlante_F.C.>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^developer(?y,?w)^type(?z,?w)",
+        "score_calibrated":0.0000112417,
+        "score_combined":0.0000112417,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "1":{
+        "entity_id":482,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Aligarh_Muslim_University>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^developer(?y,?w)^type(?z,?w)",
+        "score_calibrated":0.0000112417,
+        "score_combined":0.0000112417,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "2":{
+        "entity_id":935,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Auburn,_New_York>",
+        "still_valid":false,
+        "origin":"q(?w) :- associatedBand(?x,?y)^developer(?y,?w)^type(?z,?w)",
+        "score_calibrated":0.0000112417,
+        "score_combined":0.0000112417,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    }
+}
