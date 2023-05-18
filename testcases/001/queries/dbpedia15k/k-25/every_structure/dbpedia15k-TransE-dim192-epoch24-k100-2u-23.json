@@ -78,7 +78,7 @@
         "origin":"q(?w) :- campus(?w,?x)",
         "score_calibrated":0.0000012677,
         "score_combined":0.0000012677,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1206,7 +1206,7 @@
         "origin":"q(?w) :- musicComposer(?w,?y)",
         "score_calibrated":0.0000007955,
         "score_combined":0.0000007955,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1350,7 +1350,7 @@
         "origin":"q(?w) :- musicComposer(?w,?y)",
         "score_calibrated":0.0000004136,
         "score_combined":0.0000004136,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1410,7 +1410,7 @@
         "origin":"q(?w) :- musicComposer(?w,?y)",
         "score_calibrated":0.0000003223,
         "score_combined":0.0000003223,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1542,7 +1542,7 @@
         "origin":"q(?w) :- musicComposer(?w,?y)",
         "score_calibrated":0.0000002538,
         "score_combined":0.0000002538,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1566,7 +1566,7 @@
         "origin":"q(?w) :- musicComposer(?w,?y)",
         "score_calibrated":0.0000002462,
         "score_combined":0.0000002462,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1650,7 +1650,7 @@
         "origin":"q(?w) :- musicComposer(?w,?y)",
         "score_calibrated":0.0000002336,
         "score_combined":0.0000002336,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1734,7 +1734,7 @@
         "origin":"q(?w) :- musicComposer(?w,?y)",
         "score_calibrated":0.0000002136,
         "score_combined":0.0000002136,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1746,7 +1746,7 @@
         "origin":"q(?w) :- musicComposer(?w,?y)",
         "score_calibrated":0.0000002122,
         "score_combined":0.0000002122,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1758,7 +1758,7 @@
         "origin":"q(?w) :- musicComposer(?w,?y)",
         "score_calibrated":0.0000002122,
         "score_combined":0.0000002122,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1770,7 +1770,7 @@
         "origin":"q(?w) :- musicComposer(?w,?y)",
         "score_calibrated":0.0000002098,
         "score_combined":0.0000002098,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1794,7 +1794,7 @@
         "origin":"q(?w) :- musicComposer(?w,?y)",
         "score_calibrated":0.0000002095,
         "score_combined":0.0000002095,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1806,7 +1806,7 @@
         "origin":"q(?w) :- musicComposer(?w,?y)",
         "score_calibrated":0.000000208,
         "score_combined":0.000000208,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1938,7 +1938,7 @@
         "origin":"q(?w) :- musicComposer(?w,?y)",
         "score_calibrated":0.0000001858,
         "score_combined":0.0000001858,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1950,7 +1950,7 @@
         "origin":"q(?w) :- musicComposer(?w,?y)",
         "score_calibrated":0.0000001857,
         "score_combined":0.0000001857,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true

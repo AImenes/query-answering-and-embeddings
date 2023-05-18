@@ -162,7 +162,7 @@
         "origin":"q(?w) :- associatedMusicalArtist(?w,?x)",
         "score_calibrated":0.0563575402,
         "score_combined":0.0563575402,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -762,7 +762,7 @@
         "origin":"q(?w) :- genre(?y,?w)",
         "score_calibrated":0.0465021543,
         "score_combined":0.0465021543,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -846,7 +846,7 @@
         "origin":"q(?w) :- genre(?y,?w)",
         "score_calibrated":0.0440788455,
         "score_combined":0.0440788455,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true

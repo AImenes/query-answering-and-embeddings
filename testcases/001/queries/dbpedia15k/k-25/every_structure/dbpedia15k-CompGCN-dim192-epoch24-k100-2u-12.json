@@ -66,7 +66,7 @@
         "origin":"q(?w) :- countySeat(?w,?_)",
         "score_calibrated":1.0,
         "score_combined":1.0,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -90,7 +90,7 @@
         "origin":"q(?w) :- countySeat(?w,?_)",
         "score_calibrated":1.0,
         "score_combined":1.0,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -246,7 +246,7 @@
         "origin":"q(?w) :- timeZone(?w,?_)",
         "score_calibrated":1.0,
         "score_combined":1.0,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -294,7 +294,7 @@
         "origin":"q(?w) :- largestCity(?w,?_)",
         "score_calibrated":1.0,
         "score_combined":1.0,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -318,7 +318,7 @@
         "origin":"q(?w) :- birthPlace(?_,?w)",
         "score_calibrated":1.0,
         "score_combined":1.0,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -378,7 +378,7 @@
         "origin":"q(?w) :- capital(?w,?_)",
         "score_calibrated":1.0,
         "score_combined":1.0,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -594,7 +594,7 @@
         "origin":"q(?w) :- timeZone(?w,?_)",
         "score_calibrated":0.9999998808,
         "score_combined":0.9999998808,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -618,7 +618,7 @@
         "origin":"q(?w) :- largestCity(?w,?_)",
         "score_calibrated":0.9999997616,
         "score_combined":0.9999997616,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -798,7 +798,7 @@
         "origin":"q(?w) :- largestCity(?_,?w)",
         "score_calibrated":0.999999404,
         "score_combined":0.999999404,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -846,7 +846,7 @@
         "origin":"q(?w) :- largestCity(?w,?_)",
         "score_calibrated":0.9999991655,
         "score_combined":0.9999991655,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -1122,7 +1122,7 @@
         "origin":"q(?w) :- birthPlace(?_,?w)",
         "score_calibrated":0.9999984503,
         "score_combined":0.9999984503,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -1170,7 +1170,7 @@
         "origin":"q(?w) :- largestCity(?_,?w)",
         "score_calibrated":0.9999982119,
         "score_combined":0.9999982119,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -1266,7 +1266,7 @@
         "origin":"q(?w) :- timeZone(?w,?_)",
         "score_calibrated":0.9999970198,
         "score_combined":0.9999970198,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -1278,7 +1278,7 @@
         "origin":"q(?w) :- capital(?w,?_)",
         "score_calibrated":0.9999969006,
         "score_combined":0.9999969006,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -1290,7 +1290,7 @@
         "origin":"q(?w) :- largestCity(?w,?_)",
         "score_calibrated":0.9999969006,
         "score_combined":0.9999969006,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -1482,7 +1482,7 @@
         "origin":"q(?w) :- timeZone(?w,?_)",
         "score_calibrated":0.9999947548,
         "score_combined":0.9999947548,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -1590,7 +1590,7 @@
         "origin":"q(?w) :- largestCity(?w,?_)",
         "score_calibrated":0.9999930859,
         "score_combined":0.9999930859,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -1638,7 +1638,7 @@
         "origin":"q(?w) :- largestCity(?_,?w)",
         "score_calibrated":0.9999923706,
         "score_combined":0.9999923706,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -1698,7 +1698,7 @@
         "origin":"q(?w) :- largestCity(?_,?w)",
         "score_calibrated":0.9999911785,
         "score_combined":0.9999911785,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -1722,7 +1722,7 @@
         "origin":"q(?w) :- largestCity(?w,?_)",
         "score_calibrated":0.9999908209,
         "score_combined":0.9999908209,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -1962,7 +1962,7 @@
         "origin":"q(?w) :- largestCity(?w,?_)",
         "score_calibrated":0.9999873638,
         "score_combined":0.9999873638,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -1998,7 +1998,7 @@
         "origin":"q(?w) :- largestCity(?_,?w)",
         "score_calibrated":0.9999870062,
         "score_combined":0.9999870062,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -2118,7 +2118,7 @@
         "origin":"q(?w) :- largestCity(?_,?w)",
         "score_calibrated":0.9999849796,
         "score_combined":0.9999849796,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -2262,7 +2262,7 @@
         "origin":"q(?w) :- state(?_,?w)",
         "score_calibrated":0.9999798536,
         "score_combined":0.9999798536,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -2538,7 +2538,7 @@
         "origin":"q(?w) :- largestCity(?_,?w)",
         "score_calibrated":0.9999747276,
         "score_combined":0.9999747276,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -2562,7 +2562,7 @@
         "origin":"q(?w) :- leaderParty(?w,?_)",
         "score_calibrated":0.99997437,
         "score_combined":0.99997437,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -2610,7 +2610,7 @@
         "origin":"q(?w) :- ceremonialCounty(?w,?_)",
         "score_calibrated":0.9999731779,
         "score_combined":0.9999731779,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -2634,7 +2634,7 @@
         "origin":"q(?w) :- timeZone(?w,?_)",
         "score_calibrated":0.9999727011,
         "score_combined":0.9999727011,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -2814,7 +2814,7 @@
         "origin":"q(?w) :- state(?_,?w)",
         "score_calibrated":0.9999681711,
         "score_combined":0.9999681711,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -2838,7 +2838,7 @@
         "origin":"q(?w) :- deathPlace(?_,?w)",
         "score_calibrated":0.9999668598,
         "score_combined":0.9999668598,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -2922,7 +2922,7 @@
         "origin":"q(?w) :- capital(?w,?_)",
         "score_calibrated":0.9999645948,
         "score_combined":0.9999645948,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -2970,7 +2970,7 @@
         "origin":"q(?w) :- deathPlace(?_,?w)",
         "score_calibrated":0.9999622107,
         "score_combined":0.9999622107,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -3066,7 +3066,7 @@
         "origin":"q(?w) :- department(?_,?w)",
         "score_calibrated":0.9999570847,
         "score_combined":0.9999570847,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -3126,7 +3126,7 @@
         "origin":"q(?w) :- largestCity(?_,?w)",
         "score_calibrated":0.9999535084,
         "score_combined":0.9999535084,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -3138,7 +3138,7 @@
         "origin":"q(?w) :- largestCity(?_,?w)",
         "score_calibrated":0.99995327,
         "score_combined":0.99995327,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -3270,7 +3270,7 @@
         "origin":"q(?w) :- capital(?w,?_)",
         "score_calibrated":0.9999425411,
         "score_combined":0.9999425411,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -3318,7 +3318,7 @@
         "origin":"q(?w) :- countySeat(?w,?_)",
         "score_calibrated":0.9999389648,
         "score_combined":0.9999389648,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -3342,7 +3342,7 @@
         "origin":"q(?w) :- capital(?w,?_)",
         "score_calibrated":0.9999363422,
         "score_combined":0.9999363422,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -3426,7 +3426,7 @@
         "origin":"q(?w) :- capital(?w,?_)",
         "score_calibrated":0.9999301434,
         "score_combined":0.9999301434,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -3474,7 +3474,7 @@
         "origin":"q(?w) :- largestCity(?_,?w)",
         "score_calibrated":0.9999248981,
         "score_combined":0.9999248981,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -3870,7 +3870,7 @@
         "origin":"q(?w) :- largestCity(?w,?_)",
         "score_calibrated":0.9998823404,
         "score_combined":0.9998823404,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -4026,7 +4026,7 @@
         "origin":"q(?w) :- largestCity(?w,?_)",
         "score_calibrated":0.9998677969,
         "score_combined":0.9998677969,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -4062,7 +4062,7 @@
         "origin":"q(?w) :- largestCity(?w,?_)",
         "score_calibrated":0.999866128,
         "score_combined":0.999866128,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -4086,7 +4086,7 @@
         "origin":"q(?w) :- countySeat(?w,?_)",
         "score_calibrated":0.9998656511,
         "score_combined":0.9998656511,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -4242,7 +4242,7 @@
         "origin":"q(?w) :- location(?_,?w)",
         "score_calibrated":0.9998538494,
         "score_combined":0.9998538494,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -4266,7 +4266,7 @@
         "origin":"q(?w) :- timeZone(?w,?_)",
         "score_calibrated":0.9998526573,
         "score_combined":0.9998526573,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -4278,7 +4278,7 @@
         "origin":"q(?w) :- largestCity(?_,?w)",
         "score_calibrated":0.9998524189,
         "score_combined":0.9998524189,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -4290,7 +4290,7 @@
         "origin":"q(?w) :- largestCity(?w,?_)",
         "score_calibrated":0.9998494387,
         "score_combined":0.9998494387,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -4302,7 +4302,7 @@
         "origin":"q(?w) :- largestCity(?w,?_)",
         "score_calibrated":0.9998493195,
         "score_combined":0.9998493195,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -4410,7 +4410,7 @@
         "origin":"q(?w) :- largestCity(?w,?_)",
         "score_calibrated":0.9998393059,
         "score_combined":0.9998393059,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -4662,7 +4662,7 @@
         "origin":"q(?w) :- timeZone(?w,?_)",
         "score_calibrated":0.999807775,
         "score_combined":0.999807775,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -4770,7 +4770,7 @@
         "origin":"q(?w) :- largestCity(?w,?_)",
         "score_calibrated":0.9997954965,
         "score_combined":0.9997954965,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -5358,7 +5358,7 @@
         "origin":"q(?w) :- location(?_,?w)",
         "score_calibrated":0.9997261167,
         "score_combined":0.9997261167,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -5370,7 +5370,7 @@
         "origin":"q(?w) :- largestCity(?w,?_)",
         "score_calibrated":0.9997240901,
         "score_combined":0.9997240901,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -5514,7 +5514,7 @@
         "origin":"q(?w) :- region(?_,?w)",
         "score_calibrated":0.9997132421,
         "score_combined":0.9997132421,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -5538,7 +5538,7 @@
         "origin":"q(?w) :- region(?_,?w)",
         "score_calibrated":0.9997095466,
         "score_combined":0.9997095466,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -5586,7 +5586,7 @@
         "origin":"q(?w) :- ground(?_,?w)",
         "score_calibrated":0.9997066855,
         "score_combined":0.9997066855,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -5754,7 +5754,7 @@
         "origin":"q(?w) :- capital(?w,?_)",
         "score_calibrated":0.9996834993,
         "score_combined":0.9996834993,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -5778,7 +5778,7 @@
         "origin":"q(?w) :- countySeat(?w,?_)",
         "score_calibrated":0.999679327,
         "score_combined":0.999679327,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -5838,7 +5838,7 @@
         "origin":"q(?w) :- countySeat(?w,?_)",
         "score_calibrated":0.9996740818,
         "score_combined":0.9996740818,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -5922,7 +5922,7 @@
         "origin":"q(?w) :- region(?_,?w)",
         "score_calibrated":0.9996631145,
         "score_combined":0.9996631145,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -5946,7 +5946,7 @@
         "origin":"q(?w) :- region(?_,?w)",
         "score_calibrated":0.9996606112,
         "score_combined":0.9996606112,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -5970,7 +5970,7 @@
         "origin":"q(?w) :- countySeat(?w,?_)",
         "score_calibrated":0.9996585846,
         "score_combined":0.9996585846,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -6006,7 +6006,7 @@
         "origin":"q(?w) :- location(?_,?w)",
         "score_calibrated":0.9996515512,
         "score_combined":0.9996515512,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -6186,7 +6186,7 @@
         "origin":"q(?w) :- capital(?w,?_)",
         "score_calibrated":0.9996259212,
         "score_combined":0.9996259212,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -6462,7 +6462,7 @@
         "origin":"q(?w) :- hometown(?_,?w)",
         "score_calibrated":0.999556005,
         "score_combined":0.999556005,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -6786,7 +6786,7 @@
         "origin":"q(?w) :- region(?_,?w)",
         "score_calibrated":0.9994912148,
         "score_combined":0.9994912148,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -6810,7 +6810,7 @@
         "origin":"q(?w) :- capital(?w,?_)",
         "score_calibrated":0.9994782805,
         "score_combined":0.9994782805,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -6834,7 +6834,7 @@
         "origin":"q(?w) :- capital(?w,?_)",
         "score_calibrated":0.9994530082,
         "score_combined":0.9994530082,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -6870,7 +6870,7 @@
         "origin":"q(?w) :- capital(?w,?_)",
         "score_calibrated":0.9993991852,
         "score_combined":0.9993991852,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -6882,7 +6882,7 @@
         "origin":"q(?w) :- regionalLanguage(?w,?_)",
         "score_calibrated":0.9993886948,
         "score_combined":0.9993886948,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -6954,7 +6954,7 @@
         "origin":"q(?w) :- capital(?w,?_)",
         "score_calibrated":0.9993245602,
         "score_combined":0.9993245602,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -6990,7 +6990,7 @@
         "origin":"q(?w) :- capital(?w,?_)",
         "score_calibrated":0.9992974997,
         "score_combined":0.9992974997,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -7026,7 +7026,7 @@
         "origin":"q(?w) :- part(?_,?w)",
         "score_calibrated":0.9992516637,
         "score_combined":0.9992516637,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -7170,7 +7170,7 @@
         "origin":"q(?w) :- capital(?w,?_)",
         "score_calibrated":0.9990979433,
         "score_combined":0.9990979433,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -7254,7 +7254,7 @@
         "origin":"q(?w) :- capital(?w,?_)",
         "score_calibrated":0.9990432858,
         "score_combined":0.9990432858,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -7290,7 +7290,7 @@
         "origin":"q(?w) :- leaderParty(?w,?_)",
         "score_calibrated":0.9989928603,
         "score_combined":0.9989928603,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -7482,7 +7482,7 @@
         "origin":"q(?w) :- twinTown(?_,?w)",
         "score_calibrated":0.9988302588,
         "score_combined":0.9988302588,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -7530,7 +7530,7 @@
         "origin":"q(?w) :- capital(?w,?_)",
         "score_calibrated":0.9987899661,
         "score_combined":0.9987899661,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -7554,7 +7554,7 @@
         "origin":"q(?w) :- lieutenancyArea(?w,?_)",
         "score_calibrated":0.9987744689,
         "score_combined":0.9987744689,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -7638,7 +7638,7 @@
         "origin":"q(?w) :- department(?w,?_)",
         "score_calibrated":0.998668313,
         "score_combined":0.998668313,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -7674,7 +7674,7 @@
         "origin":"q(?w) :- restingPlace(?_,?w)",
         "score_calibrated":0.9986465573,
         "score_combined":0.9986465573,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -7890,7 +7890,7 @@
         "origin":"q(?w) :- capital(?w,?_)",
         "score_calibrated":0.99844414,
         "score_combined":0.99844414,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -8022,7 +8022,7 @@
         "origin":"q(?w) :- regionalLanguage(?w,?_)",
         "score_calibrated":0.9983834028,
         "score_combined":0.9983834028,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -8094,7 +8094,7 @@
         "origin":"q(?w) :- capital(?w,?_)",
         "score_calibrated":0.9982866645,
         "score_combined":0.9982866645,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -8142,7 +8142,7 @@
         "origin":"q(?w) :- twinTown(?_,?w)",
         "score_calibrated":0.998238802,
         "score_combined":0.998238802,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -8358,7 +8358,7 @@
         "origin":"q(?w) :- capital(?w,?_)",
         "score_calibrated":0.9979948997,
         "score_combined":0.9979948997,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -8478,7 +8478,7 @@
         "origin":"q(?w) :- capital(?w,?_)",
         "score_calibrated":0.9978886247,
         "score_combined":0.9978886247,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -8502,7 +8502,7 @@
         "origin":"q(?w) :- officialLanguage(?w,?_)",
         "score_calibrated":0.9978712797,
         "score_combined":0.9978712797,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -8586,7 +8586,7 @@
         "origin":"q(?w) :- ceremonialCounty(?_,?w)",
         "score_calibrated":0.9978141785,
         "score_combined":0.9978141785,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -8718,7 +8718,7 @@
         "origin":"q(?w) :- regionalLanguage(?w,?_)",
         "score_calibrated":0.997630477,
         "score_combined":0.997630477,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -8790,7 +8790,7 @@
         "origin":"q(?w) :- twinTown(?_,?w)",
         "score_calibrated":0.9975830317,
         "score_combined":0.9975830317,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -9066,7 +9066,7 @@
         "origin":"q(?w) :- leaderParty(?w,?_)",
         "score_calibrated":0.9973020554,
         "score_combined":0.9973020554,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -9114,7 +9114,7 @@
         "origin":"q(?w) :- leaderParty(?w,?_)",
         "score_calibrated":0.9972807169,
         "score_combined":0.9972807169,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -9174,7 +9174,7 @@
         "origin":"q(?w) :- restingPlace(?_,?w)",
         "score_calibrated":0.9972157478,
         "score_combined":0.9972157478,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -9198,7 +9198,7 @@
         "origin":"q(?w) :- regionalLanguage(?w,?_)",
         "score_calibrated":0.9972003698,
         "score_combined":0.9972003698,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -9834,7 +9834,7 @@
         "origin":"q(?w) :- spokenIn(?_,?w)",
         "score_calibrated":0.9966647029,
         "score_combined":0.9966647029,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -10698,7 +10698,7 @@
         "origin":"q(?w) :- populationPlace(?_,?w)",
         "score_calibrated":0.9959248304,
         "score_combined":0.9959248304,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -10794,7 +10794,7 @@
         "origin":"q(?w) :- regionalLanguage(?w,?_)",
         "score_calibrated":0.9958792925,
         "score_combined":0.9958792925,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -11214,7 +11214,7 @@
         "origin":"q(?w) :- department(?_,?w)",
         "score_calibrated":0.9955466986,
         "score_combined":0.9955466986,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -11286,7 +11286,7 @@
         "origin":"q(?w) :- part(?_,?w)",
         "score_calibrated":0.9955216646,
         "score_combined":0.9955216646,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -11334,7 +11334,7 @@
         "origin":"q(?w) :- spokenIn(?_,?w)",
         "score_calibrated":0.9954926968,
         "score_combined":0.9954926968,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -11634,7 +11634,7 @@
         "origin":"q(?w) :- populationPlace(?_,?w)",
         "score_calibrated":0.9951195717,
         "score_combined":0.9951195717,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -11874,7 +11874,7 @@
         "origin":"q(?w) :- lieutenancyArea(?w,?_)",
         "score_calibrated":0.9948921204,
         "score_combined":0.9948921204,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -12354,7 +12354,7 @@
         "origin":"q(?w) :- restingPlace(?_,?w)",
         "score_calibrated":0.994350791,
         "score_combined":0.994350791,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -12666,7 +12666,7 @@
         "origin":"q(?w) :- department(?_,?w)",
         "score_calibrated":0.994034946,
         "score_combined":0.994034946,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -12690,7 +12690,7 @@
         "origin":"q(?w) :- part(?_,?w)",
         "score_calibrated":0.9940128922,
         "score_combined":0.9940128922,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -13062,7 +13062,7 @@
         "origin":"q(?w) :- department(?_,?w)",
         "score_calibrated":0.9933766723,
         "score_combined":0.9933766723,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -13098,7 +13098,7 @@
         "origin":"q(?w) :- part(?_,?w)",
         "score_calibrated":0.9933339953,
         "score_combined":0.9933339953,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -13194,7 +13194,7 @@
         "origin":"q(?w) :- district(?w,?_)",
         "score_calibrated":0.9931909442,
         "score_combined":0.9931909442,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -13206,7 +13206,7 @@
         "origin":"q(?w) :- district(?_,?w)",
         "score_calibrated":0.9931519032,
         "score_combined":0.9931519032,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -13374,7 +13374,7 @@
         "origin":"q(?w) :- department(?_,?w)",
         "score_calibrated":0.9928532243,
         "score_combined":0.9928532243,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -13890,7 +13890,7 @@
         "origin":"q(?w) :- district(?w,?_)",
         "score_calibrated":0.9918233752,
         "score_combined":0.9918233752,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -13926,7 +13926,7 @@
         "origin":"q(?w) :- district(?_,?w)",
         "score_calibrated":0.9917151332,
         "score_combined":0.9917151332,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -14070,7 +14070,7 @@
         "origin":"q(?w) :- district(?_,?w)",
         "score_calibrated":0.9913161993,
         "score_combined":0.9913161993,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -14178,7 +14178,7 @@
         "origin":"q(?w) :- recordedIn(?_,?w)",
         "score_calibrated":0.99095577,
         "score_combined":0.99095577,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -14202,7 +14202,7 @@
         "origin":"q(?w) :- part(?_,?w)",
         "score_calibrated":0.9909528494,
         "score_combined":0.9909528494,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -14610,7 +14610,7 @@
         "origin":"q(?w) :- district(?w,?_)",
         "score_calibrated":0.9898406863,
         "score_combined":0.9898406863,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -14694,7 +14694,7 @@
         "origin":"q(?w) :- territory(?_,?w)",
         "score_calibrated":0.9896813035,
         "score_combined":0.9896813035,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -14718,7 +14718,7 @@
         "origin":"q(?w) :- metropolitanBorough(?w,?_)",
         "score_calibrated":0.9896315932,
         "score_combined":0.9896315932,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -14970,7 +14970,7 @@
         "origin":"q(?w) :- part(?_,?w)",
         "score_calibrated":0.9891213775,
         "score_combined":0.9891213775,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -15186,7 +15186,7 @@
         "origin":"q(?w) :- territory(?_,?w)",
         "score_calibrated":0.9885286689,
         "score_combined":0.9885286689,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -15414,7 +15414,7 @@
         "origin":"q(?w) :- territory(?_,?w)",
         "score_calibrated":0.9879310131,
         "score_combined":0.9879310131,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -15474,7 +15474,7 @@
         "origin":"q(?w) :- part(?_,?w)",
         "score_calibrated":0.9878182411,
         "score_combined":0.9878182411,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -16002,7 +16002,7 @@
         "origin":"q(?w) :- place(?_,?w)",
         "score_calibrated":0.9864886403,
         "score_combined":0.9864886403,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -16218,7 +16218,7 @@
         "origin":"q(?w) :- district(?_,?w)",
         "score_calibrated":0.9856738448,
         "score_combined":0.9856738448,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -16638,7 +16638,7 @@
         "origin":"q(?w) :- metropolitanBorough(?w,?_)",
         "score_calibrated":0.9838759303,
         "score_combined":0.9838759303,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -16650,7 +16650,7 @@
         "origin":"q(?w) :- metropolitanBorough(?w,?_)",
         "score_calibrated":0.9837791324,
         "score_combined":0.9837791324,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -17178,7 +17178,7 @@
         "origin":"q(?w) :- recordedIn(?_,?w)",
         "score_calibrated":0.9824116826,
         "score_combined":0.9824116826,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -17382,7 +17382,7 @@
         "origin":"q(?w) :- lieutenancyArea(?w,?_)",
         "score_calibrated":0.9816324711,
         "score_combined":0.9816324711,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -17514,7 +17514,7 @@
         "origin":"q(?w) :- metropolitanBorough(?w,?_)",
         "score_calibrated":0.9810521603,
         "score_combined":0.9810521603,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -17850,7 +17850,7 @@
         "origin":"q(?w) :- metropolitanBorough(?w,?_)",
         "score_calibrated":0.9799826145,
         "score_combined":0.9799826145,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -18354,7 +18354,7 @@
         "origin":"q(?w) :- locatedInArea(?w,?_)",
         "score_calibrated":0.9784026146,
         "score_combined":0.9784026146,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -18882,7 +18882,7 @@
         "origin":"q(?w) :- frazioni(?_,?w)",
         "score_calibrated":0.975052774,
         "score_combined":0.975052774,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -19002,7 +19002,7 @@
         "origin":"q(?w) :- place(?_,?w)",
         "score_calibrated":0.9744904637,
         "score_combined":0.9744904637,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -19026,7 +19026,7 @@
         "origin":"q(?w) :- department(?w,?_)",
         "score_calibrated":0.9744508862,
         "score_combined":0.9744508862,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -19218,7 +19218,7 @@
         "origin":"q(?w) :- leaderName(?w,?_)",
         "score_calibrated":0.9725563526,
         "score_combined":0.9725563526,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -19938,7 +19938,7 @@
         "origin":"q(?w) :- borough(?_,?w)",
         "score_calibrated":0.9678282738,
         "score_combined":0.9678282738,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -20058,7 +20058,7 @@
         "origin":"q(?w) :- metropolitanBorough(?_,?w)",
         "score_calibrated":0.9671645761,
         "score_combined":0.9671645761,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -20286,7 +20286,7 @@
         "origin":"q(?w) :- councilArea(?_,?w)",
         "score_calibrated":0.9658437371,
         "score_combined":0.9658437371,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -20466,7 +20466,7 @@
         "origin":"q(?w) :- ethnicGroup(?w,?_)",
         "score_calibrated":0.9649009109,
         "score_combined":0.9649009109,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -20610,7 +20610,7 @@
         "origin":"q(?w) :- principalArea(?_,?w)",
         "score_calibrated":0.964287281,
         "score_combined":0.964287281,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -20898,7 +20898,7 @@
         "origin":"q(?w) :- locatedInArea(?w,?_)",
         "score_calibrated":0.9633559585,
         "score_combined":0.9633559585,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -21018,7 +21018,7 @@
         "origin":"q(?w) :- nearestCity(?_,?w)",
         "score_calibrated":0.9630045295,
         "score_combined":0.9630045295,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -21174,7 +21174,7 @@
         "origin":"q(?w) :- councilArea(?_,?w)",
         "score_calibrated":0.9625733495,
         "score_combined":0.9625733495,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -21186,7 +21186,7 @@
         "origin":"q(?w) :- federalState(?_,?w)",
         "score_calibrated":0.9624992013,
         "score_combined":0.9624992013,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -21234,7 +21234,7 @@
         "origin":"q(?w) :- sourceConfluenceState(?_,?w)",
         "score_calibrated":0.9623577595,
         "score_combined":0.9623577595,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -21666,7 +21666,7 @@
         "origin":"q(?w) :- locatedInArea(?w,?_)",
         "score_calibrated":0.9603373408,
         "score_combined":0.9603373408,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -21738,7 +21738,7 @@
         "origin":"q(?w) :- nearestCity(?_,?w)",
         "score_calibrated":0.9599611759,
         "score_combined":0.9599611759,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -21810,7 +21810,7 @@
         "origin":"q(?w) :- recordedIn(?_,?w)",
         "score_calibrated":0.9594691396,
         "score_combined":0.9594691396,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -21918,7 +21918,7 @@
         "origin":"q(?w) :- frazioni(?_,?w)",
         "score_calibrated":0.9590865374,
         "score_combined":0.9590865374,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -22350,7 +22350,7 @@
         "origin":"q(?w) :- recordedIn(?_,?w)",
         "score_calibrated":0.9562764168,
         "score_combined":0.9562764168,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -22422,7 +22422,7 @@
         "origin":"q(?w) :- frazioni(?_,?w)",
         "score_calibrated":0.9558913708,
         "score_combined":0.9558913708,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -22590,7 +22590,7 @@
         "origin":"q(?w) :- recordedIn(?_,?w)",
         "score_calibrated":0.9552106261,
         "score_combined":0.9552106261,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -22710,7 +22710,7 @@
         "origin":"q(?w) :- department(?w,?_)",
         "score_calibrated":0.9546132088,
         "score_combined":0.9546132088,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -22734,7 +22734,7 @@
         "origin":"q(?w) :- recordedIn(?_,?w)",
         "score_calibrated":0.9544813037,
         "score_combined":0.9544813037,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -23430,7 +23430,7 @@
         "origin":"q(?w) :- frazioni(?_,?w)",
         "score_calibrated":0.9519816637,
         "score_combined":0.9519816637,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -23634,7 +23634,7 @@
         "origin":"q(?w) :- frazioni(?_,?w)",
         "score_calibrated":0.9510005116,
         "score_combined":0.9510005116,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -23814,7 +23814,7 @@
         "origin":"q(?w) :- recordedIn(?_,?w)",
         "score_calibrated":0.9502832294,
         "score_combined":0.9502832294,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -23838,7 +23838,7 @@
         "origin":"q(?w) :- nearestCity(?w,?_)",
         "score_calibrated":0.9501523376,
         "score_combined":0.9501523376,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -24390,7 +24390,7 @@
         "origin":"q(?w) :- borough(?_,?w)",
         "score_calibrated":0.9465512633,
         "score_combined":0.9465512633,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -24534,7 +24534,7 @@
         "origin":"q(?w) :- canton(?_,?w)",
         "score_calibrated":0.9451711178,
         "score_combined":0.9451711178,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -24594,7 +24594,7 @@
         "origin":"q(?w) :- county(?_,?w)",
         "score_calibrated":0.9445611835,
         "score_combined":0.9445611835,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -25374,7 +25374,7 @@
         "origin":"q(?w) :- sourceRegion(?_,?w)",
         "score_calibrated":0.938880682,
         "score_combined":0.938880682,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -25986,7 +25986,7 @@
         "origin":"q(?w) :- federalState(?w,?_)",
         "score_calibrated":0.9344506264,
         "score_combined":0.9344506264,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -26022,7 +26022,7 @@
         "origin":"q(?w) :- mouthRegion(?_,?w)",
         "score_calibrated":0.9341489673,
         "score_combined":0.9341489673,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -26334,7 +26334,7 @@
         "origin":"q(?w) :- borough(?_,?w)",
         "score_calibrated":0.9319652319,
         "score_combined":0.9319652319,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -26910,7 +26910,7 @@
         "origin":"q(?w) :- sourceRegion(?_,?w)",
         "score_calibrated":0.9284335375,
         "score_combined":0.9284335375,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -26946,7 +26946,7 @@
         "origin":"q(?w) :- daylightSavingTimeZone(?w,?_)",
         "score_calibrated":0.9280024171,
         "score_combined":0.9280024171,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -27030,7 +27030,7 @@
         "origin":"q(?w) :- releaseLocation(?_,?w)",
         "score_calibrated":0.927451849,
         "score_combined":0.927451849,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -27246,7 +27246,7 @@
         "origin":"q(?w) :- sourceRegion(?_,?w)",
         "score_calibrated":0.9254795909,
         "score_combined":0.9254795909,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -27450,7 +27450,7 @@
         "origin":"q(?w) :- locatedInArea(?_,?w)",
         "score_calibrated":0.9241014719,
         "score_combined":0.9241014719,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -27930,7 +27930,7 @@
         "origin":"q(?w) :- daylightSavingTimeZone(?w,?_)",
         "score_calibrated":0.9204724431,
         "score_combined":0.9204724431,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -28050,7 +28050,7 @@
         "origin":"q(?w) :- daylightSavingTimeZone(?w,?_)",
         "score_calibrated":0.9193181396,
         "score_combined":0.9193181396,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -28098,7 +28098,7 @@
         "origin":"q(?w) :- mouthPlace(?_,?w)",
         "score_calibrated":0.9189820886,
         "score_combined":0.9189820886,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -28290,7 +28290,7 @@
         "origin":"q(?w) :- mouthRegion(?_,?w)",
         "score_calibrated":0.9175895452,
         "score_combined":0.9175895452,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -28446,7 +28446,7 @@
         "origin":"q(?w) :- borough(?_,?w)",
         "score_calibrated":0.9164537191,
         "score_combined":0.9164537191,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -28518,7 +28518,7 @@
         "origin":"q(?w) :- lieutenancyArea(?_,?w)",
         "score_calibrated":0.9154468775,
         "score_combined":0.9154468775,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -28578,7 +28578,7 @@
         "origin":"q(?w) :- mouthPlace(?_,?w)",
         "score_calibrated":0.915158987,
         "score_combined":0.915158987,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -28734,7 +28734,7 @@
         "origin":"q(?w) :- river(?w,?_)",
         "score_calibrated":0.9139261246,
         "score_combined":0.9139261246,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -29310,7 +29310,7 @@
         "origin":"q(?w) :- releaseLocation(?_,?w)",
         "score_calibrated":0.9080474973,
         "score_combined":0.9080474973,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -29538,7 +29538,7 @@
         "origin":"q(?w) :- mouthRegion(?_,?w)",
         "score_calibrated":0.9055122137,
         "score_combined":0.9055122137,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -29946,7 +29946,7 @@
         "origin":"q(?w) :- releaseLocation(?_,?w)",
         "score_calibrated":0.9004536271,
         "score_combined":0.9004536271,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -30498,7 +30498,7 @@
         "origin":"q(?w) :- mouthRegion(?_,?w)",
         "score_calibrated":0.8930075765,
         "score_combined":0.8930075765,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -30606,7 +30606,7 @@
         "origin":"q(?w) :- canton(?_,?w)",
         "score_calibrated":0.8910460472,
         "score_combined":0.8910460472,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -30642,7 +30642,7 @@
         "origin":"q(?w) :- map(?w,?_)",
         "score_calibrated":0.8902365565,
         "score_combined":0.8902365565,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -30654,7 +30654,7 @@
         "origin":"q(?w) :- frazioni(?w,?_)",
         "score_calibrated":0.8901779652,
         "score_combined":0.8901779652,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -30762,7 +30762,7 @@
         "origin":"q(?w) :- canton(?_,?w)",
         "score_calibrated":0.8893107772,
         "score_combined":0.8893107772,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -31422,7 +31422,7 @@
         "origin":"q(?w) :- lieutenancyArea(?_,?w)",
         "score_calibrated":0.8702360392,
         "score_combined":0.8702360392,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -31770,7 +31770,7 @@
         "origin":"q(?w) :- map(?w,?_)",
         "score_calibrated":0.8607289195,
         "score_combined":0.8607289195,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -32154,7 +32154,7 @@
         "origin":"q(?w) :- sourceConfluencePlace(?_,?w)",
         "score_calibrated":0.8516002893,
         "score_combined":0.8516002893,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -32418,7 +32418,7 @@
         "origin":"q(?w) :- sourceConfluenceState(?_,?w)",
         "score_calibrated":0.845191896,
         "score_combined":0.845191896,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -32490,7 +32490,7 @@
         "origin":"q(?w) :- lowestPlace(?_,?w)",
         "score_calibrated":0.8435065746,
         "score_combined":0.8435065746,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -32598,7 +32598,7 @@
         "origin":"q(?w) :- frazioni(?w,?_)",
         "score_calibrated":0.8403844833,
         "score_combined":0.8403844833,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -32622,7 +32622,7 @@
         "origin":"q(?w) :- sourceConfluenceRegion(?_,?w)",
         "score_calibrated":0.8400607705,
         "score_combined":0.8400607705,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -32634,7 +32634,7 @@
         "origin":"q(?w) :- sourceConfluencePlace(?_,?w)",
         "score_calibrated":0.840000093,
         "score_combined":0.840000093,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -32646,7 +32646,7 @@
         "origin":"q(?w) :- municipality(?_,?w)",
         "score_calibrated":0.8395162225,
         "score_combined":0.8395162225,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -32742,7 +32742,7 @@
         "origin":"q(?w) :- canton(?_,?w)",
         "score_calibrated":0.8366683722,
         "score_combined":0.8366683722,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -32766,7 +32766,7 @@
         "origin":"q(?w) :- sourceConfluencePlace(?_,?w)",
         "score_calibrated":0.836505115,
         "score_combined":0.836505115,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -33210,7 +33210,7 @@
         "origin":"q(?w) :- map(?w,?_)",
         "score_calibrated":0.8237164617,
         "score_combined":0.8237164617,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -33330,7 +33330,7 @@
         "origin":"q(?w) :- sourceConfluenceRegion(?_,?w)",
         "score_calibrated":0.8223212957,
         "score_combined":0.8223212957,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -33558,7 +33558,7 @@
         "origin":"q(?w) :- largestSettlement(?_,?w)",
         "score_calibrated":0.815261364,
         "score_combined":0.815261364,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -33738,7 +33738,7 @@
         "origin":"q(?w) :- sourceConfluenceRegion(?_,?w)",
         "score_calibrated":0.8077419996,
         "score_combined":0.8077419996,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -34158,7 +34158,7 @@
         "origin":"q(?w) :- lowestPlace(?_,?w)",
         "score_calibrated":0.785682559,
         "score_combined":0.785682559,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -34434,7 +34434,7 @@
         "origin":"q(?w) :- municipality(?_,?w)",
         "score_calibrated":0.7715994716,
         "score_combined":0.7715994716,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -34674,7 +34674,7 @@
         "origin":"q(?w) :- municipality(?_,?w)",
         "score_calibrated":0.7626258135,
         "score_combined":0.7626258135,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
@@ -34866,7 +34866,7 @@
         "origin":"q(?w) :- province(?w,?_)",
         "score_calibrated":0.7497054935,
         "score_combined":0.7497054935,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":true

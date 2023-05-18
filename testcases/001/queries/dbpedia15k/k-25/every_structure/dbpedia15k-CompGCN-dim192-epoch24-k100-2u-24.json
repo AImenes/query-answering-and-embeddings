@@ -78,7 +78,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":1.0,
         "score_combined":1.0,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -102,7 +102,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999998808,
         "score_combined":0.9999998808,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -114,7 +114,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999998808,
         "score_combined":0.9999998808,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -150,7 +150,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999996424,
         "score_combined":0.9999996424,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -162,7 +162,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999996424,
         "score_combined":0.9999996424,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -174,7 +174,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.999999404,
         "score_combined":0.999999404,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -198,7 +198,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999988079,
         "score_combined":0.9999988079,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -222,7 +222,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999982119,
         "score_combined":0.9999982119,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -270,7 +270,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.999997735,
         "score_combined":0.999997735,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -282,7 +282,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999976158,
         "score_combined":0.9999976158,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -378,7 +378,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999964237,
         "score_combined":0.9999964237,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -390,7 +390,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999959469,
         "score_combined":0.9999959469,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -426,7 +426,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999949932,
         "score_combined":0.9999949932,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -438,7 +438,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999943972,
         "score_combined":0.9999943972,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -450,7 +450,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.999994278,
         "score_combined":0.999994278,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -522,7 +522,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999910593,
         "score_combined":0.9999910593,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -534,7 +534,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999895096,
         "score_combined":0.9999895096,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -774,7 +774,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.999980092,
         "score_combined":0.999980092,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -846,7 +846,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999729395,
         "score_combined":0.9999729395,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -906,7 +906,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.999968648,
         "score_combined":0.999968648,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -966,7 +966,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999628067,
         "score_combined":0.9999628067,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -990,7 +990,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.999961257,
         "score_combined":0.999961257,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1002,7 +1002,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999603033,
         "score_combined":0.9999603033,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1026,7 +1026,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.999958992,
         "score_combined":0.999958992,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1038,7 +1038,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999588728,
         "score_combined":0.9999588728,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1062,7 +1062,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999557734,
         "score_combined":0.9999557734,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1110,7 +1110,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999488592,
         "score_combined":0.9999488592,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1122,7 +1122,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999482632,
         "score_combined":0.9999482632,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1158,7 +1158,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.9999457598,
         "score_combined":0.9999457598,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1422,7 +1422,7 @@
         "origin":"q(?w) :- company(?x,?w)",
         "score_calibrated":0.9998121858,
         "score_combined":0.9998121858,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1530,7 +1530,7 @@
         "origin":"q(?w) :- company(?x,?w)",
         "score_calibrated":0.9997424483,
         "score_combined":0.9997424483,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1758,7 +1758,7 @@
         "origin":"q(?w) :- company(?x,?w)",
         "score_calibrated":0.9995341301,
         "score_combined":0.9995341301,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false

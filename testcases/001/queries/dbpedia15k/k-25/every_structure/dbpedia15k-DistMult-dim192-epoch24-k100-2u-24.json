@@ -30,7 +30,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.8007344007,
         "score_combined":0.8007344007,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -54,7 +54,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.7997894287,
         "score_combined":0.7997894287,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -246,7 +246,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.788893044,
         "score_combined":0.788893044,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -258,7 +258,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.7886043191,
         "score_combined":0.7886043191,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -450,7 +450,7 @@
         "origin":"q(?w) :- associatedBand(?w,?y)",
         "score_calibrated":0.7848440409,
         "score_combined":0.7848440409,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -750,7 +750,7 @@
         "origin":"q(?w) :- company(?x,?w)",
         "score_calibrated":0.7183123231,
         "score_combined":0.7183123231,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -798,7 +798,7 @@
         "origin":"q(?w) :- company(?x,?w)",
         "score_calibrated":0.6784742475,
         "score_combined":0.6784742475,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -870,7 +870,7 @@
         "origin":"q(?w) :- company(?x,?w)",
         "score_calibrated":0.6487594843,
         "score_combined":0.6487594843,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -966,7 +966,7 @@
         "origin":"q(?w) :- company(?x,?w)",
         "score_calibrated":0.6355029941,
         "score_combined":0.6355029941,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1050,7 +1050,7 @@
         "origin":"q(?w) :- company(?x,?w)",
         "score_calibrated":0.6307528615,
         "score_combined":0.6307528615,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1098,7 +1098,7 @@
         "origin":"q(?w) :- company(?x,?w)",
         "score_calibrated":0.6283197403,
         "score_combined":0.6283197403,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1362,7 +1362,7 @@
         "origin":"q(?w) :- company(?x,?w)",
         "score_calibrated":0.6202303767,
         "score_combined":0.6202303767,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1482,7 +1482,7 @@
         "origin":"q(?w) :- company(?x,?w)",
         "score_calibrated":0.6182908416,
         "score_combined":0.6182908416,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1566,7 +1566,7 @@
         "origin":"q(?w) :- company(?x,?w)",
         "score_calibrated":0.616975069,
         "score_combined":0.616975069,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false

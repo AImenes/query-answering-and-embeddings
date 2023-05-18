@@ -18,7 +18,7 @@
         "origin":"q(?w) :- recordLabel(?y,?w)",
         "score_calibrated":0.8024344444,
         "score_combined":0.8024344444,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -114,7 +114,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7964515686,
         "score_combined":0.7964515686,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -174,7 +174,7 @@
         "origin":"q(?w) :- recordLabel(?y,?w)",
         "score_calibrated":0.7946387529,
         "score_combined":0.7946387529,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -282,7 +282,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7913672328,
         "score_combined":0.7913672328,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -318,7 +318,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.790166378,
         "score_combined":0.790166378,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -354,7 +354,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7896049023,
         "score_combined":0.7896049023,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -438,7 +438,7 @@
         "origin":"q(?w) :- recordLabel(?y,?w)",
         "score_calibrated":0.7886276841,
         "score_combined":0.7886276841,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -462,7 +462,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7883451581,
         "score_combined":0.7883451581,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -762,7 +762,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7857148647,
         "score_combined":0.7857148647,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -786,7 +786,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7852203846,
         "score_combined":0.7852203846,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -834,7 +834,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7843238115,
         "score_combined":0.7843238115,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1074,7 +1074,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7825500369,
         "score_combined":0.7825500369,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1158,7 +1158,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7809377313,
         "score_combined":0.7809377313,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1170,7 +1170,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7809100151,
         "score_combined":0.7809100151,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1230,7 +1230,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7791649699,
         "score_combined":0.7791649699,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1326,7 +1326,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7782489061,
         "score_combined":0.7782489061,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1338,7 +1338,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.778129518,
         "score_combined":0.778129518,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1386,7 +1386,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.777664423,
         "score_combined":0.777664423,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1410,7 +1410,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7773686051,
         "score_combined":0.7773686051,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1422,7 +1422,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.777344346,
         "score_combined":0.777344346,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1446,7 +1446,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7769488096,
         "score_combined":0.7769488096,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1458,7 +1458,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.776634872,
         "score_combined":0.776634872,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1470,7 +1470,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7766042948,
         "score_combined":0.7766042948,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1542,7 +1542,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7752979994,
         "score_combined":0.7752979994,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1578,7 +1578,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7751618624,
         "score_combined":0.7751618624,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1590,7 +1590,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7749540806,
         "score_combined":0.7749540806,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1638,7 +1638,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7743479609,
         "score_combined":0.7743479609,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1650,7 +1650,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7743167281,
         "score_combined":0.7743167281,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1662,7 +1662,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7738982439,
         "score_combined":0.7738982439,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1674,7 +1674,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7736957073,
         "score_combined":0.7736957073,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1734,7 +1734,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7732334137,
         "score_combined":0.7732334137,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1782,7 +1782,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7726077437,
         "score_combined":0.7726077437,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1842,7 +1842,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7721297741,
         "score_combined":0.7721297741,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1854,7 +1854,7 @@
         "origin":"q(?w) :- isPartOf(?w,?x)",
         "score_calibrated":0.7721273303,
         "score_combined":0.7721273303,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false

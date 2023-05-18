@@ -18,7 +18,7 @@
         "origin":"q(?w) :- associatedMusicalArtist(?w,?x)",
         "score_calibrated":0.0378255732,
         "score_combined":0.0378255732,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -66,7 +66,7 @@
         "origin":"q(?w) :- genre(?y,?w)",
         "score_calibrated":0.0366964787,
         "score_combined":0.0366964787,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -114,7 +114,7 @@
         "origin":"q(?w) :- genre(?y,?w)",
         "score_calibrated":0.0358828716,
         "score_combined":0.0358828716,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -150,7 +150,7 @@
         "origin":"q(?w) :- genre(?y,?w)",
         "score_calibrated":0.0350745469,
         "score_combined":0.0350745469,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -318,7 +318,7 @@
         "origin":"q(?w) :- genre(?y,?w)",
         "score_calibrated":0.0311548896,
         "score_combined":0.0311548896,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -342,7 +342,7 @@
         "origin":"q(?w) :- genre(?y,?w)",
         "score_calibrated":0.0306797158,
         "score_combined":0.0306797158,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -354,7 +354,7 @@
         "origin":"q(?w) :- genre(?y,?w)",
         "score_calibrated":0.0305548832,
         "score_combined":0.0305548832,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -366,7 +366,7 @@
         "origin":"q(?w) :- genre(?y,?w)",
         "score_calibrated":0.0305526648,
         "score_combined":0.0305526648,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -438,7 +438,7 @@
         "origin":"q(?w) :- genre(?y,?w)",
         "score_calibrated":0.0299306586,
         "score_combined":0.0299306586,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -570,7 +570,7 @@
         "origin":"q(?w) :- genre(?y,?w)",
         "score_calibrated":0.0286655258,
         "score_combined":0.0286655258,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -654,7 +654,7 @@
         "origin":"q(?w) :- associatedMusicalArtist(?w,?x)",
         "score_calibrated":0.0276801698,
         "score_combined":0.0276801698,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -690,7 +690,7 @@
         "origin":"q(?w) :- associatedMusicalArtist(?w,?x)",
         "score_calibrated":0.0275328048,
         "score_combined":0.0275328048,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -726,7 +726,7 @@
         "origin":"q(?w) :- associatedMusicalArtist(?w,?x)",
         "score_calibrated":0.0273113474,
         "score_combined":0.0273113474,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -834,7 +834,7 @@
         "origin":"q(?w) :- associatedMusicalArtist(?w,?x)",
         "score_calibrated":0.0266479589,
         "score_combined":0.0266479589,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -858,7 +858,7 @@
         "origin":"q(?w) :- associatedMusicalArtist(?w,?x)",
         "score_calibrated":0.0264930092,
         "score_combined":0.0264930092,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -894,7 +894,7 @@
         "origin":"q(?w) :- associatedMusicalArtist(?w,?x)",
         "score_calibrated":0.0257398002,
         "score_combined":0.0257398002,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -930,7 +930,7 @@
         "origin":"q(?w) :- associatedMusicalArtist(?w,?x)",
         "score_calibrated":0.0253599416,
         "score_combined":0.0253599416,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1194,7 +1194,7 @@
         "origin":"q(?w) :- associatedMusicalArtist(?w,?x)",
         "score_calibrated":0.0225599203,
         "score_combined":0.0225599203,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1266,7 +1266,7 @@
         "origin":"q(?w) :- associatedMusicalArtist(?w,?x)",
         "score_calibrated":0.0220264401,
         "score_combined":0.0220264401,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false

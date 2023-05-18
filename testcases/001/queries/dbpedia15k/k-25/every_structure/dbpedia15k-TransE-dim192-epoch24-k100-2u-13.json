@@ -1,42 +1,6 @@
 {
     "0":{
-        "entity_id":10327,
-        "entity_label":"<http:\/\/dbpedia.org\/resource\/South_Korea_national_football_team>",
-        "still_valid":false,
-        "origin":"q(?w) :- timeZone(?w,?x)",
-        "score_calibrated":0.0000050653,
-        "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
-        "online_kg_hit_rewriting":false,
-        "local_kg_hit_original":false,
-        "online_kg_hit_original":false
-    },
-    "1":{
-        "entity_id":6913,
-        "entity_label":"<http:\/\/dbpedia.org\/resource\/Madhya_Pradesh>",
-        "still_valid":false,
-        "origin":"q(?w) :- timeZone(?w,?x)",
-        "score_calibrated":0.0000050653,
-        "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
-        "online_kg_hit_rewriting":true,
-        "local_kg_hit_original":true,
-        "online_kg_hit_original":true
-    },
-    "2":{
-        "entity_id":8814,
-        "entity_label":"<http:\/\/dbpedia.org\/resource\/Portuguese_language>",
-        "still_valid":false,
-        "origin":"q(?w) :- timeZone(?w,?x)",
-        "score_calibrated":0.0000050653,
-        "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
-        "online_kg_hit_rewriting":false,
-        "local_kg_hit_original":false,
-        "online_kg_hit_original":false
-    },
-    "3":{
-        "entity_id":10367,
+        "entity_id":10374,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Spanish_language>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -47,8 +11,32 @@
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
     },
-    "4":{
-        "entity_id":10472,
+    "1":{
+        "entity_id":6926,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Madhya_Pradesh>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?w,?x)",
+        "score_calibrated":0.0000050653,
+        "score_combined":0.0000050653,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    },
+    "2":{
+        "entity_id":8987,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Punjab,_India>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?w,?x)",
+        "score_calibrated":0.0000050653,
+        "score_combined":0.0000050653,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    },
+    "3":{
+        "entity_id":10479,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Standard_Chinese>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -59,20 +47,32 @@
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
     },
+    "4":{
+        "entity_id":10829,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Tamil_Nadu>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?w,?x)",
+        "score_calibrated":0.0000050653,
+        "score_combined":0.0000050653,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    },
     "5":{
-        "entity_id":8038,
+        "entity_id":8048,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Nigeria>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "6":{
-        "entity_id":7994,
+        "entity_id":8004,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Newfoundland_Time_Zone>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -84,8 +84,20 @@
         "online_kg_hit_original":false
     },
     "7":{
-        "entity_id":8119,
-        "entity_label":"<http:\/\/dbpedia.org\/resource\/North_Island>",
+        "entity_id":8218,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Odisha>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?w,?x)",
+        "score_calibrated":0.0000050653,
+        "score_combined":0.0000050653,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    },
+    "8":{
+        "entity_id":8326,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Osaka_Prefecture>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
@@ -95,20 +107,8 @@
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
     },
-    "8":{
-        "entity_id":8208,
-        "entity_label":"<http:\/\/dbpedia.org\/resource\/Odisha>",
-        "still_valid":false,
-        "origin":"q(?w) :- timeZone(?w,?x)",
-        "score_calibrated":0.0000050653,
-        "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
-        "online_kg_hit_rewriting":true,
-        "local_kg_hit_original":true,
-        "online_kg_hit_original":true
-    },
     "9":{
-        "entity_id":7027,
+        "entity_id":7040,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Marathi_language>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -120,19 +120,19 @@
         "online_kg_hit_original":false
     },
     "10":{
-        "entity_id":6939,
+        "entity_id":6952,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Maharashtra>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "11":{
-        "entity_id":6787,
+        "entity_id":6801,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Lower_Hutt>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -144,7 +144,7 @@
         "online_kg_hit_original":false
     },
     "12":{
-        "entity_id":6336,
+        "entity_id":6350,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Kyushu>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -156,7 +156,7 @@
         "online_kg_hit_original":false
     },
     "13":{
-        "entity_id":5468,
+        "entity_id":5484,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Japanese_people>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -168,19 +168,19 @@
         "online_kg_hit_original":false
     },
     "14":{
-        "entity_id":7536,
+        "entity_id":7547,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Minas_Gerais>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "15":{
-        "entity_id":7702,
+        "entity_id":7712,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Mountain_Time_Zone>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -192,19 +192,31 @@
         "online_kg_hit_original":false
     },
     "16":{
-        "entity_id":7979,
+        "entity_id":7989,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/New_Zealand>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "17":{
-        "entity_id":9213,
+        "entity_id":9224,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Republic_of_Ireland>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?w,?x)",
+        "score_calibrated":0.0000050653,
+        "score_combined":0.0000050653,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    },
+    "18":{
+        "entity_id":9222,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Republic>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -215,32 +227,8 @@
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
     },
-    "18":{
-        "entity_id":9081,
-        "entity_label":"<http:\/\/dbpedia.org\/resource\/Rajasthan>",
-        "still_valid":false,
-        "origin":"q(?w) :- timeZone(?w,?x)",
-        "score_calibrated":0.0000050653,
-        "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
-        "online_kg_hit_rewriting":true,
-        "local_kg_hit_original":true,
-        "online_kg_hit_original":true
-    },
     "19":{
-        "entity_id":8978,
-        "entity_label":"<http:\/\/dbpedia.org\/resource\/Punjab,_India>",
-        "still_valid":false,
-        "origin":"q(?w) :- timeZone(?w,?x)",
-        "score_calibrated":0.0000050653,
-        "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
-        "online_kg_hit_rewriting":true,
-        "local_kg_hit_original":true,
-        "online_kg_hit_original":true
-    },
-    "20":{
-        "entity_id":8979,
+        "entity_id":8988,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Punjab,_Pakistan>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -251,8 +239,32 @@
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
     },
+    "20":{
+        "entity_id":9090,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Rajasthan>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?w,?x)",
+        "score_calibrated":0.0000050653,
+        "score_combined":0.0000050653,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    },
     "21":{
-        "entity_id":8649,
+        "entity_id":8822,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Portugal>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?w,?x)",
+        "score_calibrated":0.0000050653,
+        "score_combined":0.0000050653,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    },
+    "22":{
+        "entity_id":8658,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Philippine_Standard_Time>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -263,9 +275,9 @@
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
     },
-    "22":{
-        "entity_id":8445,
-        "entity_label":"<http:\/\/dbpedia.org\/resource\/Pashtuns>",
+    "23":{
+        "entity_id":8823,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Portuguese_language>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
@@ -275,32 +287,20 @@
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
     },
-    "23":{
-        "entity_id":8813,
-        "entity_label":"<http:\/\/dbpedia.org\/resource\/Portugal>",
-        "still_valid":false,
-        "origin":"q(?w) :- timeZone(?w,?x)",
-        "score_calibrated":0.0000050653,
-        "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
-        "online_kg_hit_rewriting":true,
-        "local_kg_hit_original":true,
-        "online_kg_hit_original":true
-    },
     "24":{
-        "entity_id":9801,
-        "entity_label":"<http:\/\/dbpedia.org\/resource\/Santa_Fe_Province>",
+        "entity_id":9854,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Saudi_Arabia>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "25":{
-        "entity_id":5565,
+        "entity_id":5580,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Jennifer_Connelly>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -312,31 +312,31 @@
         "online_kg_hit_original":false
     },
     "26":{
-        "entity_id":9215,
-        "entity_label":"<http:\/\/dbpedia.org\/resource\/Republic_of_Ireland>",
+        "entity_id":9673,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/SPV_GmbH>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
         "local_kg_hit_rewriting":false,
-        "online_kg_hit_rewriting":true,
-        "local_kg_hit_original":true,
-        "online_kg_hit_original":true
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
     },
     "27":{
-        "entity_id":4672,
+        "entity_id":4690,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Harare>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "28":{
-        "entity_id":4996,
+        "entity_id":5014,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Hubei>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -348,19 +348,31 @@
         "online_kg_hit_original":false
     },
     "29":{
-        "entity_id":9665,
-        "entity_label":"<http:\/\/dbpedia.org\/resource\/SPV_GmbH>",
+        "entity_id":9809,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Santa_Fe_Province>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
-        "online_kg_hit_rewriting":false,
-        "local_kg_hit_original":false,
-        "online_kg_hit_original":false
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":true,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
     },
     "30":{
-        "entity_id":10180,
+        "entity_id":10309,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Sony_Pictures_Entertainment>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?w,?x)",
+        "score_calibrated":0.0000050653,
+        "score_combined":0.0000050653,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":true,
+        "online_kg_hit_original":true
+    },
+    "31":{
+        "entity_id":10187,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Sindh>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -371,80 +383,56 @@
         "local_kg_hit_original":false,
         "online_kg_hit_original":true
     },
-    "31":{
-        "entity_id":10135,
-        "entity_label":"<http:\/\/dbpedia.org\/resource\/Sichuan>",
-        "still_valid":false,
-        "origin":"q(?w) :- timeZone(?w,?x)",
-        "score_calibrated":0.0000050653,
-        "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
-        "online_kg_hit_rewriting":false,
-        "local_kg_hit_original":false,
-        "online_kg_hit_original":false
-    },
     "32":{
-        "entity_id":10302,
-        "entity_label":"<http:\/\/dbpedia.org\/resource\/Sony_Pictures_Entertainment>",
-        "still_valid":false,
-        "origin":"q(?w) :- timeZone(?w,?x)",
-        "score_calibrated":0.0000050653,
-        "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
-        "online_kg_hit_rewriting":false,
-        "local_kg_hit_original":true,
-        "online_kg_hit_original":true
-    },
-    "33":{
-        "entity_id":10315,
+        "entity_id":10322,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/South_Africa>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
+    "33":{
+        "entity_id":10332,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/South_Island>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?w,?x)",
+        "score_calibrated":0.0000050653,
+        "score_combined":0.0000050653,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
     "34":{
-        "entity_id":8382,
+        "entity_id":8455,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Pashtuns>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?w,?x)",
+        "score_calibrated":0.0000050653,
+        "score_combined":0.0000050653,
+        "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "35":{
+        "entity_id":8392,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Pakistan>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
-    "35":{
-        "entity_id":8373,
-        "entity_label":"<http:\/\/dbpedia.org\/resource\/Pacific_Time_Zone>",
-        "still_valid":false,
-        "origin":"q(?w) :- timeZone(?w,?x)",
-        "score_calibrated":0.0000050653,
-        "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
-        "online_kg_hit_rewriting":false,
-        "local_kg_hit_original":false,
-        "online_kg_hit_original":false
-    },
     "36":{
-        "entity_id":8316,
-        "entity_label":"<http:\/\/dbpedia.org\/resource\/Osaka_Prefecture>",
-        "still_valid":false,
-        "origin":"q(?w) :- timeZone(?w,?x)",
-        "score_calibrated":0.0000050653,
-        "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
-        "online_kg_hit_rewriting":false,
-        "local_kg_hit_original":false,
-        "online_kg_hit_original":false
-    },
-    "37":{
-        "entity_id":8346,
+        "entity_id":8356,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Overseas_Chinese>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -455,20 +443,32 @@
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
     },
-    "38":{
-        "entity_id":4872,
-        "entity_label":"<http:\/\/dbpedia.org\/resource\/Himachal_Pradesh>",
+    "37":{
+        "entity_id":8383,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Pacific_Time_Zone>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
         "local_kg_hit_rewriting":false,
+        "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "38":{
+        "entity_id":4890,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Himachal_Pradesh>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?w,?x)",
+        "score_calibrated":0.0000050653,
+        "score_combined":0.0000050653,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "39":{
-        "entity_id":4747,
+        "entity_id":4765,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Hawaii>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -480,7 +480,7 @@
         "online_kg_hit_original":false
     },
     "40":{
-        "entity_id":4876,
+        "entity_id":4894,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Hindi>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -492,7 +492,7 @@
         "online_kg_hit_original":false
     },
     "41":{
-        "entity_id":4884,
+        "entity_id":4902,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Hiroshima_Prefecture>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -504,19 +504,19 @@
         "online_kg_hit_original":false
     },
     "42":{
-        "entity_id":4364,
+        "entity_id":4382,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Global_Television_Network>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
     },
     "43":{
-        "entity_id":4093,
+        "entity_id":4112,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Fukuoka_Prefecture>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -528,7 +528,7 @@
         "online_kg_hit_original":false
     },
     "44":{
-        "entity_id":4061,
+        "entity_id":4080,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/French_language>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -540,7 +540,7 @@
         "online_kg_hit_original":false
     },
     "45":{
-        "entity_id":4062,
+        "entity_id":4081,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/French_people>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -552,19 +552,19 @@
         "online_kg_hit_original":false
     },
     "46":{
-        "entity_id":4561,
+        "entity_id":4579,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Gujarat>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "47":{
-        "entity_id":4500,
+        "entity_id":4518,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Greenwich_Mean_Time>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -576,43 +576,43 @@
         "online_kg_hit_original":false
     },
     "48":{
-        "entity_id":4656,
+        "entity_id":4674,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Hanoi>",
         "still_valid":true,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "49":{
-        "entity_id":9846,
-        "entity_label":"<http:\/\/dbpedia.org\/resource\/Saudi_Arabia>",
-        "still_valid":false,
-        "origin":"q(?w) :- timeZone(?w,?x)",
-        "score_calibrated":0.0000050653,
-        "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
-        "online_kg_hit_rewriting":true,
-        "local_kg_hit_original":true,
-        "online_kg_hit_original":true
-    },
-    "50":{
-        "entity_id":7682,
-        "entity_label":"<http:\/\/dbpedia.org\/resource\/Morocco>",
+        "entity_id":10142,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Sichuan>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
         "local_kg_hit_rewriting":false,
         "online_kg_hit_rewriting":false,
+        "local_kg_hit_original":false,
+        "online_kg_hit_original":false
+    },
+    "50":{
+        "entity_id":7692,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/Morocco>",
+        "still_valid":false,
+        "origin":"q(?w) :- timeZone(?w,?x)",
+        "score_calibrated":0.0000050653,
+        "score_combined":0.0000050653,
+        "local_kg_hit_rewriting":true,
+        "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
     },
     "51":{
-        "entity_id":5354,
+        "entity_id":5371,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Jacob_Zuma>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -624,19 +624,19 @@
         "online_kg_hit_original":false
     },
     "52":{
-        "entity_id":5439,
+        "entity_id":5455,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Jammu_and_Kashmir>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
     },
     "53":{
-        "entity_id":5168,
+        "entity_id":5186,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Indonesian_language>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -648,55 +648,55 @@
         "online_kg_hit_original":false
     },
     "54":{
-        "entity_id":5167,
+        "entity_id":5185,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Indonesia>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "55":{
-        "entity_id":5228,
+        "entity_id":5246,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Iran>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "56":{
-        "entity_id":5230,
+        "entity_id":5248,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Iraq>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "57":{
-        "entity_id":6050,
+        "entity_id":6064,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Kansai_region>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "58":{
-        "entity_id":6042,
+        "entity_id":6056,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Kanagawa_Prefecture>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -708,7 +708,7 @@
         "online_kg_hit_original":false
     },
     "59":{
-        "entity_id":5640,
+        "entity_id":5655,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Jiangsu>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -720,7 +720,7 @@
         "online_kg_hit_original":false
     },
     "60":{
-        "entity_id":6032,
+        "entity_id":6046,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Kagoshima_Prefecture>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -732,31 +732,31 @@
         "online_kg_hit_original":false
     },
     "61":{
-        "entity_id":6159,
+        "entity_id":6173,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Kerala>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "62":{
-        "entity_id":6072,
+        "entity_id":6086,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Karnataka>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "63":{
-        "entity_id":6186,
+        "entity_id":6200,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Khyber_Pakhtunkhwa>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -768,7 +768,7 @@
         "online_kg_hit_original":true
     },
     "64":{
-        "entity_id":2481,
+        "entity_id":2503,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Communication>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -780,7 +780,7 @@
         "online_kg_hit_original":false
     },
     "65":{
-        "entity_id":3590,
+        "entity_id":3609,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/English_language>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -792,7 +792,7 @@
         "online_kg_hit_original":false
     },
     "66":{
-        "entity_id":3541,
+        "entity_id":3560,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Elton_John>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -804,7 +804,7 @@
         "online_kg_hit_original":false
     },
     "67":{
-        "entity_id":3401,
+        "entity_id":3422,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Eastern_Time_Zone>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -816,7 +816,7 @@
         "online_kg_hit_original":false
     },
     "68":{
-        "entity_id":3520,
+        "entity_id":3539,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Elizabeth_II>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -828,19 +828,19 @@
         "online_kg_hit_original":false
     },
     "69":{
-        "entity_id":3031,
+        "entity_id":3052,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Delhi>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "70":{
-        "entity_id":3002,
+        "entity_id":3023,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Debbie_Reynolds>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -852,7 +852,7 @@
         "online_kg_hit_original":false
     },
     "71":{
-        "entity_id":3373,
+        "entity_id":3394,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/East_Africa_Time>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -864,7 +864,7 @@
         "online_kg_hit_original":false
     },
     "72":{
-        "entity_id":3394,
+        "entity_id":3415,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Eastern_European_Time>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -876,7 +876,7 @@
         "online_kg_hit_original":false
     },
     "73":{
-        "entity_id":2597,
+        "entity_id":2619,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/County_Galway>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -888,7 +888,7 @@
         "online_kg_hit_original":true
     },
     "74":{
-        "entity_id":2592,
+        "entity_id":2614,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/County_Cork>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -900,20 +900,20 @@
         "online_kg_hit_original":true
     },
     "75":{
-        "entity_id":2192,
+        "entity_id":2214,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/China>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "76":{
-        "entity_id":10325,
-        "entity_label":"<http:\/\/dbpedia.org\/resource\/South_Island>",
+        "entity_id":10334,
+        "entity_label":"<http:\/\/dbpedia.org\/resource\/South_Korea_national_football_team>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
@@ -924,7 +924,7 @@
         "online_kg_hit_original":false
     },
     "77":{
-        "entity_id":2609,
+        "entity_id":2631,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/County_Waterford>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -936,7 +936,7 @@
         "online_kg_hit_original":true
     },
     "78":{
-        "entity_id":2602,
+        "entity_id":2624,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/County_Limerick>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -948,19 +948,19 @@
         "online_kg_hit_original":true
     },
     "79":{
-        "entity_id":2716,
+        "entity_id":2738,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/DC_Comics>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "80":{
-        "entity_id":2789,
+        "entity_id":2810,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Danish_language>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -972,7 +972,7 @@
         "online_kg_hit_original":false
     },
     "81":{
-        "entity_id":1061,
+        "entity_id":1084,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Balochistan,_Pakistan>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -984,7 +984,7 @@
         "online_kg_hit_original":true
     },
     "82":{
-        "entity_id":926,
+        "entity_id":949,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Atlantic_Time_Zone>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -996,7 +996,7 @@
         "online_kg_hit_original":false
     },
     "83":{
-        "entity_id":789,
+        "entity_id":813,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Arabic>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -1008,7 +1008,7 @@
         "online_kg_hit_original":false
     },
     "84":{
-        "entity_id":790,
+        "entity_id":814,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Arabs>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -1020,7 +1020,7 @@
         "online_kg_hit_original":false
     },
     "85":{
-        "entity_id":331,
+        "entity_id":357,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Aichi_Prefecture>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -1032,7 +1032,7 @@
         "online_kg_hit_original":false
     },
     "86":{
-        "entity_id":246,
+        "entity_id":272,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Academy_of_Motion_Picture_Arts_and_Sciences>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -1044,7 +1044,7 @@
         "online_kg_hit_original":false
     },
     "87":{
-        "entity_id":401,
+        "entity_id":426,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Alaska>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -1056,7 +1056,7 @@
         "online_kg_hit_original":false
     },
     "88":{
-        "entity_id":402,
+        "entity_id":427,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Alaska_Time_Zone>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -1068,55 +1068,55 @@
         "online_kg_hit_original":false
     },
     "89":{
-        "entity_id":1858,
+        "entity_id":1881,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Cameroon>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "90":{
-        "entity_id":1722,
+        "entity_id":1745,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Buenos_Aires_Province>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "91":{
-        "entity_id":1317,
+        "entity_id":1340,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Bihar>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "92":{
-        "entity_id":1563,
+        "entity_id":1586,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Brazil>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "93":{
-        "entity_id":2031,
+        "entity_id":2054,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Central_European_Time>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -1128,19 +1128,19 @@
         "online_kg_hit_original":false
     },
     "94":{
-        "entity_id":1971,
+        "entity_id":1994,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Casablanca>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "95":{
-        "entity_id":2036,
+        "entity_id":2059,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Central_Time_Zone>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -1152,31 +1152,31 @@
         "online_kg_hit_original":false
     },
     "96":{
-        "entity_id":2109,
+        "entity_id":2131,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Charlotte,_North_Carolina>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "97":{
-        "entity_id":5138,
+        "entity_id":5156,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/India>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
         "score_calibrated":0.0000050653,
         "score_combined":0.0000050653,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
     },
     "98":{
-        "entity_id":5027,
+        "entity_id":5045,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Hunan>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -1188,7 +1188,7 @@
         "online_kg_hit_original":false
     },
     "99":{
-        "entity_id":4936,
+        "entity_id":4954,
         "entity_label":"<http:\/\/dbpedia.org\/resource\/Honshu>",
         "still_valid":false,
         "origin":"q(?w) :- timeZone(?w,?x)",
@@ -1386,7 +1386,7 @@
         "origin":"q(?w) :- distributor(?y,?w)",
         "score_calibrated":0.0000002933,
         "score_combined":0.0000002933,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1398,7 +1398,7 @@
         "origin":"q(?w) :- distributor(?y,?w)",
         "score_calibrated":0.0000002902,
         "score_combined":0.0000002902,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true

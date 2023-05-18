@@ -102,7 +102,7 @@
         "origin":"q(?w) :- genre(?x,?w)",
         "score_calibrated":0.8245184422,
         "score_combined":0.8245184422,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -198,7 +198,7 @@
         "origin":"q(?w) :- genre(?x,?w)",
         "score_calibrated":0.8220935464,
         "score_combined":0.8220935464,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -342,7 +342,7 @@
         "origin":"q(?w) :- genre(?x,?w)",
         "score_calibrated":0.8183038831,
         "score_combined":0.8183038831,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -414,7 +414,7 @@
         "origin":"q(?w) :- genre(?x,?w)",
         "score_calibrated":0.8170784712,
         "score_combined":0.8170784712,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -438,7 +438,7 @@
         "origin":"q(?w) :- genre(?x,?w)",
         "score_calibrated":0.8168193102,
         "score_combined":0.8168193102,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -522,7 +522,7 @@
         "origin":"q(?w) :- influencedBy(?y,?w)",
         "score_calibrated":0.8112643957,
         "score_combined":0.8112643957,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -678,7 +678,7 @@
         "origin":"q(?w) :- influencedBy(?y,?w)",
         "score_calibrated":0.793926239,
         "score_combined":0.793926239,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -738,7 +738,7 @@
         "origin":"q(?w) :- influencedBy(?y,?w)",
         "score_calibrated":0.7891266942,
         "score_combined":0.7891266942,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -786,7 +786,7 @@
         "origin":"q(?w) :- influencedBy(?y,?w)",
         "score_calibrated":0.7884062529,
         "score_combined":0.7884062529,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1050,7 +1050,7 @@
         "origin":"q(?w) :- influencedBy(?y,?w)",
         "score_calibrated":0.7799378037,
         "score_combined":0.7799378037,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1266,7 +1266,7 @@
         "origin":"q(?w) :- influencedBy(?y,?w)",
         "score_calibrated":0.7732799053,
         "score_combined":0.7732799053,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1434,7 +1434,7 @@
         "origin":"q(?w) :- influencedBy(?y,?w)",
         "score_calibrated":0.7689576745,
         "score_combined":0.7689576745,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true

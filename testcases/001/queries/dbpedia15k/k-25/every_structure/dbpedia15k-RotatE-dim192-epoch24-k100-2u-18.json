@@ -54,7 +54,7 @@
         "origin":"q(?w) :- genre(?x,?w)",
         "score_calibrated":0.0366964787,
         "score_combined":0.0366964787,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -90,7 +90,7 @@
         "origin":"q(?w) :- genre(?x,?w)",
         "score_calibrated":0.0358828716,
         "score_combined":0.0358828716,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -114,7 +114,7 @@
         "origin":"q(?w) :- influencedBy(?y,?w)",
         "score_calibrated":0.0354626738,
         "score_combined":0.0354626738,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -174,7 +174,7 @@
         "origin":"q(?w) :- genre(?x,?w)",
         "score_calibrated":0.0340620615,
         "score_combined":0.0340620615,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -258,7 +258,7 @@
         "origin":"q(?w) :- genre(?x,?w)",
         "score_calibrated":0.0311548896,
         "score_combined":0.0311548896,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -282,7 +282,7 @@
         "origin":"q(?w) :- genre(?x,?w)",
         "score_calibrated":0.0306797158,
         "score_combined":0.0306797158,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -294,7 +294,7 @@
         "origin":"q(?w) :- genre(?x,?w)",
         "score_calibrated":0.0305548832,
         "score_combined":0.0305548832,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -306,7 +306,7 @@
         "origin":"q(?w) :- genre(?x,?w)",
         "score_calibrated":0.0305526648,
         "score_combined":0.0305526648,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -402,7 +402,7 @@
         "origin":"q(?w) :- genre(?x,?w)",
         "score_calibrated":0.0286655258,
         "score_combined":0.0286655258,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -558,7 +558,7 @@
         "origin":"q(?w) :- influencedBy(?y,?w)",
         "score_calibrated":0.0235885028,
         "score_combined":0.0235885028,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -762,7 +762,7 @@
         "origin":"q(?w) :- influencedBy(?y,?w)",
         "score_calibrated":0.017714249,
         "score_combined":0.017714249,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true

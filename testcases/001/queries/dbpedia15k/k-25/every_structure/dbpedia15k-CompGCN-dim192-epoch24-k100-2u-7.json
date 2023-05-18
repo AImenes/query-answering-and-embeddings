@@ -78,7 +78,7 @@
         "origin":"q(?w) :- director(?w,?x)",
         "score_calibrated":1.0,
         "score_combined":1.0,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -162,7 +162,7 @@
         "origin":"q(?w) :- director(?w,?x)",
         "score_calibrated":0.9999998808,
         "score_combined":0.9999998808,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -198,7 +198,7 @@
         "origin":"q(?w) :- director(?w,?x)",
         "score_calibrated":0.9999998808,
         "score_combined":0.9999998808,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -282,7 +282,7 @@
         "origin":"q(?w) :- director(?w,?x)",
         "score_calibrated":0.9999996424,
         "score_combined":0.9999996424,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -498,7 +498,7 @@
         "origin":"q(?w) :- director(?w,?x)",
         "score_calibrated":0.9999972582,
         "score_combined":0.9999972582,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -570,7 +570,7 @@
         "origin":"q(?w) :- director(?w,?x)",
         "score_calibrated":0.9999966621,
         "score_combined":0.9999966621,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -582,7 +582,7 @@
         "origin":"q(?w) :- director(?w,?x)",
         "score_calibrated":0.9999964237,
         "score_combined":0.9999964237,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -702,7 +702,7 @@
         "origin":"q(?w) :- director(?w,?x)",
         "score_calibrated":0.9999921322,
         "score_combined":0.9999921322,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -894,7 +894,7 @@
         "origin":"q(?w) :- director(?w,?x)",
         "score_calibrated":0.999985218,
         "score_combined":0.999985218,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -954,7 +954,7 @@
         "origin":"q(?w) :- director(?w,?x)",
         "score_calibrated":0.9999821186,
         "score_combined":0.9999821186,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1014,7 +1014,7 @@
         "origin":"q(?w) :- director(?w,?x)",
         "score_calibrated":0.9999806881,
         "score_combined":0.9999806881,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1038,7 +1038,7 @@
         "origin":"q(?w) :- director(?w,?x)",
         "score_calibrated":0.9999803305,
         "score_combined":0.9999803305,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1074,7 +1074,7 @@
         "origin":"q(?w) :- language(?w,?y)",
         "score_calibrated":0.9999283552,
         "score_combined":0.9999283552,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1122,7 +1122,7 @@
         "origin":"q(?w) :- language(?w,?y)",
         "score_calibrated":0.9996786118,
         "score_combined":0.9996786118,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1182,7 +1182,7 @@
         "origin":"q(?w) :- language(?w,?y)",
         "score_calibrated":0.9994698167,
         "score_combined":0.9994698167,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1242,7 +1242,7 @@
         "origin":"q(?w) :- language(?w,?y)",
         "score_calibrated":0.9992939234,
         "score_combined":0.9992939234,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1266,7 +1266,7 @@
         "origin":"q(?w) :- language(?w,?y)",
         "score_calibrated":0.9992509484,
         "score_combined":0.9992509484,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1326,7 +1326,7 @@
         "origin":"q(?w) :- language(?w,?y)",
         "score_calibrated":0.9991637468,
         "score_combined":0.9991637468,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -1422,7 +1422,7 @@
         "origin":"q(?w) :- language(?w,?y)",
         "score_calibrated":0.9990240335,
         "score_combined":0.9990240335,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1818,7 +1818,7 @@
         "origin":"q(?w) :- language(?w,?y)",
         "score_calibrated":0.9981927276,
         "score_combined":0.9981927276,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true

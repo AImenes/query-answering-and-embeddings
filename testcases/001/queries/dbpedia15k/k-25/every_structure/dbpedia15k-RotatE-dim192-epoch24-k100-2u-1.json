@@ -66,7 +66,7 @@
         "origin":"q(?w) :- cinematography(?w,?y)",
         "score_calibrated":0.0300348382,
         "score_combined":0.0300348382,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -102,7 +102,7 @@
         "origin":"q(?w) :- distributor(?x,?w)",
         "score_calibrated":0.0279486142,
         "score_combined":0.0279486142,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -270,7 +270,7 @@
         "origin":"q(?w) :- cinematography(?w,?y)",
         "score_calibrated":0.026141569,
         "score_combined":0.026141569,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -282,7 +282,7 @@
         "origin":"q(?w) :- distributor(?x,?w)",
         "score_calibrated":0.0260346457,
         "score_combined":0.0260346457,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -366,7 +366,7 @@
         "origin":"q(?w) :- cinematography(?w,?y)",
         "score_calibrated":0.0247138683,
         "score_combined":0.0247138683,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -642,7 +642,7 @@
         "origin":"q(?w) :- cinematography(?w,?y)",
         "score_calibrated":0.0229172651,
         "score_combined":0.0229172651,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -714,7 +714,7 @@
         "origin":"q(?w) :- cinematography(?w,?y)",
         "score_calibrated":0.0223668553,
         "score_combined":0.0223668553,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -786,7 +786,7 @@
         "origin":"q(?w) :- cinematography(?w,?y)",
         "score_calibrated":0.0219777469,
         "score_combined":0.0219777469,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":false
@@ -870,7 +870,7 @@
         "origin":"q(?w) :- cinematography(?w,?y)",
         "score_calibrated":0.0206876677,
         "score_combined":0.0206876677,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -918,7 +918,7 @@
         "origin":"q(?w) :- cinematography(?w,?y)",
         "score_calibrated":0.0195651036,
         "score_combined":0.0195651036,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -930,7 +930,7 @@
         "origin":"q(?w) :- cinematography(?w,?y)",
         "score_calibrated":0.019499734,
         "score_combined":0.019499734,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1002,7 +1002,7 @@
         "origin":"q(?w) :- cinematography(?w,?y)",
         "score_calibrated":0.0184650123,
         "score_combined":0.0184650123,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
@@ -1086,7 +1086,7 @@
         "origin":"q(?w) :- cinematography(?w,?y)",
         "score_calibrated":0.0179474913,
         "score_combined":0.0179474913,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":true,
         "online_kg_hit_original":true
