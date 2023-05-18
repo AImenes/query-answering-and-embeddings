@@ -830,33 +830,35 @@ def predict_parsed_queries(all_queries, base_cases, base_cases_path, enable_onli
     for query_structure in all_queries.keys():
         structure_metrices = list()
 
+        #Temp statement for only doing 2u. SHould be removed again.
+        if query_structure == '2u':
 
-        # Get the answer for all queries in each structure
-        for idx, query in enumerate(all_queries[query_structure]):
-            
-            # Execute the query pipeline and retrieve results and metrics
-            query['answer'], results_metrics = query_pipeline(query, base_cases, base_cases_path, enable_online_lookup, dataset, model, model_params, k, tf, train, valid, test, aboxpath, n)
+            # Get the answer for all queries in each structure
+            for idx, query in enumerate(all_queries[query_structure]):
+                
+                # Execute the query pipeline and retrieve results and metrics
+                query['answer'], results_metrics = query_pipeline(query, base_cases, base_cases_path, enable_online_lookup, dataset, model, model_params, k, tf, train, valid, test, aboxpath, n)
 
-            # Save the answer to a JSON file
-            query['answer'].to_json(f'{result_path}/every_structure/{dataset}-{model_params["selected_model_name"]}-dim{model_params["dim"]}-epoch{model_params["epoch"]}-k{k}-{query_structure}-{idx+1}.json', indent=4, orient = 'index')
+                # Save the answer to a JSON file
+                query['answer'].to_json(f'{result_path}/every_structure/{dataset}-{model_params["selected_model_name"]}-dim{model_params["dim"]}-epoch{model_params["epoch"]}-k{k}-{query_structure}-{idx+1}.json', indent=4, orient = 'index')
 
-            # Save metrics to a JSON file
-            with open(f'{result_path}/every_structure/{dataset}-{model_params["selected_model_name"]}-dim{model_params["dim"]}-epoch{model_params["epoch"]}-k{k}-{query_structure}-{idx+1}-results.json', 'w') as fp:
-                json.dump(results_metrics, fp, indent=4)
+                # Save metrics to a JSON file
+                with open(f'{result_path}/every_structure/{dataset}-{model_params["selected_model_name"]}-dim{model_params["dim"]}-epoch{model_params["epoch"]}-k{k}-{query_structure}-{idx+1}-results.json', 'w') as fp:
+                    json.dump(results_metrics, fp, indent=4)
 
-            structure_metrices.append(results_metrics)
+                structure_metrices.append(results_metrics)
 
-        # Calculate average metrics for each query structure
-        final_results = average_metrics(structure_metrices, n)
-        final_results['query_structure'] = query_structure
-        final_results['number_of_queries'] = len(all_queries[query_structure])
-        final_results['model'] = model_params
-        final_results['dataset'] = dataset
-        final_results['cutoff_value'] = k
+            # Calculate average metrics for each query structure
+            final_results = average_metrics(structure_metrices, n)
+            final_results['query_structure'] = query_structure
+            final_results['number_of_queries'] = len(all_queries[query_structure])
+            final_results['model'] = model_params
+            final_results['dataset'] = dataset
+            final_results['cutoff_value'] = k
 
-        # Save the final results to a JSON file
-        with open(f'{result_path}/{dataset}-{model_params["selected_model_name"]}-dim{model_params["dim"]}-epoch{model_params["epoch"]}-k{k}-numbofqueries:{final_results["number_of_queries"]}-{query_structure}-final_results.json', 'w') as fp:
-                json.dump(final_results, fp, indent=4)
+            # Save the final results to a JSON file
+            with open(f'{result_path}/{dataset}-{model_params["selected_model_name"]}-dim{model_params["dim"]}-epoch{model_params["epoch"]}-k{k}-numbofqueries:{final_results["number_of_queries"]}-{query_structure}-final_results.json', 'w') as fp:
+                    json.dump(final_results, fp, indent=4)
 
     return None
 

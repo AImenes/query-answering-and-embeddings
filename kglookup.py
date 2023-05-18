@@ -107,7 +107,6 @@ def kg_lookup(queries, ds, abox_path, tf):
         if structure == '2i' or structure == '3i':
             for query in query_list:
                 distinguished_var = query['q1'].head.entries[0].original_entry_name
-                query_length = len(query['q1'].get_body().get_body())
                 i = 0
                 entities_to_merge = list()
                 for g in query['q1'].get_body().get_body():
@@ -671,80 +670,9 @@ def kg_lookup_rewriting(queries, ds, abox_path, tf, full_path):
                                 query['kglookup_rewriting'].append(candidate)
                     else:
                         print("An error has occurred")
-
-        # Disjunction 2u
-        if structure == '2u':
-            for query in query_list:
-                distinguished_var = query['q1'].head.entries[0].original_entry_name
-                i = 0
-                query['kglookup_rewriting'] = list()
-                
-                for rewritten in query['rewritings']:
-                    for g in query['q1'].get_body().get_body():
-                        entities_to_merge = list()
-                        atom = {'type': None, 'variable': None, 'target': None, 'entities': None}
-
-                        if isinstance(g, AtomConcept):
-                            atom['type'] = 'concept'
-                            try:
-                                atom['entities'] = [t[0] for t in query_graph_concepts(g, ds, abox_path)]
-                            except:
-                                atom['entities'] = [] 
-                            if g.var1.get_org_name() == distinguished_var:
-                                atom['variable'] = g.var1.get_org_name()
-                                atom['target'] = 'head'
-                                                                
-                                entities_to_merge.append(atom['entities'])
-                        if isinstance(g, AtomRole):
-                            atom['type'] = 'role'
-                            atom['entities'] = query_graph_roles(g, tf, abox, False)
-                            
-                            if g.var1.get_org_name() == distinguished_var:
-                                atom['target'] = 'head'
-                                entities_to_merge.append(atom['entities'][distinguished_var])
-                            elif g.var2.get_org_name() == distinguished_var:
-                                atom['target'] = 'tail'
-                                entities_to_merge.append(atom['entities'][distinguished_var])
-                                
-                        i += 1
-                    i = 0
-                    for g in query['q2'].get_body().get_body():
-                        atom = {'type': None, 'variable': None, 'target': None, 'entities': None}
-
-                        if isinstance(g, AtomConcept):
-                            atom['type'] = 'concept'
-                            try:
-                                atom['entities'] = [t[0] for t in query_graph_concepts(g, ds, abox_path)]
-                            except:
-                                atom['entities'] = []
-                            if g.var1.get_org_name() == distinguished_var:
-                                atom['variable'] = g.var1.get_org_name()
-                                atom['target'] = 'head'
-                                                                
-                                entities_to_merge.append(atom['entities'])
-                        if isinstance(g, AtomRole):
-                            atom['type'] = 'role'
-                            atom['entities'] = query_graph_roles(g, tf, abox, False)
-                            
-                            if g.var1.get_org_name() == distinguished_var:
-                                atom['target'] = 'head'
-                                entities_to_merge.append(atom['entities'][distinguished_var])
-                            elif g.var2.get_org_name() == distinguished_var:
-                                atom['target'] = 'tail'
-                                entities_to_merge.append(atom['entities'][distinguished_var])
-
-                    # Merge the sets
-                    if entities_to_merge:
-                        candidates = set.intersection(*map(set, entities_to_merge))
-                        for candidate in candidates:
-                            if candidate not in query['kglookup_rewriting']:
-                                query['kglookup_rewriting'].append(candidate)
-                    else:
-                        print("An error has occurred")
-
         
         # Disjunction up
-        if structure == 'up':
+        if structure == 'up' or structure == '2u':
             for query in query_list:
                 distinguished_var = query['q1'].head.entries[0].original_entry_name
                 i = 0
