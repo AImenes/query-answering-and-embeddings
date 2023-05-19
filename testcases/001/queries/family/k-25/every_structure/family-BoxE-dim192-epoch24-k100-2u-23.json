@@ -6,7 +6,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2750626504,
         "score_combined":0.2750626504,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -18,7 +18,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2619000971,
         "score_combined":0.2619000971,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -28,9 +28,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q462879>",
         "still_valid":true,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2570000291,
-        "score_combined":0.2570000291,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2569999993,
+        "score_combined":0.2569999993,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -42,7 +42,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2564655244,
         "score_combined":0.2564655244,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -52,9 +52,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q23091452>",
         "still_valid":true,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2558763325,
-        "score_combined":0.2558763325,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2558763027,
+        "score_combined":0.2558763027,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -64,9 +64,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q57520>",
         "still_valid":false,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2534707487,
-        "score_combined":0.2534707487,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2534707189,
+        "score_combined":0.2534707189,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -78,7 +78,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.253407836,
         "score_combined":0.253407836,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -90,7 +90,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2531095445,
         "score_combined":0.2531095445,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -102,7 +102,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2529379129,
         "score_combined":0.2529379129,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -114,7 +114,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2528760135,
         "score_combined":0.2528760135,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -124,9 +124,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q276742>",
         "still_valid":true,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2524482608,
-        "score_combined":0.2524482608,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2524482012,
+        "score_combined":0.2524482012,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -138,7 +138,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2517289221,
         "score_combined":0.2517289221,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -150,7 +150,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2515489459,
         "score_combined":0.2515489459,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -162,7 +162,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2510997951,
         "score_combined":0.2510997951,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -174,7 +174,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2506684661,
         "score_combined":0.2506684661,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -184,9 +184,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q234583>",
         "still_valid":true,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.250374198,
-        "score_combined":0.250374198,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2503741682,
+        "score_combined":0.2503741682,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -198,7 +198,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2495032251,
         "score_combined":0.2495032251,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -208,9 +208,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q233990>",
         "still_valid":false,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2494843006,
-        "score_combined":0.2494843006,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.249484241,
+        "score_combined":0.249484241,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -222,7 +222,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2494696975,
         "score_combined":0.2494696975,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -234,7 +234,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2490499169,
         "score_combined":0.2490499169,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":false,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -246,7 +246,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2486215979,
         "score_combined":0.2486215979,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -256,9 +256,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q6785898>",
         "still_valid":true,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2485433668,
-        "score_combined":0.2485433668,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.248543337,
+        "score_combined":0.248543337,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -270,7 +270,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2471978068,
         "score_combined":0.2471978068,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -282,7 +282,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2470636666,
         "score_combined":0.2470636666,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -294,7 +294,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2461522222,
         "score_combined":0.2461522222,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -306,7 +306,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2460334748,
         "score_combined":0.2460334748,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -316,9 +316,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q3719243>",
         "still_valid":true,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2458217144,
-        "score_combined":0.2458217144,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2458216846,
+        "score_combined":0.2458216846,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -330,7 +330,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2457609922,
         "score_combined":0.2457609922,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -340,9 +340,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q68501>",
         "still_valid":true,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.24535954,
-        "score_combined":0.24535954,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2453595102,
+        "score_combined":0.2453595102,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -354,7 +354,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2451623678,
         "score_combined":0.2451623678,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -366,7 +366,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2449498624,
         "score_combined":0.2449498624,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -378,7 +378,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2448992431,
         "score_combined":0.2448992431,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -390,7 +390,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2447064668,
         "score_combined":0.2447064668,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -402,7 +402,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2446708381,
         "score_combined":0.2446708381,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -412,9 +412,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q4766878>",
         "still_valid":true,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2446317822,
-        "score_combined":0.2446317822,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2446317673,
+        "score_combined":0.2446317673,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -424,9 +424,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q1097784>",
         "still_valid":true,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2444675267,
-        "score_combined":0.2444675267,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2444674671,
+        "score_combined":0.2444674671,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -438,7 +438,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2442025244,
         "score_combined":0.2442025244,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -450,7 +450,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2439056188,
         "score_combined":0.2439056188,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -460,9 +460,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q5362601>",
         "still_valid":true,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2438680977,
-        "score_combined":0.2438680977,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2438680679,
+        "score_combined":0.2438680679,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -474,7 +474,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2438195646,
         "score_combined":0.2438195646,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -486,7 +486,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2437087744,
         "score_combined":0.2437087744,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -498,7 +498,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2434393913,
         "score_combined":0.2434393913,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -510,7 +510,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2432099283,
         "score_combined":0.2432099283,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -522,7 +522,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2431305796,
         "score_combined":0.2431305796,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -532,9 +532,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q5045123>",
         "still_valid":true,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2429605871,
-        "score_combined":0.2429605871,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2429605573,
+        "score_combined":0.2429605573,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -544,9 +544,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q158229>",
         "still_valid":true,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2426128238,
-        "score_combined":0.2426128238,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.242612794,
+        "score_combined":0.242612794,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -558,7 +558,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.242553696,
         "score_combined":0.242553696,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -570,7 +570,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2420936823,
         "score_combined":0.2420936823,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -582,7 +582,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2419982255,
         "score_combined":0.2419982255,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -594,7 +594,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.241664052,
         "score_combined":0.241664052,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -606,7 +606,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2414629459,
         "score_combined":0.2414629459,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -618,7 +618,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2413520068,
         "score_combined":0.2413520068,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -630,7 +630,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2413507253,
         "score_combined":0.2413507253,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -642,7 +642,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2408587337,
         "score_combined":0.2408587337,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -654,7 +654,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2407913953,
         "score_combined":0.2407913953,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -666,7 +666,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2404538095,
         "score_combined":0.2404538095,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -678,7 +678,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.240395695,
         "score_combined":0.240395695,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -690,7 +690,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2402225584,
         "score_combined":0.2402225584,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -702,7 +702,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2400763035,
         "score_combined":0.2400763035,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -714,7 +714,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2397642881,
         "score_combined":0.2397642881,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -724,9 +724,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q5565038>",
         "still_valid":true,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2396509051,
-        "score_combined":0.2396509051,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2396508455,
+        "score_combined":0.2396508455,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -738,7 +738,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2394248843,
         "score_combined":0.2394248843,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -750,7 +750,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2393663675,
         "score_combined":0.2393663675,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -762,7 +762,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2392435819,
         "score_combined":0.2392435819,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -774,7 +774,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2391315699,
         "score_combined":0.2391315699,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -786,7 +786,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2391218841,
         "score_combined":0.2391218841,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -798,7 +798,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2390802056,
         "score_combined":0.2390802056,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -810,7 +810,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.238893941,
         "score_combined":0.238893941,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -822,7 +822,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2388113588,
         "score_combined":0.2388113588,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -832,9 +832,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q15274548>",
         "still_valid":true,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2386763245,
-        "score_combined":0.2386763245,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2386762947,
+        "score_combined":0.2386762947,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -846,7 +846,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2386729121,
         "score_combined":0.2386729121,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -856,9 +856,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q237486>",
         "still_valid":false,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2386575937,
-        "score_combined":0.2386575937,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2386575639,
+        "score_combined":0.2386575639,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -870,7 +870,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2386283129,
         "score_combined":0.2386283129,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -882,7 +882,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2382269651,
         "score_combined":0.2382269651,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -892,9 +892,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q229214>",
         "still_valid":false,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2378460318,
-        "score_combined":0.2378460318,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.237846002,
+        "score_combined":0.237846002,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -906,7 +906,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2377760559,
         "score_combined":0.2377760559,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -916,9 +916,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q4979362>",
         "still_valid":true,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2377730906,
-        "score_combined":0.2377730906,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2377730608,
+        "score_combined":0.2377730608,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -930,7 +930,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2377503067,
         "score_combined":0.2377503067,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -940,9 +940,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q263454>",
         "still_valid":true,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2377122641,
-        "score_combined":0.2377122641,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2377122343,
+        "score_combined":0.2377122343,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -952,9 +952,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q15997423>",
         "still_valid":true,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.237658605,
-        "score_combined":0.237658605,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2376585752,
+        "score_combined":0.2376585752,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -966,7 +966,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2376398295,
         "score_combined":0.2376398295,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -978,7 +978,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2376360595,
         "score_combined":0.2376360595,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -990,7 +990,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2375693023,
         "score_combined":0.2375693023,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -1000,9 +1000,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q2339123>",
         "still_valid":true,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2375213802,
-        "score_combined":0.2375213802,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2375213504,
+        "score_combined":0.2375213504,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -1014,7 +1014,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2374876142,
         "score_combined":0.2374876142,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -1026,7 +1026,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2374524176,
         "score_combined":0.2374524176,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -1038,7 +1038,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2372902483,
         "score_combined":0.2372902483,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -1048,9 +1048,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q853437>",
         "still_valid":true,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2372459322,
-        "score_combined":0.2372459322,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2372458726,
+        "score_combined":0.2372458726,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -1062,7 +1062,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2368591726,
         "score_combined":0.2368591726,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -1074,7 +1074,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2367756963,
         "score_combined":0.2367756963,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -1086,7 +1086,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2367559969,
         "score_combined":0.2367559969,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -1098,7 +1098,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2366382927,
         "score_combined":0.2366382927,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -1110,7 +1110,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2366303355,
         "score_combined":0.2366303355,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -1122,7 +1122,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2364708334,
         "score_combined":0.2364708334,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -1132,9 +1132,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q57533>",
         "still_valid":false,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2363892645,
-        "score_combined":0.2363892645,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2363892198,
+        "score_combined":0.2363892198,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -1146,7 +1146,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2363600135,
         "score_combined":0.2363600135,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -1170,7 +1170,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2361747622,
         "score_combined":0.2361747622,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -1182,7 +1182,7 @@
         "origin":"q(?w) :- P25(?_,?w)",
         "score_calibrated":0.2360261679,
         "score_combined":0.2360261679,
-        "local_kg_hit_rewriting":false,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
@@ -1192,9 +1192,9 @@
         "entity_label":"<https:\/\/www.wikidata.org\/wiki\/Q237156>",
         "still_valid":true,
         "origin":"q(?w) :- P25(?_,?w)",
-        "score_calibrated":0.2358231843,
-        "score_combined":0.2358231843,
-        "local_kg_hit_rewriting":false,
+        "score_calibrated":0.2358231246,
+        "score_combined":0.2358231246,
+        "local_kg_hit_rewriting":true,
         "online_kg_hit_rewriting":true,
         "local_kg_hit_original":false,
         "online_kg_hit_original":false
