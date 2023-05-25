@@ -18,7 +18,7 @@ from models import *
 
 def main():
     """
-    An interactive console application for generating, parsing, and predicting queries with knowledge graph embeddings.
+    An interactive console application for generating, parsing, and predicting queries with knowledge graph embeddings with PerfectRef implemented.
     Application is made together with my Masters Thesis, Combining Query Rewriting with Complex Query Answering.
     
     Code is written by 
@@ -44,8 +44,7 @@ def main():
     t_box_path = "dataset/"+dataset+"/tbox/"+tbox_import_file
     a_box_path = "dataset/"+dataset+"/abox/transductive/"
     tbox_ontology = load_ontology(t_box_path)
-    project_name = "001"
-    transductive_models = ["TransE", "BoxE", "RotatE", "DistMult", "CompGCN"]
+    project_name = "002"
     tf = TriplesFactory.from_path(a_box_path + "all.txt")
     train, valid, test = tf.split([0.8, 0.1, 0.1], random_state=RANDOM_SEED, method="cleanup")
     current_model = None
@@ -63,17 +62,25 @@ def main():
     else:
         base_cases = list()
 
+    #Create test environment
+    if not os.path.exists("testcases/" + project_name):
+        os.mkdir("testcases/" + project_name)
+        os.mkdir("testcases/" + project_name + "/models")
+        os.mkdir("testcases/" + project_name + "/queries")
+        os.mkdir("testcases/" + project_name + "/queries/family")
+        os.mkdir("testcases/" + project_name + "/queries/dbpedia15k")
+
     #########################################################################
 
     ##########################     Menu-loop    ############################
     menu = {
-            '1': "Change testcase",
-            '2': "Change dataset",
+            '1': "Create/change test environment",
+            '2': "Change dataset\t\t(Family / DBPedia15k)",
             '3': "Generate queries",
-            '4': "Import set of queries (JSON)",
-            '5': "Train models",
+            '4': "Import set of queries\t(JSON-file)",
+            '5': "Train model",
             '6': "Load model",
-            '7': "Compare results",
+            '7': "Run query answering\t(PerfectRef incl.)",
             '0': "Exit"
         }
 
@@ -82,24 +89,24 @@ def main():
         options = menu.keys()
         sorted(options)
         print("\n ----------------------------------------------------")
-        print(" |          QUERY ANSWERING AND EMBEDDINGS v2.0       ")
+        print(" |           QUERY REWRITING and KGEs v2.0          |")
         print(" ----------------------------------------------------")
-        print(" | Test case identifier:\t%s" % (project_name))
+        print("   Test case identifier:\t%s" % (project_name))
         print(" ----------------------------------------------------")
-        print(" | QUERIES ")
-        print(" | Current TBox file:\t\t%s" % (tbox_import_file))
-        print(" | Loaded TBox state:\t\t%s" % (tbox_ontology != None))
-        print(" | Queries loaded:\t\t%s\n |" % (parsed_generated_queries != None))
-        print(" | EMBEDDINGS")
-        print(" | Current dataset:\t\t%s" % (dataset))
-        print(" | Is GPU available (Cuda):\t%s\n |" % (is_available()))
-        print(" | Ready to run? \t\t%s" % (parsed_generated_queries != None and bool(parsed_generated_queries) and is_available() and tbox_ontology != None))
-        print(" --------------------- MENU -------------------------")
+        print("   QUERIES ")
+        print("   Current TBox file:\t\t%s" % (tbox_import_file))
+        print("   Loaded TBox state:\t\t%s" % (tbox_ontology != None))
+        print("   Queries loaded:\t\t%s\n  " % (parsed_generated_queries != None))
+        print("   EMBEDDINGS")
+        print("   Current dataset:\t\t%s" % (dataset))
+        print("   Is GPU available (Cuda):\t%s\n  " % (is_available()))
+        print("   Ready to run? \t\t%s" % (parsed_generated_queries != None and bool(parsed_generated_queries) and is_available() and tbox_ontology != None))
+        print("\n --------------------- MENU -------------------------")
 
         for entry in options:
-            print(" | "+entry+":\t", menu[entry])
+            print(" "+entry+":\t", menu[entry])
 
-        selection = input("\nPlease Select an option [0-7]: ")
+        selection = input("\nPlease select an option [0-7]: ")
         if selection == '0':
             print("\nProgram exited successfully.\n")
             break
@@ -108,6 +115,13 @@ def main():
                 "Enter test case identifier (folder name)  \n[001]: ")
             if project_name == "":
                 project_name = "001"
+
+            if not os.path.exists("testcases/" + project_name):
+                os.mkdir("testcases/" + project_name)
+                os.mkdir("testcases/" + project_name + "/models")
+                os.mkdir("testcases/" + project_name + "/queries")
+                os.mkdir("testcases/" + project_name + "/queries/family")
+                os.mkdir("testcases/" + project_name + "/queries/dbpedia15k")
 
         elif selection == '2':
             if dataset == "dbpedia15k":
@@ -194,7 +208,7 @@ def main():
                 press_any_key()
                 
         elif selection == '5':
-            training(transductive_models, project_name, dataset, train, valid, test)
+            training(RANDOM_SEED, project_name, dataset, train, valid, test)
         elif selection == '6':
             current_model, current_model_params = load_model(project_name, dataset)
 
@@ -219,7 +233,7 @@ def main():
 
 
         else:
-            print("Unknown Option Selected! Select a number [0-7].")
+            print("Unknown option selected! Please select a acceptable number [0-7].")
             press_any_key()
 
 

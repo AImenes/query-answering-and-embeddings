@@ -6,7 +6,7 @@ from torch import load
 
 from utilities import *
 
-def training(seed, transductive_models, project_name, dataset, train, valid, test):
+def training(seed, project_name, dataset, train, valid, test):
     """
     Train transductive models with the given parameters.
 
@@ -23,35 +23,63 @@ def training(seed, transductive_models, project_name, dataset, train, valid, tes
         None. Writes to file.
     """
     # Train each transductive model with the given parameters
-    for current_model in transductive_models:
-        # Get the dimension and number of epochs for the current model from user input
-        dim = int(input("Enter dimension for model %s: " % (current_model)))
-        epoch = int(input("Enter number of epochs for model %s: " % (current_model)))
+    
+    models = {
+    '1': "BoxE",
+    '2': "CompGCN",
+    '3': "DistMult",
+    '4': "RotatE",
+    '5': "TransE"
+    }
 
-        # Set up the configuration file path for the current model
-        current_config = "testcases/" + project_name + "/models/dataset:" + dataset + "_model:" + current_model + "_dim:" + str(dim) + "_epoch:" + str(epoch)
+    for entry in models.keys():
+        print(" | "+entry+":\t", models[entry])
 
-        if os.path.exists(current_config):
-            # If the configuration file already exists, print an error message and do not train the model again
-            print("Configuration already trained. Edit configuration or delete model directory.")
-        else:
-            # Train the model with the given parameters
-            results = pipeline(
-                training_loop='sLCWA',
-                training=train,
-                validation=valid,
-                testing=test,
-                random_seed=seed,
-                model=current_model,
-                model_kwargs=dict(embedding_dim=dim),
-                epochs=epoch,
-                dimensions=dim,
-                device=get_device(),
-            )
+    selection = None
+    while selection not in models.keys():
+        selection = input("\nPlease Select a model [1-5]: ")
+    
+    if selection == '1':
+        current_model = "BoxE"
+    elif selection == '2':
+        current_model = "CompGCN"
+    elif selection == '3':
+        current_model = "DistMult"
+    elif selection == '4':
+        current_model = "RotatE"
+    elif selection == '5':
+        current_model = "TransE"
+    else:
+        current_model = selection
 
-            # Save the trained model to the configuration file path
-            results.save_to_directory(current_config)
-    print("Training finished.")
+    # Get the dimension and number of epochs for the current model from user input
+    dim = int(input("Enter dimension for model %s: " % (current_model)))
+    epoch = int(input("Enter number of epochs for model %s: " % (current_model)))
+
+    # Set up the configuration file path for the current model
+    current_config = "testcases/" + project_name + "/models/dataset:" + dataset + "_model:" + current_model + "_dim:" + str(dim) + "_epoch:" + str(epoch)
+
+    if os.path.exists(current_config):
+        # If the configuration file already exists, print an error message and do not train the model again
+        print("Configuration already trained. Edit configuration or delete model directory.")
+    else:
+        # Train the model with the given parameters
+        results = pipeline(
+            training_loop='sLCWA',
+            training=train,
+            validation=valid,
+            testing=test,
+            random_seed=seed,
+            model=current_model,
+            model_kwargs=dict(embedding_dim=dim),
+            epochs=epoch,
+            dimensions=dim,
+            device=get_device(),
+        )
+
+        # Save the trained model to the configuration file path
+        results.save_to_directory(current_config)
+print("Training finished.")
 
 def load_model(project_name, dataset):
     """
